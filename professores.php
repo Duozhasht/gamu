@@ -8,9 +8,9 @@
 		<title>GAM&mu;</title>
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-		
 
-		
+
+
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -55,9 +55,10 @@
 				<div id="content" class="col-xs-12 col-md-10">
 					<h2 id="title" class='text-center'>Professores</h2>
 					<?php
-						require_once('insertProf.php');
+						require_once('Professor_Repository.php');
 						$prof = new Professor_Repository();
 						$prof->listar("Professor.id");
+						$prof->exportarXML();
 					?>
 				</div>
 			</div>

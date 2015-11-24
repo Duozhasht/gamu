@@ -142,6 +142,27 @@
 		function exportarXML()
 		{
 
+			$xmlstr = "<?xml version='1.0' encoding='UTF-8'?><professores/>";
+			$professores = new SimpleXMLElement($xmlstr);
+
+			$query_retrieve_some = "SELECT * FROM Professor ORDER BY Professor.id";
+			$result = $this->db->query($query_retrieve_some);
+
+
+
+			foreach ($result as $professor)
+			{
+				$prof = $professores->addChild('professor');
+				$prof->addChild('id','p'.$professor['id']);
+				$prof->addChild('nome',$professor['nome']);
+				$prof->addChild('dataNasc',$professor['data_de_nascimento']);
+				$prof->addChild('habilitacoes',$professor['habilitacoes']);
+
+			}
+
+			$professores->asXML('Public/XML/professores.xml');
+
+
 		}
 
 
