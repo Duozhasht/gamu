@@ -14,67 +14,70 @@ class Professor {
 	}
 
 
-	public static function count(){
+	public static function count() {
+		
 		$db = Db::getInstance();
 		$result_count = $db->query("SELECT COUNT(*) AS number FROM Professor");
-		foreach($result_count as $count)
-			$result_number = $count['number'];
-		return $result_number;
+		$result_number = $result_count->fetch();
+		
+		return $result_number['number'];
+	}
+
+	public static function create($id, $nome, $dataNasc, $habilitacoes) {
+	
+		$db = DB::getInstance();
+		$query_insert = "INSERT INTO Professor VALUES ($id, $nome, $dataNasc, $habilitacoes)";
+	
 	}
 
 
-	public static function all($order) {
+	public static function retrieve($order,$page,$number_of_records) {
 
-		$list = [];
 		$db = Db::getInstance();
+		$startpoint=($page-1)*$number_of_records;
+		$list = [];
+
+		//Query
+		$query_select = "SELECT * FROM Professor ORDER BY $order LIMIT $startpoint,$number_of_records";
+		$result = $db->query($query_select);
 
 
-      //Check if we got page number, if not the user it's redirected to page 1
-		if(isset($_GET['page']))
-			if(($_GET['page']>0) && ($_GET['page']<=$result_number))
-				$page=$_GET['page'];
-			else
-				$page=1;
-			else
-				$page=1;
-      //number of records per page | number of pages always rounded up | actual page
-			$result_number = Professor::count();
-			$number_of_records=20;
-			$result_number=ceil($result_number/$number_of_records);
-			$startpoint=($page-1)*$number_of_records;
+		// we create a list of Professor objects from the database results
+		foreach($result as $prof)
+			$list[] = new Professor($prof['id'],$prof['nome'],$prof['data_de_nascimento'],$prof['habilitacoes']);
+
+		return $list;
+	
+	}
 
 
-      //Query
-			$query_select = "SELECT * FROM Professor ORDER BY $order LIMIT $startpoint,$number_of_records";
-			$result = $db->query($query_select);
+	public static function update($id, $prof) {
+	
+		$db = DB::getInstance();
+		$query_update = "UPDATE Professor SET nome=$prof->nome,data_de_nascimento=$prof->dataNasc,habilitacoes=$prof->habilitacoes WHERE id=$id";
+		$result = $db->query($query_find);
+
+	}
 
 
-      // we create a list of Post objects from the database results
-			foreach($result as $prof)
-				$list[] = new Professor($prof['id'],$prof['nome'],$prof['data_de_nascimento'],$prof['habilitacoes']);
+	public static function delete($id) {
 
-			return $list;
-		}
+		$db = DB::getInstance();
+		$query_delete = "DELETE FROM Professor WHERE id=$id";
+		$result = $db->query($query_delete);
 
+	}
 
+	public static function find($id) {
 
+		$db = DB::getInstance();
+		$query_find = "SELECT * FROM Professor WHERE id = $id";
 
+		$result = $db->query($query_find);
+		$prof = $result->fetch();
+		return new Professor($prof['id'],$prof['nome'],$prof['data_de_nascimento'],$prof['habilitacoes']);
 
+	}
 
-
-		
-/*
-    public static function find($id) {
-      $db = Db::getInstance();
-      // we make sure $id is an integer
-      $id = intval($id);
-      $req = $db->prepare('SELECT * FROM Professor WHERE id = :id');
-      // the query was prepared, now we replace :id with our actual $id value
-      $req->execute(array('id' => $id));
-      $post = $req->fetch();
-
-      return new Post($post['id'], $post['author'], $post['content']);
-    }
-  */
   }
   ?>

@@ -37,9 +37,48 @@
 					  			  </td>";
 							echo "</tr>";
 						}
+
 					?>
+
 					</tbody>
 					</table>
+
+					<?php 
+						echo "<nav class='text-center'>
+  						<ul class='pagination'>";
+			
+    					if($page-1<1)
+    						echo "<li class='disabled'><a href=''";
+    					else
+    						echo "<li><a href='?controller=professor&action=index&page=".($page-1)."'";
+
+    					echo "
+     					aria-label='Previous'>
+        				<span aria-hidden='true'>&laquo;</span>
+      					</a>
+    					</li>";
+			
+						for ($i=1; $i <=$result_number ; $i++) {
+			
+							if($page==$i)
+ 								echo   "<li class='active'><a href='?controller=professor&action=index&page=".$i."'>".$i."</a></li>";
+ 							else
+ 								echo   "<li><a href='?controller=professor&action=index&page=".$i."'>".$i."</a></li>";
+ 			
+						}
+						if($page+1>$result_number)
+    						echo "<li class='disabled'><a href=''";
+    					else
+    						echo "<li><a href='?controller=professor&action=index&page=".($page+1)."'";
+						echo "aria-label='Next'>
+        				<span aria-hidden='true'>&raquo;</span>
+      					</a>
+    					</li>
+  						</ul>
+						</nav>";
+					?>
+
+
 				</div>
 			</div>
 		</div>

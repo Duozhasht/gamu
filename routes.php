@@ -7,7 +7,6 @@
         $controller = new IndexController();
       break;
       case 'professor':
-        // we need the model to query the database later in the controller
         require_once('models/professor.php');
         $controller = new ProfessorController();
       break;

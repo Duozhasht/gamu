@@ -1,12 +1,32 @@
 <?php
   class ProfessorController {
-    public function index() {
-      // we store all the posts in a variable
-      $nr_professores = Professor::count();
-      $professores = Professor::all('Professor.id',$nr_professores);
 
+    
+    public function index() {
+      //number of records per page and number of pages 
+      $nr_professores = Professor::count();
+      $number_of_records = 20;
+      $result_number=ceil($nr_professores/$number_of_records);
+
+      //Check page rules (if is set, if not atributes 1 if it's higher or lower the same)
+      if(isset($_GET['page']))
+        if(($_GET['page']>0) && ($_GET['page']<=$result_number))
+          $page=$_GET['page'];
+        else
+          $page=1;
+      else
+        $page=1;
+
+      // Get profs
+      $professores = Professor::retrieve('Professor.id',$page,$number_of_records);
       require_once('views/professor/index.php');
+
     }
+
+
+  //CRUDE
+
+
 /*
     public function show() {
       // we expect a url of form ?controller=posts&action=show&id=x
