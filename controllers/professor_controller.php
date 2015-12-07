@@ -24,6 +24,17 @@
     }
 
 
+    public function add() {
+
+      require_once('views/index/error.php');
+
+
+    }
+
+
+
+
+
   //CRUDE
 
 
