@@ -3,6 +3,8 @@
 
     
     public function index() {
+      //small script to change url
+      echo "<script>window.history.pushState('string', 'Index', 'http://localhost:8888/gamu/?controller=professor&action=index');</script>";
       //number of records per page and number of pages 
       $nr_professores = Professor::count();
       $number_of_records = 20;
@@ -26,8 +28,61 @@
 
     public function add() {
 
-      require_once('views/index/error.php');
+        if(isset($_POST['nome'])&&isset($_POST['dataNasc'])&&isset($_POST['habilitacoes'])){
+              $aux = Professor::create('NULL',$_POST['nome'],$_POST['dataNasc'],$_POST['habilitacoes']);
+              echo "Inserção Concluída com Sucesso";
+            }
+        else
+            echo "Problemas!";
 
+      $controller = new ProfessorController();
+      $controller->index();
+
+    }
+
+    public function remove(){
+      
+      if(isset($_GET['id']))
+      {
+        $aux = Professor::delete($_GET['id']);
+      }
+      $controller = new ProfessorController();
+      $controller->index();
+
+    }
+
+    public function exportxml(){
+      
+      $file = 'public/xml/professores.xml';
+
+      $nr_professores = Professor::count();
+      $professores = Professor::retrieve('Professor.id',1,$nr_professores);
+
+      $xmlstr = "<professores/>";
+      $xml_file = new SimpleXMLElement($xmlstr);
+
+      
+      foreach ($professores as $professor)
+      {
+        $prof = $xml_file->addChild('professor');
+        $prof->addChild('id','p'.$professor->id);
+        $prof->addChild('nome',$professor->nome);
+        $prof->addChild('dataNasc',$professor->dataNasc);
+        $prof->addChild('habilitacoes',$professor->habilitacoes);
+
+      }
+      //DOM conversion -> formatOutput needed
+      $dom = new DOMDocument('1.0');
+      $dom->preserveWhiteSpace = false;
+      $dom->formatOutput = true;
+      $dom->loadXML($xml_file->asXML());
+      $dom->save($file);
+
+      echo "<script>
+              window.open('controllers/test.php', '_blank');
+            </script>";
+      $controller = new ProfessorController();
+      $controller->index();      
 
     }
 

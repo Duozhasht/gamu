@@ -26,7 +26,8 @@ class Professor {
 	public static function create($id, $nome, $dataNasc, $habilitacoes) {
 	
 		$db = DB::getInstance();
-		$query_insert = "INSERT INTO Professor VALUES ($id, $nome, $dataNasc, $habilitacoes)";
+		$query_insert = "INSERT INTO Professor VALUES ('$id', '$nome', '$dataNasc', '$habilitacoes')";
+		$result = $db->query($query_insert);
 	
 	}
 
@@ -55,7 +56,7 @@ class Professor {
 	
 		$db = DB::getInstance();
 		$query_update = "UPDATE Professor SET nome=$prof->nome,data_de_nascimento=$prof->dataNasc,habilitacoes=$prof->habilitacoes WHERE id=$id";
-		$result = $db->query($query_find);
+		$result = $db->query($query_update);
 
 	}
 
