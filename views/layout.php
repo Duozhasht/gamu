@@ -12,8 +12,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -37,17 +35,24 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Professores</a></li>
-            <li><a href="#">Alunos</a></li>
-            <li><a href="#">Cursos</a></li>
+            <li><a href="#">Audições</a></li>
+            <li><a href="#">Gestão de Alunos</a></li>
+            <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gestão da Escola <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Instrumentos</a></li>
+                <li class="active"><a href="#">Professores</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
             <li><a href="#"></a></li>
             <li><a href="#">Preferencias</a></li>
           </ul>
         </div>
       </div>
     </nav>
-
     <?php require_once('routes.php'); ?>
-
   </body>
 </html>
