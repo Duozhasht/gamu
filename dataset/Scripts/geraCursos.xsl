@@ -18,14 +18,17 @@
         <curso id="CB{count(preceding-sibling::*)+1}">
             <designacao>Curso Básico de <xsl:value-of select="."/></designacao>
             <duracao>5</duracao>
-            <instrumento><xsl:value-of select="."/></instrumento>
+            <instrumento id_instrumento="I{count(preceding-sibling::*)+1}"><xsl:value-of select="."/></instrumento>
         </curso>
         
         <xsl:element name="curso">
             <xsl:attribute name="id">CS<xsl:value-of select="count(preceding-sibling::*)+23"/></xsl:attribute>
             <xsl:element name="designacao">Curso Supletivo de <xsl:value-of select="."/></xsl:element>
             <xsl:element name="duracao">3</xsl:element>
-            <xsl:element name="instrumento"><xsl:value-of select="."/></xsl:element>
+            <xsl:element name="instrumento">
+                <xsl:attribute name="id_instrumento">I<xsl:value-of select="count(preceding-sibling::*)+1"/></xsl:attribute>
+                <xsl:value-of select="."/>
+            </xsl:element>
         </xsl:element>
     </xsl:template>
 </xsl:stylesheet>

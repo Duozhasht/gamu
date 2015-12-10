@@ -1,483 +1,267 @@
 <?xml version="1.0"?>
 <professores>
-  <professor>
-    <id>p6</id>
-    <nome>HERNANI RODRIGUES DA SILVA</nome>
-    <dataNasc>1992-10-16</dataNasc>
-    <habilitacoes>Mestre em Saxofone</habilitacoes>
-  </professor>
-  <professor>
-    <id>p7</id>
-    <nome>JORGE MANUEL BARROS NUNES</nome>
-    <dataNasc>1984-03-07</dataNasc>
-    <habilitacoes>Licenciado em Obo&#xE9;</habilitacoes>
-  </professor>
-  <professor>
-    <id>p8</id>
-    <nome>JOSE MIGUEL ARAUJO FERREIRA</nome>
-    <dataNasc>1946-01-18</dataNasc>
-    <habilitacoes>Licenciado em Trombone</habilitacoes>
-  </professor>
-  <professor>
-    <id>p9</id>
-    <nome>PEDRO GABRIEL DIAS FERREIRA</nome>
-    <dataNasc>1989-12-24</dataNasc>
-    <habilitacoes>Licenciado em Percuss&#xE3;o</habilitacoes>
-  </professor>
-  <professor>
-    <id>p10</id>
-    <nome>PEDRO MANUEL VIEIRA SANTOS PINTO</nome>
-    <dataNasc>1984-09-07</dataNasc>
-    <habilitacoes>Mestre em Contrabaixo</habilitacoes>
-  </professor>
-  <professor>
-    <id>p11</id>
-    <nome>RUI MANUEL AFONSO RODRIGUES SILVA GUERRA</nome>
-    <dataNasc>1991-03-23</dataNasc>
-    <habilitacoes>Mestre em Percuss&#xE3;o</habilitacoes>
-  </professor>
-  <professor>
-    <id>p12</id>
-    <nome>SERGIO MIGUEL VALENTE DE ALMEIDA</nome>
-    <dataNasc>1949-09-08</dataNasc>
-    <habilitacoes>Mestre em Trombone</habilitacoes>
-  </professor>
-  <professor>
-    <id>p13</id>
-    <nome>TIAGO MACHADO SILVA</nome>
-    <dataNasc>1988-06-25</dataNasc>
-    <habilitacoes>Licenciado em Piano</habilitacoes>
-  </professor>
-  <professor>
-    <id>p14</id>
-    <nome>VASCO DUARTE ALMEIDA DIAS DE CASTRO</nome>
-    <dataNasc>1959-03-19</dataNasc>
-    <habilitacoes>Mestre em Fliscorne</habilitacoes>
-  </professor>
-  <professor>
-    <id>p15</id>
-    <nome>ANTONIO JOSE OLIVEIRA FARIA</nome>
-    <dataNasc>1961-11-07</dataNasc>
-    <habilitacoes>Licenciado em Euf&#xF3;nio</habilitacoes>
-  </professor>
-  <professor>
-    <id>p16</id>
-    <nome>CARLA MARIA MENDES DE CASTRO</nome>
-    <dataNasc>1980-01-24</dataNasc>
-    <habilitacoes>Mestre em Trombone</habilitacoes>
-  </professor>
-  <professor>
-    <id>p17</id>
-    <nome>MARLENE AZEVEDO DA SILVA</nome>
-    <dataNasc>1989-12-25</dataNasc>
-    <habilitacoes>Mestre em Trombone</habilitacoes>
-  </professor>
-  <professor>
-    <id>p28</id>
-    <nome>Gon&#xE7;alo Hermenegildo</nome>
-    <dataNasc>1988-04-20</dataNasc>
-    <habilitacoes>Mestre em Fagote</habilitacoes>
-  </professor>
-  <professor>
-    <id>p29</id>
-    <nome>Luis</nome>
-    <dataNasc>1986-01-04</dataNasc>
-    <habilitacoes>Mestre em Guitarra</habilitacoes>
-  </professor>
-  <professor>
-    <id>p30</id>
-    <nome>Miguel Pinto</nome>
-    <dataNasc>1979-09-03</dataNasc>
-    <habilitacoes>Licenciado em Violoncelo</habilitacoes>
-  </professor>
-  <professor>
-    <id>p31</id>
-    <nome>Pedro Lopes</nome>
-    <dataNasc>1969-01-26</dataNasc>
-    <habilitacoes>Mestre em Viola de Arco</habilitacoes>
-  </professor>
-  <professor>
-    <id>p32</id>
-    <nome>Ant&#xF3;nio Jos&#xE9; Coutinho Barbosa</nome>
-    <dataNasc>1986-05-10</dataNasc>
-    <habilitacoes>Mestre em Euf&#xF3;nio</habilitacoes>
-  </professor>
-  <professor>
-    <id>p33</id>
-    <nome>Ricardo Paz</nome>
-    <dataNasc>1991-03-05</dataNasc>
-    <habilitacoes>Licenciado em Guitarra</habilitacoes>
-  </professor>
-  <professor>
-    <id>p34</id>
-    <nome>Sandrina Maciel</nome>
-    <dataNasc>1976-01-18</dataNasc>
-    <habilitacoes>Licenciado em Trompete</habilitacoes>
-  </professor>
-  <professor>
-    <id>p35</id>
-    <nome>Bruno Martins</nome>
-    <dataNasc>1985-03-23</dataNasc>
-    <habilitacoes>Mestre em Fagote</habilitacoes>
-  </professor>
-  <professor>
-    <id>p36</id>
-    <nome>Filipe Froufe</nome>
-    <dataNasc>1952-09-26</dataNasc>
-    <habilitacoes>Licenciado em Violoncelo</habilitacoes>
-  </professor>
-  <professor>
-    <id>p37</id>
-    <nome>Jo&#xE3;o Brites</nome>
-    <dataNasc>1980-10-25</dataNasc>
-    <habilitacoes>Mestre em Guitarra</habilitacoes>
-  </professor>
-  <professor>
-    <id>p38</id>
-    <nome>Leandro Morgado</nome>
-    <dataNasc>1983-07-20</dataNasc>
-    <habilitacoes>Licenciado em Org&#xE3;o</habilitacoes>
-  </professor>
-  <professor>
-    <id>p39</id>
-    <nome>Manuel Sousa</nome>
-    <dataNasc>1986-02-19</dataNasc>
-    <habilitacoes>Licenciado em Fliscorne</habilitacoes>
-  </professor>
-  <professor>
-    <id>p40</id>
-    <nome>Pedro Resende</nome>
-    <dataNasc>1945-09-11</dataNasc>
-    <habilitacoes>Mestre em Contrabaixo</habilitacoes>
-  </professor>
-  <professor>
-    <id>p41</id>
-    <nome>Ricardo</nome>
-    <dataNasc>1950-06-08</dataNasc>
-    <habilitacoes>Mestre em Obo&#xE9;</habilitacoes>
-  </professor>
-  <professor>
-    <id>p42</id>
-    <nome>Fernanda Barroso</nome>
-    <dataNasc>1966-01-03</dataNasc>
-    <habilitacoes>Licenciado em Fliscorne</habilitacoes>
-  </professor>
-  <professor>
-    <id>p43</id>
-    <nome>Marta Silva</nome>
-    <dataNasc>1989-02-02</dataNasc>
-    <habilitacoes>Mestre em Tuba</habilitacoes>
-  </professor>
-  <professor>
-    <id>p44</id>
-    <nome>Paulo Alexandre Afonso Dias</nome>
-    <dataNasc>1962-08-08</dataNasc>
-    <habilitacoes>Licenciado em Trompete</habilitacoes>
-  </professor>
-  <professor>
-    <id>p45</id>
-    <nome>Susana Pacheco</nome>
-    <dataNasc>1981-12-26</dataNasc>
-    <habilitacoes>Licenciado em Bandolim</habilitacoes>
-  </professor>
-  <professor>
-    <id>p46</id>
-    <nome>Almeno</nome>
-    <dataNasc>1954-06-20</dataNasc>
-    <habilitacoes>Mestre em Contrabaixo</habilitacoes>
-  </professor>
-  <professor>
-    <id>p47</id>
-    <nome>Carlos Durana</nome>
-    <dataNasc>1981-09-15</dataNasc>
-    <habilitacoes>Licenciado em Piano</habilitacoes>
-  </professor>
-  <professor>
-    <id>p48</id>
-    <nome>Hernani Silva</nome>
-    <dataNasc>1989-06-18</dataNasc>
-    <habilitacoes>Licenciado em Violoncelo</habilitacoes>
-  </professor>
-  <professor>
-    <id>p49</id>
-    <nome>Sofia PAiva</nome>
-    <dataNasc>1989-12-28</dataNasc>
-    <habilitacoes>Mestre em Trompete</habilitacoes>
-  </professor>
-  <professor>
-    <id>p50</id>
-    <nome>Bruno Miguel Pereira Pinto</nome>
-    <dataNasc>1980-05-11</dataNasc>
-    <habilitacoes>Licenciado em Obo&#xE9;</habilitacoes>
-  </professor>
-  <professor>
-    <id>p51</id>
-    <nome>Cristiano Cunha</nome>
-    <dataNasc>1951-10-11</dataNasc>
-    <habilitacoes>Licenciado em Fagote</habilitacoes>
-  </professor>
-  <professor>
-    <id>p52</id>
-    <nome>Daniel Pires</nome>
-    <dataNasc>1963-03-19</dataNasc>
-    <habilitacoes>Licenciado em Tuba</habilitacoes>
-  </professor>
-  <professor>
-    <id>p53</id>
-    <nome>Ernesto Miranda Pedrosa da Silva</nome>
-    <dataNasc>1979-10-14</dataNasc>
-    <habilitacoes>Licenciado em Violoncelo</habilitacoes>
-  </professor>
-  <professor>
-    <id>p54</id>
-    <nome>Manuel Joao Salgado da Costa Amaro</nome>
-    <dataNasc>1948-02-09</dataNasc>
-    <habilitacoes>Mestre em Fagote</habilitacoes>
-  </professor>
-  <professor>
-    <id>p55</id>
-    <nome>Pedro Nuno Tavares da Silva </nome>
-    <dataNasc>1952-08-04</dataNasc>
-    <habilitacoes>Licenciado em Saxofone</habilitacoes>
-  </professor>
-  <professor>
-    <id>p56</id>
-    <nome>Rui Pedro da Costa Barbosa</nome>
-    <dataNasc>1987-11-28</dataNasc>
-    <habilitacoes>Licenciado em Viola de Arco</habilitacoes>
-  </professor>
-  <professor>
-    <id>p57</id>
-    <nome>Carlos Guilherme Pelaio Macedo Costa </nome>
-    <dataNasc>1964-05-21</dataNasc>
-    <habilitacoes>Mestre em Harpa</habilitacoes>
-  </professor>
-  <professor>
-    <id>p58</id>
-    <nome>Jorge Filipe Marcos Mota </nome>
-    <dataNasc>1989-02-18</dataNasc>
-    <habilitacoes>Mestre em Flauta</habilitacoes>
-  </professor>
-  <professor>
-    <id>p59</id>
-    <nome>Nuno Miguel Alves Peixoto</nome>
-    <dataNasc>1966-04-02</dataNasc>
-    <habilitacoes>Mestre em Percuss&#xE3;o</habilitacoes>
-  </professor>
-  <professor>
-    <id>p60</id>
-    <nome>V&#xE2;nia Sifia Carvalho</nome>
-    <dataNasc>1988-01-20</dataNasc>
-    <habilitacoes>Licenciado em Trompa</habilitacoes>
-  </professor>
-  <professor>
-    <id>p61</id>
-    <nome>Maria Campos</nome>
-    <dataNasc>1987-05-11</dataNasc>
-    <habilitacoes>Licenciado em Percuss&#xE3;o</habilitacoes>
-  </professor>
-  <professor>
-    <id>p62</id>
-    <nome>Nuno Rodrigues</nome>
-    <dataNasc>1945-11-12</dataNasc>
-    <habilitacoes>Mestre em Euf&#xF3;nio</habilitacoes>
-  </professor>
-  <professor>
-    <id>p63</id>
-    <nome>Ad&#xE9;lio Marco da Costa Fernandes</nome>
-    <dataNasc>1961-05-15</dataNasc>
-    <habilitacoes>Licenciado em Euf&#xF3;nio</habilitacoes>
-  </professor>
-  <professor>
-    <id>p64</id>
-    <nome>Alexandre Gon&#xE7;alves</nome>
-    <dataNasc>1988-12-09</dataNasc>
-    <habilitacoes>Mestre em Piano</habilitacoes>
-  </professor>
-  <professor>
-    <id>p65</id>
-    <nome>Am&#xE2;ndio Telmo Oliveira Teixeira</nome>
-    <dataNasc>1971-12-25</dataNasc>
-    <habilitacoes>Mestre em Viola de Arco</habilitacoes>
-  </professor>
-  <professor>
-    <id>p66</id>
-    <nome>Carla Sofia de Almeida Coutinho </nome>
-    <dataNasc>1965-07-27</dataNasc>
-    <habilitacoes>Licenciado em Trompete</habilitacoes>
-  </professor>
-  <professor>
-    <id>p67</id>
-    <nome>Edison Oliveira</nome>
-    <dataNasc>1976-01-04</dataNasc>
-    <habilitacoes>Licenciado em Clarinete</habilitacoes>
-  </professor>
-  <professor>
-    <id>p68</id>
-    <nome>Fernando Sousa</nome>
-    <dataNasc>1975-01-27</dataNasc>
-    <habilitacoes>Licenciado em Clarinete</habilitacoes>
-  </professor>
-  <professor>
-    <id>p69</id>
-    <nome>Filipe Manuel Alves Romano</nome>
-    <dataNasc>1948-05-11</dataNasc>
-    <habilitacoes>Mestre em Org&#xE3;o</habilitacoes>
-  </professor>
-  <professor>
-    <id>p70</id>
-    <nome>Francisco Alexandre Aires Gon&#xE7;alves</nome>
-    <dataNasc>1971-06-13</dataNasc>
-    <habilitacoes>Mestre em Clarinete</habilitacoes>
-  </professor>
-  <professor>
-    <id>p71</id>
-    <nome>M&#xE1;rio Andr&#xE9; de Castro Vila Cova</nome>
-    <dataNasc>1946-05-01</dataNasc>
-    <habilitacoes>Mestre em Clarinete</habilitacoes>
-  </professor>
-  <professor>
-    <id>p72</id>
-    <nome>Nuno Santos</nome>
-    <dataNasc>1989-05-15</dataNasc>
-    <habilitacoes>Mestre em Org&#xE3;o</habilitacoes>
-  </professor>
-  <professor>
-    <id>p73</id>
-    <nome>Nuno Miguel dos Santos Nunes Rold&#xE3;o</nome>
-    <dataNasc>1957-07-14</dataNasc>
-    <habilitacoes>Licenciado em Percuss&#xE3;o</habilitacoes>
-  </professor>
-  <professor>
-    <id>p74</id>
-    <nome>Orlando Jorge Carvalho Ribeiro</nome>
-    <dataNasc>1970-01-16</dataNasc>
-    <habilitacoes>Licenciado em Contrabaixo</habilitacoes>
-  </professor>
-  <professor>
-    <id>p75</id>
-    <nome>Pedro Filipe Meira Morais</nome>
-    <dataNasc>1971-07-14</dataNasc>
-    <habilitacoes>Mestre em Corne Ingl&#xEA;s</habilitacoes>
-  </professor>
-  <professor>
-    <id>p76</id>
-    <nome>Renato Neves</nome>
-    <dataNasc>1989-06-18</dataNasc>
-    <habilitacoes>Licenciado em Guitarra</habilitacoes>
-  </professor>
-  <professor>
-    <id>p77</id>
-    <nome>Ricardo</nome>
-    <dataNasc>1975-05-21</dataNasc>
-    <habilitacoes>Mestre em Guitarra</habilitacoes>
-  </professor>
-  <professor>
-    <id>p78</id>
-    <nome>Ricardo Manuel da Silva Abreu</nome>
-    <dataNasc>1981-07-20</dataNasc>
-    <habilitacoes>Licenciado em Harpa</habilitacoes>
-  </professor>
-  <professor>
-    <id>p79</id>
-    <nome>Rui Miguel Silva</nome>
-    <dataNasc>1952-07-26</dataNasc>
-    <habilitacoes>Mestre em Viola de Arco</habilitacoes>
-  </professor>
-  <professor>
-    <id>p80</id>
-    <nome>Sandro Miguel Vales de Freitas</nome>
-    <dataNasc>1965-03-27</dataNasc>
-    <habilitacoes>Mestre em Saxofone</habilitacoes>
-  </professor>
-  <professor>
-    <id>p81</id>
-    <nome>Ana Lu&#xED;sa Pinto Teixeira</nome>
+  <professor id="p1">
+    <nome>ALVARO JOSE DE CASTRO MOREIRA DA SILVA</nome>
+    <dataNasc>1968-06-13</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>1</curso>
+  </professor>
+  <professor id="p2">
+    <nome>ANDRE FILIPE AZEVEDO SOUSA</nome>
+    <dataNasc>1965-12-17</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>2</curso>
+  </professor>
+  <professor id="p3">
+    <nome>BRUNO MIGUEL PEREIRA PINTO</nome>
+    <dataNasc>1949-09-11</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>3</curso>
+  </professor>
+  <professor id="p4">
+    <nome>FILIPE ALEXANDRE DA SILVA MARTINS</nome>
     <dataNasc>1946-07-05</dataNasc>
-    <habilitacoes>Mestre em Obo&#xE9;</habilitacoes>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>4</curso>
   </professor>
-  <professor>
-    <id>p82</id>
-    <nome>C&#xE2;ndida</nome>
-    <dataNasc>1959-06-26</dataNasc>
-    <habilitacoes>Mestre em Violoncelo</habilitacoes>
+  <professor id="p5">
+    <nome>HELDER RICARDO DIAS RIBEIRO</nome>
+    <dataNasc>1977-11-12</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>5</curso>
   </professor>
-  <professor>
-    <id>p83</id>
-    <nome>Carla Susana Teixeira</nome>
-    <dataNasc>1957-07-07</dataNasc>
-    <habilitacoes>Licenciado em Euf&#xF3;nio</habilitacoes>
+  <professor id="p6">
+    <nome>HERNANI RODRIGUES DA SILVA</nome>
+    <dataNasc>1973-01-26</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>6</curso>
   </professor>
-  <professor>
-    <id>p84</id>
-    <nome>Daniel Edgar Pinto Soares</nome>
-    <dataNasc>1972-10-21</dataNasc>
-    <habilitacoes>Licenciado em Contrabaixo</habilitacoes>
+  <professor id="p7">
+    <nome>JORGE MANUEL BARROS NUNES</nome>
+    <dataNasc>1983-08-24</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>7</curso>
   </professor>
-  <professor>
-    <id>p85</id>
-    <nome>L&#xFA;cia Sofia Miranda</nome>
-    <dataNasc>1950-05-18</dataNasc>
-    <habilitacoes>Licenciado em Contrabaixo</habilitacoes>
+  <professor id="p8">
+    <nome>JOSE MIGUEL ARAUJO FERREIRA</nome>
+    <dataNasc>1962-11-15</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>8</curso>
   </professor>
-  <professor>
-    <id>p86</id>
-    <nome>M&#xE1;rcio Ferreira</nome>
-    <dataNasc>1971-06-06</dataNasc>
-    <habilitacoes>Mestre em Obo&#xE9;</habilitacoes>
+  <professor id="p9">
+    <nome>PEDRO GABRIEL DIAS FERREIRA</nome>
+    <dataNasc>1952-11-08</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>9</curso>
   </professor>
-  <professor>
-    <id>p87</id>
-    <nome>Maria da Concei&#xE7;&#xE3;o Mota</nome>
-    <dataNasc>1985-07-27</dataNasc>
-    <habilitacoes>Licenciado em Contrabaixo</habilitacoes>
+  <professor id="p10">
+    <nome>PEDRO MANUEL VIEIRA SANTOS PINTO</nome>
+    <dataNasc>1986-08-19</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>10</curso>
   </professor>
-  <professor>
-    <id>p88</id>
-    <nome>Maria Jo&#xE3;o Fernandes Guerreiro da Silva </nome>
-    <dataNasc>1963-04-14</dataNasc>
-    <habilitacoes>Licenciado em Flauta</habilitacoes>
+  <professor id="p11">
+    <nome>RUI MANUEL AFONSO RODRIGUES SILVA GUERRA</nome>
+    <dataNasc>1967-02-03</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>11</curso>
   </professor>
-  <professor>
-    <id>p89</id>
-    <nome>Miguel Carreira</nome>
-    <dataNasc>1959-07-22</dataNasc>
-    <habilitacoes>Mestre em Piano</habilitacoes>
+  <professor id="p12">
+    <nome>SERGIO MIGUEL VALENTE DE ALMEIDA</nome>
+    <dataNasc>1988-07-01</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>12</curso>
   </professor>
-  <professor>
-    <id>p90</id>
-    <nome>V&#xED;tor Manuel Catarino</nome>
-    <dataNasc>1990-02-10</dataNasc>
-    <habilitacoes>Mestre em Guitarra</habilitacoes>
+  <professor id="p13">
+    <nome>TIAGO MACHADO SILVA</nome>
+    <dataNasc>1967-08-21</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>13</curso>
   </professor>
-  <professor>
-    <id>p91</id>
-    <nome>Vitor Gon&#xE7;alves</nome>
-    <dataNasc>1963-10-22</dataNasc>
-    <habilitacoes>Licenciado em Tuba</habilitacoes>
+  <professor id="p14">
+    <nome>VASCO DUARTE ALMEIDA DIAS DE CASTRO</nome>
+    <dataNasc>1985-08-09</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>14</curso>
   </professor>
-  <professor>
-    <id>p92</id>
-    <nome>Fernando Jorge Ferreira La&#xFA;ndos da Costa</nome>
-    <dataNasc>1983-07-07</dataNasc>
-    <habilitacoes>Licenciado em Contrabaixo</habilitacoes>
+  <professor id="p15">
+    <nome>ANTONIO JOSE OLIVEIRA FARIA</nome>
+    <dataNasc>1945-05-06</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>15</curso>
   </professor>
-  <professor>
-    <id>p93</id>
-    <nome>Marco Paulo Martins Cruz</nome>
-    <dataNasc>1976-11-17</dataNasc>
-    <habilitacoes>Mestre em Violino</habilitacoes>
+  <professor id="p16">
+    <nome>CARLA MARIA MENDES DE CASTRO</nome>
+    <dataNasc>1966-12-06</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>16</curso>
   </professor>
-  <professor>
-    <id>p94</id>
-    <nome>Miguel Pereira Mateus</nome>
-    <dataNasc>1975-12-07</dataNasc>
-    <habilitacoes>Licenciado em Fliscorne</habilitacoes>
+  <professor id="p17">
+    <nome>MARLENE AZEVEDO DA SILVA</nome>
+    <dataNasc>1962-09-24</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>17</curso>
   </professor>
-  <professor>
-    <id>p102</id>
-    <nome>Professor</nome>
-    <dataNasc>2014-12-12</dataNasc>
-    <habilitacoes>Default</habilitacoes>
+  <professor id="p18">
+    <nome>PAULO ALEXANDRE MARQUES DE OLIVEIRA SERAFIM</nome>
+    <dataNasc>1953-02-21</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>18</curso>
+  </professor>
+  <professor id="p19">
+    <nome>DAVID FILIPE OLIVEIRA COSTA</nome>
+    <dataNasc>1978-04-18</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>19</curso>
+  </professor>
+  <professor id="p20">
+    <nome>RICARDO MIGUEL CARVALHO FERREIRA</nome>
+    <dataNasc>1991-02-07</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>20</curso>
+  </professor>
+  <professor id="p21">
+    <nome>JOSE ALVES DE CASTRO</nome>
+    <dataNasc>1975-08-10</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>21</curso>
+  </professor>
+  <professor id="p22">
+    <nome>MARIO BENTO BRITO NOBREGA RAMOS DE AZEVEDO</nome>
+    <dataNasc>1980-06-25</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>22</curso>
+  </professor>
+  <professor id="p23">
+    <nome>PAULO CESAR RODRIGUES GOMES</nome>
+    <dataNasc>1981-12-15</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>23</curso>
+  </professor>
+  <professor id="p24">
+    <nome>Susana Pereira</nome>
+    <dataNasc>1968-10-05</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>24</curso>
+  </professor>
+  <professor id="p25">
+    <nome>Gabriel Reis</nome>
+    <dataNasc>1982-10-15</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>25</curso>
+  </professor>
+  <professor id="p26">
+    <nome>Ars&#xE9;nio</nome>
+    <dataNasc>1991-04-13</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>26</curso>
+  </professor>
+  <professor id="p27">
+    <nome>Frederico Pinto</nome>
+    <dataNasc>1953-08-06</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>27</curso>
+  </professor>
+  <professor id="p28">
+    <nome>Gon&#xE7;alo Hermenegildo</nome>
+    <dataNasc>1945-10-09</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>28</curso>
+  </professor>
+  <professor id="p29">
+    <nome>Luis</nome>
+    <dataNasc>1981-07-17</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>29</curso>
+  </professor>
+  <professor id="p30">
+    <nome>Miguel Pinto</nome>
+    <dataNasc>1963-06-21</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>30</curso>
+  </professor>
+  <professor id="p31">
+    <nome>Pedro Lopes</nome>
+    <dataNasc>1975-02-09</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>31</curso>
+  </professor>
+  <professor id="p32">
+    <nome>Ant&#xF3;nio Jos&#xE9; Coutinho Barbosa</nome>
+    <dataNasc>1991-10-23</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>32</curso>
+  </professor>
+  <professor id="p33">
+    <nome>Ricardo Paz</nome>
+    <dataNasc>1986-08-22</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>33</curso>
+  </professor>
+  <professor id="p34">
+    <nome>Sandrina Maciel</nome>
+    <dataNasc>1962-01-17</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>34</curso>
+  </professor>
+  <professor id="p35">
+    <nome>Bruno Martins</nome>
+    <dataNasc>1970-11-12</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>35</curso>
+  </professor>
+  <professor id="p36">
+    <nome>Filipe Froufe</nome>
+    <dataNasc>1946-10-19</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>36</curso>
+  </professor>
+  <professor id="p37">
+    <nome>Jo&#xE3;o Brites</nome>
+    <dataNasc>1967-12-09</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>37</curso>
+  </professor>
+  <professor id="p38">
+    <nome>Leandro Morgado</nome>
+    <dataNasc>1976-01-03</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>38</curso>
+  </professor>
+  <professor id="p39">
+    <nome>Manuel Sousa</nome>
+    <dataNasc>1990-10-18</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>39</curso>
+  </professor>
+  <professor id="p40">
+    <nome>Pedro Resende</nome>
+    <dataNasc>1970-02-03</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>40</curso>
+  </professor>
+  <professor id="p41">
+    <nome>Ricardo</nome>
+    <dataNasc>1956-10-06</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>41</curso>
+  </professor>
+  <professor id="p42">
+    <nome>Fernanda Barroso</nome>
+    <dataNasc>1971-10-01</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>42</curso>
+  </professor>
+  <professor id="p43">
+    <nome>Marta Silva</nome>
+    <dataNasc>1962-08-17</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>43</curso>
+  </professor>
+  <professor id="p44">
+    <nome>Paulo Alexandre Afonso Dias</nome>
+    <dataNasc>1951-12-19</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>44</curso>
   </professor>
 </professores>

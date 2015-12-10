@@ -1,7 +1,7 @@
 <?php
-  class ProfessorController {
+  class InstrumentoController {
 
-    
+    /*
     public function index() {
       //small script to change url
       echo "<script>window.history.pushState('string', 'Index', 'http://localhost:8888/gamu/?controller=professor&action=index');</script>";
@@ -20,7 +20,7 @@
         $page=1;
 
       // Get profs
-      $professores = Professor::retrieve('id_professor',$page,$number_of_records);
+      $professores = Professor::retrieve('Professor.id',$page,$number_of_records);
       require_once('views/professor/index.php');
 
     }
@@ -56,7 +56,7 @@
       $file = 'public/xml/professores.xml';
 
       $nr_professores = Professor::count();
-      $professores = Professor::retrieve('id_professor',1,$nr_professores);
+      $professores = Professor::retrieve('Professor.id',1,$nr_professores);
 
       $xmlstr = "<professores/>";
       $xml_file = new SimpleXMLElement($xmlstr);
@@ -65,11 +65,10 @@
       foreach ($professores as $professor)
       {
         $prof = $xml_file->addChild('professor');
-        $prof->addAttribute('id','p'.$professor->id);
+        $prof->addChild('id','p'.$professor->id);
         $prof->addChild('nome',$professor->nome);
         $prof->addChild('dataNasc',$professor->dataNasc);
         $prof->addChild('habilitacoes',$professor->habilitacoes);
-        $prof->addChild('curso',$professor->id_curso);
 
       }
       //DOM conversion -> formatOutput needed
@@ -87,26 +86,26 @@
 
     }
 
-    public function importxml() {
-        $professores = simplexml_load_file("dataset/Finais/professores.xml");
 
-        foreach($professores as $professor) {
-          Professor::create(substr((string)$professor['id'],1),
-                                     (string)$professor->nome,
-                                     (string)$professor->dataNasc,
-                                     (string)$professor->habilitacoes,
-                               substr((string)$professor->curso,2));
+
+
+  */
+    public function importxml() {
+        $instrumentos = simplexml_load_file("dataset/Finais/instrumentos.xml");
+
+        foreach($instrumentos as $instrumento) {
+          Instrumento::create(substr((string)$instrumento['id'],1),
+                                     (string)$instrumento);
         }
         echo getcwd();
         echo "tudo okay!";
     }
-
-
+  /*
 
   //CRUDE
 
 
-/*
+
     public function show() {
       // we expect a url of form ?controller=posts&action=show&id=x
       // without an id we just redirect to the error page as we need the post id to find it in the database

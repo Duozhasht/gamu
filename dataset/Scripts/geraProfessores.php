@@ -24,17 +24,13 @@
 
         if($pcont<23)
         {
-            $inst = $pcont;
-            $nInst = $instrumentos->xpath("//instrumento[".$inst."]")[0];
             $professor->addChild('habilitacoes',"Licenciatura");
-            $professor->addChild('curso',$pcont);
+            $professor->addChild('curso','CB'.$pcont);
         }
         else
         {
-            $inst = $pcont-22;
-            $nInst = $instrumentos->xpath("//instrumento[".$inst."]")[0];
             $professor->addChild('habilitacoes',"Mestrado");
-            $professor->addChild('curso',$pcont);
+            $professor->addChild('curso','CS'.$pcont);
         }
 
         

@@ -5,12 +5,21 @@ class Professor {
 	public $nome;
 	public $dataNasc;
 	public $habilitacoes;
+	public $curso;
+	public $instrumento;
 
-	public function __construct($id, $nome, $dataNasc, $habilitacoes) {
+	public $id_curso;
+
+
+	public function __construct($id, $nome, $dataNasc, $habilitacoes, $curso, $instrumento, $id_curso) {
 		$this->id = $id;
 		$this->nome = $nome;
 		$this->dataNasc = $dataNasc;
 		$this->habilitacoes = $habilitacoes;
+		$this->curso = $curso;
+		$this->instrumento = $instrumento;
+
+		$this->id_curso = $id_curso;
 	}
 
 
@@ -23,10 +32,10 @@ class Professor {
 		return $result_number['number'];
 	}
 
-	public static function create($id, $nome, $dataNasc, $habilitacoes) {
+	public static function create($id, $nome, $dataNasc, $habilitacoes, $id_curso) {
 	
 		$db = DB::getInstance();
-		$query_insert = "INSERT INTO Professor VALUES ('$id', '$nome', '$dataNasc', '$habilitacoes')";
+		$query_insert = "INSERT INTO Professor VALUES ('$id', '$nome', '$dataNasc', '$habilitacoes', '$id_curso')";
 		$result = $db->query($query_insert);
 	
 	}
@@ -39,13 +48,13 @@ class Professor {
 		$list = [];
 
 		//Query
-		$query_select = "SELECT * FROM Professor ORDER BY $order LIMIT $startpoint,$number_of_records";
+		$query_select = "SELECT * from professormodel ORDER BY $order LIMIT $startpoint,$number_of_records";
 		$result = $db->query($query_select);
 
 
 		// we create a list of Professor objects from the database results
 		foreach($result as $prof)
-			$list[] = new Professor($prof['id'],$prof['nome'],$prof['data_de_nascimento'],$prof['habilitacoes']);
+			$list[] = new Professor($prof['id_professor'],$prof['nome'],$prof['data_de_nascimento'],$prof['habilitacoes'],$prof['curso'],$prof['instrumento'],$prof['id_curso']);
 
 		return $list;
 	
