@@ -32,7 +32,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `gamu`.`Curso` ;
 
 CREATE TABLE IF NOT EXISTS `gamu`.`Curso` (
-  `id_curso` INT NOT NULL COMMENT '',
+  `id_curso` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `designacao` VARCHAR(45) NOT NULL COMMENT '',
   `duracao` INT NOT NULL COMMENT '',
   `id_instrumento` INT NOT NULL COMMENT '',
@@ -94,7 +94,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `gamu`.`Periodo` ;
 
 CREATE TABLE IF NOT EXISTS `gamu`.`Periodo` (
-  `id_periodo` INT NOT NULL COMMENT '',
+  `id_periodo` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `nome` VARCHAR(45) NOT NULL COMMENT '',
   PRIMARY KEY (`id_periodo`)  COMMENT '')
 ENGINE = InnoDB;
@@ -211,7 +211,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `gamu`.`Participante` ;
 
 CREATE TABLE IF NOT EXISTS `gamu`.`Participante` (
-  `id_actuacao` INT NOT NULL COMMENT '',
+  `id_actuacao` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `id_professor` INT NULL COMMENT '',
   `id_aluno` INT NULL COMMENT '',
   INDEX `fk_participante_actuacao_idx` (`id_actuacao` ASC)  COMMENT '',
