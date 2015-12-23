@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <professores>
   <professor id="p1">
     <nome>ALVARO JOSE DE CASTRO MOREIRA DA SILVA</nome>
@@ -151,7 +151,7 @@
     <curso>25</curso>
   </professor>
   <professor id="p26">
-    <nome>Ars&#xE9;nio</nome>
+    <nome>Arsénio</nome>
     <dataNasc>1991-04-13</dataNasc>
     <habilitacoes>Mestrado</habilitacoes>
     <curso>26</curso>
@@ -163,7 +163,7 @@
     <curso>27</curso>
   </professor>
   <professor id="p28">
-    <nome>Gon&#xE7;alo Hermenegildo</nome>
+    <nome>Gonçalo Hermenegildo</nome>
     <dataNasc>1945-10-09</dataNasc>
     <habilitacoes>Mestrado</habilitacoes>
     <curso>28</curso>
@@ -187,7 +187,7 @@
     <curso>31</curso>
   </professor>
   <professor id="p32">
-    <nome>Ant&#xF3;nio Jos&#xE9; Coutinho Barbosa</nome>
+    <nome>António José Coutinho Barbosa</nome>
     <dataNasc>1991-10-23</dataNasc>
     <habilitacoes>Mestrado</habilitacoes>
     <curso>32</curso>
@@ -217,7 +217,7 @@
     <curso>36</curso>
   </professor>
   <professor id="p37">
-    <nome>Jo&#xE3;o Brites</nome>
+    <nome>João Brites</nome>
     <dataNasc>1967-12-09</dataNasc>
     <habilitacoes>Mestrado</habilitacoes>
     <curso>37</curso>

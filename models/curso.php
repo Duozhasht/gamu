@@ -1,19 +1,19 @@
 <?php
 class Curso {
 
-	public $id_curso;
+	public $id;
 	public $designacao;
 	public $duracao;
-	public $instrumento;
+	public $professor;
 
 	public $id_instrumento;
 
 
-	public function __construct($id, $designacao, $duracao, $instrumento, $id_instrumento) {
+	public function __construct($id, $designacao, $duracao, $id_instrumento,$professor) {
 		$this->id = $id;
 		$this->designacao = $designacao;
-		$this->dataNasc = $duracao;
-		$this->habilitacoes = $instrumento;
+		$this->duracao = $duracao;
+		$this->professor = $professor;
 
 		$this->id_instrumento = $id_instrumento;
 	}
@@ -36,7 +36,7 @@ class Curso {
 	
 	}
 
-/*
+
 	public static function retrieve($order,$page,$number_of_records) {
 
 		$db = Db::getInstance();
@@ -44,18 +44,19 @@ class Curso {
 		$list = [];
 
 		//Query
-		$query_select = "SELECT * FROM Curso ORDER BY $order LIMIT $startpoint,$number_of_records";
+		$query_select = "SELECT * FROM curso_model ORDER BY $order LIMIT $startpoint,$number_of_records";
 		$result = $db->query($query_select);
 
 
 		// we create a list of Curso objects from the database results
 		foreach($result as $curs)
-			$list[] = new Curso($curs['id'],$curs['designacao'],$curs['duracao'],$curs['id_instrumento']);
+			$list[] = new Curso($curs['id_curso'],$curs['designacao'],$curs['duracao'],$curs['id_instrumento'],$curs['professor']);
 
 		return $list;
 	
 	}
 
+	/*
 
 	public static function update($id, $curs) {
 	

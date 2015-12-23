@@ -18,6 +18,10 @@
         require_once('models/instrumento.php');
         $controller = new InstrumentoController();
       break;
+      case 'aluno':
+        require_once('models/aluno.php');
+        $controller = new AlunoController();
+      break;
     }
 
     $controller->{ $action }();
@@ -26,8 +30,10 @@
   // we're adding an entry for the new controller and its actions
   $controllers = array('index' => ['home', 'error'],
                        'professor' => ['index','add','remove','exportxml','importxml'],
-                       'curso' =>['importxml'],
-                       'instrumento' =>['importxml']);
+                       'curso' =>['index','add','remove','exportxml','importxml'],
+                       'instrumento' =>['index','add','remove','exportxml','importxml'],
+                       'aluno' =>['index','add','remove','exportxml','importxml']
+                       );
 
   if (array_key_exists($controller, $controllers)) {
     if (in_array($action, $controllers[$controller])) {

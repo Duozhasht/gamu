@@ -1,14 +1,14 @@
 <?php
   class InstrumentoController {
 
-    /*
+    
     public function index() {
       //small script to change url
-      echo "<script>window.history.pushState('string', 'Index', 'http://localhost:8888/gamu/?controller=professor&action=index');</script>";
+      echo "<script>window.history.pushState('string', 'Index', 'http://localhost:8888/gamu/?controller=instrumento&action=index');</script>";
       //number of records per page and number of pages 
-      $nr_professores = Professor::count();
-      $number_of_records = 20;
-      $result_number=ceil($nr_professores/$number_of_records);
+      $nr_instrumentos = Instrumento::count();
+      $number_of_records = 40;
+      $result_number=ceil($nr_instrumentos/$number_of_records);
 
       //Check page rules (if is set, if not atributes 1 if it's higher or lower the same)
       if(isset($_GET['page']))
@@ -20,22 +20,22 @@
         $page=1;
 
       // Get profs
-      $professores = Professor::retrieve('Professor.id',$page,$number_of_records);
-      require_once('views/professor/index.php');
+      $instrumentos = Instrumento::retrieve('Instrumento.id_instrumento',$page,$number_of_records);
+      require_once('views/instrumento/index.php');
 
     }
 
 
     public function add() {
 
-        if(isset($_POST['nome'])&&isset($_POST['dataNasc'])&&isset($_POST['habilitacoes'])){
-              $aux = Professor::create('NULL',$_POST['nome'],$_POST['dataNasc'],$_POST['habilitacoes']);
+        if(isset($_POST['nome'])) {
+              $aux = Instrumento::create('NULL',$_POST['nome']);
               echo "Inserção Concluída com Sucesso";
             }
         else
             echo "Problemas!";
 
-      $controller = new ProfessorController();
+      $controller = new InstrumentoController();
       $controller->index();
 
     }
@@ -44,32 +44,30 @@
       
       if(isset($_GET['id']))
       {
-        $aux = Professor::delete($_GET['id']);
+        $aux = Instrumento::delete($_GET['id']);
       }
-      $controller = new ProfessorController();
+      $controller = new InstrumentoController();
       $controller->index();
 
     }
 
     public function exportxml(){
       
-      $file = 'public/xml/professores.xml';
+      $file = 'public/xml/instrumentos.xml';
 
-      $nr_professores = Professor::count();
-      $professores = Professor::retrieve('Professor.id',1,$nr_professores);
+      $nr_instrumentos = Instrumento::count();
+      $instrumentos = Instrumento::retrieve('id_instrumento',1,$nr_instrumentos);
 
-      $xmlstr = "<professores/>";
+      $xmlstr = "<?xml version='1.0' encoding='UTF-8'?>
+                 <instrumentos/>";
       $xml_file = new SimpleXMLElement($xmlstr);
 
       
-      foreach ($professores as $professor)
+      foreach ($instrumentos as $instrumento)
       {
-        $prof = $xml_file->addChild('professor');
-        $prof->addChild('id','p'.$professor->id);
-        $prof->addChild('nome',$professor->nome);
-        $prof->addChild('dataNasc',$professor->dataNasc);
-        $prof->addChild('habilitacoes',$professor->habilitacoes);
-
+        $inst = $xml_file->addChild('instrumento');
+        $inst->addChild('id','p'.$instrumento->id);
+        $inst->addChild('nome',$instrumento->nome);
       }
       //DOM conversion -> formatOutput needed
       $dom = new DOMDocument('1.0');
@@ -79,17 +77,13 @@
       $dom->save($file);
 
       echo "<script>
-              window.open('controllers/test.php', '_blank');
+              window.open('public/download_scripts/dw_i.php', '_blank');
             </script>";
-      $controller = new ProfessorController();
+      $controller = new InstrumentoController();
       $controller->index();      
 
     }
 
-
-
-
-  */
     public function importxml() {
         $instrumentos = simplexml_load_file("dataset/Finais/instrumentos.xml");
 
@@ -101,21 +95,7 @@
         echo "tudo okay!";
     }
   /*
-
   //CRUDE
-
-
-
-    public function show() {
-      // we expect a url of form ?controller=posts&action=show&id=x
-      // without an id we just redirect to the error page as we need the post id to find it in the database
-      if (!isset($_GET['id']))
-        return call('pages', 'error');
-
-      // we use the given id to get the right post
-      $post = Post::find($_GET['id']);
-      require_once('views/posts/show.php');
-    }
   */
   }
   

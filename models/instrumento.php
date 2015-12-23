@@ -41,7 +41,7 @@ class Instrumento {
 
 		// we create a list of Instruments objects from the database results
 		foreach($result as $inst)
-			$list[] = new Instrumento($inst['id'],$inst['nome']);
+			$list[] = new Instrumento($inst['id_instrumento'],$inst['nome']);
 
 		return $list;
 	

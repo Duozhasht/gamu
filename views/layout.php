@@ -35,16 +35,46 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Audições</a></li>
-            <li><a href="#">Gestão de Alunos</a></li>
-            <li class="dropdown active">
+            <li>
+              <a href="#">Audições</a></li>
+            <li>
+              <a href="#">Gestão de Alunos</a></li>
+            <li class="dropdown 
+                  <?php
+                    if($controller=='instrumento' | $controller=='curso' | $controller=='professor')
+                      echo "active";
+                  ?>
+
+            ">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gestão da Escola <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Instrumentos</a></li>
-                <li class="active"><a href="#">Professores</a></li>
-                <li><a href="#">Cursos</a></li>
+                <li
+                  <?php
+                    if($controller=='instrumento')
+                      echo "class='active'"
+                  ?>
+
+                >
+                  <a href="?controller=instrumento&action=index">Instrumentos</a>
+                </li>
+                <li
+                  <?php
+                    if($controller=='professor')
+                      echo "class='active'"
+                  ?>
+                >
+                  <a href="?controller=professor&action=index">Professores</a></li>
+                <li
+                <?php
+                  if($controller=='curso')
+                    echo "class='active'"
+                ?>
+                >
+                  <a href="?controller=curso&action=index">Cursos</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
+                <li>
+                  <a href="#">Separated link</a>
+                </li>
               </ul>
             </li>
             <li><a href="#"></a></li>
