@@ -1,0 +1,15 @@
+Lista de Tarefas
+
+
+PRI
+
+1) Fazer o FO->PDF para:
+	- alunos (individual para cada aluno como declaração de inscrição)
+	- a lista de alunos de um dado curso
+	- a lista de cursos da escola com o respectivo professor
+	- futuramente na parte da audição será preciso ter como resultado uma "brochura" da audição
+	(acho que para já é so, se achares importante mais alguma força)
+
+
+2) Fazer um Schema para cada entidade será utilizado no relatório e faz parte da materia de PRI
+
