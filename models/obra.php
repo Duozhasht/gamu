@@ -1,48 +1,50 @@
 <?php
-class Professor {
+class Obra {
 
 	public $id;
 	public $nome;
-	public $dataNasc;
-	public $habilitacoes;
-	public $curso;
-	public $instrumento;
+	public $descricao;
+	public $ano;
+	public $periodo;
+	public $duracao;
+	
 
-	public $id_curso;
-	public $id_instrumento;
+	public $id_compositor;
+	public $id_periodo;
 
 
-	public function __construct($id, $nome, $dataNasc, $habilitacoes, $curso, $instrumento, $id_curso,$id_instrumento) {
+	public function __construct($id, $nome, $descricao, $ano, $duracao, $periodo, $id_periodo, $id_compositor) {
 		$this->id = $id;
 		$this->nome = $nome;
-		$this->dataNasc = $dataNasc;
-		$this->habilitacoes = $habilitacoes;
-		$this->curso = $curso;
-		$this->instrumento = $instrumento;
+		$this->descricao = $descricao;
+		$this->ano = $ano;
+		$this->duracao = $duracao;
+		$this->periodo = $periodo;
 
-		$this->id_curso = $id_curso;
-		$this->id_instrumento = $id_instrumento;
+		$this->id_periodo = $id_periodo;
+		$this->id_compositor = $id_compositor;
+
 	}
 
 
 	public static function count() {
 		
 		$db = Db::getInstance();
-		$result_count = $db->query("SELECT COUNT(*) AS number FROM Professor");
+		$result_count = $db->query("SELECT COUNT(*) AS number FROM Obra");
 		$result_number = $result_count->fetch();
 		
 		return $result_number['number'];
 	}
 
-	public static function create($id, $nome, $dataNasc, $habilitacoes, $id_curso) {
+	public static function create($id, $nome, $descricao, $ano, $duracao, $id_periodo, $id_compositor) {
 	
 		$db = DB::getInstance();
-		$query_insert = "INSERT INTO Professor VALUES ('$id', '$nome', '$dataNasc', '$habilitacoes', '$id_curso')";
+		$query_insert = "INSERT INTO Obra VALUES ('$id', '$nome', '$descricao', '$ano', '$duracao', '$id_periodo', '$id_compositor')";
 		$result = $db->query($query_insert);
 	
 	}
 
-
+/*
 	public static function retrieve($order,$page,$number_of_records) {
 
 		$db = Db::getInstance();
@@ -90,6 +92,6 @@ class Professor {
 		return new Professor($prof['id'],$prof['nome'],$prof['data_de_nascimento'],$prof['habilitacoes']);
 
 	}
-
+*/
   }
   ?>

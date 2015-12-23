@@ -112,7 +112,7 @@
 	</div>
 </div>
 <div class="hiddenfile" style="width: 0px; height: 0px; overflow: hidden;">
-<form action='?controller=professor&action=importxml' method="post" accept-charset="utf-8">
+<form action='?controller=compositor&action=importxml' method="post" accept-charset="utf-8">
   <input name="upload" type="file" id="fileinput"/>
 </form>
 </div>

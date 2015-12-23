@@ -22,6 +22,18 @@
         require_once('models/aluno.php');
         $controller = new AlunoController();
       break;
+      case 'periodo':
+        require_once('models/periodo.php');
+        $controller = new PeriodoController();
+      break;      
+      case 'compositor':
+        require_once('models/compositor.php');
+        $controller = new CompositorController();
+      break;
+      case 'obra':
+        require_once('models/obra.php');
+        $controller = new ObraController();
+      break;
     }
 
     $controller->{ $action }();
@@ -32,7 +44,10 @@
                        'professor' => ['index','add','remove','exportxml','importxml'],
                        'curso' =>['index','add','remove','exportxml','importxml'],
                        'instrumento' =>['index','add','remove','exportxml','importxml'],
-                       'aluno' =>['index','add','remove','exportxml','importxml']
+                       'aluno' =>['index','add','remove','exportxml','importxml'],
+                       'periodo' =>['index','add','remove','exportxml','importxml'],
+                       'compositor' =>['index','add','remove','exportxml','importxml'],
+                       'obra' =>['index','add','remove','exportxml','importxml']
                        );
 
   if (array_key_exists($controller, $controllers)) {

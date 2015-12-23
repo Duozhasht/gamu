@@ -1,47 +1,44 @@
 <?php
-class Professor {
+class Compositor {
 
 	public $id;
 	public $nome;
+	public $bio;
 	public $dataNasc;
-	public $habilitacoes;
-	public $curso;
-	public $instrumento;
+	public $dataObito;
+	public $periodo;
 
-	public $id_curso;
-	public $id_instrumento;
+	public $id_periodo;
 
 
-	public function __construct($id, $nome, $dataNasc, $habilitacoes, $curso, $instrumento, $id_curso,$id_instrumento) {
+	public function __construct($id, $nome, $bio, $dataNasc, $dataObito, $periodo ,$id_periodo) {
 		$this->id = $id;
 		$this->nome = $nome;
-		$this->dataNasc = $dataNasc;
-		$this->habilitacoes = $habilitacoes;
-		$this->curso = $curso;
-		$this->instrumento = $instrumento;
+		$this->bio = $bio;
+		$this->dataObito = $dataObito;
+		$this->periodo = $periodo;
 
-		$this->id_curso = $id_curso;
-		$this->id_instrumento = $id_instrumento;
+		$this->id_periodo = $id_periodo;
 	}
 
 
 	public static function count() {
 		
 		$db = Db::getInstance();
-		$result_count = $db->query("SELECT COUNT(*) AS number FROM Professor");
+		$result_count = $db->query("SELECT COUNT(*) AS number FROM Compositor");
 		$result_number = $result_count->fetch();
 		
 		return $result_number['number'];
 	}
 
-	public static function create($id, $nome, $dataNasc, $habilitacoes, $id_curso) {
+	public static function create($id, $nome, $bio, $dataNasc, $dataObito, $id_periodo) {
 	
 		$db = DB::getInstance();
-		$query_insert = "INSERT INTO Professor VALUES ('$id', '$nome', '$dataNasc', '$habilitacoes', '$id_curso')";
+		$query_insert = "INSERT INTO Compositor VALUES ('$id', '$nome', '$bio', '$dataNasc', '$dataObito', '$id_periodo')";
 		$result = $db->query($query_insert);
 	
 	}
-
+/*
 
 	public static function retrieve($order,$page,$number_of_records) {
 
@@ -90,6 +87,8 @@ class Professor {
 		return new Professor($prof['id'],$prof['nome'],$prof['data_de_nascimento'],$prof['habilitacoes']);
 
 	}
+
+	*/
 
   }
   ?>

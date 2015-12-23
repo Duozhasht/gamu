@@ -109,8 +109,8 @@ CREATE TABLE IF NOT EXISTS `gamu`.`Compositor` (
   `id_compositor` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `nome` VARCHAR(45) NOT NULL COMMENT '',
   `bio` VARCHAR(5000) NOT NULL COMMENT '',
-  `data_de_nascimento` DATETIME NOT NULL COMMENT '',
-  `data_de_obito` DATETIME NOT NULL COMMENT '',
+  `data_de_nascimento` VARCHAR(45) NOT NULL COMMENT '',
+  `data_de_obito` VARCHAR(45) NOT NULL COMMENT '',
   `id_periodo` INT NOT NULL COMMENT '',
   PRIMARY KEY (`id_compositor`)  COMMENT '',
   INDEX `fk_compositor_periodo_idx` (`id_periodo` ASC)  COMMENT '',
@@ -132,14 +132,20 @@ CREATE TABLE IF NOT EXISTS `gamu`.`Obra` (
   `nome` VARCHAR(45) NOT NULL COMMENT '',
   `descricao` VARCHAR(45) NOT NULL COMMENT '',
   `ano` VARCHAR(45) NOT NULL COMMENT '',
-  `periodo` VARCHAR(45) NOT NULL COMMENT '',
+  `duracao` TIME NOT NULL COMMENT '',
+  `id_periodo` INT NOT NULL COMMENT '',
   `id_compositor` INT NOT NULL COMMENT '',
-  `duracao` INT NOT NULL COMMENT '',
   PRIMARY KEY (`id_obra`)  COMMENT '',
   INDEX `fk_obra_compositor_idx` (`id_compositor` ASC)  COMMENT '',
+  INDEX `fk_obra_periodo_idx` (`id_periodo` ASC)  COMMENT '',
   CONSTRAINT `fk_obra_compositor`
     FOREIGN KEY (`id_compositor`)
     REFERENCES `gamu`.`Compositor` (`id_compositor`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_obra_periodo`
+    FOREIGN KEY (`id_periodo`)
+    REFERENCES `gamu`.`Periodo` (`id_periodo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

@@ -1,6 +1,6 @@
 <?php
-  class ProfessorController {
-
+  class CompositorController {
+/*
     
     public function index() {
       //small script to change url
@@ -87,19 +87,19 @@
       $controller->index();      
 
     }
-
+*/
     public function importxml() {
-        $professores = simplexml_load_file("dataset/Finais/professores.xml");
+        $compositores = simplexml_load_file("dataset/Finais/compositores.xml");
 
-        foreach($professores as $professor) {
-          Professor::create(substr((string)$professor['id'],1),
-                                     (string)$professor->nome,
-                                     (string)$professor->dataNasc,
-                                     (string)$professor->habilitacoes,
-                               substr((string)$professor->curso,2));
+        foreach($compositores as $compositor) {
+          Compositor::create(substr((string)$compositor['id'],1),
+                                     (string)$compositor->nome,
+                                     'text',
+                                     (string)$compositor->dataNasc,
+                                     (string)$compositor->dataObito,
+                               substr((string)$compositor->periodo,2));
         }
-        echo getcwd();
-        echo "tudo okay!";
+
     }
 
 

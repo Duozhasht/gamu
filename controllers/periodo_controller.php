@@ -1,7 +1,7 @@
 <?php
-  class ProfessorController {
+  class PeriodoController {
 
-    
+    /*
     public function index() {
       //small script to change url
       echo "<script>window.history.pushState('string', 'Index', 'http://localhost:8888/gamu/?controller=professor&action=index');</script>";
@@ -88,18 +88,17 @@
 
     }
 
-    public function importxml() {
-        $professores = simplexml_load_file("dataset/Finais/professores.xml");
+*/
 
-        foreach($professores as $professor) {
-          Professor::create(substr((string)$professor['id'],1),
-                                     (string)$professor->nome,
-                                     (string)$professor->dataNasc,
-                                     (string)$professor->habilitacoes,
-                               substr((string)$professor->curso,2));
+    public function importxml() {
+        $periodos = simplexml_load_file("dataset/Finais/periodos.xml");
+
+        foreach($periodos as $periodo) {
+          Periodo::create(substr((string)$periodo['id'],2),
+                                   (string)$periodo
+                                   );
         }
-        echo getcwd();
-        echo "tudo okay!";
+
     }
 
 
