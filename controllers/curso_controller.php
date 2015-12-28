@@ -25,17 +25,24 @@
 
     }
 
-    /*
+    
     public function add() {
 
-        if(isset($_POST['nome'])&&isset($_POST['dataNasc'])&&isset($_POST['habilitacoes'])){
-              $aux = Professor::create('NULL',$_POST['nome'],$_POST['dataNasc'],$_POST['habilitacoes']);
+        if(isset($_POST['curso'])&&isset($_POST['id_instrumento'])){
+              $instrumento = Instrumento::find($_POST['id_instrumento']);
+              $duracao = 0;
+
+              if(strpos($_POST['curso'], 'Supletivo') != FALSE)
+                $duracao = 3;
+              else
+                $duracao = 5;
+              $aux = Curso::create('NULL',$_POST['curso'].$instrumento->nome,$duracao,$_POST['id_instrumento']);
               echo "Inserção Concluída com Sucesso";
             }
         else
             echo "Problemas!";
 
-      $controller = new ProfessorController();
+      $controller = new CursoController();
       $controller->index();
 
     }
@@ -44,31 +51,35 @@
       
       if(isset($_GET['id']))
       {
-        $aux = Professor::delete($_GET['id']);
+        $aux = Curso::delete($_GET['id']);
       }
-      $controller = new ProfessorController();
+      $controller = new CursoController();
       $controller->index();
 
     }
 
     public function exportxml(){
       
-      $file = 'public/xml/professores.xml';
+      $file = 'public/xml/cursos.xml';
 
-      $nr_professores = Professor::count();
-      $professores = Professor::retrieve('Professor.id',1,$nr_professores);
+      $nr_cursos = Curso::count();
+      $cursos = Curso::retrieve('id_curso',1,$nr_cursos);
 
-      $xmlstr = "<professores/>";
+      $xmlstr = "<?xml version='1.0' encoding='UTF-8'?>
+                 <cursos/>";
       $xml_file = new SimpleXMLElement($xmlstr);
 
       
-      foreach ($professores as $professor)
+      foreach ($cursos as $curso)
       {
-        $prof = $xml_file->addChild('professor');
-        $prof->addChild('id','p'.$professor->id);
-        $prof->addChild('nome',$professor->nome);
-        $prof->addChild('dataNasc',$professor->dataNasc);
-        $prof->addChild('habilitacoes',$professor->habilitacoes);
+        $cu = $xml_file->addChild('curso');
+        $cu->addAttribute('id','p'.$curso->id);
+        $cu->addChild('designacao',$curso->designacao);
+        $cu->addChild('dataNasc',$curso->duracao);
+        if(strpos($curso->designacao,'Supletivo') != FALSE)
+          $cu->addChild('instrumento','CS'.$curso->id_instrumento);
+        else
+          $cu->addChild('instrumento','CB'.$curso->id_instrumento);
 
       }
       //DOM conversion -> formatOutput needed
@@ -79,13 +90,13 @@
       $dom->save($file);
 
       echo "<script>
-              window.open('controllers/test.php', '_blank');
+              window.open('public/download_scripts/dw_c.php', '_blank');
             </script>";
-      $controller = new ProfessorController();
+      $controller = new CursoController();
       $controller->index();      
 
     }
-*/
+
 
     public function importxml() {
         $filename = 'dataset/Finais/cursos.xml';
@@ -98,7 +109,6 @@
                         substr((string)$curso->instrumento['id_instrumento'],1));
         }
 
-        echo "tudo okay!";
     }
 
 

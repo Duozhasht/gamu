@@ -31,7 +31,10 @@
 								echo "<td>C".$curso->id."</td>";
 								echo "<td>".$curso->designacao."</td>";
 								echo "<td class='text-center'>".$curso->duracao." anos</td>";
-								echo "<td>".$curso->professor."</td>";
+								if(isset($curso->professor))
+									echo "<td>".$curso->professor."</td>";
+								else
+									echo "<td>n/a</td>";
 								echo "<td>
 									  <a href='#'><i class='fa fa-pencil-square-o'></i></a>
 									  </td>
@@ -76,37 +79,54 @@
 	</div>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="professorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="insertModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Adicionar Professor</h4>
+				<h4 class="modal-title" id="myModalLabel">Adicionar Curso</h4>
 			</div>
 			<div class="modal-body">
 				<div class="row">
-					<div class="col-md-12">
-						<form action='?controller=professor&action=add' method="post" accept-charset="utf-8">
-							<div class="form-group">
-								<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Professor">
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="dataNasc" name="dataNasc" placeholder="Data de Nascimento">
-							</div>
-							<select class="form-control" name="habilitacoes">
-								<?php
-									
-								?>
-								<option value="Default">Default</option>
-							</select>
-							
+					<form action='?controller=curso&action=add' method="post" accept-charset="utf-8">
+						<div class="col-md-6">
+
+								<label class="radio-inline">
+								<input type="radio" name="curso" value="Curso Básico de " checked="checked">
+								Curso Básico
+								</label>
 						</div>
-					</div>
+						<div class="col-md-6">
+
+								<label class="radio-inline">
+								<input type="radio" name="curso" value="Curso Supletivo de ">
+								Curso Supletivo
+								</label>
+
+						</div>
+						<br><br>
+				
+						<div class="col-md-12">
+							
+							<select class="form-control" name="id_instrumento">
+									
+									<?php
+										//echo "<option value='' disabled selected>Escolha um Curso</option>";
+										$nr_instrumentos = Instrumento::count();
+										$instrumentos = Instrumento::retrieve('id_instrumento',1,$nr_instrumentos);
+										
+										foreach ($instrumentos as $instrumento) {
+											echo "<option value='".$instrumento->id."'>".$instrumento->nome."</option>";
+										}
+									?>	
+							</select>
+						</div>
 				</div>
-				<div class="modal-footer">
-					<button type="submit" class="btn btn-primary">Adicionar</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-primary">Adicionar</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					</form>
 			</div>
 		</div>
 	</div>
@@ -120,7 +140,7 @@
 
 <script type="text/javascript">
 function showModal(){
-	$('#professorModal').modal('show');};
+	$('#insertModal').modal('show');};
 function inputXML(){
 	$('#fileinput').trigger('click'); 
 }

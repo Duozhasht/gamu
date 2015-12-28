@@ -72,37 +72,28 @@
 	</div>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="professorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="insertModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Adicionar Professor</h4>
+				<h4 class="modal-title" id="myModalLabel">Adicionar Instrumento</h4>
 			</div>
 			<div class="modal-body">
 				<div class="row">
-					<div class="col-md-12">
-						<form action='?controller=professor&action=add' method="post" accept-charset="utf-8">
+					<form action='?controller=instrumento&action=add' method="post" accept-charset="utf-8">
+				
+						<div class="col-md-12">
 							<div class="form-group">
-								<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Professor">
+								<input type="text" class="form-control" id="designacao" name="designacao" placeholder="Nome do Instrumento">
 							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="dataNasc" name="dataNasc" placeholder="Data de Nascimento">
-							</div>
-							<select class="form-control" name="habilitacoes">
-								<?php
-									
-								?>
-								<option value="Default">Default</option>
-							</select>
-							
 						</div>
-					</div>
 				</div>
-				<div class="modal-footer">
-					<button type="submit" class="btn btn-primary">Adicionar</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-primary">Adicionar</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					</form>
 			</div>
 		</div>
 	</div>
@@ -116,7 +107,7 @@
 
 <script type="text/javascript">
 function showModal(){
-	$('#professorModal').modal('show');};
+	$('#insertModal').modal('show');};
 function inputXML(){
 	$('#fileinput').trigger('click'); 
 }

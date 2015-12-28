@@ -16,8 +16,9 @@
 					<tr>
 						<th width='5%'>#</th>
 						<th width='40%'>Nome</th>
-						<th width='20%'>Data de Nascimento</th>
-						<th width='27%'>Curso</th>
+						<th width='15%'>Data de Nascimento</th>
+						<th width='7%'>Ano</th>
+						<th width='25%'>Curso</th>
 						<th width='4%'></th>
 						<th width='4%'></th>
 					</tr>
@@ -31,6 +32,7 @@
 								echo "<td>P".$aluno->id."</td>";
 								echo "<td>".$aluno->nome."</td>";
 								echo "<td>".$aluno->dataNasc."</td>";
+								echo "<td>".$aluno->anocurso."º ano</td>";
 								echo "<td>".$aluno->curso."</td>";
 								echo "<td>
 									  <a href='#'><i class='fa fa-pencil-square-o'></i></a>
@@ -56,10 +58,22 @@
 						   </a>
 						  </li>";
 				for ($i=1; $i <=$result_number ; $i++) {
+					if($i<$page-2){
+						if($i==1)
+							echo   "<li><a href='?controller=aluno&action=index&page=".$i."'>...</a></li>";
+						continue;
+					}
+
+
 					if($page==$i)
 						echo   "<li class='active'><a href='?controller=aluno&action=index&page=".$i."'>".$i."</a></li>";
 					else
 						echo   "<li><a href='?controller=aluno&action=index&page=".$i."'>".$i."</a></li>";
+					if($i>$page+2){
+						echo   "<li><a href='?controller=aluno&action=index&page=".$result_number."'>...</a></li>";
+						break;	
+					}
+
 				}
 				if($page+1>$result_number)
 					echo "<li class='disabled'><a href=''";
@@ -75,42 +89,59 @@
 		</div>
 	</div>
 </div>
+
 <!-- Modal -->
-<div class="modal fade" id="professorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="insertModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Adicionar Professor</h4>
+				<h4 class="modal-title" id="myModalLabel">Adicionar Aluno</h4>
 			</div>
 			<div class="modal-body">
 				<div class="row">
-					<div class="col-md-12">
-						<form action='?controller=professor&action=add' method="post" accept-charset="utf-8">
+					<form action='?controller=aluno&action=add' method="post" accept-charset="utf-8">
+						<div class="col-md-12">
 							<div class="form-group">
-								<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Professor">
+								<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Aluno">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="dataNasc" name="dataNasc" placeholder="Data de Nascimento">
+								<input type="date" class="form-control" id="dataNasc" name="dataNasc" placeholder="Data de Nascimento">
 							</div>
-							<select class="form-control" name="habilitacoes">
-								<?php
-									
-								?>
-								<option value="Default">Default</option>
-							</select>
-							
 						</div>
-					</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<input type="number" class="form-control" id="anoCurso" name="anoCurso" placeholder="Ano a Frequentar">
+								</div>
+						</div>					
+						<div class="col-md-8">
+							
+							<select class="form-control" name="id_curso">
+									
+									<?php
+										//echo "<option value='' disabled selected>Escolha um Curso</option>";
+										$nr_cursos = Curso::count();
+										$cursos = Curso::retrieve('id_curso',1,100);
+										
+										foreach ($cursos as $curso) {
+											echo "<option value='".$curso->id."'>".$curso->designacao."</option>";
+										}
+									?>	
+							</select>
+						</div>
 				</div>
-				<div class="modal-footer">
-					<button type="submit" class="btn btn-primary">Adicionar</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-primary">Adicionar</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					</form>
 			</div>
 		</div>
 	</div>
 </div>
+
+
+
 <div class="hiddenfile" style="width: 0px; height: 0px; overflow: hidden;">
 <form action='?controller=aluno&action=importxml' method="post" accept-charset="utf-8">
   <input name="upload" type="file" id="fileinput"/>
@@ -120,7 +151,7 @@
 
 <script type="text/javascript">
 function showModal(){
-	$('#professorModal').modal('show');};
+	$('#insertModal').modal('show');};
 function inputXML(){
 	$('#fileinput').trigger('click'); 
 }

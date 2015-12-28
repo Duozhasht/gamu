@@ -28,8 +28,8 @@
 
     public function add() {
 
-        if(isset($_POST['nome'])) {
-              $aux = Instrumento::create('NULL',$_POST['nome']);
+        if(isset($_POST['designacao'])) {
+              $aux = Instrumento::create('NULL',$_POST['designacao']);
               echo "Inserção Concluída com Sucesso";
             }
         else

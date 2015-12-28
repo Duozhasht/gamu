@@ -29,7 +29,7 @@
     public function add() {
 
         if(isset($_POST['nome'])&&isset($_POST['dataNasc'])&&isset($_POST['habilitacoes'])){
-              $aux = Professor::create('NULL',$_POST['nome'],$_POST['dataNasc'],$_POST['habilitacoes']);
+              $aux = Professor::create('NULL',$_POST['nome'],$_POST['dataNasc'],$_POST['habilitacoes'],$_POST['id_curso']);
               echo "Inserção Concluída com Sucesso";
             }
         else

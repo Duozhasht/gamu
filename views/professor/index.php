@@ -28,16 +28,16 @@
 							foreach ($professores as $professor)
 							{
 								echo "<tr>";
-								echo "<td>P".$professor->id."</td>";
-								echo "<td>".$professor->nome."</td>";
-								echo "<td>".$professor->dataNasc."</td>";
-								echo "<td>".$professor->habilitacoes."</td>";
-								echo "<td>
-									  <a href='#'><i class='fa fa-pencil-square-o'></i></a>
-									  </td>
-									  <td>
-									  <a href='?controller=professor&action=remove&id=".$professor->id."'><i class='fa fa-times'></i></a>
-									  </td>";
+									echo "<td>P".$professor->id."</td>";
+									echo "<td>".$professor->nome."</td>";
+									echo "<td>".$professor->dataNasc."</td>";
+									echo "<td>".$professor->habilitacoes."</td>";
+									echo "<td>
+											<a href='#'><i class='fa fa-pencil-square-o'></i></a>
+										</td>
+										<td>
+											<a href='?controller=professor&action=remove&id=".$professor->id."'><i class='fa fa-times'></i></a>
+										</td>";
 								echo "</tr>";
 							}
 					?>
@@ -45,31 +45,31 @@
 			</table>
 			<?php
 				echo "<nav class='text-center'>
-					  <ul class='pagination'>";
-															
-				if($page-1<1)
-					echo "<li class='disabled'><a href=''";
-				else
-					echo "<li><a href='?controller=professor&action=index&page=".($page-1)."'";
-					echo "aria-label='Previous'>
-						   <span aria-hidden='true'>&laquo;</span>
-						   </a>
-						  </li>";
-				for ($i=1; $i <=$result_number ; $i++) {
-					if($page==$i)
-						echo   "<li class='active'><a href='?controller=professor&action=index&page=".$i."'>".$i."</a></li>";
-					else
-						echo   "<li><a href='?controller=professor&action=index&page=".$i."'>".$i."</a></li>";
-				}
-				if($page+1>$result_number)
-					echo "<li class='disabled'><a href=''";
-				else
-					echo "<li><a href='?controller=professor&action=index&page=".($page+1)."'";
-					echo "aria-label='Next'>
-						  <span aria-hidden='true'>&raquo;</span>
-						  </a>
-						  </li>
-						 </ul>
+						<ul class='pagination'>";
+																	
+						if($page-1<1)
+							echo "<li class='disabled'><a href=''";
+							else
+								echo "<li><a href='?controller=professor&action=index&page=".($page-1)."'";
+									echo "aria-label='Previous'>
+										<span aria-hidden='true'>&laquo;</span>
+									</a>
+								</li>";
+						for ($i=1; $i <=$result_number ; $i++) {
+							if($page==$i)
+								echo   "<li class='active'><a href='?controller=professor&action=index&page=".$i."'>".$i."</a></li>";
+							else
+								echo   "<li><a href='?controller=professor&action=index&page=".$i."'>".$i."</a></li>";
+						}
+						if($page+1>$result_number)
+							echo "<li class='disabled'><a href=''";
+							else
+								echo "<li><a href='?controller=professor&action=index&page=".($page+1)."'";
+									echo "aria-label='Next'>
+										<span aria-hidden='true'>&raquo;</span>
+									</a>
+								</li>
+							</ul>
 						</nav>";
 			?>
 		</div>
@@ -87,18 +87,49 @@
 				<div class="row">
 					<div class="col-md-12">
 						<form action='?controller=professor&action=add' method="post" accept-charset="utf-8">
-							<div class="form-group">
-								<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Professor">
+							
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Professor">
+								</div>
+								<div class="form-group">
+									<input type="date" class="form-control" id="dataNasc" name="dataNasc" placeholder="Data de Nascimento">
+								</div>
 							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="dataNasc" name="dataNasc" placeholder="Data de Nascimento">
-							</div>
-							<select class="form-control" name="habilitacoes">
-								<?php
+							<div class="col-md-12">
+								
+								<select class="form-control" name="id_curso">
 									
-								?>
-								<option value="Default">Default</option>
-							</select>
+									<?php
+										//echo "<option value='' disabled selected>Escolha um Curso</option>";
+										$nr_cursos = Curso::count();
+										$cursos = Curso::retrieve('id_curso',1,100);
+										
+										foreach ($cursos as $curso) {
+											echo "<option value='".$curso->id."'>".$curso->designacao."</option>";
+										}
+									?>
+								</select>
+							</div>
+							<div class="col-md-12">
+								<br>
+								<div class="radio">
+									<label class="radio-inline">
+										<input type="radio" name="habilitacoes" value="Licenciatura" checked="checked">
+										Licenciatura
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="habilitacoes" value="Mestrado">
+										Mestrado
+									</label>
+									<label class="radio-inline">
+									</label>
+									<h6 class="radio-inline text-muted" style="cursor:default;">
+										Habilitações do Professor
+									</h6>
+								</div>
+
+							</div>
 							
 						</div>
 					</div>
@@ -112,16 +143,14 @@
 	</div>
 </div>
 <div class="hiddenfile" style="width: 0px; height: 0px; overflow: hidden;">
-<form action='?controller=professor&action=importxml' method="post" accept-charset="utf-8">
-  <input name="upload" type="file" id="fileinput"/>
-</form>
+	<form action='?controller=professor&action=importxml' method="post" accept-charset="utf-8">
+		<input name="upload" type="file" id="fileinput"/>
+	</form>
 </div>
-
-
 <script type="text/javascript">
 function showModal(){
 	$('#professorModal').modal('show');};
 function inputXML(){
-	$('#fileinput').trigger('click'); 
+	$('#fileinput').trigger('click');
 }
 </script>

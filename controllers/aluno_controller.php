@@ -19,23 +19,22 @@
       else
         $page=1;
 
-      // Get profs
+      // Get Students
       $alunos = Aluno::retrieve('id_aluno',$page,$number_of_records);
       require_once('views/aluno/index.php');
 
     }
 
-/*
     public function add() {
 
-        if(isset($_POST['nome'])&&isset($_POST['dataNasc'])&&isset($_POST['habilitacoes'])){
-              $aux = Professor::create('NULL',$_POST['nome'],$_POST['dataNasc'],$_POST['habilitacoes']);
+        if(isset($_POST['nome'])&&isset($_POST['dataNasc'])&&isset($_POST['anoCurso'])&&isset($_POST['id_curso'])){
+              $aux = Aluno::create('NULL',$_POST['nome'],$_POST['dataNasc'],$_POST['id_curso'],$_POST['anoCurso']);
               echo "Inserção Concluída com Sucesso";
             }
         else
             echo "Problemas!";
 
-      $controller = new ProfessorController();
+      $controller = new AlunoController();
       $controller->index();
 
     }
@@ -44,35 +43,36 @@
       
       if(isset($_GET['id']))
       {
-        $aux = Professor::delete($_GET['id']);
+        $aux = Aluno::delete($_GET['id']);
       }
-      $controller = new ProfessorController();
+      $controller = new AlunoController();
       $controller->index();
 
     }
 
     public function exportxml(){
       
-      $file = 'public/xml/professores.xml';
+      $file = 'public/xml/alunos.xml';
 
-      $nr_professores = Professor::count();
-      $professores = Professor::retrieve('id_professor',1,$nr_professores);
+      $nr_alunos = Aluno::count();
+      $alunos = Aluno::retrieve('id_aluno',1,$nr_alunos);
 
       $xmlstr = "<?xml version='1.0' encoding='UTF-8'?>
-                 <professores/>";
+                 <alunos/>";
       $xml_file = new SimpleXMLElement($xmlstr);
 
       
-      foreach ($professores as $professor)
+      foreach ($alunos as $aluno)
       {
-        $prof = $xml_file->addChild('professor');
-        $prof->addAttribute('id','p'.$professor->id);
-        $prof->addChild('nome',$professor->nome);
-        $prof->addChild('dataNasc',$professor->dataNasc);
-        $prof->addChild('habilitacoes',$professor->habilitacoes);
-        $prof->addChild('curso',$professor->id_curso);
+        $alu = $xml_file->addChild('aluno');
+        $alu->addAttribute('id','a'.$aluno->id);
+        $alu->addChild('nome',$aluno->nome);
+        $alu->addChild('dataNasc',$aluno->dataNasc);
+        $alu->addChild('curso',$aluno->id_curso);
+        $alu->addChild('anoCurso',$aluno->anocurso);
 
       }
+      
       //DOM conversion -> formatOutput needed
       $dom = new DOMDocument();
       $dom->preserveWhiteSpace = false;
@@ -81,13 +81,13 @@
       $dom->save($file);
 
       echo "<script>
-              window.open('public/download_scripts/dw_p.php', '_blank');
+              window.open('public/download_scripts/dw_a.php', '_blank');
             </script>";
-      $controller = new ProfessorController();
+      $controller = new AlunoController();
       $controller->index();      
 
     }
-*/
+
     public function importxml() {
         $alunos = simplexml_load_file("dataset/Finais/alunos.xml");
 
@@ -99,8 +99,6 @@
                                      (string)$aluno->anoCurso);
         }
         //  $id, $nome, $dataNasc, $id_curso,$anocurso
-        echo getcwd();
-        echo "tudo okay!";
     }
 
   }

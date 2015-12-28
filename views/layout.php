@@ -35,10 +35,49 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="#">Audições</a></li>
-            <li>
-              <a href="#">Gestão de Alunos</a></li>
+            <li class="dropdown 
+                  <?php
+                    if($controller=='compositor' | $controller=='obra' | $controller=='periodo')
+                      echo "active";
+                  ?>
+
+            ">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gestão de Audições <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li
+                <?php
+                  if($controller=='audicao')
+                    echo "class='active'"
+                ?>
+                >
+                  <a href="?controller=audicao&action=index">Audições</a></li>
+                <li role="separator" class="divider"></li>
+                <li
+                  <?php
+                    if($controller=='obra')
+                      echo "class='active'"
+                  ?>
+
+                >
+                  <a href="?controller=obra&action=index">Obras</a>
+                </li>
+                <li
+                  <?php
+                    if($controller=='compositor')
+                      echo "class='active'"
+                  ?>
+                >
+                  <a href="?controller=compositor&action=index">Compositores</a></li>
+
+              </ul>
+            </li>
+            <li
+            <?php
+                    if($controller=='aluno')
+                      echo "class='active'"
+            ?>
+            >
+              <a href="?controller=aluno&action=index">Gestão de Alunos</a></li>
             <li class="dropdown 
                   <?php
                     if($controller=='instrumento' | $controller=='curso' | $controller=='professor')
