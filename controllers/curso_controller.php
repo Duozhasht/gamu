@@ -28,7 +28,7 @@
     
     public function add() {
 
-        if(isset($_POST['curso'])&&isset($_POST['id_instrumento'])){
+        if(!empty($_POST['curso'])&&!empty($_POST['id_instrumento'])){
               $instrumento = Instrumento::find($_POST['id_instrumento']);
               $duracao = 0;
 
@@ -37,10 +37,18 @@
               else
                 $duracao = 5;
               $aux = Curso::create('NULL',$_POST['curso'].$instrumento->nome,$duracao,$_POST['id_instrumento']);
-              echo "Inserção Concluída com Sucesso";
+              echo "
+                    <div class='alert alert-success text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Inserção Concluída com Sucesso
+                    </div>
+                  ";
             }
         else
-            echo "Problemas!";
+            echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Problemas no preenchimento de pelo menos um dos campos!
+                  </div>";
 
       $controller = new CursoController();
       $controller->index();
