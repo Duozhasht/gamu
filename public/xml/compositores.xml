@@ -28,13 +28,6 @@
     <dataObito>1706-03-09</dataObito>
     <curso>PE3</curso>
   </compositor>
-  <compositor id="C10">
-    <nome>Marc-Antoine Charpentier</nome>
-    <bio>text</bio>
-    <dataNasc>1643</dataNasc>
-    <dataObito>1704-02-24</dataObito>
-    <curso>PE2</curso>
-  </compositor>
   <compositor id="C12">
     <nome>Peri, Jacopo</nome>
     <bio>text</bio>
@@ -1175,5 +1168,12 @@
     <dataNasc>1724-12-08</dataNasc>
     <dataObito>1799-05-09</dataObito>
     <curso>PE3</curso>
+  </compositor>
+  <compositor id="C338">
+    <nome>Um novo</nome>
+    <bio>Este compositor era muita fixe</bio>
+    <dataNasc>1900-10-12</dataNasc>
+    <dataObito>1987-05-12</dataObito>
+    <curso>PE6</curso>
   </compositor>
 </compositores>
