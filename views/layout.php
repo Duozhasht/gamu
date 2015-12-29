@@ -14,6 +14,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Custom CSS  -->
+    <link rel="stylesheet" type="text/css" href="public/gamu.css?reload">
+
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -31,14 +35,53 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">GAM&mu;</a>
+          <a class="navbar-brand" href="?controller=index&action=home">GAM&mu;</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="#">Audições</a></li>
-            <li>
-              <a href="#">Gestão de Alunos</a></li>
+            <li class="dropdown 
+                  <?php
+                    if($controller=='compositor' | $controller=='obra' | $controller=='periodo')
+                      echo "active";
+                  ?>
+
+            ">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gestão de Audições <span class="caret"></span></a>
+              <ul id ="ga" class="dropdown-menu">
+                <li
+                <?php
+                  if($controller=='audicao')
+                    echo "class='active'"
+                ?>
+                >
+                  <a href="?controller=audicao&action=index">Audições</a></li>
+                <li role="separator" class="divider"></li>
+                <li
+                  <?php
+                    if($controller=='obra')
+                      echo "class='active'"
+                  ?>
+
+                >
+                  <a href="?controller=obra&action=index">Obras</a>
+                </li>
+                <li
+                  <?php
+                    if($controller=='compositor')
+                      echo "class='active'"
+                  ?>
+                >
+                  <a href="?controller=compositor&action=index">Compositores</a></li>
+
+              </ul>
+            </li>
+            <li
+            <?php
+                    if($controller=='aluno')
+                      echo "class='active'"
+            ?>
+            >
+              <a href="?controller=aluno&action=index">Gestão de Alunos</a></li>
             <li class="dropdown 
                   <?php
                     if($controller=='instrumento' | $controller=='curso' | $controller=='professor')
@@ -47,16 +90,7 @@
 
             ">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gestão da Escola <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li
-                  <?php
-                    if($controller=='instrumento')
-                      echo "class='active'"
-                  ?>
-
-                >
-                  <a href="?controller=instrumento&action=index">Instrumentos</a>
-                </li>
+              <ul id ="ge" class="dropdown-menu">
                 <li
                   <?php
                     if($controller=='professor')
@@ -72,8 +106,14 @@
                 >
                   <a href="?controller=curso&action=index">Cursos</a></li>
                 <li role="separator" class="divider"></li>
-                <li>
-                  <a href="#">Separated link</a>
+                <li
+                  <?php
+                    if($controller=='instrumento')
+                      echo "class='active'"
+                  ?>
+
+                >
+                  <a href="?controller=instrumento&action=index">Instrumentos</a>
                 </li>
               </ul>
             </li>

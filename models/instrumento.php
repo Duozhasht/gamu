@@ -68,11 +68,11 @@ class Instrumento {
 	public static function find($id) {
 
 		$db = DB::getInstance();
-		$query_find = "SELECT * FROM Instrumento WHERE id = $id";
+		$query_find = "SELECT * FROM Instrumento WHERE id_instrumento = $id";
 
 		$result = $db->query($query_find);
 		$inst = $result->fetch();
-		return new Instrumento($inst['id'],$inst['nome']);
+		return new Instrumento($inst['id_instrumento'],$inst['nome']);
 
 	}
 

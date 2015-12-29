@@ -7,10 +7,12 @@
         $controller = new IndexController();
       break;
       case 'professor':
+        require_once('models/curso.php');
         require_once('models/professor.php');
         $controller = new ProfessorController();
       break;
       case 'curso':
+        require_once('models/instrumento.php');
         require_once('models/curso.php');
         $controller = new CursoController();
       break;
@@ -19,6 +21,7 @@
         $controller = new InstrumentoController();
       break;
       case 'aluno':
+        require_once('models/curso.php');
         require_once('models/aluno.php');
         $controller = new AlunoController();
       break;
@@ -27,10 +30,12 @@
         $controller = new PeriodoController();
       break;      
       case 'compositor':
+        require_once('models/periodo.php');
         require_once('models/compositor.php');
         $controller = new CompositorController();
       break;
       case 'obra':
+        require_once('models/periodo.php');
         require_once('models/obra.php');
         $controller = new ObraController();
       break;

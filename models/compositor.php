@@ -15,6 +15,7 @@ class Compositor {
 		$this->id = $id;
 		$this->nome = $nome;
 		$this->bio = $bio;
+		$this->dataNasc = $dataNasc;
 		$this->dataObito = $dataObito;
 		$this->periodo = $periodo;
 
@@ -38,7 +39,7 @@ class Compositor {
 		$result = $db->query($query_insert);
 	
 	}
-/*
+
 
 	public static function retrieve($order,$page,$number_of_records) {
 
@@ -46,20 +47,21 @@ class Compositor {
 		$startpoint=($page-1)*$number_of_records;
 		$list = [];
 
-		//Query
-		$query_select = "SELECT * from professor_model ORDER BY $order LIMIT $startpoint,$number_of_records";
+
+		$query_select = "SELECT * from compositor_model ORDER BY $order LIMIT $startpoint,$number_of_records";
 		$result = $db->query($query_select);
 
 
-		// we create a list of Professor objects from the database results
-		foreach($result as $prof)
-			$list[] = new Professor($prof['id_professor'],$prof['nome'],$prof['data_de_nascimento'],$prof['habilitacoes'],$prof['curso'],$prof['instrumento'],$prof['id_curso'],$prof['id_instrumento']);
+		
+		foreach($result as $comp)
+			$list[] = new Compositor($comp['id_compositor'],$comp['nome'],$comp['bio'],$comp['data_de_nascimento'],$comp['data_de_obito'],$comp['periodo'],$comp['id_periodo']);
+
 
 		return $list;
 	
 	}
 
-
+/*
 	public static function update($id, $prof) {
 	
 		$db = DB::getInstance();
@@ -68,11 +70,11 @@ class Compositor {
 
 	}
 
-
+*/
 	public static function delete($id) {
 
 		$db = DB::getInstance();
-		$query_delete = "DELETE FROM Professor WHERE id=$id";
+		$query_delete = "DELETE FROM Compositor WHERE id_compositor=$id";
 		$result = $db->query($query_delete);
 
 	}
@@ -80,15 +82,15 @@ class Compositor {
 	public static function find($id) {
 
 		$db = DB::getInstance();
-		$query_find = "SELECT * FROM Professor WHERE id = $id";
+		$query_find = "SELECT * FROM Compositor WHERE id_compositor = $id";
 
 		$result = $db->query($query_find);
 		$prof = $result->fetch();
-		return new Professor($prof['id'],$prof['nome'],$prof['data_de_nascimento'],$prof['habilitacoes']);
+		return new Compositor($comp['id_compositor'],$comp['nome'],$comp['bio'],$comp['data_de_nascimento'],$comp['data_de_obito'],$comp['periodo'],$comp['id_periodo']);
 
 	}
 
-	*/
+
 
   }
   ?>

@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compositores>
+  <compositor id="C2">
+    <nome>Dieterich Buxtehude</nome>
+    <bio>text</bio>
+    <dataNasc>1637</dataNasc>
+    <dataObito>1707</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C4">
+    <nome>Giovanni Gabrieli</nome>
+    <bio>text</bio>
+    <dataNasc>1554</dataNasc>
+    <dataObito>1612</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C6">
+    <nome>Johann Joachim Quantz</nome>
+    <bio>text</bio>
+    <dataNasc>1697-01-30</dataNasc>
+    <dataObito>1773-07-12</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C8">
+    <nome>Johann Pachelbel</nome>
+    <bio>text</bio>
+    <dataNasc>1653-09-01</dataNasc>
+    <dataObito>1706-03-09</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C12">
+    <nome>Peri, Jacopo</nome>
+    <bio>text</bio>
+    <dataNasc>1561-08-20</dataNasc>
+    <dataObito>1633-08-12</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C14">
+    <nome>Rameau, Jean-Philippe</nome>
+    <bio>text</bio>
+    <dataNasc>1683-09-25</dataNasc>
+    <dataObito>1764-09-12</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C16">
+    <nome>Johann Christoph(er) Pepusch</nome>
+    <bio>text</bio>
+    <dataNasc>1667</dataNasc>
+    <dataObito>1752-07-20</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C18">
+    <nome>John Blow</nome>
+    <bio>text</bio>
+    <dataNasc>1649-02-23</dataNasc>
+    <dataObito>1708-10-01</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C20">
+    <nome>Thomas Arne</nome>
+    <bio>text</bio>
+    <dataNasc>1710-03-12</dataNasc>
+    <dataObito>1778-03-05</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C22">
+    <nome>Thomas Campion</nome>
+    <bio>text</bio>
+    <dataNasc>1567-02-12</dataNasc>
+    <dataObito>1620-03-01</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C24">
+    <nome>Louis-Claude Daquin</nome>
+    <bio>text</bio>
+    <dataNasc>1694-07-04</dataNasc>
+    <dataObito>1772-06-15</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C26">
+    <nome>Alessandro Marcello</nome>
+    <bio>text</bio>
+    <dataNasc>1673-02-01</dataNasc>
+    <dataObito>1747-06-19</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C28">
+    <nome>Baldassare Galuppi</nome>
+    <bio>text</bio>
+    <dataNasc>1706-10-18</dataNasc>
+    <dataObito>1785-01-03</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C30">
+    <nome>Jan Pieterszoon Sweelinck</nome>
+    <bio>text</bio>
+    <dataNasc>1562</dataNasc>
+    <dataObito>1621-10-16</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C32">
+    <nome>Francesco Maria Veracini</nome>
+    <bio>text</bio>
+    <dataNasc>1690-02-01</dataNasc>
+    <dataObito>1768-10-31</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C34">
+    <nome>Giuseppe Tartini</nome>
+    <bio>text</bio>
+    <dataNasc>1692-04-08</dataNasc>
+    <dataObito>1770-02-26</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C36">
+    <nome>Titelouze, Jean</nome>
+    <bio>text</bio>
+    <dataNasc>1562</dataNasc>
+    <dataObito>1633</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C38">
+    <nome>Louis Couperin</nome>
+    <bio>text</bio>
+    <dataNasc>1626</dataNasc>
+    <dataObito>1661-08-29</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C40">
+    <nome>Nicola Porpora</nome>
+    <bio>text</bio>
+    <dataNasc>1686-08-17</dataNasc>
+    <dataObito>1768-03-03</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C42">
+    <nome>Seixas, Carlos</nome>
+    <bio>text</bio>
+    <dataNasc>1704-06-11</dataNasc>
+    <dataObito>1742-08-25</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C44">
+    <nome>Heinrich Scheidemann</nome>
+    <bio>text</bio>
+    <dataNasc>1595</dataNasc>
+    <dataObito>1663</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C46">
+    <nome>Mattheson, Johann</nome>
+    <bio>text</bio>
+    <dataNasc>1681-09-28</dataNasc>
+    <dataObito>1764-04-17</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C48">
+    <nome>Alessandro Scarlatti</nome>
+    <bio>text</bio>
+    <dataNasc>1660-05-02</dataNasc>
+    <dataObito>1725-10-22</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C50">
+    <nome>Antonio Lucio Vivaldi</nome>
+    <bio>text</bio>
+    <dataNasc>1678-03-04</dataNasc>
+    <dataObito>1741-07-28</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C52">
+    <nome>Monteverdi, Claudio</nome>
+    <bio>text</bio>
+    <dataNasc>1567-05-15</dataNasc>
+    <dataObito>1643-11-29</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C54">
+    <nome>Domenico Alberti</nome>
+    <bio>text</bio>
+    <dataNasc>1710</dataNasc>
+    <dataObito>1740</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C56">
+    <nome>Georg Philipp Telemann</nome>
+    <bio>text</bio>
+    <dataNasc>1681-03-14</dataNasc>
+    <dataObito>1767-06-25</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C58">
+    <nome>Handel, George Frideric</nome>
+    <bio>text</bio>
+    <dataNasc>1685-02-23</dataNasc>
+    <dataObito>1759-04-14</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C60">
+    <nome>Gregor Aichinger</nome>
+    <bio>text</bio>
+    <dataNasc>1565</dataNasc>
+    <dataObito>1628</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C62">
+    <nome>Gregorio Allegri</nome>
+    <bio>text</bio>
+    <dataNasc>1582</dataNasc>
+    <dataObito>1652-02-17</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C64">
+    <nome>Purcell, Henry</nome>
+    <bio>text</bio>
+    <dataNasc>1659-09-10</dataNasc>
+    <dataObito>1695-11-21</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C66">
+    <nome>Johann Tobias Krebs</nome>
+    <bio>text</bio>
+    <dataNasc>1690-07-07</dataNasc>
+    <dataObito>1762-02-11</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C68">
+    <nome>Estevao de Brito</nome>
+    <bio>text</bio>
+    <dataNasc>1570</dataNasc>
+    <dataObito>1641</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C70">
+    <nome>Johann Ernst Eberlin</nome>
+    <bio>text</bio>
+    <dataNasc>1702-03-27</dataNasc>
+    <dataObito>1762-06-19</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C72">
+    <nome>Johann Hermann Schein</nome>
+    <bio>text</bio>
+    <dataNasc>1586-01-20</dataNasc>
+    <dataObito>1630-11-19</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C74">
+    <nome>Wilbye, John</nome>
+    <bio>text</bio>
+    <dataNasc>1574-03-07</dataNasc>
+    <dataObito>1638</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C76">
+    <nome>Altnickol, Johann Christoph</nome>
+    <bio>text</bio>
+    <dataNasc>1720-01-01</dataNasc>
+    <dataObito>1759-07-25</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C78">
+    <nome>Jan Dismas Zelenka</nome>
+    <bio>text</bio>
+    <dataNasc>1679-10-16</dataNasc>
+    <dataObito>1745-12-23</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C80">
+    <nome>Machado, Manuel</nome>
+    <bio>text</bio>
+    <dataNasc>1590</dataNasc>
+    <dataObito>1646</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C82">
+    <nome>Haym, Nicola Francesco</nome>
+    <bio>text</bio>
+    <dataNasc>1678-07-06</dataNasc>
+    <dataObito>1729-07-31</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C84">
+    <nome>Stefano Landi</nome>
+    <bio>text</bio>
+    <dataNasc>1587-02-26</dataNasc>
+    <dataObito>1639-10-28</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C86">
+    <nome>Jean-Joseph Mouret</nome>
+    <bio>text</bio>
+    <dataNasc>1682-04-11</dataNasc>
+    <dataObito>1738-12-22</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C88">
+    <nome>Antonio Maria Abbatini</nome>
+    <bio>text</bio>
+    <dataNasc>1595-01-26</dataNasc>
+    <dataObito>1679-03-15</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C90">
+    <nome>Giovanni Battista Bassani</nome>
+    <bio>text</bio>
+    <dataNasc>1650</dataNasc>
+    <dataObito>1716-10-01</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C92">
+    <nome>Pedro de Araujo</nome>
+    <bio>text</bio>
+    <dataNasc>1640</dataNasc>
+    <dataObito>1705</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C94">
+    <nome>Corelli, Arcangelo</nome>
+    <bio>text</bio>
+    <dataNasc>1653-02-17</dataNasc>
+    <dataObito>1713-01-08</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C96">
+    <nome>Domenico Scarlatti</nome>
+    <bio>text</bio>
+    <dataNasc>1685-10-26</dataNasc>
+    <dataObito>1757-07-23</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C98">
+    <nome>Pergolesi, Giovanni Battista</nome>
+    <bio>text</bio>
+    <dataNasc>1710-01-04</dataNasc>
+    <dataObito>1736-03-17</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C100">
+    <nome>Paolo Agostino</nome>
+    <bio>text</bio>
+    <dataNasc>1583</dataNasc>
+    <dataObito>1629</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C102">
+    <nome>Tomaso Albinoni</nome>
+    <bio>text</bio>
+    <dataNasc>1671-06-08</dataNasc>
+    <dataObito>1751-01-17</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C104">
+    <nome>Zipoli, Domenico</nome>
+    <bio>text</bio>
+    <dataNasc>1688-10-17</dataNasc>
+    <dataObito>1726-01-02</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C106">
+    <nome>David Perez</nome>
+    <bio>text</bio>
+    <dataNasc>1711</dataNasc>
+    <dataObito>1778-10-30</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C108">
+    <nome>Froberger, Johann Jakob</nome>
+    <bio>text</bio>
+    <dataNasc>1616-05-19</dataNasc>
+    <dataObito>1667-05-07</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C110">
+    <nome>Johann Krieger</nome>
+    <bio>text</bio>
+    <dataNasc>1651-12-28</dataNasc>
+    <dataObito>1735-07-18</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C112">
+    <nome>Manuel Correia</nome>
+    <bio>text</bio>
+    <dataNasc>1600</dataNasc>
+    <dataObito>1653</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C114">
+    <nome>Gibbons, Orlando</nome>
+    <bio>text</bio>
+    <dataNasc>1583-12-25</dataNasc>
+    <dataObito>1625-06-05</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C116">
+    <nome>Cesti, Antonio</nome>
+    <bio>text</bio>
+    <dataNasc>1623-08-05</dataNasc>
+    <dataObito>1669-10-14</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C118">
+    <nome>Marcello, Benedetto</nome>
+    <bio>text</bio>
+    <dataNasc>1686-08-01</dataNasc>
+    <dataObito>1739-07-24</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C120">
+    <nome>Cavalli, Francesco</nome>
+    <bio>text</bio>
+    <dataNasc>1602-02-14</dataNasc>
+    <dataObito>1676-01-14</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C122">
+    <nome>Carissimi, Giacomo</nome>
+    <bio>text</bio>
+    <dataNasc>1605-04-18</dataNasc>
+    <dataObito>1674-01-12</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C124">
+    <nome>Cristofaro Caresana</nome>
+    <bio>text</bio>
+    <dataNasc>1640</dataNasc>
+    <dataObito>1709</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C126">
+    <nome>Filipe De Magalhaes</nome>
+    <bio>text</bio>
+    <dataNasc>1571</dataNasc>
+    <dataObito>1652</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C128">
+    <nome>Bach, Johann Christoph</nome>
+    <bio>text</bio>
+    <dataNasc>1642-12-06</dataNasc>
+    <dataObito>1703-03-31</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C130">
+    <nome>Elisabeth Sophie of Mecklenburg</nome>
+    <bio>text</bio>
+    <dataNasc>1613-08-20</dataNasc>
+    <dataObito>1676-07-12</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C132">
+    <nome>Hasse, Johann Adolph</nome>
+    <bio>text</bio>
+    <dataNasc>1699-03-25</dataNasc>
+    <dataObito>1783-12-16</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C134">
+    <nome>Marais, Marin</nome>
+    <bio>text</bio>
+    <dataNasc>1656-05-31</dataNasc>
+    <dataObito>1728-08-15</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C136">
+    <nome>Melchior Schildt</nome>
+    <bio>text</bio>
+    <dataNasc>1592</dataNasc>
+    <dataObito>1667</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C138">
+    <nome>Cavalieri, Emilio de</nome>
+    <bio>text</bio>
+    <dataNasc>1550</dataNasc>
+    <dataObito>1602-03-11</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C140">
+    <nome>Samuel Scheidt</nome>
+    <bio>text</bio>
+    <dataNasc>1587-11-03</dataNasc>
+    <dataObito>1654-03-24</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C142">
+    <nome>Emanuele dAstorga</nome>
+    <bio>text</bio>
+    <dataNasc>1681-12-11</dataNasc>
+    <dataObito>1736-08-21</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C144">
+    <nome>Maurice, Landgrave of Hesse-Kassel</nome>
+    <bio>text</bio>
+    <dataNasc>1572-05-25</dataNasc>
+    <dataObito>1632-03-15</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C146">
+    <nome>Grigny, Nicolas de</nome>
+    <bio>text</bio>
+    <dataNasc>1672-09-08</dataNasc>
+    <dataObito>1703-11-30</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C148">
+    <nome>Antonio Soler</nome>
+    <bio>text</bio>
+    <dataNasc>1729-12-03</dataNasc>
+    <dataObito>1783-12-20</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C150">
+    <nome>Nivers, Guillaume-Gabriel</nome>
+    <bio>text</bio>
+    <dataNasc>1632</dataNasc>
+    <dataObito>1714</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C152">
+    <nome>Bach, Johann Michael</nome>
+    <bio>text</bio>
+    <dataNasc>1648-08-09</dataNasc>
+    <dataObito>1694-05-17</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C154">
+    <nome>Johann Schop</nome>
+    <bio>text</bio>
+    <dataNasc>1590</dataNasc>
+    <dataObito>1667</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C156">
+    <nome>Antonio Lotti</nome>
+    <bio>text</bio>
+    <dataNasc>1667</dataNasc>
+    <dataObito>1740</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C158">
+    <nome>Strozzi, Barbara</nome>
+    <bio>text</bio>
+    <dataNasc>1619-08-06</dataNasc>
+    <dataObito>1677-11-11</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C160">
+    <nome>Georg Muffat</nome>
+    <bio>text</bio>
+    <dataNasc>1653-06-01</dataNasc>
+    <dataObito>1704-02-23</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C162">
+    <nome>Frescobaldi, Girolamo</nome>
+    <bio>text</bio>
+    <dataNasc>1583-09-13</dataNasc>
+    <dataObito>1643-03-01</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C164">
+    <nome>Steffani, Agostino</nome>
+    <bio>text</bio>
+    <dataNasc>1654-07-25</dataNasc>
+    <dataObito>1728-02-12</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C166">
+    <nome>Bononcini, Giovanni Battista</nome>
+    <bio>text</bio>
+    <dataNasc>1670-07-18</dataNasc>
+    <dataObito>1747-07-09</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C168">
+    <nome>Caldara, Antonio</nome>
+    <bio>text</bio>
+    <dataNasc>1670</dataNasc>
+    <dataObito>1736-12-28</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C170">
+    <nome>Friederike Sophie Wilhelmine</nome>
+    <bio>text</bio>
+    <dataNasc>1709-07-03</dataNasc>
+    <dataObito>1758-10-14</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C172">
+    <nome>Wilhelmine of Prussia</nome>
+    <bio>text</bio>
+    <dataNasc>1709-07-03</dataNasc>
+    <dataObito>1758-10-14</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C174">
+    <nome>Esteban Lopez Morago</nome>
+    <bio>text</bio>
+    <dataNasc>1575</dataNasc>
+    <dataObito>1630</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C176">
+    <nome>Robert Cambert</nome>
+    <bio>text</bio>
+    <dataNasc>1628</dataNasc>
+    <dataObito>1677</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C178">
+    <nome>Johann Nicolaus Bach</nome>
+    <bio>text</bio>
+    <dataNasc>1669-10-10</dataNasc>
+    <dataObito>1753-11-04</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C180">
+    <nome>John IV</nome>
+    <bio>text</bio>
+    <dataNasc>1604-03-19</dataNasc>
+    <dataObito>1656-11-06</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C182">
+    <nome>John 04 Of Portugal</nome>
+    <bio>text</bio>
+    <dataNasc>1604-03-19</dataNasc>
+    <dataObito>1656-11-06</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C184">
+    <nome>Monsieur de Sainte-Colombe</nome>
+    <bio>text</bio>
+    <dataNasc>1640</dataNasc>
+    <dataObito>1700</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C186">
+    <nome>Pietro Della Valle</nome>
+    <bio>text</bio>
+    <dataNasc>1586-04-02</dataNasc>
+    <dataObito>1652-04-21</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C188">
+    <nome>Francesco Feo</nome>
+    <bio>text</bio>
+    <dataNasc>1691</dataNasc>
+    <dataObito>1761-01-28</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C190">
+    <nome>Nicolas Siret</nome>
+    <bio>text</bio>
+    <dataNasc>1663-03-03</dataNasc>
+    <dataObito>1754-06-22</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C192">
+    <nome>Andrea Falconieri</nome>
+    <bio>text</bio>
+    <dataNasc>1585</dataNasc>
+    <dataObito>1656</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C194">
+    <nome>Madre De Deus, Filpe Da</nome>
+    <bio>text</bio>
+    <dataNasc>1630</dataNasc>
+    <dataObito>1688</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C196">
+    <nome>Henri Desmarets</nome>
+    <bio>text</bio>
+    <dataNasc>1661</dataNasc>
+    <dataObito>1741-09-07</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C198">
+    <nome>John Eccles</nome>
+    <bio>text</bio>
+    <dataNasc>1668</dataNasc>
+    <dataObito>1735-01-12</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C200">
+    <nome>Nicolaus Bruhns</nome>
+    <bio>text</bio>
+    <dataNasc>1665</dataNasc>
+    <dataObito>1697-03-29</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C202">
+    <nome>Bull, John</nome>
+    <bio>text</bio>
+    <dataNasc>1562</dataNasc>
+    <dataObito>1628</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C204">
+    <nome>Antoine Forqueray</nome>
+    <bio>text</bio>
+    <dataNasc>1671</dataNasc>
+    <dataObito>1745-06-28</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C206">
+    <nome>Alessandro Stradella</nome>
+    <bio>text</bio>
+    <dataNasc>1639-04-03</dataNasc>
+    <dataObito>1682-02-25</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C208">
+    <nome>Giulio Caccini</nome>
+    <bio>text</bio>
+    <dataNasc>1551-10-08</dataNasc>
+    <dataObito>1618-12-10</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C210">
+    <nome>Reincken, Johann Adam</nome>
+    <bio>text</bio>
+    <dataNasc>1643-12-10</dataNasc>
+    <dataObito>1722-11-24</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C212">
+    <nome>Johann David Heinichen</nome>
+    <bio>text</bio>
+    <dataNasc>1683-04-17</dataNasc>
+    <dataObito>1729-07-16</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C214">
+    <nome>Krebs, Johann Ludwig</nome>
+    <bio>text</bio>
+    <dataNasc>1713-10-12</dataNasc>
+    <dataObito>1780-02-01</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C216">
+    <nome>Weldon, John</nome>
+    <bio>text</bio>
+    <dataNasc>1676-01-19</dataNasc>
+    <dataObito>1736-05-07</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C218">
+    <nome>Maurice Greene</nome>
+    <bio>text</bio>
+    <dataNasc>1696-08-12</dataNasc>
+    <dataObito>1755-12-01</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C220">
+    <nome>Pierre Beauchamp</nome>
+    <bio>text</bio>
+    <dataNasc>1631-10-30</dataNasc>
+    <dataObito>1705</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C222">
+    <nome>Hans Leo Haßler</nome>
+    <bio>text</bio>
+    <dataNasc>1564-10-26</dataNasc>
+    <dataObito>1612-06-08</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C224">
+    <nome>Fux, Johann Joseph</nome>
+    <bio>text</bio>
+    <dataNasc>1660</dataNasc>
+    <dataObito>1741-02-13</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C226">
+    <nome>Duarte Lobo</nome>
+    <bio>text</bio>
+    <dataNasc>1565</dataNasc>
+    <dataObito>1646</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C228">
+    <nome>Lôbo, Duarte</nome>
+    <bio>text</bio>
+    <dataNasc>1565</dataNasc>
+    <dataObito>1646</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C230">
+    <nome>Duarte Lôbo</nome>
+    <bio>text</bio>
+    <dataNasc>1565</dataNasc>
+    <dataObito>1646</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C232">
+    <nome>Robert de Visee</nome>
+    <bio>text</bio>
+    <dataNasc>1655</dataNasc>
+    <dataObito>1732</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C234">
+    <nome>Ferdinand Iii, Holy Roman Emperor</nome>
+    <bio>text</bio>
+    <dataNasc>1608-07-13</dataNasc>
+    <dataObito>1657-04-02</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C236">
+    <nome>Lully, Jean-Baptiste</nome>
+    <bio>text</bio>
+    <dataNasc>1632-11-28</dataNasc>
+    <dataObito>1687-03-22</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C238">
+    <nome>Bach, Wilhelm Friedemann</nome>
+    <bio>text</bio>
+    <dataNasc>1710-11-22</dataNasc>
+    <dataObito>1784-07-01</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C240">
+    <nome>Leopold I</nome>
+    <bio>text</bio>
+    <dataNasc>1640-06-09</dataNasc>
+    <dataObito>1705-05-05</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C242">
+    <nome>Anerio, Felice</nome>
+    <bio>text</bio>
+    <dataNasc>1560</dataNasc>
+    <dataObito>1614</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C244">
+    <nome>Anerio, Giovanni Francesco</nome>
+    <bio>text</bio>
+    <dataNasc>1567</dataNasc>
+    <dataObito>1630</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C246">
+    <nome>Zachow, Friedrich Wilhelm</nome>
+    <bio>text</bio>
+    <dataNasc>1663-11-14</dataNasc>
+    <dataObito>1712-08-07</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C248">
+    <nome>Sanz, Gaspar</nome>
+    <bio>text</bio>
+    <dataNasc>1640</dataNasc>
+    <dataObito>1710</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C250">
+    <nome>Michael Praetorius</nome>
+    <bio>text</bio>
+    <dataNasc>1571-02-15</dataNasc>
+    <dataObito>1621-02-15</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C252">
+    <nome>Peter Philips</nome>
+    <bio>text</bio>
+    <dataNasc>1560</dataNasc>
+    <dataObito>1628</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C254">
+    <nome>Georg Bohm</nome>
+    <bio>text</bio>
+    <dataNasc>1661-09-02</dataNasc>
+    <dataObito>1733-05-18</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C256">
+    <nome>Michel Richard Delalande</nome>
+    <bio>text</bio>
+    <dataNasc>1657-12-15</dataNasc>
+    <dataObito>1726-06-18</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C258">
+    <nome>Schenck, Johannes</nome>
+    <bio>text</bio>
+    <dataNasc>1660-06-03</dataNasc>
+    <dataObito>1712</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C260">
+    <nome>Manuel Rodriguez Coelho</nome>
+    <bio>text</bio>
+    <dataNasc>1555</dataNasc>
+    <dataObito>1635</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C262">
+    <nome>Thomas Weelkes</nome>
+    <bio>text</bio>
+    <dataNasc>1576-10-25</dataNasc>
+    <dataObito>1623-11-30</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C264">
+    <nome>Sammartini, Giovanni Battista</nome>
+    <bio>text</bio>
+    <dataNasc>1700</dataNasc>
+    <dataObito>1775</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C266">
+    <nome>Giovanni Battista Vitali</nome>
+    <bio>text</bio>
+    <dataNasc>1632-02-18</dataNasc>
+    <dataObito>1692-10-12</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C268">
+    <nome>Diogo Dias Melgas</nome>
+    <bio>text</bio>
+    <dataNasc>1638</dataNasc>
+    <dataObito>1700</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C270">
+    <nome>Johann Gottlieb Goldberg</nome>
+    <bio>text</bio>
+    <dataNasc>1727-03-14</dataNasc>
+    <dataObito>1756-04-13</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C272">
+    <nome>Cabanilles, Juan Bautista</nome>
+    <bio>text</bio>
+    <dataNasc>1644</dataNasc>
+    <dataObito>1712</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C274">
+    <nome>Ariosti, Attilio</nome>
+    <bio>text</bio>
+    <dataNasc>1666-11-05</dataNasc>
+    <dataObito>1729</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C276">
+    <nome>Rousseau, Jean-Jacques</nome>
+    <bio>text</bio>
+    <dataNasc>1712-06-28</dataNasc>
+    <dataObito>1778-07-02</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C278">
+    <nome>Bach, Johann Sebastian</nome>
+    <bio>text</bio>
+    <dataNasc>1685-03-21</dataNasc>
+    <dataObito>1750-07-28</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C280">
+    <nome>John Dowland</nome>
+    <bio>text</bio>
+    <dataNasc>1563</dataNasc>
+    <dataObito>1626-02-20</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C282">
+    <nome>Barbara of Portugal</nome>
+    <bio>text</bio>
+    <dataNasc>1711-12-04</dataNasc>
+    <dataObito>1758-08-27</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C284">
+    <nome>Bernardo Pasquini</nome>
+    <bio>text</bio>
+    <dataNasc>1637-12-07</dataNasc>
+    <dataObito>1710-11-21</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C286">
+    <nome>Durante, Francesco</nome>
+    <bio>text</bio>
+    <dataNasc>1684-03-31</dataNasc>
+    <dataObito>1755-09-30</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C288">
+    <nome>Francesco Geminiani</nome>
+    <bio>text</bio>
+    <dataNasc>1687-12-05</dataNasc>
+    <dataObito>1762-09-17</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C290">
+    <nome>Martini, Giovanni Battista</nome>
+    <bio>text</bio>
+    <dataNasc>1706-04-24</dataNasc>
+    <dataObito>1784-08-03</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C292">
+    <nome>Biber, Heinrich Ignaz Franz</nome>
+    <bio>text</bio>
+    <dataNasc>1644-08-12</dataNasc>
+    <dataObito>1704-05-03</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C294">
+    <nome>Leo, Leonardo</nome>
+    <bio>text</bio>
+    <dataNasc>1694-08-05</dataNasc>
+    <dataObito>1744-10-31</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C296">
+    <nome>William Boyce</nome>
+    <bio>text</bio>
+    <dataNasc>1711-09-11</dataNasc>
+    <dataObito>1779-02-07</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C298">
+    <nome>Neander, Joachim</nome>
+    <bio>text</bio>
+    <dataNasc>1650</dataNasc>
+    <dataObito>1680-05-31</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C300">
+    <nome>Couperin, Armand-Louis</nome>
+    <bio>text</bio>
+    <dataNasc>1727-02-25</dataNasc>
+    <dataObito>1789-02-02</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C302">
+    <nome>Fernandes, Gaspar</nome>
+    <bio>text</bio>
+    <dataNasc>1566</dataNasc>
+    <dataObito>1629</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C304">
+    <nome>Luigi de Rossi</nome>
+    <bio>text</bio>
+    <dataNasc>1597</dataNasc>
+    <dataObito>1653-02-20</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C306">
+    <nome>Jeremiah Clarke</nome>
+    <bio>text</bio>
+    <dataNasc>1674</dataNasc>
+    <dataObito>1707-12-01</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C308">
+    <nome>Manuel Cardoso</nome>
+    <bio>text</bio>
+    <dataNasc>1566-12-11</dataNasc>
+    <dataObito>1650-11-24</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C310">
+    <nome>Giovanni Legrenzi</nome>
+    <bio>text</bio>
+    <dataNasc>1626-08-12</dataNasc>
+    <dataObito>1690-05-27</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C312">
+    <nome>Kuhnau, Johann</nome>
+    <bio>text</bio>
+    <dataNasc>1660-04-06</dataNasc>
+    <dataObito>1722-06-05</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C314">
+    <nome>Veracini, Antonio</nome>
+    <bio>text</bio>
+    <dataNasc>1659-01-17</dataNasc>
+    <dataObito>1733-10-26</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C316">
+    <nome>Viadana, Lodovico Grossi da</nome>
+    <bio>text</bio>
+    <dataNasc>1560</dataNasc>
+    <dataObito>1627-05-02</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C318">
+    <nome>Boyvin, Jacques</nome>
+    <bio>text</bio>
+    <dataNasc>1649</dataNasc>
+    <dataObito>1706</dataObito>
+    <curso>PE2</curso>
+  </compositor>
+  <compositor id="C320">
+    <nome>Sammartini, Giuseppe</nome>
+    <bio>text</bio>
+    <dataNasc>1695-01-06</dataNasc>
+    <dataObito>1750</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C322">
+    <nome>Biber, Carl Heinrich</nome>
+    <bio>text</bio>
+    <dataNasc>1681-09-04</dataNasc>
+    <dataObito>1749-11-19</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C324">
+    <nome>Gibbs, Joseph</nome>
+    <bio>text</bio>
+    <dataNasc>1699</dataNasc>
+    <dataObito>1788-12-12</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C326">
+    <nome>Bonporti, Francesco Antonio</nome>
+    <bio>text</bio>
+    <dataNasc>1672-06-11</dataNasc>
+    <dataObito>1749-12-19</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C328">
+    <nome>Louis Marchand</nome>
+    <bio>text</bio>
+    <dataNasc>1669-02-02</dataNasc>
+    <dataObito>1732-02-17</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C330">
+    <nome>Jean-Marie Leclair</nome>
+    <bio>text</bio>
+    <dataNasc>1697-05-10</dataNasc>
+    <dataObito>1764-10-22</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C332">
+    <nome>Mondonville, Jean-Joseph</nome>
+    <bio>text</bio>
+    <dataNasc>1711</dataNasc>
+    <dataObito>1772</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C334">
+    <nome>Benda, Franz</nome>
+    <bio>text</bio>
+    <dataNasc>1709-11-22</dataNasc>
+    <dataObito>1786-03-07</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C336">
+    <nome>Balbastre, Claude</nome>
+    <bio>text</bio>
+    <dataNasc>1724-12-08</dataNasc>
+    <dataObito>1799-05-09</dataObito>
+    <curso>PE3</curso>
+  </compositor>
+  <compositor id="C338">
+    <nome>Um novo</nome>
+    <bio>Este compositor era muita fixe</bio>
+    <dataNasc>1900-10-12</dataNasc>
+    <dataObito>1987-05-12</dataObito>
+    <curso>PE6</curso>
+  </compositor>
+</compositores>

@@ -75,7 +75,7 @@ class Professor {
 	public static function delete($id) {
 
 		$db = DB::getInstance();
-		$query_delete = "DELETE FROM Professor WHERE id=$id";
+		$query_delete = "DELETE FROM Professor WHERE id_professor=$id";
 		$result = $db->query($query_delete);
 
 	}
@@ -83,7 +83,7 @@ class Professor {
 	public static function find($id) {
 
 		$db = DB::getInstance();
-		$query_find = "SELECT * FROM Professor WHERE id = $id";
+		$query_find = "SELECT * FROM Professor WHERE id_professor = $id";
 
 		$result = $db->query($query_find);
 		$prof = $result->fetch();

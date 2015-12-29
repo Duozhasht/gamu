@@ -264,4 +264,16 @@
     <habilitacoes>Mestrado</habilitacoes>
     <curso>44</curso>
   </professor>
+  <professor id="p45">
+    <nome>Um teste</nome>
+    <dataNasc>1998-07-16</dataNasc>
+    <habilitacoes>Licenciatura</habilitacoes>
+    <curso>18</curso>
+  </professor>
+  <professor id="p47">
+    <nome>Mais um</nome>
+    <dataNasc>1992-12-12</dataNasc>
+    <habilitacoes>Mestrado</habilitacoes>
+    <curso>5</curso>
+  </professor>
 </professores>

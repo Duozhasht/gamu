@@ -28,12 +28,20 @@
 
     public function add() {
 
-        if(isset($_POST['nome'])&&isset($_POST['dataNasc'])&&isset($_POST['habilitacoes'])){
-              $aux = Professor::create('NULL',$_POST['nome'],$_POST['dataNasc'],$_POST['habilitacoes']);
-              echo "Inserção Concluída com Sucesso";
+        if(!empty($_POST['nome'])&&!empty($_POST['dataNasc'])&&!empty($_POST['habilitacoes'])){
+              $aux = Professor::create('NULL',$_POST['nome'],$_POST['dataNasc'],$_POST['habilitacoes'],$_POST['id_curso']);
+              echo "
+                    <div class='alert alert-success text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Inserção Concluída com Sucesso
+                    </div>
+                  ";
             }
         else
-            echo "Problemas!";
+            echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Problemas no preenchimento de pelo menos um dos campos!
+                  </div>";
 
       $controller = new ProfessorController();
       $controller->index();

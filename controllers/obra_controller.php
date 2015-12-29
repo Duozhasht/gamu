@@ -1,14 +1,14 @@
 <?php
   class ObraController {
 
-    /*
+    
     public function index() {
       //small script to change url
-      echo "<script>window.history.pushState('string', 'Index', 'http://localhost:8888/gamu/?controller=professor&action=index');</script>";
+      echo "<script>window.history.pushState('string', 'Index', 'http://localhost:8888/gamu/?controller=obra&action=index');</script>";
       //number of records per page and number of pages 
-      $nr_professores = Professor::count();
+      $nr_obra = Obra::count();
       $number_of_records = 20;
-      $result_number=ceil($nr_professores/$number_of_records);
+      $result_number=ceil($nr_obra/$number_of_records);
 
       //Check page rules (if is set, if not atributes 1 if it's higher or lower the same)
       if(isset($_GET['page']))
@@ -20,12 +20,11 @@
         $page=1;
 
       // Get profs
-      $professores = Professor::retrieve('id_professor',$page,$number_of_records);
-      require_once('views/professor/index.php');
-
+      $obras = Obra::retrieve('id_obra',$page,$number_of_records);
+      require_once('views/obra/index.php');
     }
 
-
+/*
     public function add() {
 
         if(isset($_POST['nome'])&&isset($_POST['dataNasc'])&&isset($_POST['habilitacoes'])){

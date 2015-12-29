@@ -7,7 +7,7 @@
       echo "<script>window.history.pushState('string', 'Index', 'http://localhost:8888/gamu/?controller=instrumento&action=index');</script>";
       //number of records per page and number of pages 
       $nr_instrumentos = Instrumento::count();
-      $number_of_records = 40;
+      $number_of_records = 100;
       $result_number=ceil($nr_instrumentos/$number_of_records);
 
       //Check page rules (if is set, if not atributes 1 if it's higher or lower the same)
@@ -28,12 +28,20 @@
 
     public function add() {
 
-        if(isset($_POST['nome'])) {
-              $aux = Instrumento::create('NULL',$_POST['nome']);
-              echo "Inserção Concluída com Sucesso";
+        if(!empty($_POST['designacao'])) {
+              $aux = Instrumento::create('NULL',$_POST['designacao']);
+              echo "
+                    <div class='alert alert-success text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Inserção Concluída com Sucesso
+                    </div>
+                  ";
             }
         else
-            echo "Problemas!";
+              echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Problemas no preenchimento de pelo menos um dos campos!
+                  </div>";
 
       $controller = new InstrumentoController();
       $controller->index();
@@ -46,6 +54,9 @@
       {
         $aux = Instrumento::delete($_GET['id']);
       }
+
+
+
       $controller = new InstrumentoController();
       $controller->index();
 

@@ -56,8 +56,8 @@ class Curso {
 	
 	}
 
-	/*
-
+	
+/*
 	public static function update($id, $curs) {
 	
 		$db = DB::getInstance();
@@ -65,12 +65,12 @@ class Curso {
 		$result = $db->query($query_update);
 
 	}
-
+*/
 
 	public static function delete($id) {
 
 		$db = DB::getInstance();
-		$query_delete = "DELETE FROM Curso WHERE id=$id";
+		$query_delete = "DELETE FROM Curso WHERE id_curso=$id";
 		$result = $db->query($query_delete);
 
 	}
@@ -78,15 +78,15 @@ class Curso {
 	public static function find($id) {
 
 		$db = DB::getInstance();
-		$query_find = "SELECT * FROM Curso WHERE id = $id";
+		$query_find = "SELECT * FROM Curso WHERE id_curso = $id";
 
 		$result = $db->query($query_find);
 		$curs = $result->fetch();
-		return new Curso($curs['id'],$curs['designacao'],$curs['data_de_nascimento'],$curs['habilitacoes']);
+		return new Curso($curs['id_curso'],$curs['designacao'],$curs['data_de_nascimento'],$curs['habilitacoes']);
 
 	}
 
-*/
+
 
   }
   ?>
