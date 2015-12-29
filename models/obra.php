@@ -5,21 +5,23 @@ class Obra {
 	public $nome;
 	public $descricao;
 	public $ano;
-	public $periodo;
 	public $duracao;
+	public $periodo;
+	public $compositor;
 	
 
 	public $id_compositor;
 	public $id_periodo;
 
 
-	public function __construct($id, $nome, $descricao, $ano, $duracao, $periodo, $id_periodo, $id_compositor) {
+	public function __construct($id, $nome, $descricao, $ano, $duracao, $periodo, $compositor, $id_periodo, $id_compositor) {
 		$this->id = $id;
 		$this->nome = $nome;
 		$this->descricao = $descricao;
 		$this->ano = $ano;
 		$this->duracao = $duracao;
 		$this->periodo = $periodo;
+		$this->compositor = $compositor;
 
 		$this->id_periodo = $id_periodo;
 		$this->id_compositor = $id_compositor;
@@ -44,7 +46,7 @@ class Obra {
 	
 	}
 
-/*
+
 	public static function retrieve($order,$page,$number_of_records) {
 
 		$db = Db::getInstance();
@@ -52,19 +54,19 @@ class Obra {
 		$list = [];
 
 		//Query
-		$query_select = "SELECT * from professor_model ORDER BY $order LIMIT $startpoint,$number_of_records";
+		$query_select = "SELECT * from obra_model ORDER BY $order LIMIT $startpoint,$number_of_records";
 		$result = $db->query($query_select);
 
 
 		// we create a list of Professor objects from the database results
-		foreach($result as $prof)
-			$list[] = new Professor($prof['id_professor'],$prof['nome'],$prof['data_de_nascimento'],$prof['habilitacoes'],$prof['curso'],$prof['instrumento'],$prof['id_curso'],$prof['id_instrumento']);
+		foreach($result as $obra)
+			$list[] = new Obra($obra['id_obra'],$obra['nome'],$obra['descricao'],$obra['ano'],$obra['duracao'],$obra['periodo'],$obra['compositor'],$obra['id_periodo'],$obra['id_compositor']);
 
 		return $list;
 	
 	}
 
-
+/*
 	public static function update($id, $prof) {
 	
 		$db = DB::getInstance();
