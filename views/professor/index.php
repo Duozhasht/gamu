@@ -1,23 +1,53 @@
-<div class="container">
-	<div class="row">
-		<div id="sidebar" class="col-xs-12 col-md-2" style="padding-top:100px;">
-			<ul class="nav nav-pills nav-stacked">
-				<li role="presentation" class="active"><a href="#" onclick="showModal()">Adicionar</a></li>
-				<li></li>
-				<li id="download" role="presentation"><a href="?controller=professor&action=exportxml">Exportar Professores</a></li>
-				<li role="presentation"><a href="#" onclick="inputXML()">Importar Professores</a></li>
+	<div class="container-fluid">
+		<div class="row">
+			<div id="header" class="col-xs-12" style="padding-top:30px;padding-bottom:70px;">
+				<h2 id="title" class='text-center'>Professores</h2>	
+			</div>
+		</div> 
+	</div>
+
+	<div class="container">
+		<div id="sidebar" class="col-xs-12 col-md-2" style="padding-top:10px;">
+			<ul class="sidebar nav nav-pills nav-stacked">
+				<li role="presentation" class="normal">
+					
+					<a href="#" onclick="showModal()">
+					<i class="fa fa-plus" style="padding-right: 20px"></i>
+						Adicionar
+					</a>
+				</li>
+				<li id="download" role="presentation" class="safe">
+					<a href="?controller=professor&action=exportxml">
+						<i class="fa fa-file-text-o" style="padding-right: 20px"></i>
+						Exportar XML
+					</a>
+				</li>
+				<li role="presentation" class="safe">
+					<a href="#" onclick="inputXML()">
+						<i class="fa fa-file-pdf-o" style="padding-right: 20px"></i>
+						Exportar PDF
+					</a>
+				</li>
+				<li class="mydivider">
+				</li>
+				<li role="presentation" class="warn">
+					<a href="#" onclick="inputXML()">
+						<i class="fa fa-file-text-o" style="padding-right: 20px"></i>
+						Importar XML
+					</a>
+				</li>
 			</ul>
 		</div>
 		<div id="content" class="col-xs-12 col-md-10">
-			<h2 id="title" class='text-center'>Professores</h2>
 			<!-- Button trigger modal -->
 			<table class='table'>
 				<thead>
 					<tr>
 						<th width='5%'>#</th>
 						<th width='40%'>Nome</th>
-						<th width='20%'>Data de Nascimento</th>
-						<th width='27%'>Habilitações</th>
+						<th width='12%'>Data de Nasc</th>
+						<th width='12%'>Habilitações</th>
+						<th width='23%'>Curso</th>
 						<th width='4%'></th>
 						<th width='4%'></th>
 					</tr>
@@ -32,6 +62,7 @@
 									echo "<td>".$professor->nome."</td>";
 									echo "<td>".$professor->dataNasc."</td>";
 									echo "<td>".$professor->habilitacoes."</td>";
+									echo "<td>".$professor->curso."</td>";
 									echo "<td>
 											<a href='#'><i class='fa fa-pencil-square-o'></i></a>
 										</td>
@@ -74,7 +105,6 @@
 			?>
 		</div>
 	</div>
-</div>
 <!-- Modal -->
 <div class="modal fade" id="professorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">

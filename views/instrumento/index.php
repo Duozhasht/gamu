@@ -1,15 +1,43 @@
-<div class="container">
+	<div class="container-fluid">
 	<div class="row">
-		<div id="sidebar" class="col-xs-12 col-md-3" style="padding-top:100px;">
-			<ul class="nav nav-pills nav-stacked">
-				<li role="presentation" class="active"><a href="#" onclick="showModal()">Adicionar</a></li>
-				<li></li>
-				<li id="download" role="presentation"><a href="?controller=instrumento&action=exportxml">Exportar Instrumentos</a></li>
-				<li role="presentation"><a href="#" onclick="inputXML()">Importar Instrumentos</a></li>
+		<div id="header" class="col-xs-12" style="padding-top:30px;padding-bottom:70px;">
+			<h2 id="title" class='text-center'>Instrumentos</h2>	
+	</div>
+	</div> 
+
+	<div class="container">
+		<div id="sidebar" class="col-xs-12 col-md-2" style="padding-top:10px;">
+			<ul class="sidebar nav nav-pills nav-stacked">
+				<li role="presentation" class="normal">
+					
+					<a href="#" onclick="showModal()">
+					<i class="fa fa-plus" style="padding-right: 20px"></i>
+						Adicionar
+					</a>
+				</li>
+				<li id="download" role="presentation" class="safe">
+					<a href="?controller=instrumento&action=exportxml">
+						<i class="fa fa-file-text-o" style="padding-right: 20px"></i>
+						Exportar XML
+					</a>
+				</li>
+				<li role="presentation" class="safe">
+					<a href="#" onclick="inputXML()">
+						<i class="fa fa-file-pdf-o" style="padding-right: 20px"></i>
+						Exportar PDF
+					</a>
+				</li>
+				<li class="mydivider">
+				</li>
+				<li role="presentation" class="warn">
+					<a href="#" onclick="inputXML()">
+						<i class="fa fa-file-text-o" style="padding-right: 20px"></i>
+						Importar XML
+					</a>
+				</li>
 			</ul>
 		</div>
-		<div id="content" class="col-xs-12 col-md-9">
-			<h2 id="title" class='text-center'>Instrumentos</h2>
+		<div id="content" class="col-xs-12 col-md-5">
 			<!-- Button trigger modal -->
 			<table class='table'>
 				<thead>
@@ -23,6 +51,9 @@
 				<tbody>
 					
 					<?php
+					$c = 0;
+					$total = count($instrumentos);
+
 							foreach ($instrumentos as $instrumento)
 							{
 								echo "<tr>";
@@ -35,39 +66,53 @@
 									  <a href='?controller=instrumento&action=remove&id=".$instrumento->id."'><i class='fa fa-times'></i></a>
 									  </td>";
 								echo "</tr>";
+								$c++;
+								if($c>ceil($total/2)-1)
+									break;
 							}
 					?>
 				</tbody>
 			</table>
-			<?php
-				echo "<nav class='text-center'>
-					  <ul class='pagination'>";
-															
-				if($page-1<1)
-					echo "<li class='disabled'><a href=''";
-				else
-					echo "<li><a href='?controller=instrumento&action=index&page=".($page-1)."'";
-					echo "aria-label='Previous'>
-						   <span aria-hidden='true'>&laquo;</span>
-						   </a>
-						  </li>";
-				for ($i=1; $i <=$result_number ; $i++) {
-					if($page==$i)
-						echo   "<li class='active'><a href='?controller=instrumento&action=index&page=".$i."'>".$i."</a></li>";
-					else
-						echo   "<li><a href='?controller=instrumento&action=index&page=".$i."'>".$i."</a></li>";
-				}
-				if($page+1>$result_number)
-					echo "<li class='disabled'><a href=''";
-				else
-					echo "<li><a href='?controller=instrumento&action=index&page=".($page+1)."'";
-					echo "aria-label='Next'>
-						  <span aria-hidden='true'>&raquo;</span>
-						  </a>
-						  </li>
-						 </ul>
-						</nav>";
-			?>
+		</div>
+		<div id="content" class="col-xs-12 col-md-5">
+			<!-- Button trigger modal -->
+			<table class='table'>
+				<thead>
+					<tr>
+						<th width='5%'>#</th>
+						<th width='87%'>Designação</th>
+						<th width='4%'></th>
+						<th width='4%'></th>
+					</tr>
+				</thead>
+				<tbody>
+					
+					<?php
+					$c = 0;
+					$total = count($instrumentos);
+
+							foreach ($instrumentos as $instrumento)
+							{
+								$c++;
+								if($c<=ceil($total/2))
+									continue;
+
+								echo "<tr>";
+								echo "<td>I".$instrumento->id."</td>";
+								echo "<td>".$instrumento->nome."</td>";
+								echo "<td>
+									  <a href='#'><i class='fa fa-pencil-square-o'></i></a>
+									  </td>
+									  <td>
+									  <a href='?controller=instrumento&action=remove&id=".$instrumento->id."'><i class='fa fa-times'></i></a>
+									  </td>";
+								echo "</tr>";
+								
+
+							}
+					?>
+				</tbody>
+			</table>
 		</div>
 	</div>
 </div>
