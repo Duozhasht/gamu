@@ -149,7 +149,7 @@
 									<?php
 										//echo "<option value='' disabled selected>Escolha um Curso</option>";
 										$nr_cursos = Curso::count();
-										$cursos = Curso::retrieve('id_curso',1,100);
+										$cursos = Curso::retrieve('designacao',1,100);
 										
 										foreach ($cursos as $curso) {
 											echo "<option value='".$curso->id."'>".$curso->designacao."</option>";

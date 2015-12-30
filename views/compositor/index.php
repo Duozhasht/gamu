@@ -146,7 +146,7 @@
 									<?php
 										
 										$nr_periodos = Periodo::count();
-										$periodos = Periodo::retrieve('id_periodo',1,$nr_periodos);
+										$periodos = Periodo::retrieve('nome',1,$nr_periodos);
 										
 										foreach ($periodos as $periodo) {
 											echo "<option value='".$periodo->id."'>".$periodo->nome."</option>";

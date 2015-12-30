@@ -24,7 +24,7 @@
       require_once('views/obra/index.php');
     }
 
-/*
+
     public function add() {
 
         if(isset($_POST['nome'])&&isset($_POST['dataNasc'])&&isset($_POST['habilitacoes'])){
@@ -49,7 +49,7 @@
       $controller->index();
 
     }
-
+/*
     public function exportxml(){
       
       $file = 'public/xml/professores.xml';

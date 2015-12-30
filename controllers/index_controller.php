@@ -1,6 +1,7 @@
 <?php
   class IndexController {
     public function home() {
+      echo "<script>window.history.pushState(null, null, 'http://localhost:8888/gamu/?controller=index&action=home');</script>";
       require_once('views/index/home.php');
     }
 

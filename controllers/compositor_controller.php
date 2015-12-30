@@ -52,7 +52,15 @@
       
       if(isset($_GET['id']))
       {
-        $aux = Compositor::delete($_GET['id']);
+        try {
+          $aux = Compositor::delete($_GET['id']);
+        }
+        catch (Exception $e) {
+          echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Não é possivel remover o registo. Por favor verifique se este não possui dependecias.
+                  </div>";
+        }
       }
       $controller = new CompositorController();
       $controller->index();
