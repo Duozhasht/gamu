@@ -5,6 +5,11 @@
     <dataNasc>5</dataNasc>
     <instrumento>CB1</instrumento>
   </curso>
+  <curso id="p1">
+    <designacao>Curso Básico de Clarinete</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB1</instrumento>
+  </curso>
   <curso id="p2">
     <designacao>Curso Básico de Contrabaixo</designacao>
     <dataNasc>5</dataNasc>
@@ -19,6 +24,11 @@
     <designacao>Curso Básico de Eufónio</designacao>
     <dataNasc>5</dataNasc>
     <instrumento>CB4</instrumento>
+  </curso>
+  <curso id="p5">
+    <designacao>Curso Básico de Fagote</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB5</instrumento>
   </curso>
   <curso id="p5">
     <designacao>Curso Básico de Fagote</designacao>
@@ -219,10 +229,5 @@
     <designacao>Curso Supletivo de Viola de Arco</designacao>
     <dataNasc>3</dataNasc>
     <instrumento>CS21</instrumento>
-  </curso>
-  <curso id="p44">
-    <designacao>Curso Supletivo de Bandolim</designacao>
-    <dataNasc>3</dataNasc>
-    <instrumento>CS22</instrumento>
   </curso>
 </cursos>

@@ -83,17 +83,17 @@ class Obra {
 		$result = $db->query($query_delete);
 
 	}
-
+*/
 	public static function find($id) {
 
 		$db = DB::getInstance();
-		$query_find = "SELECT * FROM Professor WHERE id = $id";
+		$query_find = "SELECT * FROM obra_model WHERE id_obra = $id";
 
 		$result = $db->query($query_find);
-		$prof = $result->fetch();
-		return new Professor($prof['id'],$prof['nome'],$prof['data_de_nascimento'],$prof['habilitacoes']);
+		$obra = $result->fetch();
+		return new Obra($obra['id_obra'],$obra['nome'],$obra['descricao'],$obra['ano'],$obra['duracao'],$obra['periodo'],$obra['compositor'],$obra['id_periodo'],$obra['id_compositor']);
 
 	}
-*/
+
   }
   ?>

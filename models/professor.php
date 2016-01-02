@@ -83,11 +83,11 @@ class Professor {
 	public static function find($id) {
 
 		$db = DB::getInstance();
-		$query_find = "SELECT * FROM Professor WHERE id_professor = $id";
+		$query_find = "SELECT * FROM professor_model WHERE id_professor = $id";
 
 		$result = $db->query($query_find);
 		$prof = $result->fetch();
-		return new Professor($prof['id'],$prof['nome'],$prof['data_de_nascimento'],$prof['habilitacoes']);
+		return new Professor($prof['id_professor'],$prof['nome'],$prof['data_de_nascimento'],$prof['habilitacoes'],$prof['curso'],$prof['instrumento'],$prof['id_curso'],$prof['id_instrumento']);
 
 	}
 

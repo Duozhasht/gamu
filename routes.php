@@ -39,6 +39,14 @@
         require_once('models/obra.php');
         $controller = new ObraController();
       break;
+      case 'audicao':
+        require_once('models/audicao.php');
+        require_once('models/atuacao.php');
+        require_once('models/aluno.php');
+        require_once('models/professor.php');
+        require_once('models/obra.php');
+        $controller = new AudicaoController();
+      break;
     }
 
     $controller->{ $action }();
@@ -52,7 +60,8 @@
                        'aluno' =>['index','add','remove','exportxml','importxml'],
                        'periodo' =>['index','add','remove','exportxml','importxml'],
                        'compositor' =>['index','add','remove','exportxml','importxml'],
-                       'obra' =>['index','add','remove','exportxml','importxml']
+                       'obra' =>['index','add','remove','exportxml','importxml'],
+                       'audicao' =>['index','add','remove','exportxml','importxml']
                        );
 
   if (array_key_exists($controller, $controllers)) {
