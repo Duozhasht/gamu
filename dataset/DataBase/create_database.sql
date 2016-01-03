@@ -13,7 +13,96 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `gamu` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 USE `gamu` ;
+-- -----------------------------------------------------
+-- Table `gamu`.`Audicao`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `gamu`.`Audicao` ;
 
+CREATE TABLE IF NOT EXISTS `gamu`.`Audicao` (
+  `id_audicao` INT NOT NULL AUTO_INCREMENT COMMENT '',
+  `titulo` VARCHAR(45) NOT NULL COMMENT '',
+  `subtitulo` VARCHAR(45) NOT NULL COMMENT '',
+  `tema` VARCHAR(45) NOT NULL COMMENT '',
+  `data` DATETIME NOT NULL COMMENT '',
+  `local` VARCHAR(45) NOT NULL COMMENT '',
+  `organizador` VARCHAR(45) NOT NULL COMMENT '',
+  `duracao` TIME NOT NULL COMMENT '',
+  PRIMARY KEY (`id_audicao`)  COMMENT '')
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `gamu`.`Actuacao`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `gamu`.`Actuacao` ;
+
+CREATE TABLE IF NOT EXISTS `gamu`.`Actuacao` (
+  `id_actuacao` INT NOT NULL COMMENT '',
+  `id_audicao` INT NOT NULL COMMENT '',
+  `designacao` VARCHAR(100) NOT NULL COMMENT '',
+  PRIMARY KEY (`id_actuacao`)  COMMENT '',
+  INDEX `fk_actuacao_audicao_idx` (`id_audicao` ASC)  COMMENT '',
+  CONSTRAINT `fk_actuacao_audicao`
+    FOREIGN KEY (`id_audicao`)
+    REFERENCES `gamu`.`Audicao` (`id_audicao`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `gamu`.`Actuacao_Obra`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `gamu`.`Actuacao_Obra` ;
+
+CREATE TABLE IF NOT EXISTS `gamu`.`Actuacao_Obra` (
+  `id_actuacao` INT NOT NULL COMMENT '',
+  `id_obra` INT NOT NULL COMMENT '',
+  INDEX `fk_actuacao_obra_obra_idx` (`id_obra` ASC)  COMMENT '',
+  INDEX `fk_actuacao_obra_actuacao_idx` (`id_actuacao` ASC)  COMMENT '',
+  PRIMARY KEY (`id_actuacao`, `id_obra`)  COMMENT '',
+  CONSTRAINT `fk_actuacao_obra_obra`
+    FOREIGN KEY (`id_obra`)
+    REFERENCES `gamu`.`Obra` (`id_obra`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_actuacao_obra_actuacao`
+    FOREIGN KEY (`id_actuacao`)
+    REFERENCES `gamu`.`Actuacao` (`id_actuacao`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `gamu`.`Participante`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `gamu`.`Participante` ;
+
+CREATE TABLE IF NOT EXISTS `gamu`.`Participante` (
+  `id_actuacao` INT NOT NULL COMMENT '',
+  `id_obra` INT NOT NULL COMMENT '',
+  `id_professor` INT NULL COMMENT '',
+  `id_aluno` INT NULL COMMENT '',
+  INDEX `fk_participante_professor_idx` (`id_professor` ASC)  COMMENT '',
+  INDEX `fk_participante_aluno_idx` (`id_aluno` ASC)  COMMENT '',
+  INDEX `fk_participante_actuacao_idx` (`id_actuacao` ASC, `id_obra` ASC)  COMMENT '',
+  CONSTRAINT `fk_participante_actuacao`
+    FOREIGN KEY (`id_actuacao` , `id_obra`)
+    REFERENCES `gamu`.`Actuacao_Obra` (`id_actuacao` , `id_obra`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_participante_aluno`
+    FOREIGN KEY (`id_aluno`)
+    REFERENCES `gamu`.`Aluno` (`id_aluno`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_participante_professor`
+    FOREIGN KEY (`id_professor`)
+    REFERENCES `gamu`.`Professor` (`id_professor`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `gamu`.`Instrumento`
 -- -----------------------------------------------------
@@ -164,7 +253,7 @@ CREATE TABLE IF NOT EXISTS `gamu`.`Audicao` (
   `data` DATETIME NOT NULL COMMENT '',
   `local` VARCHAR(45) NOT NULL COMMENT '',
   `organizador` VARCHAR(45) NOT NULL COMMENT '',
-  `duracao` VARCHAR(45) NOT NULL COMMENT '',
+  `duracao` TIME NOT NULL COMMENT '',
   PRIMARY KEY (`id_audicao`)  COMMENT '')
 ENGINE = InnoDB;
 
@@ -177,6 +266,7 @@ DROP TABLE IF EXISTS `gamu`.`Actuacao` ;
 CREATE TABLE IF NOT EXISTS `gamu`.`Actuacao` (
   `id_actuacao` INT NOT NULL COMMENT '',
   `id_audicao` INT NOT NULL COMMENT '',
+  `designacao` VARCHAR(100) NOT NULL COMMENT '',
   PRIMARY KEY (`id_actuacao`)  COMMENT '',
   INDEX `fk_actuacao_audicao_idx` (`id_audicao` ASC)  COMMENT '',
   CONSTRAINT `fk_actuacao_audicao`
@@ -217,15 +307,16 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `gamu`.`Participante` ;
 
 CREATE TABLE IF NOT EXISTS `gamu`.`Participante` (
-  `id_actuacao` INT NOT NULL AUTO_INCREMENT COMMENT '',
+  `id_actuacao` INT NOT NULL COMMENT '',
+  `id_obra` INT NOT NULL COMMENT '',
   `id_professor` INT NULL COMMENT '',
   `id_aluno` INT NULL COMMENT '',
-  INDEX `fk_participante_actuacao_idx` (`id_actuacao` ASC)  COMMENT '',
   INDEX `fk_participante_professor_idx` (`id_professor` ASC)  COMMENT '',
   INDEX `fk_participante_aluno_idx` (`id_aluno` ASC)  COMMENT '',
+  INDEX `fk_participante_actuacao_idx` (`id_actuacao` ASC, `id_obra` ASC)  COMMENT '',
   CONSTRAINT `fk_participante_actuacao`
-    FOREIGN KEY (`id_actuacao`)
-    REFERENCES `gamu`.`Actuacao` (`id_actuacao`)
+    FOREIGN KEY (`id_actuacao` , `id_obra`)
+    REFERENCES `gamu`.`Actuacao_Obra` (`id_actuacao` , `id_obra`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_participante_aluno`
@@ -239,6 +330,83 @@ CREATE TABLE IF NOT EXISTS `gamu`.`Participante` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- View `gamu`.`aluno_model`
+-- -----------------------------------------------------
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `aluno_model`
+AS SELECT
+   `aluno`.`id_aluno` AS `id_aluno`,
+   `aluno`.`nome` AS `nome`,
+   `aluno`.`data_de_nascimento` AS `data_de_nascimento`,
+   `aluno`.`id_curso` AS `id_curso`,
+   `aluno`.`ano_curso` AS `ano_curso`,
+   `curso`.`designacao` AS `curso`,
+   `instrumento`.`nome` AS `instrumento`,
+   `instrumento`.`id_instrumento` AS `id_instrumento`
+FROM ((`aluno` join `curso` on((`aluno`.`id_curso` = `curso`.`id_curso`))) join `instrumento` on((`curso`.`id_instrumento` = `instrumento`.`id_instrumento`)));
+
+
+-- -----------------------------------------------------
+-- View `gamu`.`compositor_model`
+-- -----------------------------------------------------
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `compositor_model`
+AS SELECT
+   `compositor`.`id_compositor` AS `id_compositor`,
+   `compositor`.`nome` AS `nome`,
+   `compositor`.`bio` AS `bio`,
+   `compositor`.`data_de_nascimento` AS `data_de_nascimento`,
+   `compositor`.`data_de_obito` AS `data_de_obito`,
+   `compositor`.`id_periodo` AS `id_periodo`,
+   `periodo`.`nome` AS `periodo`
+FROM (`compositor` left join `periodo` on((`compositor`.`id_periodo` = `periodo`.`id_periodo`)));
+
+-- -----------------------------------------------------
+-- View `gamu`.`curso`
+-- -----------------------------------------------------
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `curso_model`
+AS SELECT
+   `curso`.`id_curso` AS `id_curso`,
+   `curso`.`designacao` AS `designacao`,
+   `curso`.`duracao` AS `duracao`,
+   `curso`.`id_instrumento` AS `id_instrumento`,
+   `professor`.`nome` AS `professor`
+FROM (`curso` left join `professor` on((`curso`.`id_curso` = `professor`.`id_curso`)));
+
+-- -----------------------------------------------------
+-- View `gamu`.`obra_model`
+-- -----------------------------------------------------
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `obra_model`
+AS SELECT
+   `obra`.`id_obra` AS `id_obra`,
+   `obra`.`nome` AS `nome`,
+   `obra`.`descricao` AS `descricao`,
+   `obra`.`ano` AS `ano`,
+   `obra`.`duracao` AS `duracao`,
+   `obra`.`id_periodo` AS `id_periodo`,
+   `obra`.`id_compositor` AS `id_compositor`,
+   `periodo`.`nome` AS `periodo`,
+   `compositor`.`nome` AS `compositor`
+FROM ((`obra` join `periodo` on((`obra`.`id_periodo` = `periodo`.`id_periodo`))) join `compositor` on((`obra`.`id_compositor` = `compositor`.`id_compositor`)));
+
+-- -----------------------------------------------------
+-- View `gamu`.`professor_model`
+-- -----------------------------------------------------
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `professor_model`
+AS SELECT
+   `professor`.`id_professor` AS `id_professor`,
+   `professor`.`nome` AS `nome`,
+   `professor`.`data_de_nascimento` AS `data_de_nascimento`,
+   `professor`.`habilitacoes` AS `habilitacoes`,
+   `professor`.`id_curso` AS `id_curso`,
+   `curso`.`designacao` AS `curso`,
+   `instrumento`.`nome` AS `instrumento`,
+   `instrumento`.`id_instrumento` AS `id_instrumento`
+FROM ((`professor` join `curso` on((`professor`.`id_curso` = `curso`.`id_curso`))) join `instrumento` on((`curso`.`id_instrumento` = `instrumento`.`id_instrumento`)));
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

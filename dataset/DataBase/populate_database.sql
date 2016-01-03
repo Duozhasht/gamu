@@ -839,6 +839,58 @@ INSERT INTO gamu.Obra VALUES (172, 'Preludes Op. 11 No. 4', '(string)$obra->desc
 INSERT INTO gamu.Obra VALUES (173, 'Mazurkas, Op. 56', '(string)$obra->desc', '1534', '00:21:50', 2, 176);
 INSERT INTO gamu.Obra VALUES (174, 'Händelgesellschaft volume 50', '(string)$obra->desc', '1818', '01:15:40', 4, 284);
 
+INSERT INTO gamu.Audicao VALUES (1,'Titulo','Sub','Tema',NOW(),'Local','Organizador',NOW());
+
+INSERT INTO gamu.Actuacao VALUES (1,1,'Primeira');
+INSERT INTO gamu.Actuacao VALUES (2,1,'Segunda');
+INSERT INTO gamu.Actuacao VALUES (3,1,'Terceira');
+INSERT INTO gamu.Actuacao VALUES (4,1,'Quarta');
+
+
+INSERT INTO gamu.Actuacao_Obra VALUES (1,12);
+INSERT INTO gamu.Actuacao_Obra VALUES (1,13);
+INSERT INTO gamu.Actuacao_Obra VALUES (2,14);
+INSERT INTO gamu.Actuacao_Obra VALUES (2,15);
+INSERT INTO gamu.Actuacao_Obra VALUES (3,20);
+INSERT INTO gamu.Actuacao_Obra VALUES (4,21);
+
+/*Obra 12*/
+INSERT INTO gamu.Participante VALUES (1,12,NULL,1510);
+INSERT INTO gamu.Participante VALUES (1,12,NULL,12753);
+INSERT INTO gamu.Participante VALUES (1,12,NULL,14539);
+INSERT INTO gamu.Participante VALUES (1,12,1,NULL);
+INSERT INTO gamu.Participante VALUES (1,12,2,NULL);
+INSERT INTO gamu.Participante VALUES (1,12,3,NULL);
+
+/*Obra 12*/
+INSERT INTO gamu.Participante VALUES (1,13,NULL,1510);
+INSERT INTO gamu.Participante VALUES (1,13,NULL,12753);
+INSERT INTO gamu.Participante VALUES (1,13,NULL,14539);
+INSERT INTO gamu.Participante VALUES (1,13,1,NULL);
+
+/*Obra 14*/
+INSERT INTO gamu.Participante VALUES (2,14,NULL,1510);
+INSERT INTO gamu.Participante VALUES (2,14,NULL,20044);
+INSERT INTO gamu.Participante VALUES (2,14,NULL,14539);
+INSERT INTO gamu.Participante VALUES (2,14,1,NULL);
+
+/*Obra 15*/
+INSERT INTO gamu.Participante VALUES (2,15,NULL,19705);
+INSERT INTO gamu.Participante VALUES (2,15,NULL,20021);
+INSERT INTO gamu.Participante VALUES (2,15,NULL,20044);
+INSERT INTO gamu.Participante VALUES (2,15,7,NULL);
+
+/*Obra 20*/
+INSERT INTO gamu.Participante VALUES (3,20,NULL,19705);
+INSERT INTO gamu.Participante VALUES (3,20,NULL,1510);
+INSERT INTO gamu.Participante VALUES (3,20,NULL,20044);
+INSERT INTO gamu.Participante VALUES (3,20,5,NULL);
+
+/*Obra 21*/
+INSERT INTO gamu.Participante VALUES (4,21,NULL,19705);
+INSERT INTO gamu.Participante VALUES (4,21,NULL,1510);
+INSERT INTO gamu.Participante VALUES (4,21,NULL,20044);
+INSERT INTO gamu.Participante VALUES (4,21,9,NULL);
 
 
 
