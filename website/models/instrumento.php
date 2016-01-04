@@ -48,10 +48,10 @@ class Instrumento {
 	}
 
 
-	public static function update($id, $inst) {
+	public static function update($id, $nome) {
 	
 		$db = DB::getInstance();
-		$query_update = "UPDATE Instrumento SET nome=$inst->nome WHERE id_instrumento=$id";
+		$query_update = "UPDATE Instrumento SET nome='$nome' WHERE id_instrumento=$id";
 		$result = $db->query($query_update);
 
 	}

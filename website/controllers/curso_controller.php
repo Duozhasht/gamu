@@ -55,12 +55,56 @@
 
     }
 
+    public function update() {
+
+        if(!empty($_POST['id'])&&!empty($_POST['curso'])&&!empty($_POST['id_instrumento'])){
+              $instrumento = Instrumento::find($_POST['id_instrumento']);
+              $duracao = 0;
+
+              if(strpos($_POST['curso'], 'Supletivo') != FALSE)
+                $duracao = 3;
+              else
+                $duracao = 5;
+              $aux = Curso::update($_POST['id'],$_POST['curso'].$instrumento->nome,$duracao,$_POST['id_instrumento']);
+              echo "
+                    <div class='alert alert-success text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Actualização Concluída com Sucesso
+                    </div>
+                  ";
+            }
+        else
+            echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Problemas no preenchimento de pelo menos um dos campos!
+                  </div>";
+
+      $controller = new CursoController();
+      $controller->index();
+
+    }
+
+
     public function remove(){
-      
+
       if(isset($_GET['id']))
       {
-        $aux = Curso::delete($_GET['id']);
+        try{
+          $aux = Curso::delete($_GET['id']);
+          echo "<div class='alert alert-success text-center'>
+              <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+              Curso Removido Com Sucesso!
+              </div>";
+        }catch(PDOException $Exception){
+          echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    O seguinte elemento não pode ser removido pois contem pelo menos uma dependencia;
+                  </div>";
+          
+        }
+
       }
+
       $controller = new CursoController();
       $controller->index();
 
@@ -81,13 +125,18 @@
       foreach ($cursos as $curso)
       {
         $cu = $xml_file->addChild('curso');
-        $cu->addAttribute('id','p'.$curso->id);
         $cu->addChild('designacao',$curso->designacao);
-        $cu->addChild('dataNasc',$curso->duracao);
-        if(strpos($curso->designacao,'Supletivo') != FALSE)
-          $cu->addChild('instrumento','CS'.$curso->id_instrumento);
-        else
-          $cu->addChild('instrumento','CB'.$curso->id_instrumento);
+        $cu->addChild('duracao',$curso->duracao);
+        if(strpos($curso->designacao,'Supletivo') != FALSE){
+          $cu->addAttribute('id','CS'.$curso->id);
+          $aux = $cu->addChild('instrumento',substr($curso->designacao,20));
+          $aux->addAttribute('id_instrumento','I'.$curso->id_instrumento);
+        }
+        else{
+          $cu->addAttribute('id','CB'.$curso->id);
+          $aux = $cu->addChild('instrumento',substr($curso->designacao,17));
+          $aux->addAttribute('id_instrumento','I'.$curso->id_instrumento);
+        }
 
       }
       //DOM conversion -> formatOutput needed
@@ -106,18 +155,6 @@
     }
 
 
-    public function importxml() {
-        $filename = 'dataset/Finais/cursos.xml';
-
-        $cursos = simplexml_load_file($filename);
-        foreach($cursos as $curso) {
-          Curso::create(substr((string)$curso['id'],2),
-                               (string)$curso->designacao,
-                               (string)$curso->duracao,
-                        substr((string)$curso->instrumento['id_instrumento'],1));
-        }
-
-    }
 
     public function importxml() {
         
@@ -140,7 +177,7 @@
 
           }
           else{
-            $cursos = simplexml_load_file($_FILES['ficheiro']['tmp_name']);
+          $cursos = simplexml_load_file($_FILES['ficheiro']['tmp_name']);
           $erros = [];
   
           foreach($cursos as $curso) 
@@ -154,7 +191,7 @@
             }
             else
             {
-                $erros[] = (string)$instrumento['id'];
+                $erros[] = (string)$curso['id'];
             }
 
           }
@@ -177,14 +214,11 @@
 
 
           }
-          $controller = new InstrumentoController();
+          $controller = new CursoController();
           $controller->index(); 
          }
 
         }
-
-
-  //CRUDE
 
 
 /*

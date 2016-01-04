@@ -64,7 +64,7 @@
 									echo "<td>".$professor->habilitacoes."</td>";
 									echo "<td>".$professor->curso."</td>";
 									echo "<td>
-											<a href='#'><i class='fa fa-pencil-square-o'></i></a>
+											<a href='#' onclick='showModal2(\"".$professor->id."\",\"".$professor->nome."\",\"".$professor->dataNasc."\",\"".$professor->id_curso."\",\"".$professor->habilitacoes."\")'><i class='fa fa-pencil-square-o'></i></a>
 										</td>
 										<td>
 											<a href='?controller=professor&action=remove&id=".$professor->id."'><i class='fa fa-times'></i></a>
@@ -106,7 +106,7 @@
 		</div>
 	</div>
 <!-- Modal -->
-<div class="modal fade" id="professorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="insertModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -172,15 +172,108 @@
 		</div>
 	</div>
 </div>
-<div class="hiddenfile" style="width: 0px; height: 0px; overflow: hidden;">
-	<form action='?controller=professor&action=importxml' method="post" accept-charset="utf-8">
-		<input name="upload" type="file" id="fileinput"/>
-	</form>
+
+
+<!-- Modal -->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Editar Professor</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-12">
+						<form action='?controller=professor&action=update' method="post" accept-charset="utf-8">
+							<div class="hiddenfile" style="width: 0px; height: 0px; overflow: hidden;">
+							<div class="form-group">
+								<input type="text" class="form-control" id="idu" name="id">
+							</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" id="nomeu" name="nome" placeholder="Nome do Professor">
+								</div>
+								<div class="form-group">
+									<input type="date" class="form-control" id="dataNascu" name="dataNasc" placeholder="Data de Nascimento">
+								</div>
+							</div>
+							<div class="col-md-12">
+								
+								<select id="cursou" class="form-control" name="id_curso">
+									
+									<?php
+										//echo "<option value='' disabled selected>Escolha um Curso</option>";
+										$nr_cursos = Curso::count();
+										$cursos = Curso::retrieve('id_curso',1,100);
+										
+										foreach ($cursos as $curso) {
+											echo "<option value='".$curso->id."'>".$curso->designacao."</option>";
+										}
+									?>
+								</select>
+							</div>
+							<div class="col-md-12">
+								<br>
+								<div class="radio">
+									<label class="radio-inline">
+										<input id="habilitacoes1" type="radio" name="habilitacoes" value="Licenciatura">
+										Licenciatura
+									</label>
+									<label class="radio-inline">
+										<input id="habilitacoes2" type="radio" name="habilitacoes" value="Mestrado">
+										Mestrado
+									</label>
+									<label class="radio-inline">
+									</label>
+									<h6 class="radio-inline text-muted" style="cursor:default;">
+										Habilitações do Professor
+									</h6>
+								</div>
+
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Actualizar</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div  class="hiddenfile" style="width: 0px; height: 0px; overflow: hidden;">
+<form id="upload" action='?controller=professor&action=importxml' method="post" accept-charset="utf-8" enctype="multipart/form-data">
+  <input type="file" name="ficheiro" id="file" />
+  <input type="submit" name="Enviar"/>
+</form>
 </div>
 <script type="text/javascript">
 function showModal(){
-	$('#professorModal').modal('show');};
+	$('#insertModal').modal('show');};
+function showModal2(id,nome,dataNasc,instrumento,habilitacoes){
+	$('#idu').val(id);
+	$('#nomeu').val(nome);
+	$('#dataNascu').val(dataNasc);
+	$('#cursou').val(instrumento);
+	console.log(instrumento);
+	if(habilitacoes.search("Licenciatura") >= 0){
+		$('#habilitacoes1').prop('checked', true);
+	}
+	else{
+		$('#habilitacoes2').prop('checked', true);
+	}
+	$('#updateModal').modal('show');
+};
 function inputXML(){
-	$('#fileinput').trigger('click');
+	$('#file').trigger('click');
 }
+$('#file').change(function() {
+  $('#upload').submit();
+});
 </script>

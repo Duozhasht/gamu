@@ -61,16 +61,15 @@ class Compositor {
 	
 	}
 
-/*
-	public static function update($id, $prof) {
+	public static function update($id, $nome, $bio, $dataNasc, $dataObito, $id_periodo) {
 	
 		$db = DB::getInstance();
-		$query_update = "UPDATE Professor SET nome=$prof->nome,data_de_nascimento=$prof->dataNasc,habilitacoes=$prof->habilitacoes WHERE id=$id";
+		$query_update = "UPDATE Compositor SET nome='$nome',bio='$bio',data_de_nascimento=$dataNasc,data_de_obito=$dataObito WHERE id_compositor=$id";
 		$result = $db->query($query_update);
 
 	}
 
-*/
+
 	public static function delete($id) {
 
 		$db = DB::getInstance();
@@ -82,10 +81,10 @@ class Compositor {
 	public static function find($id) {
 
 		$db = DB::getInstance();
-		$query_find = "SELECT * FROM Compositor WHERE id_compositor = $id";
+		$query_find = "SELECT * FROM compositor_model WHERE id_compositor = $id";
 
 		$result = $db->query($query_find);
-		$prof = $result->fetch();
+		$comp = $result->fetch();
 		return new Compositor($comp['id_compositor'],$comp['nome'],$comp['bio'],$comp['data_de_nascimento'],$comp['data_de_obito'],$comp['periodo'],$comp['id_periodo']);
 
 	}

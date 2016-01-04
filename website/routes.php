@@ -53,15 +53,15 @@
   }
 
   // we're adding an entry for the new controller and its actions
-  $controllers = array('index' => ['home', 'error'],
-                       'professor' => ['index','add','remove','exportxml','importxml'],
-                       'curso' =>['index','add','remove','exportxml','importxml'],
-                       'instrumento' =>['index','add','remove','exportxml','importxml'],
-                       'aluno' =>['index','add','remove','exportxml','importxml'],
-                       'periodo' =>['index','add','remove','exportxml','importxml'],
-                       'compositor' =>['index','add','remove','exportxml','importxml'],
-                       'obra' =>['index','add','remove','exportxml','importxml'],
-                       'audicao' =>['index','add','remove','exportxml','importxml','test','view']
+  $controllers = array('index' => ['update','home', 'error'],
+                       'professor' => ['update','index','add','remove','exportxml','importxml'],
+                       'curso' => ['update','index','add','remove','exportxml','importxml'],
+                       'instrumento' => ['update','index','add','remove','exportxml','importxml'],
+                       'aluno' => ['update','index','add','remove','exportxml','importxml'],
+                       'periodo' => ['update','index','add','remove','exportxml','importxml'],
+                       'compositor' => ['update','index','add','remove','exportxml','importxml'],
+                       'obra' => ['update','index','add','remove','exportxml','importxml'],
+                       'audicao' => ['update','index','add','remove','exportxml','importxml','test','view']
                        );
 
   if (array_key_exists($controller, $controllers)) {

@@ -61,14 +61,34 @@
         }catch(PDOException $Exception){
           echo "<div class='alert alert-danger text-center'>
                     <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-                    O seguinte elemento não pode ser removido!
+                    O seguinte elemento não pode ser removido pois contem pelo menos uma dependencia;
                   </div>";
           
-      }
+        }
 
       }
 
+      $controller = new InstrumentoController();
+      $controller->index();
 
+    }
+
+    public function update() {
+
+        if(!empty($_POST['id'])&& !empty($_POST['designacao'])) {
+              $aux = Instrumento::update($_POST['id'],$_POST['designacao']);
+              echo "
+                    <div class='alert alert-success text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Actualização Concluída com Sucesso
+                    </div>
+                  ";
+            }
+        else
+              echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Problemas no preenchimento de pelo menos um dos campos!
+                  </div>";
 
       $controller = new InstrumentoController();
       $controller->index();
@@ -149,7 +169,7 @@
           {
               echo "<div class='alert alert-danger text-center'>
                     <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-                    Erro! Os seguintes ID's já se encontram determinados:
+                    Erro! Os seguintes ID's já se encontram atribuidos:
                     <p>".implode(" - ",$erros)."</p>
                   </div>";
           }

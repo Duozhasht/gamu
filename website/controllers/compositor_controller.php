@@ -19,7 +19,7 @@
       else
         $page=1;
 
-      // Get profs
+      // Get
       $compositores = Compositor::retrieve('id_compositor',$page,$number_of_records);
       require_once('views/compositor/index.php');
 
@@ -67,6 +67,28 @@
 
     }
 
+    public function update() {
+
+        if(!empty($_POST['nome'])&&!empty($_POST['dataNasc'])&&!empty($_POST['dataObito'])&&!empty($_POST['bio'])&&!empty($_POST['id_periodo'])){
+              $aux = Compositor::update($_POST['id'],$_POST['nome'],$_POST['bio'],$_POST['dataNasc'],$_POST['dataObito'],$_POST['id_periodo']);
+              echo "
+                    <div class='alert alert-success text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Actualização Concluída com Sucesso
+                    </div>
+                  ";
+            }
+        else
+            echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Problemas no preenchimento de pelo menos um dos campos!
+                  </div>";
+
+      $controller = new CompositorController();
+      $controller->index();
+
+    }
+
     public function exportxml(){
       
       $file = 'public/xml/compositores.xml';
@@ -87,7 +109,7 @@
         $comp->addChild('bio',$compositor->bio);
         $comp->addChild('dataNasc',$compositor->dataNasc);
         $comp->addChild('dataObito',$compositor->dataObito);
-        $comp->addChild('curso','PE'.$compositor->id_periodo);
+        $comp->addChild('periodo','PE'.$compositor->id_periodo);
 
       }
       //DOM conversion -> formatOutput needed
@@ -97,27 +119,78 @@
       $dom->loadXML($xml_file->asXML());
       $dom->save($file);
 
-      echo "<script>
-              window.open('public/download_scripts/dw_cp.php', '_blank');
-            </script>";
+      echo "<script> window.open('public/download_scripts/dw_cp.php', '_blank'); </script>";
       $controller = new CompositorController();
       $controller->index();      
 
     }
 
-    public function importxml() {
-        $compositores = simplexml_load_file("dataset/Finais/compositores.xml");
 
-        foreach($compositores as $compositor) {
-          Compositor::create(substr((string)$compositor['id'],1),
+    public function importxml() {
+        
+        if($_FILES['ficheiro']['error'] > 0)
+        {
+          echo "Erro no ficheiro!";
+        }
+        else
+        {
+
+            $xmlDoc = new DOMDocument();
+            $xmlDoc->load($_FILES['ficheiro']['tmp_name']);          
+
+          if(!$xmlDoc->schemaValidate("public/schema/compositores.xsd"))
+          {
+            echo "<div class='alert alert-danger text-center'>
+               <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                O ficheiro de xml não se encontra na devida estrutura!
+               </div>";
+
+          }
+          else{
+            $compositores = simplexml_load_file($_FILES['ficheiro']['tmp_name']);
+            $erros = [];
+  
+          foreach($compositores as $compositor) 
+          {
+            if(Compositor::find(substr((string)$compositor['id'],1))->id==null)
+            {
+              Compositor::create(substr((string)$compositor['id'],1),
                                      (string)$compositor->nome,
-                                     'text',
+                                     (string)$compositor->bio,
                                      (string)$compositor->dataNasc,
                                      (string)$compositor->dataObito,
                                substr((string)$compositor->periodo,2));
-        }
+            }
+            else
+            {
+                $erros[] = (string)$compositor['id'];
+            }
 
-    }
+          }
+
+          if(!empty($erros))
+          {
+              echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Erro! Os seguintes ID's já se encontram atribuidos:
+                    <p>".implode(" - ",$erros)."</p>
+                  </div>";
+          }
+          else{
+            echo "<div class='alert alert-success text-center'>   
+                  <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                  Os dados foram importados com sucesso!
+                </div>
+                  ";
+          }
+
+
+          }
+          $controller = new CompositorController();
+          $controller->index(); 
+         }
+
+        }
 
 
 

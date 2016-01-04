@@ -60,7 +60,7 @@
 								echo "<td>I".$instrumento->id."</td>";
 								echo "<td>".$instrumento->nome."</td>";
 								echo "<td>
-									  <a href='#'><i class='fa fa-pencil-square-o'></i></a>
+									  <a href='#' onclick='showModal2(\"".$instrumento->nome."\")'><i class='fa fa-pencil-square-o'></i></a>
 									  </td>
 									  <td>
 									  <a href='?controller=instrumento&action=remove&id=".$instrumento->id."'><i class='fa fa-times'></i></a>
@@ -101,7 +101,7 @@
 								echo "<td>I".$instrumento->id."</td>";
 								echo "<td>".$instrumento->nome."</td>";
 								echo "<td>
-									  <a href='#'><i class='fa fa-pencil-square-o'></i></a>
+									  <a href='#' onclick='showModal2(\"".$instrumento->id."\",\"".$instrumento->nome."\")'><i class='fa fa-pencil-square-o'></i></a>
 									  </td>
 									  <td>
 									  <a href='?controller=instrumento&action=remove&id=".$instrumento->id."'><i class='fa fa-times'></i></a>
@@ -143,6 +143,39 @@
 		</div>
 	</div>
 </div>
+
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Editar Instrumento</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<form action='?controller=instrumento&action=update' method="post" accept-charset="utf-8">
+				
+						<div class="hiddenfile" style="width: 0px; height: 0px; overflow: hidden;">
+							<div class="form-group">
+								<input type="text" class="form-control" id="idu" name="id">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="text" class="form-control" id="designacaou" name="designacao" placeholder="Nome do Instrumento">
+							</div>
+						</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-primary">Actualizar</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					</form>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div  class="hiddenfile" style="width: 0px; height: 0px; overflow: hidden;">
 <form id="upload" action='?controller=instrumento&action=importxml' method="post" accept-charset="utf-8" enctype="multipart/form-data">
   <input type="file" name="ficheiro" id="file" />
@@ -150,10 +183,14 @@
 </form>
 </div>
 
-
 <script type="text/javascript">
 function showModal(){
 	$('#insertModal').modal('show');};
+function showModal2(id,designacao){
+	$('#idu').val(id);
+	$('#designacaou').val(designacao);
+	$('#updateModal').modal('show');
+};
 function inputXML(){
 	$('#file').trigger('click');
 }

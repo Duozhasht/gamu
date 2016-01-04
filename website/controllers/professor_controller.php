@@ -51,9 +51,44 @@
     public function remove(){
       
       if(isset($_GET['id']))
-      {
-        $aux = Professor::delete($_GET['id']);
+      {        
+        try{
+          $aux = Professor::delete($_GET['id']);
+          echo "<div class='alert alert-success text-center'>
+              <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+              Professor Removido Com Sucesso!
+              </div>";
+        }catch(PDOException $Exception){
+          echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    O seguinte elemento não pode ser removido pois contem pelo menos uma dependencia;
+                  </div>";
+          
+        }
+        
       }
+      $controller = new ProfessorController();
+      $controller->index();
+
+    }
+
+    public function update() {
+
+        if(!empty($_POST['nome'])&&!empty($_POST['dataNasc'])&&!empty($_POST['habilitacoes'])){
+              $aux = Professor::update($_POST['id'],$_POST['nome'],$_POST['dataNasc'],$_POST['habilitacoes'],$_POST['id_curso']);
+              echo "
+                    <div class='alert alert-success text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Actualização Concluída com Sucesso
+                    </div>
+                  ";
+            }
+        else
+            echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Problemas no preenchimento de pelo menos um dos campos!
+                  </div>";
+
       $controller = new ProfessorController();
       $controller->index();
 
@@ -74,11 +109,14 @@
       foreach ($professores as $professor)
       {
         $prof = $xml_file->addChild('professor');
-        $prof->addAttribute('id','p'.$professor->id);
+        $prof->addAttribute('id','P'.$professor->id);
         $prof->addChild('nome',$professor->nome);
         $prof->addChild('dataNasc',$professor->dataNasc);
         $prof->addChild('habilitacoes',$professor->habilitacoes);
-        $prof->addChild('curso',$professor->id_curso);
+        if(strpos($prof->curso,'Supletivo') != FALSE)
+          $prof->addChild('curso','CS'.$professor->id_curso);
+        else
+          $prof->addChild('curso','CB'.$professor->id_curso);
 
       }
       //DOM conversion -> formatOutput needed
@@ -96,19 +134,71 @@
 
     }
 
-    public function importxml() {
-        $professores = simplexml_load_file("dataset/Finais/professores.xml");
 
-        foreach($professores as $professor) {
-          Professor::create(substr((string)$professor['id'],1),
+    public function importxml() {
+        
+        if($_FILES['ficheiro']['error'] > 0)
+        {
+          echo "Erro no ficheiro!";
+        }
+        else
+        {
+
+            $xmlDoc = new DOMDocument();
+            $xmlDoc->load($_FILES['ficheiro']['tmp_name']);          
+
+          if(!$xmlDoc->schemaValidate("public/schema/professores.xsd"))
+          {
+            echo "<div class='alert alert-danger text-center'>
+               <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                O ficheiro de xml não se encontra na devida estrutura!
+               </div>";
+
+          }
+          else{
+            $professores = simplexml_load_file($_FILES['ficheiro']['tmp_name']);
+          $erros = [];
+  
+          foreach($professores as $professor) 
+          {
+            if(Professor::find(substr((string)$professor['id'],1))->id==null)
+            {
+              Professor::create(substr((string)$professor['id'],1),
                                      (string)$professor->nome,
                                      (string)$professor->dataNasc,
                                      (string)$professor->habilitacoes,
                                substr((string)$professor->curso,2));
-        }
-        echo getcwd();
-        echo "tudo okay!";
-    }
+            }
+            else
+            {
+                $erros[] = (string)$professor['id'];
+            }
+
+          }
+
+          if(!empty($erros))
+          {
+              echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Erro! Os seguintes ID's já se encontram atribuidos:
+                    <p>".implode(" - ",$erros)."</p>
+                  </div>";
+          }
+          else{
+            echo "<div class='alert alert-success text-center'>   
+                  <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                  Os dados foram importados com sucesso!
+                </div>
+                  ";
+          }
+
+
+          }
+          $controller = new ProfessorController();
+          $controller->index(); 
+         }
+
+        }  
 
 
 

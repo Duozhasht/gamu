@@ -67,8 +67,8 @@
          foi um compositor e alaudista italiano.Viveu em Parma de 1604 a 1614, depois em Roma e
          finalmente voltou a Nápoles, onde, em 1647, tornou-se maestro di cappella da capela
          real.</bio>
-      <dataNasc>1585-00-00</dataNasc>
-      <dataObito>1656-00-00</dataObito>
+      <dataNasc>1585</dataNasc>
+      <dataObito>1656</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C242">
@@ -77,8 +77,8 @@
          italiano do final da Renascença e início do Barroco, e membro da Escola romana de
          compositores. Foi o irmão mais velho de outro importante, e um pouco mais progressista
          compositor do mesmo período, Giovanni Francesco Anerio.</bio>
-      <dataNasc>1560-00-00</dataNasc>
-      <dataObito>1614-00-00</dataObito>
+      <dataNasc>1560</dataNasc>
+      <dataObito>1614</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C244">
@@ -90,8 +90,8 @@
          progressista em meio a outra forma conservadora da Escola romana, embora compartilhasse
          também de algumas das tendências estilísticas do seu irmão, que foi muito influenciado por
          Palestrina.</bio>
-      <dataNasc>1567-00-00</dataNasc>
-      <dataObito>1630-00-00</dataObito>
+      <dataNasc>1567</dataNasc>
+      <dataObito>1630</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C204">
@@ -119,7 +119,7 @@
          viola de gamba. Desejava tocar em viola de gamba tudo o que podiam fazer os músicos
          italianos com o violino. A sua capacidade para a improvisação era notável. Dizia-se que
          interpretava como um demónio, opondo-se a Marin Marais, que o fazia como um anjo.</bio>
-      <dataNasc>1671-00-00</dataNasc>
+      <dataNasc>1671</dataNasc>
       <dataObito>1745-06-28</dataObito>
       <periodo>PE3</periodo>
    </compositor>
@@ -142,8 +142,8 @@
          os quais possuíam cópias da missa de Lotti, a Missa Sapientiae. Lotti foi um professor
          notável, de Domenico Alberti, Benedetto Marcello, Baldassare Galuppi, Saratelli Giuseppe e
          Johann Dismas Zelenka entre seus alunos. Casou com a notável soprano Santa Stella.</bio>
-      <dataNasc>1667-00-00</dataNasc>
-      <dataObito>1740-00-00</dataObito>
+      <dataNasc>1667</dataNasc>
+      <dataObito>1740</dataObito>
       <periodo>PE3</periodo>
    </compositor>
    <compositor id="C50">
@@ -214,7 +214,7 @@
          foram o maior sucesso editorial de música do século XVIII. Cantava, escrevia libretos, e
          tocava violoncelo, cravo e em especial a viola damore.</bio>
       <dataNasc>1666-11-05</dataNasc>
-      <dataObito>1729-00-00</dataObito>
+      <dataObito>1729</dataObito>
       <periodo>PE3</periodo>
    </compositor>
    <compositor id="C128">
@@ -406,24 +406,24 @@
       <nome>Boyvin, Jacques</nome>
       <bio>Jacques Boyvin (Paris (?), entre 1649 e 1655; Ruão, 30 de julho de 1706) foi um organista
          francês e compositor do período da Renascença.</bio>
-      <dataNasc>1649-00-00</dataNasc>
-      <dataObito>1706-00-00</dataObito>
+      <dataNasc>1649</dataNasc>
+      <dataObito>1706</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C202">
       <nome>Bull, John</nome>
       <bio>John Bull (1562 ou 1563 – 15 de março 1628) foi um compositor inglês, músico e
          organista.</bio>
-      <dataNasc>1562-00-00</dataNasc>
-      <dataObito>1628-00-00</dataObito>
+      <dataNasc>1562</dataNasc>
+      <dataObito>1628</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C272">
       <nome>Cabanilles, Juan Bautista</nome>
       <bio>Juan Cabanilles (Algemesí, 6 de setembro de 1644; Valência, 29 de abril de 1712) foi um
          organista espanhol e compositor do período da Renascença.</bio>
-      <dataNasc>1644-00-00</dataNasc>
-      <dataObito>1712-00-00</dataObito>
+      <dataNasc>1644</dataNasc>
+      <dataObito>1712</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C168">
@@ -444,7 +444,7 @@
          delle Spagne é apresentada na Llotja de Mar, em Agosto de 1708, para celebrar o casamento
          do arquiduque com Elisabeth Christine de Brunswick-Wolfenbüttel.Caldara, irá influenciar a
          escola de Mannheim, bem como Haydn e Mozart.</bio>
-      <dataNasc>1670-00-00</dataNasc>
+      <dataNasc>1670</dataNasc>
       <dataObito>1736-12-28</dataObito>
       <periodo>PE3</periodo>
    </compositor>
@@ -467,7 +467,7 @@
       <bio>Emilio de Cavalieri (1550 - Roma, 11 de março de 1602) foi um compositor e humanista
          italiano. Pertencente à Camerata Fiorentina ou Camerata dos Bardi, contribuiu com suas
          obras escritas para o desenvolvimento do estilo recitativo e da ópera.</bio>
-      <dataNasc>1550-00-00</dataNasc>
+      <dataNasc>1550</dataNasc>
       <dataObito>1602-03-11</dataObito>
       <periodo>PE2</periodo>
    </compositor>
@@ -545,8 +545,8 @@
       <bio>Cristofaro Caresana (Veneza, c. 1640 - Nápoles, 1709) foi um compositor, organista e
          tenor barroco da Itália, um dos primeiros representantes da escola napolitana de ópera. É
          lembrado por suas cantatas, assim como interlúdios musicais.</bio>
-      <dataNasc>1640-00-00</dataNasc>
-      <dataObito>1709-00-00</dataObito>
+      <dataNasc>1640</dataNasc>
+      <dataObito>1709</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C106">
@@ -570,7 +570,7 @@
          exerceu uma grande influência nos compositores portugueses florescidos nos finais do século
          XVIII e princípios XIX. Em todos eles, inclusive, Marcos Portugal se nota influência. A sua
          assinatura na Irmandade de S. Cecília consta com a data de 28 de Setembro de 1756.</bio>
-      <dataNasc>1711-00-00</dataNasc>
+      <dataNasc>1711</dataNasc>
       <dataObito>1778-10-30</dataObito>
       <periodo>PE3</periodo>
    </compositor>
@@ -608,16 +608,16 @@
          meses.Buxtehude, a despeito da importância para a música alemã e de sua origem também alemã
          (a família era de Buxtehude, uma cidade a sudoeste de Hamburgo), sempre se considerou
          dinamarquês.== §Referências ==</bio>
-      <dataNasc>1637-00-00</dataNasc>
-      <dataObito>1707-00-00</dataObito>
+      <dataNasc>1637</dataNasc>
+      <dataObito>1707</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C268">
       <nome>Diogo Dias Melgas</nome>
       <bio>Diogo Dias Melgás (ou Melgaz) (Cuba (Portugal), 14 de Abril de 1638 - Évora, 1700) foi
          compositor português da polifonia.</bio>
-      <dataNasc>1638-00-00</dataNasc>
-      <dataObito>1700-00-00</dataObito>
+      <dataNasc>1638</dataNasc>
+      <dataObito>1700</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C54">
@@ -625,8 +625,8 @@
       <bio>Domenico Alberti (Veneza, ca. 1710 - Roma, 14 de outubro de 1740) foi um cantor,
          cravista, e compositor italiano, cujos trabalhos interligam os períodos Barroco e
          Clássico.</bio>
-      <dataNasc>1710-00-00</dataNasc>
-      <dataObito>1740-00-00</dataObito>
+      <dataNasc>1710</dataNasc>
+      <dataObito>1740</dataObito>
       <periodo>PE3</periodo>
    </compositor>
    <compositor id="C96">
@@ -663,8 +663,8 @@
          Évora, Vila Viçosa, Valladolid, Sevilha, Munique, Londres e Viena) os exemplares de
          praticamente tudo o que da sua obra foi editado em Antuérpia (Plantin, 1602-1639) e em
          Lisboa (Craesbeck, 1607).</bio>
-      <dataNasc>1565-00-00</dataNasc>
-      <dataObito>1646-00-00</dataObito>
+      <dataNasc>1565</dataNasc>
+      <dataObito>1646</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C230">
@@ -688,8 +688,8 @@
          Évora, Vila Viçosa, Valladolid, Sevilha, Munique, Londres e Viena) os exemplares de
          praticamente tudo o que da sua obra foi editado em Antuérpia (Plantin, 1602-1639) e em
          Lisboa (Craesbeck, 1607).</bio>
-      <dataNasc>1565-00-00</dataNasc>
-      <dataObito>1646-00-00</dataObito>
+      <dataNasc>1565</dataNasc>
+      <dataObito>1646</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C286">
@@ -721,16 +721,16 @@
       <bio>Esteban López Morago (ou Estêvão Lopes Morago) (Vallecas, c.1575 - faleceu Viseu (?),
          após 1630) é um compositor espanhol que estudou, viveu, trabalhou e morreu em
          Portugal.</bio>
-      <dataNasc>1575-00-00</dataNasc>
-      <dataObito>1630-00-00</dataObito>
+      <dataNasc>1575</dataNasc>
+      <dataObito>1630</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C68">
       <nome>Estevao de Brito</nome>
       <bio>Estêvão de Brito (Serpa, c.1570 - Málaga, 1641), compositor português do barroco
          (polifonia).</bio>
-      <dataNasc>1570-00-00</dataNasc>
-      <dataObito>1641-00-00</dataObito>
+      <dataNasc>1570</dataNasc>
+      <dataObito>1641</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C234">
@@ -747,16 +747,16 @@
       <bio>Gaspar Fernandes ou Gaspar Fernández (1566-1629) compositor e organista português. Ativo
          na catedral de Santiago de Guatemala e Puebla de los Ángeles, Nova Espanha (México nos dias
          de hoje).</bio>
-      <dataNasc>1566-00-00</dataNasc>
-      <dataObito>1629-00-00</dataObito>
+      <dataNasc>1566</dataNasc>
+      <dataObito>1629</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C126">
       <nome>Filipe De Magalhaes</nome>
       <bio>Filipe de Magalhães (Azeitão, c. 1571 - Lisboa, 1652) foi um compositor português de
          polifonia sacra.</bio>
-      <dataNasc>1571-00-00</dataNasc>
-      <dataObito>1652-00-00</dataObito>
+      <dataNasc>1571</dataNasc>
+      <dataObito>1652</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C188">
@@ -764,7 +764,7 @@
       <bio>Francesco Feo (1691 - 28 de janeiro de 1761) foi um compositor italiano, mais conhecido
          por suas óperas. Ele nasceu e morreu em Nápoles, onde a maior parte de suas óperas foram
          apresentadas.</bio>
-      <dataNasc>1691-00-00</dataNasc>
+      <dataNasc>1691</dataNasc>
       <dataObito>1761-01-28</dataObito>
       <periodo>PE3</periodo>
    </compositor>
@@ -864,7 +864,7 @@
          composição. A obra exerceu profunda influência sobre os compositores de sua geração e
          sobreviveu em voga por muito mais tempo, sendo a base do aprendizado de, entre muitos
          outros, Haydn, Mozart e Beethoven.</bio>
-      <dataNasc>1660-00-00</dataNasc>
+      <dataNasc>1660</dataNasc>
       <dataObito>1741-02-13</dataObito>
       <periodo>PE3</periodo>
    </compositor>
@@ -931,7 +931,7 @@
          como organista na igreja de St. Mary-le-Tower em Ipswich, e seu primeiro trabalho foi
          publicado, Eight Solos for Violin with a Thorough Bass. Apenas mais um, Six Quartettos, foi
          sabidamente publicado no decorrer de seus quarenta anos como músico.</bio>
-      <dataNasc>1699-00-00</dataNasc>
+      <dataNasc>1699</dataNasc>
       <dataObito>1788-12-12</dataObito>
       <periodo>PE3</periodo>
    </compositor>
@@ -949,7 +949,7 @@
          Carità, na mesma cidade, até sua morte. Foi um celebrado violinista em vida, e suas obras
          instrumentais ainda hoje estão presentes em concertos. De seus treze oratórios somente
          quatro sobrevivem, e suas treze óperas têm hoje um interesse apenas histórico.</bio>
-      <dataNasc>1650-00-00</dataNasc>
+      <dataNasc>1650</dataNasc>
       <dataObito>1716-10-01</dataObito>
       <periodo>PE3</periodo>
    </compositor>
@@ -989,8 +989,8 @@
          polifônica francesa mas o organizou em torno de um motivo recorrente que, à maneira de
          refrão, é intercalado entre passagens variadas. Com ele a versão italiana da chanson
          tornou-se uma forma plenamente autônoma e impregnada de um espírito renovado.</bio>
-      <dataNasc>1554-00-00</dataNasc>
-      <dataObito>1612-00-00</dataObito>
+      <dataNasc>1554</dataNasc>
+      <dataObito>1612</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C310">
@@ -1069,8 +1069,8 @@
       <nome>Gregor Aichinger</nome>
       <bio>Gregor Aichinger (Regensburgo, 1564 - Augsburgo, 21 de janeiro de 1628) foi um compositor
          alemão.</bio>
-      <dataNasc>1565-00-00</dataNasc>
-      <dataObito>1628-00-00</dataObito>
+      <dataNasc>1565</dataNasc>
+      <dataObito>1628</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C62">
@@ -1091,7 +1091,7 @@
          Allegri também publicou oito livros de motetos sacros num estilo mais moderno, entre 1618 e
          1639, destinados a consumo amplo.Entre as obras mais famosas de Allegri está Miserere Mei
          Deus.</bio>
-      <dataNasc>1582-00-00</dataNasc>
+      <dataNasc>1582</dataNasc>
       <dataObito>1652-02-17</dataObito>
       <periodo>PE2</periodo>
    </compositor>
@@ -1182,15 +1182,15 @@
       <nome>Heinrich Scheidemann</nome>
       <bio>Heinrich Scheidemann (1595 – 1663) foi um organista alemão e compositor do período da
          Renascença.</bio>
-      <dataNasc>1595-00-00</dataNasc>
-      <dataObito>1663-00-00</dataObito>
+      <dataNasc>1595</dataNasc>
+      <dataObito>1663</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C196">
       <nome>Henri Desmarets</nome>
       <bio>Henry Desmarest (Paris, Fevereiro de 1661 — Lunéville, 7 de Setembro de 1741) foi um
          músico e compositor francês da época barroca.</bio>
-      <dataNasc>1661-00-00</dataNasc>
+      <dataNasc>1661</dataNasc>
       <dataObito>1741-09-07</dataObito>
       <periodo>PE3</periodo>
    </compositor>
@@ -1211,7 +1211,7 @@
          professor ajudou a criar a tradição de órgãos do norte da Alemanha. Ao lado um dos dois
          retratos sobreviventes de Sweelinck, de 1606, atribuído a Gerrit Pietersz Sweelink, irmão
          do compositor.</bio>
-      <dataNasc>1562-00-00</dataNasc>
+      <dataNasc>1562</dataNasc>
       <dataObito>1621-10-16</dataObito>
       <periodo>PE2</periodo>
    </compositor>
@@ -1241,7 +1241,7 @@
          inclui música eclesiástica, odes, canções e música cênica. Suicidou-se em 1707,
          aparentemente por um caso de amor frustrado. Foi sepultado na Catedral de São Paulo na
          Londres.</bio>
-      <dataNasc>1674-00-00</dataNasc>
+      <dataNasc>1674</dataNasc>
       <dataObito>1707-12-01</dataObito>
       <periodo>PE3</periodo>
    </compositor>
@@ -1256,7 +1256,7 @@
          para o The Beggars Opera (1728) - com libretto de John Gay, compôs muitas outras obras,
          como música sacra, concertos trio sonatas para oboé, violino e baixo contínuo, peças
          clássicas como Sonata em Fá Maior, para flauta.</bio>
-      <dataNasc>1667-00-00</dataNasc>
+      <dataNasc>1667</dataNasc>
       <dataObito>1752-07-20</dataObito>
       <periodo>PE3</periodo>
    </compositor>
@@ -1388,8 +1388,8 @@
          habe", e o décimo é "Jesu bleibet meine Freude", sendo que este último, sob o título de
          Jesus, alegria dos homens, tem sido arranjado para diferentes instrumentos e ganho enorme
          popularidade.== §Referências ==</bio>
-      <dataNasc>1590-00-00</dataNasc>
-      <dataObito>1667-00-00</dataObito>
+      <dataNasc>1590</dataNasc>
+      <dataObito>1667</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C66">
@@ -1434,14 +1434,14 @@
          grande melancolia em suas músicas vocais. Sua música instrumental passou por uma grande
          revitalização, tendo sido incluída no repertório de violonistas eruditos durante o século
          XX.</bio>
-      <dataNasc>1563-00-00</dataNasc>
+      <dataNasc>1563</dataNasc>
       <dataObito>1626-02-20</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C198">
       <nome>John Eccles</nome>
       <bio>John Eccles (1668 - 12 de janeiro de 1735) foi um compositor Ingês.</bio>
-      <dataNasc>1668-00-00</dataNasc>
+      <dataNasc>1668</dataNasc>
       <dataObito>1735-01-12</dataObito>
       <periodo>PE3</periodo>
    </compositor>
@@ -1521,7 +1521,7 @@
          fundadores da escola francesa do cravo, tendo inventado o gênero de prelúdio non mesuré
          (sem compasso) para o cravo. Ele e seu sobrinho Couperin o Grande foram os mais renomados
          membros da família Couperin.</bio>
-      <dataNasc>1626-00-00</dataNasc>
+      <dataNasc>1626</dataNasc>
       <dataObito>1661-08-29</dataObito>
       <periodo>PE2</periodo>
    </compositor>
@@ -1563,7 +1563,7 @@
          músico e professor italiano do período do barroco, e que viveu em Itália e França.
          Introduziu o melodrama italiano na corte de França e aí fundou a cantata de câmara.Luigi
          Rossi foi autor, entre outras obras, de 200 cantatas de câmara.</bio>
-      <dataNasc>1597-00-00</dataNasc>
+      <dataNasc>1597</dataNasc>
       <dataObito>1653-02-20</dataObito>
       <periodo>PE2</periodo>
    </compositor>
@@ -1600,16 +1600,16 @@
          Évora, Vila Viçosa, Valladolid, Sevilha, Munique, Londres e Viena) os exemplares de
          praticamente tudo o que da sua obra foi editado em Antuérpia (Plantin, 1602-1639) e em
          Lisboa (Craesbeck, 1607).</bio>
-      <dataNasc>1565-00-00</dataNasc>
-      <dataObito>1646-00-00</dataObito>
+      <dataNasc>1565</dataNasc>
+      <dataObito>1646</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C80">
       <nome>Machado, Manuel</nome>
       <bio>Manuel Machado (Lisboa, c. 1590 - Madrid, 1646) foi um compositor e Harpista português.
          Esteve ativo em Espanha (nasceu quando Portugal esteve sob domínio espanhol).</bio>
-      <dataNasc>1590-00-00</dataNasc>
-      <dataObito>1646-00-00</dataObito>
+      <dataNasc>1590</dataNasc>
+      <dataObito>1646</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C194">
@@ -1617,8 +1617,8 @@
       <bio>Frei Filipe da Madre de Deus (c. 1630 - c. 1700) foi um compositor português do século
          XVII, nasceu em Lisboa e faleceu provavelmente em Sevilha, na Espanha.Foi frade no convento
          da Madre de Deus, em Lisboa.</bio>
-      <dataNasc>1630-00-00</dataNasc>
-      <dataObito>1688-00-00</dataObito>
+      <dataNasc>1630</dataNasc>
+      <dataObito>1688</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C308">
@@ -1638,8 +1638,8 @@
          para Saragoça, onde permaneceu até sua morte em 1653. Ele compôs muitos motets e
          villancicos, presente no cancioneiro El libro de Tonos humanos (1655) da catedral de
          Valladolid.</bio>
-      <dataNasc>1600-00-00</dataNasc>
-      <dataObito>1653-00-00</dataObito>
+      <dataNasc>1600</dataNasc>
+      <dataObito>1653</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C260">
@@ -1655,8 +1655,8 @@
          da produção musical portuguesa na época do domínio castelhano. De entre outros
          compositores, Manuel Rodrigues Coelho conhecia a música Orlando di Lasso, e na sua obra
          Flores de Música faz quatro variações de uma das suas chansons.</bio>
-      <dataNasc>1555-00-00</dataNasc>
-      <dataObito>1635-00-00</dataObito>
+      <dataNasc>1555</dataNasc>
+      <dataObito>1635</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C134">
@@ -1692,7 +1692,7 @@
          como propiciou-lhe encomendas da capela do delfim.Entre as obras mais notáveis de
          Charpentier estão: Oratório de Natal Frigidae Noctis Umbra e Messe de Minuit Pour
          Noël.</bio>
-      <dataNasc>1643-00-00</dataNasc>
+      <dataNasc>1643</dataNasc>
       <dataObito>1704-02-24</dataObito>
       <periodo>PE2</periodo>
    </compositor>
@@ -1777,8 +1777,8 @@
       <bio>Melchior Schildt (1592 ou 1593, Hanôver; 18 de maio de 1667) foi um organista e
          compositor alemão do período da Renascença. Fez parte da Escola Alemã do Norte de Orgão
          (Norddeutsche Orgelschule).== §Referências ==</bio>
-      <dataNasc>1592-00-00</dataNasc>
-      <dataObito>1667-00-00</dataObito>
+      <dataNasc>1592</dataNasc>
+      <dataObito>1667</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C250">
@@ -1810,8 +1810,8 @@
          grande sucesso em sua época. Pierre-Louis Daquin (filho do compositor Louis Claude Daquin)
          afirmou: "Se eu não pudesse ser Rameau, não há ninguém que eu preferia ser além de
          Mondonville".</bio>
-      <dataNasc>1711-00-00</dataNasc>
-      <dataObito>1772-00-00</dataObito>
+      <dataNasc>1711</dataNasc>
+      <dataObito>1772</dataObito>
       <periodo>PE3</periodo>
    </compositor>
    <compositor id="C184">
@@ -1824,8 +1824,8 @@
          Monsieur de Sainte-Colombe, filho — também compositor e tocador de viola de gamba, mas
          praticamente desconhecido, apesar do valor da sua obra que só recentemente foi
          descoberta.</bio>
-      <dataNasc>1640-00-00</dataNasc>
-      <dataObito>1700-00-00</dataObito>
+      <dataNasc>1640</dataNasc>
+      <dataObito>1700</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C52">
@@ -1854,7 +1854,7 @@
       <nome>Neander, Joachim</nome>
       <bio>Joachim Neander (1650, Bremen – 31 de maio de 1680) foi um pastor evangélico, poeta e
          compositor de música sacra alemão.</bio>
-      <dataNasc>1650-00-00</dataNasc>
+      <dataNasc>1650</dataNasc>
       <dataObito>1680-05-31</dataObito>
       <periodo>PE3</periodo>
    </compositor>
@@ -1892,7 +1892,7 @@
       <nome>Nicolaus Bruhns</nome>
       <bio>Friedrich Nicolaus Bruhns (também Nikolaus, Nicolás) (1665, Schwabstedt - 29 de março de
          1697, Husum) foi um organista alemão e compositor do período Barroco.</bio>
-      <dataNasc>1665-00-00</dataNasc>
+      <dataNasc>1665</dataNasc>
       <dataObito>1697-03-29</dataObito>
       <periodo>PE3</periodo>
    </compositor>
@@ -1900,16 +1900,16 @@
       <nome>Nivers, Guillaume-Gabriel</nome>
       <bio>Guillaume-Gabriel Nivers (1632; Paris, 13 de novembro de 1714) foi um organista francês,
          teórico musical e compositor do período da Renascença.</bio>
-      <dataNasc>1632-00-00</dataNasc>
-      <dataObito>1714-00-00</dataObito>
+      <dataNasc>1632</dataNasc>
+      <dataObito>1714</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C100">
       <nome>Paolo Agostino</nome>
       <bio>Paolo Agostini (ou Agostino; Augustinus em latim; Vallerano, ca. 1583 - Roma, 1629) foi
          um compositor, organista e maestro di cappella italiano do início da era barroca.</bio>
-      <dataNasc>1583-00-00</dataNasc>
-      <dataObito>1629-00-00</dataObito>
+      <dataNasc>1583</dataNasc>
+      <dataObito>1629</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C92">
@@ -1919,8 +1919,8 @@
          Seminário Conciliar de S. Pedro e S. Paulo (Braga) entre 1663 e 1668 e de segundo organista
          da Sé de Braga até 1665. == §Referências ==BibliografiaRui Vieira Nery: CD Batalhas e Meios
          Registos. Movieplay, Lisboa 1994</bio>
-      <dataNasc>1640-00-00</dataNasc>
-      <dataObito>1705-00-00</dataObito>
+      <dataNasc>1640</dataNasc>
+      <dataObito>1705</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C98">
@@ -1971,8 +1971,8 @@
       <bio>Peter Philips (c. 1560 – 1628) foi um eminente compositor, organista, e padre católico
          Flamengo Inglês exilado na Flandres após o início da Reforma Protestante. Foi um virtuoso
          do teclado no seu tempo.</bio>
-      <dataNasc>1560-00-00</dataNasc>
-      <dataObito>1628-00-00</dataObito>
+      <dataNasc>1560</dataNasc>
+      <dataObito>1628</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C220">
@@ -1998,7 +1998,7 @@
          rapidez para a formulação de passos, pois em sua carreira, provavelmente, estendeu-se de
          1655 a 1687, tendo seu sistema supostamente concluído em 1674.</bio>
       <dataNasc>1631-10-30</dataNasc>
-      <dataObito>1705-00-00</dataObito>
+      <dataObito>1705</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C186">
@@ -2147,16 +2147,16 @@
          dramáticas é um punhado de árias, duetos e trios. Sua música dramática que chegou até nós
          sugere um compositor com um senso acurado do aspecto emocional de um texto.== §Referências
          ==</bio>
-      <dataNasc>1628-00-00</dataNasc>
-      <dataObito>1677-00-00</dataObito>
+      <dataNasc>1628</dataNasc>
+      <dataObito>1677</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C232">
       <nome>Robert de Visee</nome>
       <bio>Robert de Visée (c.1655 – 1732 ou 1733) foi um alaúdista, guitarrista, violinista,
          teorbista, cantor e compositor barroco da corte.</bio>
-      <dataNasc>1655-00-00</dataNasc>
-      <dataObito>1732-00-00</dataObito>
+      <dataNasc>1655</dataNasc>
+      <dataObito>1732</dataObito>
       <periodo>PE3</periodo>
    </compositor>
    <compositor id="C276">
@@ -2216,8 +2216,8 @@
          clássicas, incluindo Mozart. O período médio de Sammartinié considerado como o mais
          significativo e pioneiro, durante o qual as suas composições no estilo galante prefiguram a
          música clássica que estava para vir.</bio>
-      <dataNasc>1700-00-00</dataNasc>
-      <dataObito>1775-00-00</dataObito>
+      <dataNasc>1700</dataNasc>
+      <dataObito>1775</dataObito>
       <periodo>PE3</periodo>
    </compositor>
    <compositor id="C320">
@@ -2225,7 +2225,7 @@
       <bio>Giuseppe Baldassare Sammartini (6 de janeiro, 1695 - novembro 1750) foi um compositor e
          oboísta Italiano.</bio>
       <dataNasc>1695-01-06</dataNasc>
-      <dataObito>1750-00-00</dataObito>
+      <dataObito>1750</dataObito>
       <periodo>PE3</periodo>
    </compositor>
    <compositor id="C140">
@@ -2242,8 +2242,8 @@
          espanhol. Entre suas peças mais conhecidas está Spañoleta. Sua obra mais importante é
          Instrucción de música sobre la guitarra española, importante hoje em dia nos estudos de
          reconstrução da sonoridade da guitarra barroca.</bio>
-      <dataNasc>1640-00-00</dataNasc>
-      <dataObito>1710-00-00</dataObito>
+      <dataNasc>1640</dataNasc>
+      <dataObito>1710</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C258">
@@ -2252,7 +2252,7 @@
          foi músico e compositor holandês. É um virtuoso holandês da viola da gamba, filho de pais
          alemães e ativo na Alemanha durante a segunda metade de sua vida.</bio>
       <dataNasc>1660-06-03</dataNasc>
-      <dataObito>1712-00-00</dataObito>
+      <dataObito>1712</dataObito>
       <periodo>PE3</periodo>
    </compositor>
    <compositor id="C42">
@@ -2407,8 +2407,8 @@
       <nome>Titelouze, Jean</nome>
       <bio>Jean (Jehan) Titelouze (c. 1562/3 – 24 de outubro de 1633) foi um organista francês,
          poeta e compositor do período da Renascença.</bio>
-      <dataNasc>1562-00-00</dataNasc>
-      <dataObito>1633-00-00</dataObito>
+      <dataNasc>1562</dataNasc>
+      <dataObito>1633</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C102">
@@ -2443,7 +2443,7 @@
          significativa a fazer uso da então recém-desenvolvida técnica do baixo contínuo, uma das
          técnicas de composição que definiram o fim da Renascença e o começo do Barroco em
          música.</bio>
-      <dataNasc>1560-00-00</dataNasc>
+      <dataNasc>1560</dataNasc>
       <dataObito>1627-05-02</dataObito>
       <periodo>PE2</periodo>
    </compositor>
@@ -2477,7 +2477,7 @@
          autor de dois conjuntos de madrigais, com 64 peças (1598, 1614), das quais se destaca, Draw
          on, Sweet Night, Sweet Honey-sucking Bees e Weep, Weep, Mine Eyes.</bio>
       <dataNasc>1574-03-07</dataNasc>
-      <dataObito>1638-00-00</dataObito>
+      <dataObito>1638</dataObito>
       <periodo>PE2</periodo>
    </compositor>
    <compositor id="C172">

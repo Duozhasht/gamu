@@ -1,2 +1,267 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<professores><professor id="P1"><nome>ALVARO JOSE DE CASTRO MOREIRA DA SILVA</nome><dataNasc>1968-6-13</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB1</curso></professor><professor id="P2"><nome>ANDRE FILIPE AZEVEDO SOUSA</nome><dataNasc>1965-12-17</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB2</curso></professor><professor id="P3"><nome>BRUNO MIGUEL PEREIRA PINTO</nome><dataNasc>1949-9-11</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB3</curso></professor><professor id="P4"><nome>FILIPE ALEXANDRE DA SILVA MARTINS</nome><dataNasc>1946-7-5</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB4</curso></professor><professor id="P5"><nome>HELDER RICARDO DIAS RIBEIRO</nome><dataNasc>1977-11-12</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB5</curso></professor><professor id="P6"><nome>HERNANI RODRIGUES DA SILVA</nome><dataNasc>1973-1-26</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB6</curso></professor><professor id="P7"><nome>JORGE MANUEL BARROS NUNES</nome><dataNasc>1983-8-24</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB7</curso></professor><professor id="P8"><nome>JOSE MIGUEL ARAUJO FERREIRA</nome><dataNasc>1962-11-15</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB8</curso></professor><professor id="P9"><nome>PEDRO GABRIEL DIAS FERREIRA</nome><dataNasc>1952-11-8</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB9</curso></professor><professor id="P10"><nome>PEDRO MANUEL VIEIRA SANTOS PINTO</nome><dataNasc>1986-8-19</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB10</curso></professor><professor id="P11"><nome>RUI MANUEL AFONSO RODRIGUES SILVA GUERRA</nome><dataNasc>1967-2-3</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB11</curso></professor><professor id="P12"><nome>SERGIO MIGUEL VALENTE DE ALMEIDA</nome><dataNasc>1988-7-1</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB12</curso></professor><professor id="P13"><nome>TIAGO MACHADO SILVA</nome><dataNasc>1967-8-21</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB13</curso></professor><professor id="P14"><nome>VASCO DUARTE ALMEIDA DIAS DE CASTRO</nome><dataNasc>1985-8-9</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB14</curso></professor><professor id="P15"><nome>ANTONIO JOSE OLIVEIRA FARIA</nome><dataNasc>1945-5-6</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB15</curso></professor><professor id="P16"><nome>CARLA MARIA MENDES DE CASTRO</nome><dataNasc>1966-12-6</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB16</curso></professor><professor id="P17"><nome>MARLENE AZEVEDO DA SILVA</nome><dataNasc>1962-9-24</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB17</curso></professor><professor id="P18"><nome>PAULO ALEXANDRE MARQUES DE OLIVEIRA SERAFIM</nome><dataNasc>1953-2-21</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB18</curso></professor><professor id="P19"><nome>DAVID FILIPE OLIVEIRA COSTA</nome><dataNasc>1978-4-18</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB19</curso></professor><professor id="P20"><nome>RICARDO MIGUEL CARVALHO FERREIRA</nome><dataNasc>1991-2-7</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB20</curso></professor><professor id="P21"><nome>JOSE ALVES DE CASTRO</nome><dataNasc>1975-8-10</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB21</curso></professor><professor id="P22"><nome>MARIO BENTO BRITO NOBREGA RAMOS DE AZEVEDO</nome><dataNasc>1980-6-25</dataNasc><habilitacoes>Licenciatura</habilitacoes><curso>CB22</curso></professor><professor id="P23"><nome>PAULO CESAR RODRIGUES GOMES</nome><dataNasc>1981-12-15</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS23</curso></professor><professor id="P24"><nome>Susana Pereira</nome><dataNasc>1968-10-5</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS24</curso></professor><professor id="P25"><nome>Gabriel Reis</nome><dataNasc>1982-10-15</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS25</curso></professor><professor id="P26"><nome>Arsénio</nome><dataNasc>1991-4-13</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS26</curso></professor><professor id="P27"><nome>Frederico Pinto</nome><dataNasc>1953-8-6</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS27</curso></professor><professor id="P28"><nome>Gonçalo Hermenegildo</nome><dataNasc>1945-10-9</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS28</curso></professor><professor id="P29"><nome>Luis</nome><dataNasc>1981-7-17</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS29</curso></professor><professor id="P30"><nome>Miguel Pinto</nome><dataNasc>1963-6-21</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS30</curso></professor><professor id="P31"><nome>Pedro Lopes</nome><dataNasc>1975-2-9</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS31</curso></professor><professor id="P32"><nome>António José Coutinho Barbosa</nome><dataNasc>1991-10-23</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS32</curso></professor><professor id="P33"><nome>Ricardo Paz</nome><dataNasc>1986-8-22</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS33</curso></professor><professor id="P34"><nome>Sandrina Maciel</nome><dataNasc>1962-1-17</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS34</curso></professor><professor id="P35"><nome>Bruno Martins</nome><dataNasc>1970-11-12</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS35</curso></professor><professor id="P36"><nome>Filipe Froufe</nome><dataNasc>1946-10-19</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS36</curso></professor><professor id="P37"><nome>João Brites</nome><dataNasc>1967-12-9</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS37</curso></professor><professor id="P38"><nome>Leandro Morgado</nome><dataNasc>1976-1-3</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS38</curso></professor><professor id="P39"><nome>Manuel Sousa</nome><dataNasc>1990-10-18</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS39</curso></professor><professor id="P40"><nome>Pedro Resende</nome><dataNasc>1970-2-3</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS40</curso></professor><professor id="P41"><nome>Ricardo</nome><dataNasc>1956-10-6</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS41</curso></professor><professor id="P42"><nome>Fernanda Barroso</nome><dataNasc>1971-10-1</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS42</curso></professor><professor id="P43"><nome>Marta Silva</nome><dataNasc>1962-8-17</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS43</curso></professor><professor id="P44"><nome>Paulo Alexandre Afonso Dias</nome><dataNasc>1951-12-19</dataNasc><habilitacoes>Mestrado</habilitacoes><curso>CS44</curso></professor></professores>
+<professores>
+    <professor id="P1">
+        <nome>ALVARO JOSE DE CASTRO MOREIRA DA SILVA</nome>
+        <dataNasc>1968-6-13</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB1</curso>
+    </professor>
+    <professor id="P2">
+        <nome>ANDRE FILIPE AZEVEDO SOUSA</nome>
+        <dataNasc>1965-12-17</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB2</curso>
+    </professor>
+    <professor id="P3">
+        <nome>BRUNO MIGUEL PEREIRA PINTO</nome>
+        <dataNasc>1949-9-11</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB3</curso>
+    </professor>
+    <professor id="P4">
+        <nome>FILIPE ALEXANDRE DA SILVA MARTINS</nome>
+        <dataNasc>1946-7-5</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB4</curso>
+    </professor>
+    <professor id="P5">
+        <nome>HELDER RICARDO DIAS RIBEIRO</nome>
+        <dataNasc>1977-11-12</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB5</curso>
+    </professor>
+    <professor id="P6">
+        <nome>HERNANI RODRIGUES DA SILVA</nome>
+        <dataNasc>1973-1-26</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB6</curso>
+    </professor>
+    <professor id="P7">
+        <nome>JORGE MANUEL BARROS NUNES</nome>
+        <dataNasc>1983-8-24</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB7</curso>
+    </professor>
+    <professor id="P8">
+        <nome>JOSE MIGUEL ARAUJO FERREIRA</nome>
+        <dataNasc>1962-11-15</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB8</curso>
+    </professor>
+    <professor id="P9">
+        <nome>PEDRO GABRIEL DIAS FERREIRA</nome>
+        <dataNasc>1952-11-8</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB9</curso>
+    </professor>
+    <professor id="P10">
+        <nome>PEDRO MANUEL VIEIRA SANTOS PINTO</nome>
+        <dataNasc>1986-8-19</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB10</curso>
+    </professor>
+    <professor id="P11">
+        <nome>RUI MANUEL AFONSO RODRIGUES SILVA GUERRA</nome>
+        <dataNasc>1967-2-3</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB11</curso>
+    </professor>
+    <professor id="P12">
+        <nome>SERGIO MIGUEL VALENTE DE ALMEIDA</nome>
+        <dataNasc>1988-7-1</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB12</curso>
+    </professor>
+    <professor id="P13">
+        <nome>TIAGO MACHADO SILVA</nome>
+        <dataNasc>1967-8-21</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB13</curso>
+    </professor>
+    <professor id="P14">
+        <nome>VASCO DUARTE ALMEIDA DIAS DE CASTRO</nome>
+        <dataNasc>1985-8-9</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB14</curso>
+    </professor>
+    <professor id="P15">
+        <nome>ANTONIO JOSE OLIVEIRA FARIA</nome>
+        <dataNasc>1945-5-6</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB15</curso>
+    </professor>
+    <professor id="P16">
+        <nome>CARLA MARIA MENDES DE CASTRO</nome>
+        <dataNasc>1966-12-6</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB16</curso>
+    </professor>
+    <professor id="P17">
+        <nome>MARLENE AZEVEDO DA SILVA</nome>
+        <dataNasc>1962-9-24</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB17</curso>
+    </professor>
+    <professor id="P18">
+        <nome>PAULO ALEXANDRE MARQUES DE OLIVEIRA SERAFIM</nome>
+        <dataNasc>1953-2-21</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB18</curso>
+    </professor>
+    <professor id="P19">
+        <nome>DAVID FILIPE OLIVEIRA COSTA</nome>
+        <dataNasc>1978-4-18</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB19</curso>
+    </professor>
+    <professor id="P20">
+        <nome>RICARDO MIGUEL CARVALHO FERREIRA</nome>
+        <dataNasc>1991-2-7</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB20</curso>
+    </professor>
+    <professor id="P21">
+        <nome>JOSE ALVES DE CASTRO</nome>
+        <dataNasc>1975-8-10</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB21</curso>
+    </professor>
+    <professor id="P22">
+        <nome>MARIO BENTO BRITO NOBREGA RAMOS DE AZEVEDO</nome>
+        <dataNasc>1980-6-25</dataNasc>
+        <habilitacoes>Licenciatura</habilitacoes>
+        <curso>CB22</curso>
+    </professor>
+    <professor id="P23">
+        <nome>PAULO CESAR RODRIGUES GOMES</nome>
+        <dataNasc>1981-12-15</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS23</curso>
+    </professor>
+    <professor id="P24">
+        <nome>Susana Pereira</nome>
+        <dataNasc>1968-10-5</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS24</curso>
+    </professor>
+    <professor id="P25">
+        <nome>Gabriel Reis</nome>
+        <dataNasc>1982-10-15</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS25</curso>
+    </professor>
+    <professor id="P26">
+        <nome>Arsénio</nome>
+        <dataNasc>1991-4-13</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS26</curso>
+    </professor>
+    <professor id="P27">
+        <nome>Frederico Pinto</nome>
+        <dataNasc>1953-8-6</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS27</curso>
+    </professor>
+    <professor id="P28">
+        <nome>Gonçalo Hermenegildo</nome>
+        <dataNasc>1945-10-9</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS28</curso>
+    </professor>
+    <professor id="P29">
+        <nome>Luis</nome>
+        <dataNasc>1981-7-17</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS29</curso>
+    </professor>
+    <professor id="P30">
+        <nome>Miguel Pinto</nome>
+        <dataNasc>1963-6-21</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS30</curso>
+    </professor>
+    <professor id="P31">
+        <nome>Pedro Lopes</nome>
+        <dataNasc>1975-2-9</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS31</curso>
+    </professor>
+    <professor id="P32">
+        <nome>António José Coutinho Barbosa</nome>
+        <dataNasc>1991-10-23</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS32</curso>
+    </professor>
+    <professor id="P33">
+        <nome>Ricardo Paz</nome>
+        <dataNasc>1986-8-22</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS33</curso>
+    </professor>
+    <professor id="P34">
+        <nome>Sandrina Maciel</nome>
+        <dataNasc>1962-1-17</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS34</curso>
+    </professor>
+    <professor id="P35">
+        <nome>Bruno Martins</nome>
+        <dataNasc>1970-11-12</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS35</curso>
+    </professor>
+    <professor id="P36">
+        <nome>Filipe Froufe</nome>
+        <dataNasc>1946-10-19</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS36</curso>
+    </professor>
+    <professor id="P37">
+        <nome>João Brites</nome>
+        <dataNasc>1967-12-9</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS37</curso>
+    </professor>
+    <professor id="P38">
+        <nome>Leandro Morgado</nome>
+        <dataNasc>1976-1-3</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS38</curso>
+    </professor>
+    <professor id="P39">
+        <nome>Manuel Sousa</nome>
+        <dataNasc>1990-10-18</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS39</curso>
+    </professor>
+    <professor id="P40">
+        <nome>Pedro Resende</nome>
+        <dataNasc>1970-2-3</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS40</curso>
+    </professor>
+    <professor id="P41">
+        <nome>Ricardo</nome>
+        <dataNasc>1956-10-6</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS41</curso>
+    </professor>
+    <professor id="P42">
+        <nome>Fernanda Barroso</nome>
+        <dataNasc>1971-10-1</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS42</curso>
+    </professor>
+    <professor id="P43">
+        <nome>Marta Silva</nome>
+        <dataNasc>1962-8-17</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS43</curso>
+    </professor>
+    <professor id="P44">
+        <nome>Paulo Alexandre Afonso Dias</nome>
+        <dataNasc>1951-12-19</dataNasc>
+        <habilitacoes>Mestrado</habilitacoes>
+        <curso>CS44</curso>
+    </professor>
+</professores>

@@ -138,4 +138,9 @@ table {
 	color: #337ab7;	
 }
 
+.modal-title {
+    margin: 0;
+    line-height: 1.42857143;
+    text-align: center;
+}
 

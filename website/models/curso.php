@@ -57,15 +57,15 @@ class Curso {
 	}
 
 	
-/*
-	public static function update($id, $curs) {
+
+	public static function update($id, $designacao, $duracao, $id_instrumento) {
 	
 		$db = DB::getInstance();
-		$query_update = "UPDATE Curso SET designacao=$curs->designacao,data_de_nascimento=$curs->dataNasc,habilitacoes=$curs->habilitacoes WHERE id=$id";
+		$query_update = "UPDATE Curso SET designacao='$designacao',duracao=$duracao,id_instrumento=$id_instrumento WHERE id_curso=$id";
 		$result = $db->query($query_update);
 
 	}
-*/
+
 
 	public static function delete($id) {
 

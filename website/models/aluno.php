@@ -65,10 +65,10 @@ class Aluno {
 	}
 
 
-	public static function update($id, $alu) {
+	public static function update($id, $nome, $dataNasc, $id_curso,$anocurso) {
 	
 		$db = DB::getInstance();
-		$query_update = "UPDATE Aluno SET nome=$alu->nome,data_de_nascimento=$alu->dataNasc,id_curso=$alu->id_curso,ano_curso=$alu->anocurso WHERE id=$id";
+		$query_update = "UPDATE Aluno SET nome='$nome',data_de_nascimento='$dataNasc',id_curso=$id_curso,ano_curso=$anocurso WHERE id_aluno=$id";
 		$result = $db->query($query_update);
 
 	}
@@ -86,6 +86,7 @@ class Aluno {
 
 		$db = DB::getInstance();
 		$query_find = "SELECT * FROM aluno_model WHERE id_aluno = $id";
+		echo $query_find;
 
 		$result = $db->query($query_find);
 		$alu = $result->fetch();

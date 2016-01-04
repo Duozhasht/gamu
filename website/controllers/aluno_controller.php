@@ -51,8 +51,42 @@
       
       if(isset($_GET['id']))
       {
-        $aux = Aluno::delete($_GET['id']);
+        try{
+          $aux = Aluno::delete($_GET['id']);
+          echo "<div class='alert alert-success text-center'>
+              <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+              Aluno Removido Com Sucesso!
+              </div>";
+        }catch(PDOException $Exception){
+          echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    O seguinte elemento não pode ser removido pois contem pelo menos uma dependencia;
+                  </div>";
+          
+        }
       }
+      $controller = new AlunoController();
+      $controller->index();
+
+    }
+
+    public function update() {
+
+        if(!empty($_POST['nome'])&&!empty($_POST['dataNasc'])&&!empty($_POST['anoCurso'])&&!empty($_POST['id_curso'])){
+              $aux = Aluno::update($_POST['id'],$_POST['nome'],$_POST['dataNasc'],$_POST['id_curso'],$_POST['anoCurso']);
+              echo "
+                    <div class='alert alert-success text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Actualização Concluída com Sucesso
+                    </div>
+                  ";
+            }
+        else
+            echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Problemas no preenchimento de pelo menos um dos campos!
+                  </div>";
+
       $controller = new AlunoController();
       $controller->index();
 
@@ -76,8 +110,14 @@
         $alu->addAttribute('id','a'.$aluno->id);
         $alu->addChild('nome',$aluno->nome);
         $alu->addChild('dataNasc',$aluno->dataNasc);
-        $alu->addChild('curso',$aluno->id_curso);
+        if(strpos($aluno->curso,'Supletivo') != FALSE){
+          $alu->addChild('curso','CS'.$aluno->id_curso);
+        }
+        else{
+          $alu->addChild('curso','CB'.$aluno->id_curso);
+        }
         $alu->addChild('anoCurso',$aluno->anocurso);
+        $alu->addChild('instrumento',$aluno->instrumento);
 
       }
       
@@ -97,17 +137,69 @@
     }
 
     public function importxml() {
-        $alunos = simplexml_load_file("dataset/Finais/alunos.xml");
+        
+        if($_FILES['ficheiro']['error'] > 0)
+        {
+          echo "Erro no ficheiro!";
+        }
+        else
+        {
 
-        foreach($alunos as $aluno) {
-          Aluno::create(  substr((string)$aluno['id'],1),
+            $xmlDoc = new DOMDocument();
+            $xmlDoc->load($_FILES['ficheiro']['tmp_name']);          
+
+          if(!$xmlDoc->schemaValidate("public/schema/alunos.xsd"))
+          {
+            echo "<div class='alert alert-danger text-center'>
+               <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                O ficheiro de xml não se encontra na devida estrutura!
+               </div>";
+
+          }
+          else{
+            $alunos = simplexml_load_file($_FILES['ficheiro']['tmp_name']);
+          $erros = [];
+  
+          foreach($alunos as $aluno) 
+          {
+            if(Aluno::find(substr((string)$aluno['id'],1))->id==null)
+            {
+              Aluno::create(  substr((string)$aluno['id'],1),
                                      (string)$aluno->nome,
                                      (string)$aluno->dataNasc,
                               substr((string)$aluno->curso,2),
                                      (string)$aluno->anoCurso);
+            }
+            else
+            {
+                $erros[] = (string)$aluno['id'];
+            }
+
+          }
+
+          if(!empty($erros))
+          {
+              echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Erro! Os seguintes ID's já se encontram atribuidos:
+                    <p>".implode(" - ",$erros)."</p>
+                  </div>";
+          }
+          else{
+            echo "<div class='alert alert-success text-center'>   
+                  <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                  Os dados foram importados com sucesso!
+                </div>
+                  ";
+          }
+
+
+          }
+          $controller = new AlunoController();
+          $controller->index(); 
+         }
+
         }
-        //  $id, $nome, $dataNasc, $id_curso,$anocurso
-    }
 
   }
   

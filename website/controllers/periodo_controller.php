@@ -91,7 +91,7 @@
 */
 
     public function importxml() {
-        $periodos = simplexml_load_file("dataset/Finais/periodos.xml");
+        $periodos = simplexml_load_file("/Applications/MAMP/htdocs/gamu/dataset/Finais/periodos.xml");
 
         foreach($periodos as $periodo) {
           Periodo::create(substr((string)$periodo['id'],2),

@@ -63,10 +63,10 @@ class Professor {
 	}
 
 
-	public static function update($id, $prof) {
+	public static function update($id, $nome, $dataNasc, $habilitacoes, $id_curso) {
 	
 		$db = DB::getInstance();
-		$query_update = "UPDATE Professor SET nome=$prof->nome,data_de_nascimento=$prof->dataNasc,habilitacoes=$prof->habilitacoes WHERE id=$id";
+		$query_update = "UPDATE Professor SET nome='$nome',data_de_nascimento='$dataNasc',habilitacoes='$habilitacoes', id_curso=$id_curso WHERE id_professor=$id";
 		$result = $db->query($query_update);
 
 	}

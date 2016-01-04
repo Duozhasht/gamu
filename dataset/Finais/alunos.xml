@@ -2485,13 +2485,6 @@
         <anoCurso>7</anoCurso>
         <instrumento>Corne Inglês</instrumento>
     </aluno>
-    <aluno id="A">
-        <nome/>
-        <dataNasc>2004-9-9</dataNasc>
-        <curso>CB9</curso>
-        <anoCurso>1</anoCurso>
-        <instrumento>Harpa</instrumento>
-    </aluno>
     <aluno id="A27648">
         <nome>NUNO RAMOS MATOS</nome>
         <dataNasc>1998-7-15</dataNasc>
