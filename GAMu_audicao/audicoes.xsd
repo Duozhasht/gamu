@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="audicoes">
+        <xs:complexType>
+            <xs:sequence maxOccurs="1">
+                <xs:element maxOccurs="unbounded" name="audicao">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:string"/>
+                            <xs:element name="metadados">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="titulo" type="xs:string"/>
+                                        <xs:element name="subtitulo" type="xs:string"/>
+                                        <xs:element name="tema" type="xs:string"/>
+                                        <xs:element name="data" type="xs:string"/>
+                                        <xs:element name="hora" type="xs:string"/>
+                                        <xs:element name="local" type="xs:string"/>
+                                        <xs:element name="organizador" type="xs:string"/>
+                                        <xs:element name="duracao" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="atuacoes">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element maxOccurs="unbounded" name="atuacao">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="idAt" type="xs:string"/>
+                                                  <xs:element maxOccurs="unbounded" name="obra"> </xs:element>
+                                                  <xs:element name="obras">
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+                                                  <xs:element maxOccurs="unbounded" name="obra">
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+                                                  <xs:element name="idOb" type="xs:string"/>
+                                                  <xs:element name="instrumentos">
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+                                                  <xs:element maxOccurs="unbounded"
+                                                  name="instrumento" type="xs:string"/>
+                                                  </xs:sequence>
+                                                  </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="maestros">
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+                                                  <xs:element maxOccurs="unbounded" name="maestro"
+                                                  type="xs:string"/>
+                                                  </xs:sequence>
+                                                  </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="musicos">
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+                                                  <xs:element maxOccurs="unbounded" name="musico"
+                                                  type="xs:string"/>
+                                                  </xs:sequence>
+                                                  </xs:complexType>
+                                                  </xs:element>
+                                                  </xs:sequence>
+                                                  </xs:complexType>
+                                                  </xs:element>
+                                                  </xs:sequence>
+                                                  </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

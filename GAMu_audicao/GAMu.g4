@@ -21,6 +21,8 @@ audicoes : {
             GrammarJDBC gdb = new GrammarJDBC(); 
             gdb.carregaDataSets(); 
             int cont = 1;
+            int ats = 1;
+            
             System.out.println("----------------------------------------");
             System.out.println("|           AUDIÇÕES MUSICAIS           |");
             System.out.println("----------------------------------------");
@@ -42,7 +44,7 @@ audicoes : {
              }
             }
              
-             c=audicao[cont, gdb.getDs()] (audicao[$c.cont2,gdb.getDs()])*
+             c=audicao[cont, ats, gdb.getDs()] (audicao[$c.cont2,$c.ats2,gdb.getDs()])*
              {
               try {
                File file = new File("audicoes.xml");
@@ -59,8 +61,8 @@ audicoes : {
               }
          ;
 
-audicao[int cont, Datasets d]
-    returns [int cont2]
+audicao[int cont, int ats, Datasets d]
+    returns [int cont2, int ats2]
     : 'AUDICAO:'  {
                     PrintWriter pw = null;
                     System.out.println("----------------------------------------");
@@ -83,8 +85,9 @@ audicao[int cont, Datasets d]
                    
                    } 
       dadosAud 
-      atuacoes[$d] 
+      a=atuacoes[$ats, $d] 
       '.' {
+            $ats2 = $a.ats2;
             try {
                File file = new File("audicoes.xml");
                FileWriter fw = new FileWriter(file, true);
@@ -213,7 +216,8 @@ duracaoS
     : 'DURACAO' ':' vduracao=duracao {$tx = $vduracao.text;}
     ;
 
-atuacoes[Datasets d]
+atuacoes[int ats, Datasets d]
+    returns [int ats2]
     : {
         System.out.println("----------------------------------------");
         System.out.println("|           LISTA DE ATUAÇÕES          | ");
@@ -232,8 +236,9 @@ atuacoes[Datasets d]
            }
         }
     }
-    atuacao[$d]+
+    a=atuacao[$ats,$d] (b=atuacao[$a.ats2,$d])*
     {
+        $ats2 = $b.ats2;
         pw = null;
         try {
            File file = new File("audicoes.xml");
@@ -250,18 +255,21 @@ atuacoes[Datasets d]
     }
     ;
 
-atuacao[Datasets d] 
-    : 'ATUACAO' idAt=ID ':' 
+atuacao[int ats,Datasets d]
+    returns [int ats2]
+    : 'ATUACAO' desig=NOME ':' 
             {   System.out.println("----------------------------------------");
-                System.out.println("|           ATUAÇÃO: " + $idAt.text + "               |");
+                System.out.println("           ATUAÇÃO: " + $desig.text + "       ");
                 System.out.println("----------------------------------------");;
                 PrintWriter pw = null;
                 try {
                    File file = new File("audicoes.xml");
                    FileWriter fw = new FileWriter(file, true);
                    pw = new PrintWriter(fw);
-                    pw.println("<atuacao>");
-                   pw.println("<idAt>"+$idAt.text+"</idAt>");
+                   pw.println("<atuacao>");
+                   pw.println("<idAt>AT"+$ats+"</idAt>");
+                   pw.println("<tituloAt>"+$desig.text+"</tituloAt>");
+                   $ats2 = $ats + 1;
                 } catch (IOException e) {
                    e.printStackTrace();
                 } finally {
