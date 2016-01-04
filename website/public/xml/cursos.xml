@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cursos>
+  <curso id="p1">
+    <designacao>Curso Básico de Clarinete</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB1</instrumento>
+  </curso>
+  <curso id="p1">
+    <designacao>Curso Básico de Clarinete</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB1</instrumento>
+  </curso>
+  <curso id="p2">
+    <designacao>Curso Básico de Contrabaixo</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB2</instrumento>
+  </curso>
+  <curso id="p3">
+    <designacao>Curso Básico de Corne Inglês</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB3</instrumento>
+  </curso>
+  <curso id="p4">
+    <designacao>Curso Básico de Eufónio</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB4</instrumento>
+  </curso>
+  <curso id="p5">
+    <designacao>Curso Básico de Fagote</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB5</instrumento>
+  </curso>
+  <curso id="p5">
+    <designacao>Curso Básico de Fagote</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB5</instrumento>
+  </curso>
+  <curso id="p6">
+    <designacao>Curso Básico de Flauta</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB6</instrumento>
+  </curso>
+  <curso id="p7">
+    <designacao>Curso Básico de Fliscorne</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB7</instrumento>
+  </curso>
+  <curso id="p8">
+    <designacao>Curso Básico de Guitarra</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB8</instrumento>
+  </curso>
+  <curso id="p9">
+    <designacao>Curso Básico de Harpa</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB9</instrumento>
+  </curso>
+  <curso id="p10">
+    <designacao>Curso Básico de Oboé</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB10</instrumento>
+  </curso>
+  <curso id="p11">
+    <designacao>Curso Básico de Orgão</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB11</instrumento>
+  </curso>
+  <curso id="p12">
+    <designacao>Curso Básico de Percussão</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB12</instrumento>
+  </curso>
+  <curso id="p13">
+    <designacao>Curso Básico de Piano</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB13</instrumento>
+  </curso>
+  <curso id="p14">
+    <designacao>Curso Básico de Saxofone</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB14</instrumento>
+  </curso>
+  <curso id="p15">
+    <designacao>Curso Básico de Trombone</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB15</instrumento>
+  </curso>
+  <curso id="p16">
+    <designacao>Curso Básico de Trompa</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB16</instrumento>
+  </curso>
+  <curso id="p17">
+    <designacao>Curso Básico de Trompete</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB17</instrumento>
+  </curso>
+  <curso id="p18">
+    <designacao>Curso Básico de Tuba</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB18</instrumento>
+  </curso>
+  <curso id="p18">
+    <designacao>Curso Básico de Tuba</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB18</instrumento>
+  </curso>
+  <curso id="p19">
+    <designacao>Curso Básico de Violoncelo</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB19</instrumento>
+  </curso>
+  <curso id="p20">
+    <designacao>Curso Básico de Violino</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB20</instrumento>
+  </curso>
+  <curso id="p21">
+    <designacao>Curso Básico de Viola de Arco</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB21</instrumento>
+  </curso>
+  <curso id="p22">
+    <designacao>Curso Básico de Bandolim</designacao>
+    <dataNasc>5</dataNasc>
+    <instrumento>CB22</instrumento>
+  </curso>
+  <curso id="p23">
+    <designacao>Curso Supletivo de Clarinete</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS1</instrumento>
+  </curso>
+  <curso id="p24">
+    <designacao>Curso Supletivo de Contrabaixo</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS2</instrumento>
+  </curso>
+  <curso id="p25">
+    <designacao>Curso Supletivo de Corne Inglês</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS3</instrumento>
+  </curso>
+  <curso id="p26">
+    <designacao>Curso Supletivo de Eufónio</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS4</instrumento>
+  </curso>
+  <curso id="p27">
+    <designacao>Curso Supletivo de Fagote</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS5</instrumento>
+  </curso>
+  <curso id="p28">
+    <designacao>Curso Supletivo de Flauta</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS6</instrumento>
+  </curso>
+  <curso id="p29">
+    <designacao>Curso Supletivo de Fliscorne</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS7</instrumento>
+  </curso>
+  <curso id="p30">
+    <designacao>Curso Supletivo de Guitarra</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS8</instrumento>
+  </curso>
+  <curso id="p31">
+    <designacao>Curso Supletivo de Harpa</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS9</instrumento>
+  </curso>
+  <curso id="p32">
+    <designacao>Curso Supletivo de Oboé</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS10</instrumento>
+  </curso>
+  <curso id="p33">
+    <designacao>Curso Supletivo de Orgão</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS11</instrumento>
+  </curso>
+  <curso id="p34">
+    <designacao>Curso Supletivo de Percussão</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS12</instrumento>
+  </curso>
+  <curso id="p35">
+    <designacao>Curso Supletivo de Piano</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS13</instrumento>
+  </curso>
+  <curso id="p36">
+    <designacao>Curso Supletivo de Saxofone</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS14</instrumento>
+  </curso>
+  <curso id="p37">
+    <designacao>Curso Supletivo de Trombone</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS15</instrumento>
+  </curso>
+  <curso id="p38">
+    <designacao>Curso Supletivo de Trompa</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS16</instrumento>
+  </curso>
+  <curso id="p39">
+    <designacao>Curso Supletivo de Trompete</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS17</instrumento>
+  </curso>
+  <curso id="p40">
+    <designacao>Curso Supletivo de Tuba</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS18</instrumento>
+  </curso>
+  <curso id="p41">
+    <designacao>Curso Supletivo de Violoncelo</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS19</instrumento>
+  </curso>
+  <curso id="p42">
+    <designacao>Curso Supletivo de Violino</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS20</instrumento>
+  </curso>
+  <curso id="p43">
+    <designacao>Curso Supletivo de Viola de Arco</designacao>
+    <dataNasc>3</dataNasc>
+    <instrumento>CS21</instrumento>
+  </curso>
+</cursos>
