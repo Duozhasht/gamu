@@ -28,7 +28,7 @@
                                             <xs:complexType>
                                                 <xs:sequence>
                                                   <xs:element name="idAt" type="xs:string"/>
-                                                  <xs:element name="tituloAt" type="xs:string"/>
+                                                  <xs:element maxOccurs="unbounded" name="obra"> </xs:element>
                                                   <xs:element name="obras">
                                                   <xs:complexType>
                                                   <xs:sequence>
