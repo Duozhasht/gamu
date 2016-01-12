@@ -35,6 +35,7 @@
         $controller = new CompositorController();
       break;
       case 'obra':
+        require_once('models/compositor.php');
         require_once('models/periodo.php');
         require_once('models/obra.php');
         $controller = new ObraController();

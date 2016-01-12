@@ -19,7 +19,7 @@
       else
         $page=1;
 
-      // Get profs
+      // Get
       $obras = Obra::retrieve('id_obra',$page,$number_of_records);
       require_once('views/obra/index.php');
     }
@@ -27,49 +27,71 @@
 
     public function add() {
 
-        if(isset($_POST['nome'])&&isset($_POST['dataNasc'])&&isset($_POST['habilitacoes'])){
-              $aux = Professor::create('NULL',$_POST['nome'],$_POST['dataNasc'],$_POST['habilitacoes']);
-              echo "Inserção Concluída com Sucesso";
+
+      if(!empty($_POST['nome'])&&!empty($_POST['descricao'])&&!empty($_POST['duracao'])&&!empty($_POST['ano'])){
+              $aux = Obra::create('NULL',$_POST['nome'],$_POST['descricao'],$_POST['ano'],$_POST['duracao'],$_POST['id_periodo'],$_POST['id_compositor']);
+              echo "
+                    <div class='alert alert-success text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Inserção Concluída com Sucesso
+                    </div>
+                  ";
             }
         else
-            echo "Problemas!";
+            echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Problemas no preenchimento de pelo menos um dos campos!
+                  </div>";
 
-      $controller = new ProfessorController();
+      $controller = new ObraController();
       $controller->index();
+
 
     }
 
     public function remove(){
       
       if(isset($_GET['id']))
-      {
-        $aux = Professor::delete($_GET['id']);
-      }
-      $controller = new ProfessorController();
+        try{
+          $aux = Obra::delete($_GET['id']);
+          echo "<div class='alert alert-success text-center'>
+              <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+              Aluno Removido Com Sucesso!
+              </div>";
+        }catch(PDOException $Exception){
+          echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    O seguinte elemento não pode ser removido pois contem pelo menos uma dependencia;
+                  </div>";
+          
+        }
+      $controller = new ObraController();
       $controller->index();
 
     }
-/*
+
     public function exportxml(){
       
-      $file = 'public/xml/professores.xml';
+      $file = 'public/xml/obras.xml';
 
-      $nr_professores = Professor::count();
-      $professores = Professor::retrieve('id_professor',1,$nr_professores);
+      $nr_obras = Obra::count();
+      $obras = Obra::retrieve('id_obra',1,$nr_obras);
 
       $xmlstr = "<?xml version='1.0' encoding='UTF-8'?>
-                 <professores/>";
+                 <obras/>";
       $xml_file = new SimpleXMLElement($xmlstr);
 
       
-      foreach ($professores as $professor)
+      foreach ($obras as $obra)
       {
-        $prof = $xml_file->addChild('professor');
-        $prof->addAttribute('id','p'.$professor->id);
-        $prof->addChild('nome',$professor->nome);
-        $prof->addChild('dataNasc',$professor->dataNasc);
-        $prof->addChild('habilitacoes',$professor->habilitacoes);
-        $prof->addChild('curso',$professor->id_curso);
+        $ob = $xml_file->addChild('obra');
+        $ob->addAttribute('id','O'.$obra->id);
+        $ob->addChild('nome',$obra->nome);
+        $ob->addChild('desc',$obra->descricao);
+        $ob->addChild('anoCriacao',$obra->ano);
+        $ob->addChild('periodo','PE'.$obra->id_periodo);
+        $ob->addChild('compositor','C'.$obra->id_compositor);
+        $ob->addChild('duracao',$obra->duracao.':00');
 
       }
       //DOM conversion -> formatOutput needed
@@ -80,27 +102,79 @@
       $dom->save($file);
 
       echo "<script>
-              window.open('public/download_scripts/dw_p.php', '_blank');
+              window.open('public/download_scripts/dw_o.php', '_blank');
             </script>";
-      $controller = new ProfessorController();
+      $controller = new ObraController();
       $controller->index();      
 
     }
-*/
-    public function importxml() {
-        $obras = simplexml_load_file("dataset/Finais/obras.xml");
 
-        foreach($obras as $obra) {
-          Obra::create(substr((string)$obra['id'],1),
+
+        public function importxml() {
+        
+        if($_FILES['ficheiro']['error'] > 0)
+        {
+          echo "Erro no ficheiro!";
+        }
+        else
+        {
+
+            $xmlDoc = new DOMDocument();
+            $xmlDoc->load($_FILES['ficheiro']['tmp_name']);          
+
+          if(!$xmlDoc->schemaValidate("public/schema/obras.xsd"))
+          {
+            echo "<div class='alert alert-danger text-center'>
+               <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                O ficheiro de xml não se encontra na devida estrutura!
+               </div>";
+
+          }
+          else{
+            $obras = simplexml_load_file($_FILES['ficheiro']['tmp_name']);
+          $erros = [];
+  
+          foreach($obras as $obra) 
+          {
+            if(Obra::find(substr((string)$obra['id'],1))->id==null)
+            {
+              Obra::create(substr((string)$obra['id'],1),
                                      (string)$obra->nome,
-                                     '(string)$obra->desc',
+                                     (string)$obra->desc,
                                      (string)$obra->anoCriacao,
                                      (string)$obra->duracao,
                                substr((string)$obra->periodo,2),
-                               substr((string)$obra->compositor,1));
-        }
+                               substr((string)$obra->compositor,1));            }
+            else
+            {
+                $erros[] = (string)$obra['id'];
+            }
 
-    }
+          }
+
+          if(!empty($erros))
+          {
+              echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Erro! Os seguintes ID's já se encontram atribuidos:
+                    <p>".implode(" - ",$erros)."</p>
+                  </div>";
+          }
+          else{
+            echo "<div class='alert alert-success text-center'>   
+                  <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                  Os dados foram importados com sucesso!
+                </div>
+                  ";
+          }
+
+
+          }
+          $controller = new ObraController();
+          $controller->index(); 
+         }
+
+        }
 
 
 

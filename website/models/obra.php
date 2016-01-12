@@ -60,17 +60,17 @@ class Obra {
 
 		// we create a list of Professor objects from the database results
 		foreach($result as $obra)
-			$list[] = new Obra($obra['id_obra'],$obra['nome'],$obra['descricao'],$obra['ano'],$obra['duracao'],$obra['periodo'],$obra['compositor'],$obra['id_periodo'],$obra['id_compositor']);
+			$list[] = new Obra($obra['id_obra'],$obra['nome'],$obra['descricao'],$obra['ano'],(substr((string)$obra['duracao'],0,-3)),$obra['periodo'],$obra['compositor'],$obra['id_periodo'],$obra['id_compositor']);
 
 		return $list;
 	
 	}
 
-/*
-	public static function update($id, $prof) {
+
+	public static function update($id, $nome, $descricao, $ano, $duracao, $id_periodo, $id_compositor) {
 	
 		$db = DB::getInstance();
-		$query_update = "UPDATE Professor SET nome=$prof->nome,data_de_nascimento=$prof->dataNasc,habilitacoes=$prof->habilitacoes WHERE id=$id";
+		$query_update = "UPDATE Obra SET nome='$nome', descricao='$descricao', ano='$ano', duracao='$duracao', id_periodo=$id_periodo ,id_compositor=$id_compositor WHERE id_obra=$id";
 		$result = $db->query($query_update);
 
 	}
@@ -79,11 +79,11 @@ class Obra {
 	public static function delete($id) {
 
 		$db = DB::getInstance();
-		$query_delete = "DELETE FROM Professor WHERE id=$id";
+		$query_delete = "DELETE FROM Obra WHERE id_obra=$id";
 		$result = $db->query($query_delete);
 
 	}
-*/
+
 	public static function find($id) {
 
 		$db = DB::getInstance();

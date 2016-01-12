@@ -32,6 +32,25 @@
 
     }
 
+    public function add(){
+       if(!empty($_POST['titulo'])&&!empty($_POST['subtitulo'])&&!empty($_POST['tema'])&&!empty($_POST['data'])&&!empty($_POST['local'])&&!empty($_POST['organizador'])&&!empty($_POST['duracao'])){
+              $aux = Audicao::create('NULL',$_POST['titulo'],$_POST['subtitulo'],$_POST['tema'],$_POST['data'],$_POST['local'],$_POST['organizador'],$_POST['duracao']);
+              echo "<div class='alert alert-success text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Inserção Concluída com Sucesso
+                    </div>
+                  ";
+            }
+        else
+            echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Problemas no preenchimento de pelo menos um dos campos!
+                  </div>";
+
+      $controller = new AudicaoController();
+      $controller->index();
+    }
+
 
     public function view()
     {

@@ -86,7 +86,6 @@ class Aluno {
 
 		$db = DB::getInstance();
 		$query_find = "SELECT * FROM aluno_model WHERE id_aluno = $id";
-		echo $query_find;
 
 		$result = $db->query($query_find);
 		$alu = $result->fetch();

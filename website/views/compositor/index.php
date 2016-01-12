@@ -56,9 +56,7 @@
 					<?php
 							foreach ($compositores as $compositor)
 							{
-							echo "<div id='c".$compositor->id."' class='hiddenfile' style='width: 0px; height: 0px; overflow: hidden;'>
-									$compositor->bio;
-								 </div>";
+							echo "<div id='c".$compositor->id."' class='hiddenfile' style='width: 0px; height: 0px; overflow: hidden;'>$compositor->bio</div>";
 	
 								echo "<tr>";
 								echo "<td>C".$compositor->id."</td>";
@@ -189,10 +187,10 @@
 								<input type="text" class="form-control" id="nomeu" name="nome" placeholder="Nome do Compositor">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="dataNascu" name="dataNasc" placeholder="Data de Nascimento" onfocus="(this.type='date')">
+								<input type="date" class="form-control" id="dataNascu" name="dataNasc" placeholder="Data de Nascimento">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="dataObitou" name="dataObito" placeholder="Data de Obito" onfocus="(this.type='date')">
+								<input type="date" class="form-control" id="dataObitou" name="dataObito" placeholder="Data de Nascimento">
 							</div>
 							<div class="form-group">
   								<textarea class="form-control" rows="5" id="biou" name="bio" placeholder="Biografia (breve descrição do compositor)"></textarea>

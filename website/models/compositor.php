@@ -64,7 +64,7 @@ class Compositor {
 	public static function update($id, $nome, $bio, $dataNasc, $dataObito, $id_periodo) {
 	
 		$db = DB::getInstance();
-		$query_update = "UPDATE Compositor SET nome='$nome',bio='$bio',data_de_nascimento=$dataNasc,data_de_obito=$dataObito WHERE id_compositor=$id";
+		$query_update = "UPDATE Compositor SET nome='$nome',bio='$bio',data_de_nascimento='$dataNasc',data_de_obito='$dataObito',id_periodo=$id_periodo WHERE id_compositor='$id'";
 		$result = $db->query($query_update);
 
 	}

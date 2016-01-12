@@ -14,34 +14,35 @@
       					foreach($actuacoes as $actuacao)
       					{
         					
-        					echo "<h3 class='text-center' style='padding-bottom:50px;'>".$counter."º - ".$actuacao->designacao."</h3>";
+        					echo "<h3 class='text-center' style='padding-bottom:30px;'>".$counter."º Actuação: ".$actuacao->designacao."</h3>";
+
         					
  					       foreach($actuacao->actos as $acto)
  					       {
- 					       		echo "<div class='row' style='padding-bottom:50px;'>";
+ 					       		echo "<div class='row' style='padding-top: 30px; padding-bottom:30px;'>";
  					       		echo "<div class='col-md-4'>";
  					       		echo "<h4 id='title'>Obra</h5>";
- 					        	echo "<p>".$acto['obra']->nome."</p>";
+ 					        	echo "<p style='font-size:16px;''>".$acto['obra']->nome."</p>";
 								echo "</div>";
 								echo "<div class='col-md-4'>";
  					            echo "<h4 id='title'>Maestros</h5>";
  					            foreach($acto['participantes']['maestros'] as $ma)
  					            {
- 					              echo "<p>".$ma->nome."</p>";
- 					              echo "<p style='font-size:12px;'><strong>".$ma->instrumento."</strong></p>";
+ 					              echo "<p style='margin: 0px;'>".$ma->nome."</p>";
+ 					              echo "<p style='font-size:11px;'><strong>".$ma->instrumento."</strong></p>";
  					            }
  					            echo "</div>";
 					 			echo "<div class='col-md-4'>";
  					            echo "<h4 id='title'>Musicos</h5>";
  					            foreach($acto['participantes']['musicos'] as $mu)
  					            {
- 					              echo "<p>".$mu->nome."</p>";
- 					              echo "<p style='font-size:10px;'><strong>".$mu->instrumento."</strong></p>";
+ 					              echo "<p style='margin: 0px;'>".$mu->nome."</p>";
+ 					              echo "<p style='font-size:11px;'><strong>".$mu->instrumento."</strong></p>";
  					            }
  					            echo "</div>";
  					            echo "</div>";
  					      	}
- 					         
+ 					         echo "<hr>";
  					         $counter++;
  					     }
 							

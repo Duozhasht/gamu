@@ -57,6 +57,7 @@
 					<?php
 							foreach ($obras as $obra)
 							{
+								echo "<div id='o".$obra->id."' class='hiddenfile' style='width: 0px; height: 0px; overflow: hidden;'>$obra->descricao</div>";
 								echo "<tr>";
 								echo "<td>C".$obra->id."</td>";
 								echo "<td>".$obra->nome."</td>";
@@ -64,7 +65,7 @@
 								echo "<td>".$obra->periodo."</td>";
 								echo "<td>".$obra->compositor."</td>";
 								echo "<td>
-									  <a href='#'><i class='fa fa-pencil-square-o'></i></a>
+									  <a href='#' onclick='showModal2(\"".$obra->id."\",\"".$obra->nome."\",\"".$obra->duracao."\",\"".$obra->ano."\",\"".$obra->id_periodo."\",\"".$obra->id_compositor."\")'><i class='fa fa-pencil-square-o'></i></a>
 									  </td>
 									  <td>
 									  <a href='?controller=obra&action=remove&id=".$obra->id."'><i class='fa fa-times'></i></a>
@@ -111,30 +112,58 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Adicionar Aluno</h4>
+				<h4 class="modal-title" id="myModalLabel">Adicionar Obra</h4>
 			</div>
 			<div class="modal-body">
 				<div class="row">
-					<form action='?controller=aluno&action=add' method="post" accept-charset="utf-8">
+					<form action='?controller=obra&action=add' method="post" accept-charset="utf-8">
 						<div class="col-md-12">
 							<div class="form-group">
-								<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Aluno">
+								<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome da Obra">
 							</div>
 							<div class="form-group">
-								<input type="date" class="form-control" id="dataNasc" name="dataNasc" placeholder="Data de Nascimento">
+								<input type="text" class="form-control" id="descricao" name="descricao" placeholder="Descrição da Obra">
+							</div>
+							<div class="form-group">
+								<input type="time" class="form-control" id="duracao" name="duracao" placeholder="Data de Nascimento">
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="form-group">
-								<input type="number" class="form-control" id="anoCurso" name="anoCurso" placeholder="Ano a Frequentar">
+								<input type="number" class="form-control" id="ano" name="ano" placeholder="Ano da Obra">
 								</div>
 						</div>					
 						<div class="col-md-8">
 							
-							<select class="form-control" name="id_curso">
+							<select id="periodo" class="form-control" name="id_periodo">
+								<?php
+										
+									$nr_periodos = Periodo::count();
+									$periodos = Periodo::retrieve('nome',1,$nr_periodos);
 									
+									foreach ($periodos as $periodo) {
+										echo "<option value='".$periodo->id."'>".$periodo->nome."</option>";
+									}
+								?>	
+
+
 							</select>
 						</div>
+						<div class="col-md-12">					
+							<select id="compositor" class="form-control" name="id_compositor">
+									<?php
+										
+										$nr_comps = Compositor::count();
+										$comps = Compositor::retrieve('nome',1,$nr_comps);
+										
+										foreach ($comps as $comp) {
+											echo "<option value='".$comp->id."'>".$comp->nome."</option>";
+										}
+									?>
+
+							</select>
+						</div>
+
 				</div>
 			</div>
 			<div class="modal-footer">
@@ -146,19 +175,101 @@
 	</div>
 </div>
 
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Editar Obra</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<form action='?controller=obra&action=update' method="post" accept-charset="utf-8">
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="text" class="form-control" id="nomeu" name="nome" placeholder="Nome da Obra">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="descricaou" name="descricao" placeholder="Descrição da Obra">
+							</div>
+							<div class="form-group">
+								<input type="time" class="form-control" id="duracaou" name="duracao" placeholder="Data de Nascimento">
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<input type="number" class="form-control" id="anou" name="ano" placeholder="Ano da Obra">
+								</div>
+						</div>					
+						<div class="col-md-8">
+							
+							<select id="periodou" class="form-control" name="id_periodo">
+								<?php
+										
+									$nr_periodos = Periodo::count();
+									$periodos = Periodo::retrieve('nome',1,$nr_periodos);
+									
+									foreach ($periodos as $periodo) {
+										echo "<option value='".$periodo->id."'>".$periodo->nome."</option>";
+									}
+								?>	
 
 
-<div class="hiddenfile" style="width: 0px; height: 0px; overflow: hidden;">
-<form action='?controller=aluno&action=importxml' method="post" accept-charset="utf-8">
-  <input name="upload" type="file" id="fileinput"/>
-</form>
+							</select>
+						</div>
+						<div class="col-md-12">					
+							<select id="compositoru" class="form-control" name="id_compositor">
+									<?php
+										
+										$nr_comps = Compositor::count();
+										$comps = Compositor::retrieve('nome',1,$nr_comps);
+										
+										foreach ($comps as $comp) {
+											echo "<option value='".$comp->id."'>".$comp->nome."</option>";
+										}
+									?>
+
+							</select>
+						</div>
+
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-primary">Actualizar</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					</form>
+			</div>
+		</div>
+	</div>
 </div>
 
 
+
+<div  class="hiddenfile" style="width: 0px; height: 0px; overflow: hidden;">
+<form id="upload" action='?controller=obra&action=importxml' method="post" accept-charset="utf-8" enctype="multipart/form-data">
+  <input type="file" name="ficheiro" id="file" />
+  <input type="submit" name="Enviar"/>
+</form>
+</div>
 <script type="text/javascript">
 function showModal(){
 	$('#insertModal').modal('show');};
+function showModal2(id,nome,duracao,ano,periodo,compositor){
+	$('#idu').val(id);
+	$('#nomeu').val(nome);
+	$('#anou').val(ano);
+	$('#periodou').val(periodo);
+	$('#compositoru').val(compositor);
+	$('#duracaou').val(duracao);
+	$('#descricaou').val($('#o'+id).text());
+
+
+	$('#updateModal').modal('show');
+};
 function inputXML(){
-	$('#fileinput').trigger('click'); 
+	$('#file').trigger('click');
 }
+$('#file').change(function() {
+  $('#upload').submit();
+});
 </script>
