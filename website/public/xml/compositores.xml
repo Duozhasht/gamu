@@ -69,29 +69,30 @@
   </compositor>
   <compositor id="C6">
     <nome>Johann Joachim Quantz</nome>
-    <bio>Johann Joachim Quantz (Oberscheden, Baixa Saxônia, 30 de janeiro de 1697 — Potsdam, 12 de
-         julho de 1773), foi um compositor e flautista alemão, e professor de flauta do rei
-         Frederico II da Prússia.Começou a demonstrar seu talento musical muito cedo. Aos 8 anos de
-         idade já era contrabaixista em festivais locais. Em 1708, quando da morte de seu pai, foi
-         viver na casa de seu tio Justus Quantz, membro da orquestra da cidade de Merseburg, com
-         quem começou seus estudos musicias. Quando seu tio morreu, o genro de seu tio, Johann Adolf
-         Fleischhack recebeu Quantz como aluno. Ao terminar seus estudos já sabia tocar os
-         principais instrumentos de corda e todos os de sopro mais usuais, com exceção da flauta
-         transversal.Em março de 1716, ingressou na orquestra municipal de Dresden, e um ano depois
-         muda-se para Viena, onde estuda composição com Jan Dismas Zelenka e Johann Joseph Fux. Em
-         1718 foi nomeado oboísta na capela polonesa de Augusto II em Varsóvia. Especializou-se no
-         estudo da flauta transversal sob a direção de Pierre Buffardin.Estudou contraponto em Roma
-         com Francesco Gasparini e durante suas viagens pela Europa conheceu pessoalmente Domenico
-         Scarlatti e Georg Friederich Haendel.Em 1728, tornou-se flautista na capela de Dresden. Lá,
-         durante um concerto, conhece o príncipe Frederico da Prússia, mais tarde conhecido como
-         Frederico, o Grande, que se torna seu aluno particular de flauta.Quando o príncipe chega a
-         ser proclamado rei, Quantz passa às ordens diretas do novo monarca e passa a ministrar
-         aulas diárias de flauta e composição. Inclusive, acompanha-o em suas campanhas militares.
-         Quantz permaneceu como compositor da corte e músico de câmara de Frederico II para o resto
-         de sua vida, intepretando suas próprias composições, assim como as do rei. Somente ele
-         tinha o privilégio de criticar o rei, em sentido positivo ou negativo.</bio>
-    <dataNasc>1697-01-30</dataNasc>
-    <dataObito>1773-07-12</dataObito>
+    <bio>Johann Joachim Quantz (Oberscheden, Baixa Saxônia, 30 de janeiro de 1697 — Potsdam, 12 de&#13;
+         julho de 1773), foi um compositor e flautista alemão, e professor de flauta do rei&#13;
+         Frederico II da Prússia.Começou a demonstrar seu talento musical muito cedo. Aos 8 anos de&#13;
+         idade já era contrabaixista em festivais locais. Em 1708, quando da morte de seu pai, foi&#13;
+         viver na casa de seu tio Justus Quantz, membro da orquestra da cidade de Merseburg, com&#13;
+         quem começou seus estudos musicias. Quando seu tio morreu, o genro de seu tio, Johann Adolf&#13;
+         Fleischhack recebeu Quantz como aluno. Ao terminar seus estudos já sabia tocar os&#13;
+         principais instrumentos de corda e todos os de sopro mais usuais, com exceção da flauta&#13;
+         transversal.Em março de 1716, ingressou na orquestra municipal de Dresden, e um ano depois&#13;
+         muda-se para Viena, onde estuda composição com Jan Dismas Zelenka e Johann Joseph Fux. Em&#13;
+         1718 foi nomeado oboísta na capela polonesa de Augusto II em Varsóvia. Especializou-se no&#13;
+         estudo da flauta transversal sob a direção de Pierre Buffardin.Estudou contraponto em Roma&#13;
+         com Francesco Gasparini e durante suas viagens pela Europa conheceu pessoalmente Domenico&#13;
+         Scarlatti e Georg Friederich Haendel.Em 1728, tornou-se flautista na capela de Dresden. Lá,&#13;
+         durante um concerto, conhece o príncipe Frederico da Prússia, mais tarde conhecido como&#13;
+         Frederico, o Grande, que se torna seu aluno particular de flauta.Quando o príncipe chega a&#13;
+         ser proclamado rei, Quantz passa às ordens diretas do novo monarca e passa a ministrar&#13;
+         aulas diárias de flauta e composição. Inclusive, acompanha-o em suas campanhas militares.&#13;
+         Quantz permaneceu como compositor da corte e músico de câmara de Frederico II para o resto&#13;
+         de sua vida, intepretando suas próprias composições, assim como as do rei. Somente ele&#13;
+         tinha o privilégio de criticar o rei, em sentido positivo ou negativo.;&#13;
+								 </bio>
+    <dataNasc>0000-00-00</dataNasc>
+    <dataObito>0000-00-00</dataObito>
     <periodo>PE3</periodo>
   </compositor>
   <compositor id="C8">
@@ -128,13 +129,15 @@
   </compositor>
   <compositor id="C12">
     <nome>Peri, Jacopo</nome>
-    <bio>Jacopo Peri (20 de agosto 1561 – 12 de agosto 1633) foi um compositor e cantor italiano
-         do período de transição entre os estilos renascentista e barroco, e é frequentemente
-         chamado o inventor da ópera. Escreveu a primeira obra a ser chamada hoje uma ópera, Dafne
-         (cerca de 1597), e também a primeira ópera que sobreviveu até aos nossos dias, Euridice
-         (1600).</bio>
-    <dataNasc>1561-08-20</dataNasc>
-    <dataObito>1633-08-12</dataObito>
+    <bio>&#13;
+									Jacopo Peri (20 de agosto 1561 – 12 de agosto 1633) foi um compositor e cantor italiano&#13;
+         do período de transição entre os estilos renascentista e barroco, e é frequentemente&#13;
+         chamado o inventor da ópera. Escreveu a primeira obra a ser chamada hoje uma ópera, Dafne&#13;
+         (cerca de 1597), e também a primeira ópera que sobreviveu até aos nossos dias, Euridice&#13;
+         (1600).;&#13;
+								 </bio>
+    <dataNasc>0000-00-00</dataNasc>
+    <dataObito>0000-00-00</dataObito>
     <periodo>PE2</periodo>
   </compositor>
   <compositor id="C14">
@@ -180,18 +183,27 @@
     <periodo>PE3</periodo>
   </compositor>
   <compositor id="C18">
-    <nome>John Blow</nome>
-    <bio>John Blow (batizado a 23 de fevereiro de 1649 e falecido a 1 de outubro de 1708) foi um
-         compositor inglês e organista da Idade do Barroco. Orgulhoso e com perfil de estadista, o
-         humilde Blow tornou-se o mais famoso músico da Inglaterra no final do século XVIII.
-         Importante na música da Restauração, teve postos reais criados especialmente para ele, como
-         na catedral de St. Paul e em Westminster. Suas obras seculares incluem música cerimonial e
-         Venus and Adonis, a primeira ópera inglesa. Escreveu muita música religiosa em especial
-         mais de cem hinos intensamente melódicos. De seus doze trabalhos anglicanos, o em sol maior
-         é magistral.</bio>
+    <nome>John Blows</nome>
+    <bio>&#13;
+									&#13;
+									&#13;
+									&#13;
+									John Blow (batizado a 23 de fevereiro de 1649 e falecido a 1 de outubro de 1708) foi um&#13;
+         compositor inglês e organista da Idade do Barroco. Orgulhoso e com perfil de estadista, o&#13;
+         humilde Blow tornou-se o mais famoso músico da Inglaterra no final do século XVIII.&#13;
+         Importante na música da Restauração, teve postos reais criados especialmente para ele, como&#13;
+         na catedral de St. Paul e em Westminster. Suas obras seculares incluem música cerimonial e&#13;
+         Venus and Adonis, a primeira ópera inglesa. Escreveu muita música religiosa em especial&#13;
+         mais de cem hinos intensamente melódicos. De seus doze trabalhos anglicanos, o em sol maior&#13;
+         é magistral.;&#13;
+								 ;&#13;
+								 ;&#13;
+								 ;&#13;
+								 ;&#13;
+								 </bio>
     <dataNasc>1649-02-23</dataNasc>
     <dataObito>1708-10-01</dataObito>
-    <periodo>PE2</periodo>
+    <periodo>PE7</periodo>
   </compositor>
   <compositor id="C20">
     <nome>Thomas Arne</nome>
@@ -2635,5 +2647,12 @@
     <dataNasc>1637-00-00</dataNasc>
     <dataObito>1707-00-00</dataObito>
     <periodo>PE2</periodo>
+  </compositor>
+  <compositor id="C340">
+    <nome>asd</nome>
+    <bio>asdasd</bio>
+    <dataNasc>2016-01-04</dataNasc>
+    <dataObito>2016-01-04</dataObito>
+    <periodo>PE1</periodo>
   </compositor>
 </compositores>

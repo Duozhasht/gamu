@@ -62,7 +62,7 @@
                        'periodo' => ['update','index','add','remove','exportxml','importxml'],
                        'compositor' => ['update','index','add','remove','exportxml','importxml'],
                        'obra' => ['update','index','add','remove','exportxml','importxml'],
-                       'audicao' => ['update','index','add','remove','exportxml','importxml','test','view']
+                       'audicao' => ['update','index','add','remove','exportxml','importxml','test','view','remove_maestro_obra','remove_musico_obra', 'remove_obra','add_atuacao']
                        );
 
   if (array_key_exists($controller, $controllers)) {

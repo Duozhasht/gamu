@@ -27,20 +27,16 @@ class Atuacao	 {
 		
 		return $result_number['number'];
 	}
-/*
-	public static function create($id_actuacao,$id_audicao, $designacao, $actos) {
+
+	public static function create($id_audicao, $designacao) {
 	
 		$db = DB::getInstance();
-		$query_insert = "INSERT INTO Actuacao VALUES ('$id_actuacao', '$id_audicao', '$designacao')";
+		$query_insert = "INSERT INTO Actuacao VALUES (NULL, $id_audicao, '$designacao')";
 		
 		$result = $db->query($query_insert);
-
-		foreach ($actos as $acto) {
-			
-		}
 	
 	}
-*/
+
 
 	public static function retrieve($order,$id_audicao) {
 
@@ -104,24 +100,76 @@ class Atuacao	 {
 		return $list;
 	
 	}
-/*
 
-	public static function update($id, $alu) {
-	
+	public static function retrieve_last(){
 		$db = DB::getInstance();
-		$query_update = "UPDATE Aluno SET nome=$alu->nome,data_de_nascimento=$alu->dataNasc,id_curso=$alu->id_curso,ano_curso=$alu->anocurso WHERE id=$id";
-		$result = $db->query($query_update);
+		$query_select = "SELECT id_actuacao from Actuacao ORDER BY id_actuacao DESC LIMIT 1";
+		$result = $db->query($query_select);
+		$result_number = $result->fetch();
+		
+		return $result_number['id_actuacao'];
+	}
+
+	public static function add_obra($id_actuacao, $id_obra){
+		$db = DB::getInstance();
+		$query_insert = "INSERT INTO Actuacao_Obra VALUES ($id_actuacao, $id_obra)";
+		$result = $db->query($query_insert);
+	}
+
+
+	public static function add_musico_obra($id_actuacao,$id_obra,$id_aluno){
+		$db = DB::getInstance();
+		$query_insert = "INSERT INTO Participante VALUES ($id_actuacao, $id_obra, NULL, $id_aluno)";
+		echo $query_insert;
+		$result = $db->query($query_insert);
+
+	}
+
+	public static function add_maestro_obra($id_actuacao,$id_obra,$id_professor){
+		$db = DB::getInstance();
+		$query_insert = "INSERT INTO Participante VALUES ($id_actuacao, $id_obra, $id_professor, NULL)";
+		echo $query_insert;
+		$result = $db->query($query_insert);
 
 	}
 
 
-	public static function delete($id) {
+	public static function delete($id_actuacao){
+		$db = DB::getInstance();
+		$query_delete = "DELETE FROM Participante WHERE id_actuacao=$id_actuacao";
+		$result = $db->query($query_delete);
+		$query_delete = "DELETE FROM Actuacao_Obra WHERE id_actuacao=$id_actuacao";
+		$result = $db->query($query_delete);
+		$query_delete = "DELETE FROM Actuacao WHERE id_actuacao=$id_actuacao";
+		$result = $db->query($query_delete);	
+	}
+
+
+	public static function delete_obra($id_actuacao,$id_obra) {
 
 		$db = DB::getInstance();
-		$query_delete = "DELETE FROM Aluno WHERE id_aluno=$id";
+		$query_delete = "DELETE FROM Participante WHERE id_actuacao=$id_actuacao AND id_obra=$id_obra";
+		$result = $db->query($query_delete);
+		$query_delete = "DELETE FROM Actuacao_Obra WHERE id_actuacao=$id_actuacao AND id_obra=$id_obra";
 		$result = $db->query($query_delete);
 
 	}
-*/
+
+
+	public static function delete_musico_obra($id_actuacao,$id_obra,$id_aluno) {
+
+		$db = DB::getInstance();
+		$query_delete = "DELETE FROM Participante WHERE id_actuacao=$id_actuacao AND id_obra=$id_obra AND id_aluno=$id_aluno";
+		$result = $db->query($query_delete);
+
+	}
+
+	public static function delete_maestro_obra($id_actuacao,$id_obra,$id_professor) {
+
+		$db = DB::getInstance();
+		$query_delete = "DELETE FROM Participante WHERE id_actuacao=$id_actuacao AND id_obra=$id_obra AND id_professor=$id_professor";
+		$result = $db->query($query_delete);
+
+	}
   }
   ?>
