@@ -120,7 +120,6 @@ class Atuacao	 {
 	public static function add_musico_obra($id_actuacao,$id_obra,$id_aluno){
 		$db = DB::getInstance();
 		$query_insert = "INSERT INTO Participante VALUES ($id_actuacao, $id_obra, NULL, $id_aluno)";
-		echo $query_insert;
 		$result = $db->query($query_insert);
 
 	}
@@ -128,7 +127,6 @@ class Atuacao	 {
 	public static function add_maestro_obra($id_actuacao,$id_obra,$id_professor){
 		$db = DB::getInstance();
 		$query_insert = "INSERT INTO Participante VALUES ($id_actuacao, $id_obra, $id_professor, NULL)";
-		echo $query_insert;
 		$result = $db->query($query_insert);
 
 	}

@@ -136,6 +136,42 @@
 
     }
 
+    public function add_obra(){
+
+      if(isset($_POST['id_actuacao'])&&isset($_POST['id_audicao'])&&isset($_POST['id_obra']))
+      {
+        try{
+          $aux = Atuacao::add_obra($_POST['id_actuacao'],$_POST['id_obra']);
+          foreach ($_POST['ids_maestro'] as $id_maestro) {
+                  Atuacao::add_maestro_obra($_POST['id_actuacao'],$_POST['id_obra'],$id_maestro);
+                  //echo "<p>id maestro: ".$id_maestro."</p>";
+                }
+          foreach ($_POST['ids_musico'] as $id_musico) {
+                  Atuacao::add_musico_obra($_POST['id_actuacao'],$_POST['id_obra'],$id_musico);
+                  //echo "<p>id musico".$id_musico."</p>";
+                }
+
+          echo "<div class='alert alert-success text-center'>
+              <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+              Maestro Adicionado Com Sucesso!
+              </div>";
+        }
+        catch (Exception $e) {
+          echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Não é possivel adicionar este registo.
+                  </div>";
+        }
+      }
+      else
+        echo "erro";
+      $controller = new AudicaoController();
+      $controller->view2($_POST['id_audicao']);
+
+    }
+
+
+
 
     public function view()
     {
@@ -256,8 +292,6 @@
     }
 
 
-    
-
     public function remove_atuacao(){
 
        if(isset($_GET['id_audicao'])&&!empty($_GET['id_actuacao'])){
@@ -270,70 +304,130 @@
       $controller->view2($_GET['id_audicao']);
     }
 
-
-
-
-
-    /*
-    public function index() {
-      //small script to change url
-      echo "<script>window.history.pushState('string', 'Index', 'http://localhost:8888/gamu/?controller=aluno&action=index');</script>";
-      //number of records per page and number of pages 
-      $nr_alunos = Aluno::count();
-      $number_of_records = 20;
-      $result_number=ceil($nr_alunos/$number_of_records);
-
-      //Check page rules (if is set, if not atributes 1 if it's higher or lower the same)
-      if(isset($_GET['page']))
-        if(($_GET['page']>0) && ($_GET['page']<=$result_number))
-          $page=$_GET['page'];
+/*
+    public function importxml() {
+        
+        if($_FILES['ficheiro']['error'] > 0)
+        {
+          echo "Erro no ficheiro!";
+        }
         else
-          $page=1;
-      else
-        $page=1;
+        {
 
-      // Get Students
-      $alunos = Aluno::retrieve('id_aluno',$page,$number_of_records);
-      require_once('views/aluno/index.php');
+            $xmlDoc = new DOMDocument();
+            $xmlDoc->load($_FILES['ficheiro']['tmp_name']);          
 
-    }
+          if(!$xmlDoc->schemaValidate("public/schema/audicoes.xsd"))
+          {
+            echo "<div class='alert alert-danger text-center'>
+               <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                O ficheiro de xml não se encontra na devida estrutura!
+               </div>";
+
+          }
+          else{
+            $audicoes = simplexml_load_file($_FILES['ficheiro']['tmp_name']);
+            $erros = [];
+  
+          foreach($audicoes as $audicao) 
+          {
+            if(Audicao::find(substr((string)$audicao['id'],1))->id==null)
+            {
+              Audicao::create(  substr((string)$audicao['id'],3),
+                                     (string)$audicao->metadados->titulo,
+                                     (string)$audicao->metadados->subtitulo,
+                              substr((string)$audicao->curso,2),
+                                     (string)$audicao->anoCurso);
+
+              create($id, $titulo, $subtitulo, $tema, $data, $local, $organizador, $duracao)
+            }
+            else
+            {
+                $erros[] = (string)$audicao['id'];
+            }
+
+          }
+
+          if(!empty($erros))
+          {
+              echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Erro! Os seguintes ID's já se encontram atribuidos:
+                    <p>".implode(" - ",$erros)."</p>
+                  </div>";
+          }
+          else{
+            echo "<div class='alert alert-success text-center'>   
+                  <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                  Os dados foram importados com sucesso!
+                </div>
+                  ";
+          }
 
 
+          }
+          $controller = new AlunoController();
+          $controller->index(); 
+         }
 
-    public function remove(){
-      
-      if(isset($_GET['id']))
-      {
-        $aux = Aluno::delete($_GET['id']);
-      }
-      $controller = new AlunoController();
-      $controller->index();
+        }
 
-    }
+*/
 
     public function exportxml(){
       
-      $file = 'public/xml/alunos.xml';
+      $file = 'public/xml/audicoes.xml';
 
-      $nr_alunos = Aluno::count();
-      $alunos = Aluno::retrieve('id_aluno',1,$nr_alunos);
+      $nr_auds = Audicao::count();
+      $audicoes = Audicao::retrieve('data',1,$nr_auds,3);
 
       $xmlstr = "<?xml version='1.0' encoding='UTF-8'?>
-                 <alunos/>";
+                 <audicoes/>";
       $xml_file = new SimpleXMLElement($xmlstr);
 
       
-      foreach ($alunos as $aluno)
+      foreach ($audicoes as $audicao)
       {
-        $alu = $xml_file->addChild('aluno');
-        $alu->addAttribute('id','a'.$aluno->id);
-        $alu->addChild('nome',$aluno->nome);
-        $alu->addChild('dataNasc',$aluno->dataNasc);
-        $alu->addChild('curso',$aluno->id_curso);
-        $alu->addChild('anoCurso',$aluno->anocurso);
+        $aud = $xml_file->addChild('audicao');
+        $aud->addChild('id','AUD'.$audicao->id);
+        
+        $aud_meta = $aud->addChild('metadados');
+        $aud_meta->addChild('titulo',$audicao->titulo);
+        $aud_meta->addChild('subtitulo',$audicao->subtitulo);
+        $aud_meta->addChild('tema',$audicao->tema);
+        $aud_meta->addChild('data',$audicao->data);
+        $aud_meta->addChild('local',$audicao->local);
+        $aud_meta->addChild('organizador',$audicao->organizador);
+        $aud_meta->addChild('duracao',$audicao->duracao);
+        
+        $actuacoes = Atuacao::retrieve('id_actuacao',$audicao->id);
+        $aud_acts = $aud->addChild('actuacoes');
+        
+        foreach ($actuacoes as $actuacao) {
+          $aud_act = $aud_acts->addChild('actuacao');
+          $aud_act->addChild('idAt','AT'.$actuacao->id_actuacao);  
+          $aud_act->addChild('tituloAt',$actuacao->designacao);
 
+          $obras = $aud_act->addChild('obras');
+
+          foreach($actuacao->actos as $acto){
+            $obra = $obras->addChild('obra'); 
+            $obra->addChild('idOb',$acto['obra']->id);
+            $instrumentos = $obra->addChild('instrumentos');
+            $maestros = $obra->addChild('maestros');
+            $musicos = $obra->addChild('musicos');
+
+             foreach($acto['participantes']['maestros'] as $ma){
+                $maestros->addChild('maestro',$ma->id);
+             }
+             foreach($acto['participantes']['musicos'] as $mu){
+                $musicos->addChild('musico',$mu->id);
+             }
+          }
+  
+        }
       }
-      
+
       //DOM conversion -> formatOutput needed
       $dom = new DOMDocument();
       $dom->preserveWhiteSpace = false;
@@ -342,26 +436,13 @@
       $dom->save($file);
 
       echo "<script>
-              window.open('public/download_scripts/dw_a.php', '_blank');
+              window.open('public/download_scripts/dw_aud.php', '_blank');
             </script>";
-      $controller = new AlunoController();
+      $controller = new AudicaoController();
       $controller->index();      
 
     }
 
-    public function importxml() {
-        $alunos = simplexml_load_file("dataset/Finais/alunos.xml");
-
-        foreach($alunos as $aluno) {
-          Aluno::create(  substr((string)$aluno['id'],1),
-                                     (string)$aluno->nome,
-                                     (string)$aluno->dataNasc,
-                              substr((string)$aluno->curso,2),
-                                     (string)$aluno->anoCurso);
-        }
-        //  $id, $nome, $dataNasc, $id_curso,$anocurso
-    }
-    */
 
   }
   
