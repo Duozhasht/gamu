@@ -14,3 +14,8 @@ PRI
 2) Fazer um Schema para cada entidade será utilizado no relatório e faz parte da materia de PRI
 
 
+<<<<<<< HEAD
+coias
+rafa
+=======
+>>>>>>> addf102f1f85d7d7e837e4ab92d2d6ae4beedfcc

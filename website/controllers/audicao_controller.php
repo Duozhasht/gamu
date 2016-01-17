@@ -64,6 +64,14 @@
         echo "Erro";
     }
 
+    public function view2($id)
+    {
+
+        $audicao = Audicao::find($id);
+        $actuacoes = Atuacao::retrieve('id_actuacao',$id);
+        require_once('views/audicao/view.php');
+    }
+
     public function test() 
     {
       $actuacoes = Atuacao::retrieve('id_actuacao',1);
@@ -97,6 +105,118 @@
         //print_r($actuacoes);
     }
 
+    public function remove_obra(){
+      if(isset($_GET['id_actuacao'])&&isset($_GET['id_obra']))
+      {
+        try{
+          $aux = Atuacao::delete_obra($_GET['id_actuacao'],$_GET['id_obra']);
+          echo "<div class='alert alert-success text-center'>
+              <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+              Aluno Removido Com Sucesso!
+              </div>";
+        }
+        catch (Exception $e) {
+          echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Não é possivel remover o registo. Por favor verifique se este não possui dependecias.
+                  </div>";
+        }
+      }
+      $controller = new AudicaoController();
+      $controller->view2($_GET['id_audicao']);
+    }
+
+    public function remove_maestro_obra(){
+
+      if(isset($_GET['id_actuacao'])&&isset($_GET['id_obra'])&&isset($_GET['id_professor']))
+      {
+        try{
+          $aux = Atuacao::delete_maestro_obra($_GET['id_actuacao'],$_GET['id_obra'],$_GET['id_professor']);
+          echo "<div class='alert alert-success text-center'>
+              <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+              Maestro Removido Com Sucesso!
+              </div>";
+        }
+        catch (Exception $e) {
+          echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Não é possivel remover o registo. Por favor verifique se este não possui dependecias.
+                  </div>";
+        }
+      }
+      $controller = new AudicaoController();
+      $controller->view2($_GET['id_audicao']);
+    }
+
+    public function remove_musico_obra(){
+
+      if(isset($_GET['id_actuacao'])&&isset($_GET['id_obra'])&&isset($_GET['id_aluno']))
+      {
+        try{
+          $aux = Atuacao::delete_musico_obra($_GET['id_actuacao'],$_GET['id_obra'],$_GET['id_aluno']);
+          echo "<div class='alert alert-success text-center'>
+              <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+              Musico Removido Com Sucesso!
+              </div>";
+        }
+        catch (Exception $e) {
+          echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Não é possivel remover o registo. Por favor verifique se este não possui dependecias.
+                  </div>";
+        }
+      }
+      $controller = new AudicaoController();
+      $controller->view2($_GET['id_audicao']);
+    }
+
+
+    public function add_atuacao() {
+
+        if(isset($_GET['id_audicao'])&&!empty($_POST['designacao'])){
+              Atuacao::create($_GET['id_audicao'],$_POST['designacao']);
+              $id_actuacao = Atuacao::retrieve_last();
+
+
+              //echo "<p>".$_POST['designacao']."</p>";
+              $counter = 0;
+              foreach ($_POST['id_obra'] as $id_obra) {
+                Atuacao::add_obra($id_actuacao, $id_obra);
+                //echo "<p>id obra: ".$id_obra."</p>";
+                
+                foreach ($_POST['ids_maestro'][$counter] as $id_maestro) {
+                  Atuacao::add_maestro_obra($id_actuacao,$id_obra,$id_maestro);
+                  //echo "<p>id maestro: ".$id_maestro."</p>";
+                }
+                foreach ($_POST['ids_musico'][$counter] as $id_musico) {
+                  Atuacao::add_musico_obra($id_actuacao,$id_obra,$id_musico);
+                  //echo "<p>id musico".$id_musico."</p>";
+                }
+                $counter++;
+
+
+              }
+
+              echo "
+                    <div class='alert alert-success text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Inserção Concluída com Sucesso
+                    </div>
+                  ";
+            }
+        else
+            echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Problemas no preenchimento de pelo menos um dos campos!
+                  </div>";
+
+      $controller = new AudicaoController();
+      $controller->view2($_GET['id_audicao']);
+
+    }
+
+
+
 
 
     /*
@@ -123,27 +243,7 @@
 
     }
 
-    public function add() {
 
-        if(!empty($_POST['nome'])&&!empty($_POST['dataNasc'])&&!empty($_POST['anoCurso'])&&!empty($_POST['id_curso'])){
-              $aux = Aluno::create('NULL',$_POST['nome'],$_POST['dataNasc'],$_POST['id_curso'],$_POST['anoCurso']);
-              echo "
-                    <div class='alert alert-success text-center'>
-                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-                    Inserção Concluída com Sucesso
-                    </div>
-                  ";
-            }
-        else
-            echo "<div class='alert alert-danger text-center'>
-                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-                    Problemas no preenchimento de pelo menos um dos campos!
-                  </div>";
-
-      $controller = new AlunoController();
-      $controller->index();
-
-    }
 
     public function remove(){
       

@@ -54,6 +54,10 @@
       {
         try {
           $aux = Compositor::delete($_GET['id']);
+          echo "<div class='alert alert-success text-center'>
+              <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+              Compositor Removido Com Sucesso!
+              </div>";
         }
         catch (Exception $e) {
           echo "<div class='alert alert-danger text-center'>
