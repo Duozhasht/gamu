@@ -96,7 +96,7 @@ public class GAMuParser extends Parser {
 	public ATN getATN() { return _ATN; }
 
 
-	    
+
 
 	public GAMuParser(TokenStream input) {
 		super(input);
@@ -132,15 +132,18 @@ public class GAMuParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 
-			            GrammarJDBC gdb = new GrammarJDBC(); 
-			            gdb.carregaDataSets(); 
-			            int cont = 1;
-			            int ats = 1;
-			            
+			            GrammarJDBC gdb = new GrammarJDBC();
+			            gdb.carregaDataSets();
+			            int cont = gdb.getDs().getIdAudicao()+1;
+			            int ats = gdb.getDs().getIdAtuacao()+1;
+			            int erros = 0;
+
+			            //System.out.println("CONT: "+ cont);
+			            //System.out.println("ATS: "+ ats);
 			            System.out.println("----------------------------------------");
 			            System.out.println("|           AUDIÇÕES MUSICAIS           |");
 			            System.out.println("----------------------------------------");
-			            
+
 			            PrintWriter pw = null;
 			            try {
 			                File file = new File("audicoes.xml");
@@ -158,7 +161,7 @@ public class GAMuParser extends Parser {
 			             }
 			            
 			setState(45);
-			((AudicoesContext)_localctx).c = audicao(cont, ats, gdb.getDs());
+			((AudicoesContext)_localctx).c = audicao(cont, ats, erros, gdb.getDs(),gdb);
 			setState(49);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
@@ -166,7 +169,7 @@ public class GAMuParser extends Parser {
 				{
 				{
 				setState(46);
-				audicao(((AudicoesContext)_localctx).c.cont2,((AudicoesContext)_localctx).c.ats2,gdb.getDs());
+				audicao(((AudicoesContext)_localctx).c.cont2,((AudicoesContext)_localctx).c.ats2,((AudicoesContext)_localctx).c.erros2,gdb.getDs(),gdb);
 				}
 				}
 				setState(51);
@@ -203,9 +206,13 @@ public class GAMuParser extends Parser {
 	public static class AudicaoContext extends ParserRuleContext {
 		public int cont;
 		public int ats;
+		public int erros;
 		public Datasets d;
+		public GrammarJDBC gdb;
 		public int cont2;
 		public int ats2;
+		public int erros2;
+		public DadosAudContext da;
 		public AtuacoesContext a;
 		public DadosAudContext dadosAud() {
 			return getRuleContext(DadosAudContext.class,0);
@@ -214,11 +221,13 @@ public class GAMuParser extends Parser {
 			return getRuleContext(AtuacoesContext.class,0);
 		}
 		public AudicaoContext(ParserRuleContext parent, int invokingState) { super(parent, invokingState); }
-		public AudicaoContext(ParserRuleContext parent, int invokingState, int cont, int ats, Datasets d) {
+		public AudicaoContext(ParserRuleContext parent, int invokingState, int cont, int ats, int erros, Datasets d, GrammarJDBC gdb) {
 			super(parent, invokingState);
 			this.cont = cont;
 			this.ats = ats;
+			this.erros = erros;
 			this.d = d;
+			this.gdb = gdb;
 		}
 		@Override public int getRuleIndex() { return RULE_audicao; }
 		@Override
@@ -231,9 +240,12 @@ public class GAMuParser extends Parser {
 		}
 	}
 
-	public final AudicaoContext audicao(int cont,int ats,Datasets d) throws RecognitionException {
-		AudicaoContext _localctx = new AudicaoContext(_ctx, getState(), cont, ats, d);
+	public final AudicaoContext audicao(int cont,int ats,int erros,Datasets d,GrammarJDBC gdb) throws RecognitionException {
+		AudicaoContext _localctx = new AudicaoContext(_ctx, getState(), cont, ats, erros, d, gdb);
 		enterRule(_localctx, 2, RULE_audicao);
+
+		      ArrayList<String> intSql = new ArrayList<>();
+		    
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -258,16 +270,17 @@ public class GAMuParser extends Parser {
 			                          pw.close();
 			                       }
 			                    }
-			                   
+
 			                   
 			setState(56);
-			dadosAud();
+			((AudicaoContext)_localctx).da = dadosAud(intSql,_localctx.cont);
 			setState(57);
-			((AudicaoContext)_localctx).a = atuacoes(_localctx.ats, _localctx.d);
+			((AudicaoContext)_localctx).a = atuacoes(_localctx.ats, _localctx.erros, _localctx.d, _localctx.cont, ((AudicaoContext)_localctx).da.out);
 			setState(58);
 			match(T__1);
 
 			            ((AudicaoContext)_localctx).ats2 =  ((AudicaoContext)_localctx).a.ats2;
+			            ((AudicaoContext)_localctx).erros2 =  ((AudicaoContext)_localctx).a.erros2;
 			            try {
 			               File file = new File("audicoes.xml");
 			               FileWriter fw = new FileWriter(file, true);
@@ -280,7 +293,21 @@ public class GAMuParser extends Parser {
 			                  pw.close();
 			               }
 			            }
-			           
+			            //System.out.println("Erros da audicao: " + _localctx.erros2 );
+			            /*for(String s : ((AudicaoContext)_localctx).a.out){
+			              System.out.println(s);
+			            }*/
+
+
+			            if(_localctx.erros2 == 0){
+			              _localctx.gdb.carregaAudicao(((AudicaoContext)_localctx).a.out);
+			              System.out.println("------------------------------");
+			              System.out.println("Audição carregada com sucesso!");
+			            }
+			            else {
+			              System.out.println("-------------------------------------------------------");
+			              System.out.println("Impossivel carregar audição devido à presença de erros!");}
+			         
 			}
 		}
 		catch (RecognitionException re) {
@@ -295,6 +322,9 @@ public class GAMuParser extends Parser {
 	}
 
 	public static class DadosAudContext extends ParserRuleContext {
+		public ArrayList<String> in;
+		public int cont;
+		public ArrayList<String> out;
 		public TituloContext ti;
 		public SubtituloContext st;
 		public TemaContext te;
@@ -327,8 +357,11 @@ public class GAMuParser extends Parser {
 		public DuracaoSContext duracaoS() {
 			return getRuleContext(DuracaoSContext.class,0);
 		}
-		public DadosAudContext(ParserRuleContext parent, int invokingState) {
+		public DadosAudContext(ParserRuleContext parent, int invokingState) { super(parent, invokingState); }
+		public DadosAudContext(ParserRuleContext parent, int invokingState, ArrayList<String> in, int cont) {
 			super(parent, invokingState);
+			this.in = in;
+			this.cont = cont;
 		}
 		@Override public int getRuleIndex() { return RULE_dadosAud; }
 		@Override
@@ -341,8 +374,8 @@ public class GAMuParser extends Parser {
 		}
 	}
 
-	public final DadosAudContext dadosAud() throws RecognitionException {
-		DadosAudContext _localctx = new DadosAudContext(_ctx, getState());
+	public final DadosAudContext dadosAud(ArrayList<String> in,int cont) throws RecognitionException {
+		DadosAudContext _localctx = new DadosAudContext(_ctx, getState(), in, cont);
 		enterRule(_localctx, 4, RULE_dadosAud);
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -367,28 +400,38 @@ public class GAMuParser extends Parser {
 			        System.out.println("----------------------------------------");
 			        System.out.println("|       INFORMAÇÕES DA AUDIÇÃO         |");
 			        System.out.println("----------------------------------------");
-			        System.out.println("TITULO: " + ((DadosAudContext)_localctx).ti.tx);
-			        System.out.println("SUBTITULO: " + ((DadosAudContext)_localctx).st.tx);
-			        System.out.println("TEMA: " + ((DadosAudContext)_localctx).te.tx);
+			        System.out.println("TITULO: " + ((DadosAudContext)_localctx).ti.tx.substring(1,((DadosAudContext)_localctx).ti.tx.length()-1));
+			        System.out.println("SUBTITULO: " + ((DadosAudContext)_localctx).st.tx.substring(1,((DadosAudContext)_localctx).st.tx.length()-1));
+			        System.out.println("TEMA: " + ((DadosAudContext)_localctx).te.tx.substring(1,((DadosAudContext)_localctx).te.tx.length()-1));
 			        System.out.println("DATA: " + ((DadosAudContext)_localctx).da.td);
 			        System.out.println("HORA: " + ((DadosAudContext)_localctx).h.tx);
-			        System.out.println("LOCAL: " + ((DadosAudContext)_localctx).l.tx);
-			        System.out.println("ORGANIZADOR: " + ((DadosAudContext)_localctx).o.tx);
+			        System.out.println("LOCAL: " + ((DadosAudContext)_localctx).l.tx.substring(1,((DadosAudContext)_localctx).l.tx.length()-1));
+			        System.out.println("ORGANIZADOR: " + ((DadosAudContext)_localctx).o.tx.substring(1,((DadosAudContext)_localctx).o.tx.length()-1));
 			        System.out.println("DURAÇÃO: " + ((DadosAudContext)_localctx).du.tx);
-			        
+
+			        String sql = "INSERT INTO gamu.Audicao VALUES(" +_localctx.cont+ ",\'" +
+			                      ((DadosAudContext)_localctx).ti.tx.substring(1,((DadosAudContext)_localctx).ti.tx.length()-1)+"\',\'"
+			                      +((DadosAudContext)_localctx).st.tx.substring(1,((DadosAudContext)_localctx).st.tx.length()-1)+"\',\'"+ ((DadosAudContext)_localctx).te.tx.substring(1,((DadosAudContext)_localctx).te.tx.length()-1)+"\',\'"
+			                      +((DadosAudContext)_localctx).da.td+" "+((DadosAudContext)_localctx).h.tx+ ":00\'" +  ",\'" + ((DadosAudContext)_localctx).l.tx.substring(1,((DadosAudContext)_localctx).l.tx.length()-1)+"\',\'"+
+			                      ((DadosAudContext)_localctx).o.tx.substring(1,((DadosAudContext)_localctx).o.tx.length()-1)+"\',\'"+ ((DadosAudContext)_localctx).du.tx+"\');";
+
+			        //System.out.println(sql);
+
+			        _localctx.in.add(sql);
+			        ((DadosAudContext)_localctx).out =  _localctx.in;
 			        PrintWriter pw = null;
 			        try {
 			           File file = new File("audicoes.xml");
 			           FileWriter fw = new FileWriter(file, true);
 			           pw = new PrintWriter(fw);
 			           pw.println("<metadados>");
-			           pw.println("<titulo>"+((DadosAudContext)_localctx).ti.tx+"</titulo>");
-			           pw.println("<subtitulo>"+((DadosAudContext)_localctx).st.tx+"</subtitulo>");
-			           pw.println("<tema>"+((DadosAudContext)_localctx).te.tx+"</tema>");
+			           pw.println("<titulo>"+((DadosAudContext)_localctx).ti.tx.substring(1,((DadosAudContext)_localctx).ti.tx.length()-1)+"</titulo>");
+			           pw.println("<subtitulo>"+((DadosAudContext)_localctx).st.tx.substring(1,((DadosAudContext)_localctx).st.tx.length()-1)+"</subtitulo>");
+			           pw.println("<tema>"+((DadosAudContext)_localctx).te.tx.substring(1,((DadosAudContext)_localctx).te.tx.length()-1)+"</tema>");
 			           pw.println("<data>"+((DadosAudContext)_localctx).da.td+"</data>");
 			           pw.println("<hora>"+((DadosAudContext)_localctx).h.tx+"</hora>");
-			           pw.println("<local>"+((DadosAudContext)_localctx).l.tx+"</local>");
-			           pw.println("<organizador>"+((DadosAudContext)_localctx).o.tx+"</organizador>");
+			           pw.println("<local>"+((DadosAudContext)_localctx).l.tx.substring(1,((DadosAudContext)_localctx).l.tx.length()-1)+"</local>");
+			           pw.println("<organizador>"+((DadosAudContext)_localctx).o.tx.substring(1,((DadosAudContext)_localctx).o.tx.length()-1)+"</organizador>");
 			           pw.println("<duracao>"+((DadosAudContext)_localctx).du.tx+"</duracao>");
 			           pw.println("</metadados>");
 			           if (((DadosAudContext)_localctx).da.tx.equals("")== false)
@@ -592,19 +635,19 @@ public class GAMuParser extends Parser {
 			                //System.out.println("DIA :"+cal.get(Calendar.YEAR)+"|"+cal.get(Calendar.MONTH)+"|"+cal.get(Calendar.DAY_OF_MONTH));
 			                if(cal.get(Calendar.YEAR) < today.get(Calendar.YEAR))
 			                {
-			                    ((DataSContext)_localctx).tx =  "ERRO: O ano da audição já foi ultrapassado";
+			                    ((DataSContext)_localctx).tx =  "Aviso: O ano da audição já foi ultrapassado";
 			                } else
 			                {
 			                    if(cal.get(Calendar.MONTH)+1 < today.get(Calendar.MONTH)+1)
-			                    { ((DataSContext)_localctx).tx =  "ERRO: O mês da atuação já foi ultrapassado" ;}
+			                    { ((DataSContext)_localctx).tx =  "Aviso: O mês da atuação já foi ultrapassado" ;}
 			                    else
 			                    {
 			                        if(cal.get(Calendar.DAY_OF_MONTH) < today.get(Calendar.DAY_OF_MONTH))
-			                       {((DataSContext)_localctx).tx =  "ERRO: O dia da atuação já foi ultrapassado";}
+			                       {((DataSContext)_localctx).tx =  "Aviso: O dia da atuação já foi ultrapassado";}
 			                    }
-			                 
+
 			                 }
-			                
+
 				} catch (ParseException e) {
 					e.printStackTrace();
 				}
@@ -802,8 +845,13 @@ public class GAMuParser extends Parser {
 
 	public static class AtuacoesContext extends ParserRuleContext {
 		public int ats;
+		public int erros;
 		public Datasets d;
+		public int cont;
+		public ArrayList<String> in;
 		public int ats2;
+		public int erros2;
+		public ArrayList<String> out;
 		public AtuacaoContext a;
 		public AtuacaoContext b;
 		public List<AtuacaoContext> atuacao() {
@@ -813,10 +861,13 @@ public class GAMuParser extends Parser {
 			return getRuleContext(AtuacaoContext.class,i);
 		}
 		public AtuacoesContext(ParserRuleContext parent, int invokingState) { super(parent, invokingState); }
-		public AtuacoesContext(ParserRuleContext parent, int invokingState, int ats, Datasets d) {
+		public AtuacoesContext(ParserRuleContext parent, int invokingState, int ats, int erros, Datasets d, int cont, ArrayList<String> in) {
 			super(parent, invokingState);
 			this.ats = ats;
+			this.erros = erros;
 			this.d = d;
+			this.cont = cont;
+			this.in = in;
 		}
 		@Override public int getRuleIndex() { return RULE_atuacoes; }
 		@Override
@@ -829,8 +880,8 @@ public class GAMuParser extends Parser {
 		}
 	}
 
-	public final AtuacoesContext atuacoes(int ats,Datasets d) throws RecognitionException {
-		AtuacoesContext _localctx = new AtuacoesContext(_ctx, getState(), ats, d);
+	public final AtuacoesContext atuacoes(int ats,int erros,Datasets d,int cont,ArrayList<String> in) throws RecognitionException {
+		AtuacoesContext _localctx = new AtuacoesContext(_ctx, getState(), ats, erros, d, cont, in);
 		enterRule(_localctx, 22, RULE_atuacoes);
 		int _la;
 		try {
@@ -855,7 +906,7 @@ public class GAMuParser extends Parser {
 			        }
 			    
 			setState(112);
-			((AtuacoesContext)_localctx).a = atuacao(_localctx.ats,_localctx.d);
+			((AtuacoesContext)_localctx).a = atuacao(_localctx.ats,_localctx.erros,_localctx.d,_localctx.cont,_localctx.in);
 			setState(116);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
@@ -863,7 +914,7 @@ public class GAMuParser extends Parser {
 				{
 				{
 				setState(113);
-				((AtuacoesContext)_localctx).b = atuacao(((AtuacoesContext)_localctx).a.ats2,_localctx.d);
+				((AtuacoesContext)_localctx).b = atuacao(((AtuacoesContext)_localctx).a.ats2,((AtuacoesContext)_localctx).a.erros2,_localctx.d,_localctx.cont,((AtuacoesContext)_localctx).a.out);
 				}
 				}
 				setState(118);
@@ -871,7 +922,16 @@ public class GAMuParser extends Parser {
 				_la = _input.LA(1);
 			}
 
-			        ((AtuacoesContext)_localctx).ats2 =  ((AtuacoesContext)_localctx).b.ats2;
+			        if ((((AtuacoesContext)_localctx).b!=null?_input.getText(((AtuacoesContext)_localctx).b.start,((AtuacoesContext)_localctx).b.stop):null) != null) {
+			          ((AtuacoesContext)_localctx).ats2 =  ((AtuacoesContext)_localctx).b.ats2;
+			          ((AtuacoesContext)_localctx).erros2 =  ((AtuacoesContext)_localctx).b.erros2;
+			          ((AtuacoesContext)_localctx).out =  ((AtuacoesContext)_localctx).b.out;
+			        } else {
+			          ((AtuacoesContext)_localctx).ats2 =  ((AtuacoesContext)_localctx).a.ats2;
+			          ((AtuacoesContext)_localctx).erros2 =  ((AtuacoesContext)_localctx).a.erros2;
+			          ((AtuacoesContext)_localctx).out =  ((AtuacoesContext)_localctx).a.out;
+			        }
+
 			        pw = null;
 			        try {
 			           File file = new File("audicoes.xml");
@@ -901,18 +961,27 @@ public class GAMuParser extends Parser {
 
 	public static class AtuacaoContext extends ParserRuleContext {
 		public int ats;
+		public int erros;
 		public Datasets d;
+		public int cont;
+		public ArrayList<String> in;
 		public int ats2;
+		public int erros2;
+		public ArrayList<String> out;
 		public Token desig;
+		public ObrasContext o;
+		public TerminalNode NOME() { return getToken(GAMuParser.NOME, 0); }
 		public ObrasContext obras() {
 			return getRuleContext(ObrasContext.class,0);
 		}
-		public TerminalNode NOME() { return getToken(GAMuParser.NOME, 0); }
 		public AtuacaoContext(ParserRuleContext parent, int invokingState) { super(parent, invokingState); }
-		public AtuacaoContext(ParserRuleContext parent, int invokingState, int ats, Datasets d) {
+		public AtuacaoContext(ParserRuleContext parent, int invokingState, int ats, int erros, Datasets d, int cont, ArrayList<String> in) {
 			super(parent, invokingState);
 			this.ats = ats;
+			this.erros = erros;
 			this.d = d;
+			this.cont = cont;
+			this.in = in;
 		}
 		@Override public int getRuleIndex() { return RULE_atuacao; }
 		@Override
@@ -925,8 +994,8 @@ public class GAMuParser extends Parser {
 		}
 	}
 
-	public final AtuacaoContext atuacao(int ats,Datasets d) throws RecognitionException {
-		AtuacaoContext _localctx = new AtuacaoContext(_ctx, getState(), ats, d);
+	public final AtuacaoContext atuacao(int ats,int erros,Datasets d,int cont,ArrayList<String> in) throws RecognitionException {
+		AtuacaoContext _localctx = new AtuacaoContext(_ctx, getState(), ats, erros, d, cont, in);
 		enterRule(_localctx, 24, RULE_atuacao);
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -938,7 +1007,7 @@ public class GAMuParser extends Parser {
 			setState(123);
 			match(T__3);
 			   System.out.println("----------------------------------------");
-			                System.out.println("           ATUAÇÃO: " + (((AtuacaoContext)_localctx).desig!=null?((AtuacaoContext)_localctx).desig.getText():null) + "       ");
+			                System.out.println("           ATUAÇÃO: " + (((AtuacaoContext)_localctx).desig!=null?((AtuacaoContext)_localctx).desig.getText():null).substring(1,(((AtuacaoContext)_localctx).desig!=null?((AtuacaoContext)_localctx).desig.getText():null).length()-1) + "       ");
 			                System.out.println("----------------------------------------");;
 			                PrintWriter pw = null;
 			                try {
@@ -947,8 +1016,13 @@ public class GAMuParser extends Parser {
 			                   pw = new PrintWriter(fw);
 			                   pw.println("<atuacao>");
 			                   pw.println("<idAt>AT"+_localctx.ats+"</idAt>");
-			                   pw.println("<tituloAt>"+(((AtuacaoContext)_localctx).desig!=null?((AtuacaoContext)_localctx).desig.getText():null)+"</tituloAt>");
+			                   pw.println("<tituloAt>"+(((AtuacaoContext)_localctx).desig!=null?((AtuacaoContext)_localctx).desig.getText():null).substring(1,(((AtuacaoContext)_localctx).desig!=null?((AtuacaoContext)_localctx).desig.getText():null).length()-1)+"</tituloAt>");
 			                   ((AtuacaoContext)_localctx).ats2 =  _localctx.ats + 1;
+			                   String sql = "INSERT INTO gamu.Actuacao VALUES ("+ _localctx.ats + "," + _localctx.cont + ",\'"
+			                                    + (((AtuacaoContext)_localctx).desig!=null?((AtuacaoContext)_localctx).desig.getText():null).substring(1,(((AtuacaoContext)_localctx).desig!=null?((AtuacaoContext)_localctx).desig.getText():null).length()-1) + "\');";
+			                  _localctx.in.add(sql);
+			                  ((AtuacaoContext)_localctx).out =  _localctx.in;
+			                	//System.out.println(sql);
 			                } catch (IOException e) {
 			                   e.printStackTrace();
 			                } finally {
@@ -958,9 +1032,12 @@ public class GAMuParser extends Parser {
 			                }
 			            
 			setState(125);
-			obras(_localctx.d);
-			   pw = null;
+			((AtuacaoContext)_localctx).o = obras(_localctx.d, _localctx.erros, _localctx.ats, _localctx.out);
+			       ((AtuacaoContext)_localctx).erros2 =  ((AtuacaoContext)_localctx).o.erros2;
+			                ((AtuacaoContext)_localctx).out =  ((AtuacaoContext)_localctx).o.out;
+			                pw = null;
 			                try {
+			                   ((AtuacaoContext)_localctx).erros2 =  ((AtuacaoContext)_localctx).o.erros2;
 			                   File file = new File("audicoes.xml");
 			                   FileWriter fw = new FileWriter(file, true);
 			                   pw = new PrintWriter(fw);
@@ -972,7 +1049,8 @@ public class GAMuParser extends Parser {
 			                      pw.close();
 			                   }
 			                }
-			            
+			                //System.out.println("ERROS obras: " + _localctx.erros2);
+			        
 			}
 		}
 		catch (RecognitionException re) {
@@ -988,6 +1066,13 @@ public class GAMuParser extends Parser {
 
 	public static class ObrasContext extends ParserRuleContext {
 		public Datasets d;
+		public int erros;
+		public int ats;
+		public ArrayList<String> in;
+		public int erros2;
+		public ArrayList<String> out;
+		public ObraContext o;
+		public ObraContext ob;
 		public List<ObraContext> obra() {
 			return getRuleContexts(ObraContext.class);
 		}
@@ -995,9 +1080,12 @@ public class GAMuParser extends Parser {
 			return getRuleContext(ObraContext.class,i);
 		}
 		public ObrasContext(ParserRuleContext parent, int invokingState) { super(parent, invokingState); }
-		public ObrasContext(ParserRuleContext parent, int invokingState, Datasets d) {
+		public ObrasContext(ParserRuleContext parent, int invokingState, Datasets d, int erros, int ats, ArrayList<String> in) {
 			super(parent, invokingState);
 			this.d = d;
+			this.erros = erros;
+			this.ats = ats;
+			this.in = in;
 		}
 		@Override public int getRuleIndex() { return RULE_obras; }
 		@Override
@@ -1010,14 +1098,14 @@ public class GAMuParser extends Parser {
 		}
 	}
 
-	public final ObrasContext obras(Datasets d) throws RecognitionException {
-		ObrasContext _localctx = new ObrasContext(_ctx, getState(), d);
+	public final ObrasContext obras(Datasets d,int erros,int ats,ArrayList<String> in) throws RecognitionException {
+		ObrasContext _localctx = new ObrasContext(_ctx, getState(), d, erros, ats, in);
 		enterRule(_localctx, 26, RULE_obras);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			 
+
 			        System.out.println("-------------------------");
 			        System.out.println("|    LISTA DE OBRAS     |");
 			        System.out.println("-------------------------");
@@ -1035,23 +1123,33 @@ public class GAMuParser extends Parser {
 			           }
 			        }
 			    
-			setState(130); 
+			setState(129);
+			((ObrasContext)_localctx).o = obra(_localctx.d, _localctx.erros, _localctx.ats, _localctx.in);
+			setState(133);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			do {
+			while (_la==T__12) {
 				{
 				{
-				setState(129);
-				obra(_localctx.d);
+				setState(130);
+				((ObrasContext)_localctx).ob = obra(_localctx.d,((ObrasContext)_localctx).o.erros2,_localctx.ats,((ObrasContext)_localctx).o.out);
 				}
 				}
-				setState(132); 
+				setState(135);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( _la==T__12 );
-			 
+			}
+
 			        pw = null;
 			        try {
+			          if ((((ObrasContext)_localctx).ob!=null?_input.getText(((ObrasContext)_localctx).ob.start,((ObrasContext)_localctx).ob.stop):null) != null) {
+			            ((ObrasContext)_localctx).erros2 =  ((ObrasContext)_localctx).ob.erros2;
+			            ((ObrasContext)_localctx).out =  ((ObrasContext)_localctx).ob.out;
+			          } else {
+			            ((ObrasContext)_localctx).erros2 =  ((ObrasContext)_localctx).o.erros2;
+			            ((ObrasContext)_localctx).out =  ((ObrasContext)_localctx).o.out;
+			          }
+
 			           File file = new File("audicoes.xml");
 			           FileWriter fw = new FileWriter(file, true);
 			           pw = new PrintWriter(fw);
@@ -1079,15 +1177,24 @@ public class GAMuParser extends Parser {
 
 	public static class ObraContext extends ParserRuleContext {
 		public Datasets d;
+		public int erros;
+		public int ats;
+		public ArrayList<String> in;
+		public int erros2;
+		public ArrayList<String> out;
 		public Token idObra;
+		public DadosObraContext dados;
+		public TerminalNode ID() { return getToken(GAMuParser.ID, 0); }
 		public DadosObraContext dadosObra() {
 			return getRuleContext(DadosObraContext.class,0);
 		}
-		public TerminalNode ID() { return getToken(GAMuParser.ID, 0); }
 		public ObraContext(ParserRuleContext parent, int invokingState) { super(parent, invokingState); }
-		public ObraContext(ParserRuleContext parent, int invokingState, Datasets d) {
+		public ObraContext(ParserRuleContext parent, int invokingState, Datasets d, int erros, int ats, ArrayList<String> in) {
 			super(parent, invokingState);
 			this.d = d;
+			this.erros = erros;
+			this.ats = ats;
+			this.in = in;
 		}
 		@Override public int getRuleIndex() { return RULE_obra; }
 		@Override
@@ -1100,32 +1207,40 @@ public class GAMuParser extends Parser {
 		}
 	}
 
-	public final ObraContext obra(Datasets d) throws RecognitionException {
-		ObraContext _localctx = new ObraContext(_ctx, getState(), d);
+	public final ObraContext obra(Datasets d,int erros,int ats,ArrayList<String> in) throws RecognitionException {
+		ObraContext _localctx = new ObraContext(_ctx, getState(), d, erros, ats, in);
 		enterRule(_localctx, 28, RULE_obra);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(136);
-			match(T__12);
-			setState(137);
-			((ObraContext)_localctx).idObra = match(ID);
 			setState(138);
+			match(T__12);
+			setState(139);
+			((ObraContext)_localctx).idObra = match(ID);
+			setState(140);
 			match(T__3);
-			    PrintWriter pw = null;  
+
+			            ((ObraContext)_localctx).erros2 =  _localctx.erros;
+			            PrintWriter pw = null;
 			            System.out.println("---------------");
 			            System.out.println("|    OBRA     |");
 			            System.out.println("---------------");
-			            
+
 			            /*System.out.println("OBRA: "+ (((ObraContext)_localctx).idObra!=null?((ObraContext)_localctx).idObra.getText():null) + " (\"" +
-			            _localctx.d.getOb().getObra((((ObraContext)_localctx).idObra!=null?((ObraContext)_localctx).idObra.getText():null)).getNome() + "\"" + " - "  
-			            + "nome compositor" + 
+			            _localctx.d.getOb().getObra((((ObraContext)_localctx).idObra!=null?((ObraContext)_localctx).idObra.getText():null)).getNome() + "\"" + " - "
+			            + "nome compositor" +
 			            _localctx.d.getCp().getCompositor(_localctx.d.getOb().getObra((((ObraContext)_localctx).idObra!=null?((ObraContext)_localctx).idObra.getText():null)).getCompositor()).getNome() + ")");*/
-			            
+
 			            System.out.println("Id: "+ (((ObraContext)_localctx).idObra!=null?((ObraContext)_localctx).idObra.getText():null));
 			            System.out.println("Titulo: " + _localctx.d.getOb().getObra((((ObraContext)_localctx).idObra!=null?((ObraContext)_localctx).idObra.getText():null)).getNome());
-			            System.out.println("Compositor: " + _localctx.d.getCp().getCompositor(_localctx.d.getOb().getObra((((ObraContext)_localctx).idObra!=null?((ObraContext)_localctx).idObra.getText():null)).getCompositor()).getNome());                
-			            
+			            System.out.println("Compositor: " + _localctx.d.getCp().getCompositor(_localctx.d.getOb().getObra((((ObraContext)_localctx).idObra!=null?((ObraContext)_localctx).idObra.getText():null)).getCompositor()).getNome());
+
+			            String sql = "INSERT INTO gamu.Actuacao_Obra VALUES (" + _localctx.ats + "," +
+			                          (((ObraContext)_localctx).idObra!=null?((ObraContext)_localctx).idObra.getText():null).substring(1)+ ");";
+
+			            _localctx.in.add(sql);
+			            //System.out.println(sql);
+
 			            try {
 			               File file = new File("audicoes.xml");
 			               FileWriter fw = new FileWriter(file, true);
@@ -1139,10 +1254,13 @@ public class GAMuParser extends Parser {
 			                  pw.close();
 			               }
 			            }
+			            //System.out.println("ERROS obra: " + _localctx.erros2);
 			        
-			setState(140);
-			dadosObra(_localctx.d);
-			 
+			setState(142);
+			((ObraContext)_localctx).dados = dadosObra(_localctx.d, _localctx.erros, _localctx.ats, (((ObraContext)_localctx).idObra!=null?((ObraContext)_localctx).idObra.getText():null).substring(1),_localctx.in);
+
+			            ((ObraContext)_localctx).erros2 =  ((ObraContext)_localctx).dados.erros2;
+			            ((ObraContext)_localctx).out =  ((ObraContext)_localctx).dados.out;
 			            pw = null;
 			            try {
 			               File file = new File("audicoes.xml");
@@ -1155,6 +1273,7 @@ public class GAMuParser extends Parser {
 			                  pw.close();
 			               }
 			            }
+			            //System.out.println("ERROS dadosObra: " + ((ObraContext)_localctx).dados.erros2);
 			    
 			}
 		}
@@ -1171,6 +1290,12 @@ public class GAMuParser extends Parser {
 
 	public static class DadosObraContext extends ParserRuleContext {
 		public Datasets d;
+		public int erros;
+		public int ats;
+		public String idOb;
+		public ArrayList<String> in;
+		public int erros2;
+		public ArrayList<String> out;
 		public InstrumentosContext ins;
 		public MaestrosContext ms;
 		public MusicosContext mu;
@@ -1184,9 +1309,13 @@ public class GAMuParser extends Parser {
 			return getRuleContext(MusicosContext.class,0);
 		}
 		public DadosObraContext(ParserRuleContext parent, int invokingState) { super(parent, invokingState); }
-		public DadosObraContext(ParserRuleContext parent, int invokingState, Datasets d) {
+		public DadosObraContext(ParserRuleContext parent, int invokingState, Datasets d, int erros, int ats, String idOb, ArrayList<String> in) {
 			super(parent, invokingState);
 			this.d = d;
+			this.erros = erros;
+			this.ats = ats;
+			this.idOb = idOb;
+			this.in = in;
 		}
 		@Override public int getRuleIndex() { return RULE_dadosObra; }
 		@Override
@@ -1199,20 +1328,21 @@ public class GAMuParser extends Parser {
 		}
 	}
 
-	public final DadosObraContext dadosObra(Datasets d) throws RecognitionException {
-		DadosObraContext _localctx = new DadosObraContext(_ctx, getState(), d);
+	public final DadosObraContext dadosObra(Datasets d,int erros,int ats,String idOb,ArrayList<String> in) throws RecognitionException {
+		DadosObraContext _localctx = new DadosObraContext(_ctx, getState(), d, erros, ats, idOb, in);
 		enterRule(_localctx, 30, RULE_dadosObra);
-		 
-		        ArrayList<String> intrumentos = new ArrayList<String>(); 
+
+		        ArrayList<String> intrumentos = new ArrayList<String>();
 		        ArrayList<String> maestros = new ArrayList<String>();
 		        ArrayList<String> musicos = new ArrayList<String>();
 
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(143);
+			setState(145);
 			((DadosObraContext)_localctx).ins = instrumentos(intrumentos);
-			   
+
+			            ((DadosObraContext)_localctx).erros2 =  _localctx.erros;
 			            System.out.println("-----------------------");
 			            System.out.println("|LISTA DE INSTRUMENTOS|");
 			            System.out.println("-----------------------");
@@ -1229,7 +1359,7 @@ public class GAMuParser extends Parser {
 			                        {System.out.println("ERRO: O instrumento " + s + " não existe!");}
 			                    else {
 			                        pw.println("<instrumento>"+s+"</instrumento>");
-			                        System.out.println(">"+_localctx.d.getIn().getIntrumento(s)+" ("+s+")");    
+			                        System.out.println(">"+_localctx.d.getIn().getIntrumento(s)+" ("+s+")");
 			                    }
 			                }
 			                pw.println("</instrumentos>");
@@ -1240,8 +1370,9 @@ public class GAMuParser extends Parser {
 			                  pw.close();
 			               }
 			            }
+			            //System.out.println("ERROS intrumentos: " + _localctx.erros2);
 			        
-			setState(145);
+			setState(147);
 			((DadosObraContext)_localctx).ms = maestros(maestros);
 
 			            System.out.println("-------------------");
@@ -1258,13 +1389,22 @@ public class GAMuParser extends Parser {
 			                {
 			                    if(s.contains("P") == false){
 			                        System.out.println("ERRO: O ID = " + s + " não corresponde a um professor!");
+			                        _localctx.erros2++;
 			                    }
 			                    else{
-			                        if(_localctx.d.getPr().getProfs().containsKey(s) == false)
+			                        if(_localctx.d.getPr().getProfs().containsKey(s) == false){
 			                            System.out.println("ERRO: O professor com o ID = " + s + " não existe!");
+			                            _localctx.erros2++;
+			                        }
 			                        else {
 			                                pw.println("<maestro>"+s+"</maestro>");
 			                                System.out.println(">"+_localctx.d.getPr().getProfessor(s).getNome()+" ("+s+")");
+			                                String sql= "INSERT INTO gamu.Participante VALUES (" + _localctx.ats + "," + _localctx.idOb
+			                                + "," + s.substring(1) +",NULL);";
+
+			                                _localctx.in.add(sql);
+
+			                                //System.out.println(sql);
 			                            }
 			                    }
 			                }
@@ -1276,12 +1416,13 @@ public class GAMuParser extends Parser {
 			                  pw.close();
 			               }
 			            }
+			            //System.out.println("ERROS maestros: " + _localctx.erros2);
 			        
-			setState(147);
+			setState(149);
 			((DadosObraContext)_localctx).mu = musicos(musicos);
-			   
+
 			            ArrayList<String> instMusicos = new ArrayList<String>();
-			            ArrayList<String> erros = new ArrayList<String>();
+			            ArrayList<String> lerros = new ArrayList<String>();
 			            String idCurso = "";
 			            String idInst = "";
 			            pw = null;
@@ -1295,46 +1436,38 @@ public class GAMuParser extends Parser {
 			                pw.println("<musicos>");
 			            for(String s : ((DadosObraContext)_localctx).mu.listaOUT)
 			            {
-			                if(s.startsWith("P") == false && s.startsWith("A") == false){
-			                    System.out.println("ERRO: O ID = " + s + " não corresponde a um professor nem a um aluno!");
+
+			                if(s.startsWith("A") == false){
+			                    System.out.println("ERRO: O ID = " + s + " não corresponde a um aluno!");
+			                    _localctx.erros2++;
 			                }
 			                else{
-			                        if(s.startsWith("P") == true){
-			                            if(_localctx.d.getPr().getProfs().containsKey(s) == false)
-			                            {System.out.println("ERRO: O professor com o ID = " + s + " não existe!");}
+			                        if(_localctx.d.getAl().getAls().containsKey(s) == false)
+			                            {System.out.println("ERRO: O aluno com o ID = " + s + " não existe!"); _localctx.erros2++;}
 			                            else {
-			                                    pw.println("<musico>"+s+"</musico>");
-			                                    idCurso = _localctx.d.getPr().getProfessor(s).getCurso();
-			                                    idInst = _localctx.d.getCs().getCurso(idCurso.substring(2)).getId_instrumento();
-			                                    //System.out.println(idCurso);
-			                                    instMusicos.add(idInst);
-			                                    //System.out.println(_localctx.d.getCs().getCurso(idCurso.substring(2)).getId_instrumento());
-			                                    System.out.println(">"+_localctx.d.getPr().getProfessor(s).getNome()+" ("+s+")");
-			                                    if(((DadosObraContext)_localctx).ins.listaOUT.contains(idInst) == false){
-			                                        erros.add("Aviso: O professor com o ID = "+ s 
-			                                            + " não toca nenhum dos instrumentos da lista" );
-			                                    }
+			                                idCurso = _localctx.d.getAl().getAluno(s).getCurso();
+			                                //System.out.println(idCurso);
+			                                idInst = _localctx.d.getCs().getCurso(idCurso.substring(2)).getId_instrumento();
+			                                instMusicos.add(idInst);
+
+			                                pw.println("<musico>"+s+"</musico>");
+
+			                                String sql= "INSERT INTO gamu.Participante VALUES (" + _localctx.ats + "," + _localctx.idOb
+			                                + ",NULL," + s.substring(1) +");";
+
+			                                _localctx.in.add(sql);
+
+			                                //System.out.println(sql);
+
+			                                System.out.println(">"+_localctx.d.getAl().getAluno(s).getNome()+" ("+s+")");
+			                                if(((DadosObraContext)_localctx).ins.listaOUT.contains(idInst) == false){
+			                                    lerros.add("Aviso: O aluno com o ID = "+ s
+			                                        + " não toca nenhum dos instrumentos da lista" );
+
 			                                }
-			                            
-			                        }
-			                        if(s.startsWith("A") == true){
-			                            if(_localctx.d.getAl().getAls().containsKey(s) == false)
-			                                {System.out.println("ERRO: O aluno com o ID = " + s + " não existe!");}
-			                                else {
-			                                    idCurso = _localctx.d.getAl().getAluno(s).getCurso();
-			                                    //System.out.println(idCurso);
-			                                    idInst = _localctx.d.getCs().getCurso(idCurso.substring(2)).getId_instrumento();
-			                                    instMusicos.add(idInst);
-			                                    
-			                                    pw.println("<musico>"+s+"</musico>");
-			                                    System.out.println(">"+_localctx.d.getAl().getAluno(s).getNome()+" ("+s+")");
-			                                    if(((DadosObraContext)_localctx).ins.listaOUT.contains(idInst) == false){
-			                                        erros.add("Aviso: O aluno com o ID = "+ s 
-			                                            + " não toca nenhum dos instrumentos da lista" );
-			                                    }
-			                                }
-			                        }
-			                    }   
+			                            }
+			                    }
+
 			            }
 			            for(String s: ((DadosObraContext)_localctx).ins.listaOUT){
 			                if(instMusicos.contains(s) == false){
@@ -1342,11 +1475,11 @@ public class GAMuParser extends Parser {
 			                        + " não tem nenhum músico que o toque");
 			                }
 			            }
-			            
-			            for(String s : erros)
+
+			            for(String s : lerros)
 			                System.out.println(s);
-			            
-			  
+
+
 			            pw.println("</musicos>");
 			            pw.println("</obra>");
 			            }catch (IOException e) {
@@ -1356,6 +1489,8 @@ public class GAMuParser extends Parser {
 			                  pw.close();
 			               }
 			            }
+			            //System.out.println("ERROS musicos: " + _localctx.erros2);
+			            ((DadosObraContext)_localctx).out =  _localctx.in;
 			        
 			}
 		}
@@ -1404,26 +1539,26 @@ public class GAMuParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(150);
-			match(T__13);
-			setState(151);
-			match(T__3);
 			setState(152);
+			match(T__13);
+			setState(153);
+			match(T__3);
+			setState(154);
 			((InstrumentosContext)_localctx).instrumento1 = id(_localctx.listaIN);
 			 ((InstrumentosContext)_localctx).listaOUT =  ((InstrumentosContext)_localctx).instrumento1.out; 
-			setState(158);
+			setState(160);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__14) {
 				{
 				{
-				setState(154);
+				setState(156);
 				match(T__14);
-				setState(155);
+				setState(157);
 				((InstrumentosContext)_localctx).instrumento2 = id(_localctx.listaIN);
 				}
 				}
-				setState(160);
+				setState(162);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -1475,26 +1610,26 @@ public class GAMuParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(163);
-			match(T__15);
-			setState(164);
-			match(T__3);
 			setState(165);
+			match(T__15);
+			setState(166);
+			match(T__3);
+			setState(167);
 			((MaestrosContext)_localctx).idP1 = id(_localctx.listaIN);
 			 ((MaestrosContext)_localctx).listaOUT =  ((MaestrosContext)_localctx).idP1.out; 
-			setState(171);
+			setState(173);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__14) {
 				{
 				{
-				setState(167);
+				setState(169);
 				match(T__14);
-				setState(168);
+				setState(170);
 				((MaestrosContext)_localctx).idP2 = id(_localctx.listaIN);
 				}
 				}
-				setState(173);
+				setState(175);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -1546,26 +1681,26 @@ public class GAMuParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(176);
-			match(T__16);
-			setState(177);
-			match(T__3);
 			setState(178);
+			match(T__16);
+			setState(179);
+			match(T__3);
+			setState(180);
 			((MusicosContext)_localctx).idM1 = id(_localctx.listaIN);
 			 ((MusicosContext)_localctx).listaOUT =  ((MusicosContext)_localctx).idM1.out; 
-			setState(184);
+			setState(186);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__14) {
 				{
 				{
-				setState(180);
+				setState(182);
 				match(T__14);
-				setState(181);
+				setState(183);
 				((MusicosContext)_localctx).idM2 = id(_localctx.listaIN);
 				}
 				}
-				setState(186);
+				setState(188);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -1607,7 +1742,7 @@ public class GAMuParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(189);
+			setState(191);
 			((DataContext)_localctx).d = match(DATA);
 			((DataContext)_localctx).dt =  (((DataContext)_localctx).d!=null?((DataContext)_localctx).d.getText():null);
 			}
@@ -1645,7 +1780,7 @@ public class GAMuParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(192);
+			setState(194);
 			match(DURACAO);
 			}
 		}
@@ -1687,7 +1822,7 @@ public class GAMuParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(194);
+			setState(196);
 			((IdContext)_localctx).varID = match(ID);
 
 			                if(_localctx.in.contains((((IdContext)_localctx).varID!=null?((IdContext)_localctx).varID.getText():null)) == false) _localctx.in.add((((IdContext)_localctx).varID!=null?((IdContext)_localctx).varID.getText():null));
@@ -1707,7 +1842,7 @@ public class GAMuParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\35\u00c8\4\2\t\2"+
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\35\u00ca\4\2\t\2"+
 		"\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
 		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\3\2\3\2\3\2\7\2\62"+
@@ -1716,52 +1851,53 @@ public class GAMuParser extends Parser {
 		"\7\3\7\3\7\3\7\3\7\3\b\3\b\3\b\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\n\3\n\3\n"+
 		"\3\n\3\n\3\13\3\13\3\13\3\13\3\13\3\f\3\f\3\f\3\f\3\f\3\r\3\r\3\r\7\r"+
 		"u\n\r\f\r\16\rx\13\r\3\r\3\r\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3\17\3"+
-		"\17\6\17\u0085\n\17\r\17\16\17\u0086\3\17\3\17\3\20\3\20\3\20\3\20\3\20"+
-		"\3\20\3\20\3\21\3\21\3\21\3\21\3\21\3\21\3\21\3\22\3\22\3\22\3\22\3\22"+
-		"\3\22\7\22\u009f\n\22\f\22\16\22\u00a2\13\22\3\22\3\22\3\23\3\23\3\23"+
-		"\3\23\3\23\3\23\7\23\u00ac\n\23\f\23\16\23\u00af\13\23\3\23\3\23\3\24"+
-		"\3\24\3\24\3\24\3\24\3\24\7\24\u00b9\n\24\f\24\16\24\u00bc\13\24\3\24"+
-		"\3\24\3\25\3\25\3\25\3\26\3\26\3\27\3\27\3\27\3\27\2\2\30\2\4\6\b\n\f"+
-		"\16\20\22\24\26\30\32\34\36 \"$&(*,\2\2\u00b7\2.\3\2\2\2\48\3\2\2\2\6"+
-		"?\3\2\2\2\bI\3\2\2\2\nN\3\2\2\2\fS\3\2\2\2\16X\3\2\2\2\20]\3\2\2\2\22"+
-		"b\3\2\2\2\24g\3\2\2\2\26l\3\2\2\2\30q\3\2\2\2\32{\3\2\2\2\34\u0082\3\2"+
-		"\2\2\36\u008a\3\2\2\2 \u0091\3\2\2\2\"\u0098\3\2\2\2$\u00a5\3\2\2\2&\u00b2"+
-		"\3\2\2\2(\u00bf\3\2\2\2*\u00c2\3\2\2\2,\u00c4\3\2\2\2./\b\2\1\2/\63\5"+
-		"\4\3\2\60\62\5\4\3\2\61\60\3\2\2\2\62\65\3\2\2\2\63\61\3\2\2\2\63\64\3"+
-		"\2\2\2\64\66\3\2\2\2\65\63\3\2\2\2\66\67\b\2\1\2\67\3\3\2\2\289\7\3\2"+
-		"\29:\b\3\1\2:;\5\6\4\2;<\5\30\r\2<=\7\4\2\2=>\b\3\1\2>\5\3\2\2\2?@\5\b"+
-		"\5\2@A\5\n\6\2AB\5\f\7\2BC\5\16\b\2CD\5\20\t\2DE\5\22\n\2EF\5\24\13\2"+
-		"FG\5\26\f\2GH\b\4\1\2H\7\3\2\2\2IJ\7\5\2\2JK\7\6\2\2KL\7\24\2\2LM\b\5"+
-		"\1\2M\t\3\2\2\2NO\7\7\2\2OP\7\6\2\2PQ\7\24\2\2QR\b\6\1\2R\13\3\2\2\2S"+
-		"T\7\b\2\2TU\7\6\2\2UV\7\24\2\2VW\b\7\1\2W\r\3\2\2\2XY\7\t\2\2YZ\7\6\2"+
-		"\2Z[\5(\25\2[\\\b\b\1\2\\\17\3\2\2\2]^\7\n\2\2^_\7\6\2\2_`\7\31\2\2`a"+
-		"\b\t\1\2a\21\3\2\2\2bc\7\13\2\2cd\7\6\2\2de\7\24\2\2ef\b\n\1\2f\23\3\2"+
-		"\2\2gh\7\f\2\2hi\7\6\2\2ij\7\24\2\2jk\b\13\1\2k\25\3\2\2\2lm\7\r\2\2m"+
-		"n\7\6\2\2no\5*\26\2op\b\f\1\2p\27\3\2\2\2qr\b\r\1\2rv\5\32\16\2su\5\32"+
-		"\16\2ts\3\2\2\2ux\3\2\2\2vt\3\2\2\2vw\3\2\2\2wy\3\2\2\2xv\3\2\2\2yz\b"+
-		"\r\1\2z\31\3\2\2\2{|\7\16\2\2|}\7\24\2\2}~\7\6\2\2~\177\b\16\1\2\177\u0080"+
-		"\5\34\17\2\u0080\u0081\b\16\1\2\u0081\33\3\2\2\2\u0082\u0084\b\17\1\2"+
-		"\u0083\u0085\5\36\20\2\u0084\u0083\3\2\2\2\u0085\u0086\3\2\2\2\u0086\u0084"+
-		"\3\2\2\2\u0086\u0087\3\2\2\2\u0087\u0088\3\2\2\2\u0088\u0089\b\17\1\2"+
-		"\u0089\35\3\2\2\2\u008a\u008b\7\17\2\2\u008b\u008c\7\30\2\2\u008c\u008d"+
-		"\7\6\2\2\u008d\u008e\b\20\1\2\u008e\u008f\5 \21\2\u008f\u0090\b\20\1\2"+
-		"\u0090\37\3\2\2\2\u0091\u0092\5\"\22\2\u0092\u0093\b\21\1\2\u0093\u0094"+
-		"\5$\23\2\u0094\u0095\b\21\1\2\u0095\u0096\5&\24\2\u0096\u0097\b\21\1\2"+
-		"\u0097!\3\2\2\2\u0098\u0099\7\20\2\2\u0099\u009a\7\6\2\2\u009a\u009b\5"+
-		",\27\2\u009b\u00a0\b\22\1\2\u009c\u009d\7\21\2\2\u009d\u009f\5,\27\2\u009e"+
-		"\u009c\3\2\2\2\u009f\u00a2\3\2\2\2\u00a0\u009e\3\2\2\2\u00a0\u00a1\3\2"+
-		"\2\2\u00a1\u00a3\3\2\2\2\u00a2\u00a0\3\2\2\2\u00a3\u00a4\b\22\1\2\u00a4"+
-		"#\3\2\2\2\u00a5\u00a6\7\22\2\2\u00a6\u00a7\7\6\2\2\u00a7\u00a8\5,\27\2"+
-		"\u00a8\u00ad\b\23\1\2\u00a9\u00aa\7\21\2\2\u00aa\u00ac\5,\27\2\u00ab\u00a9"+
-		"\3\2\2\2\u00ac\u00af\3\2\2\2\u00ad\u00ab\3\2\2\2\u00ad\u00ae\3\2\2\2\u00ae"+
-		"\u00b0\3\2\2\2\u00af\u00ad\3\2\2\2\u00b0\u00b1\b\23\1\2\u00b1%\3\2\2\2"+
-		"\u00b2\u00b3\7\23\2\2\u00b3\u00b4\7\6\2\2\u00b4\u00b5\5,\27\2\u00b5\u00ba"+
-		"\b\24\1\2\u00b6\u00b7\7\21\2\2\u00b7\u00b9\5,\27\2\u00b8\u00b6\3\2\2\2"+
-		"\u00b9\u00bc\3\2\2\2\u00ba\u00b8\3\2\2\2\u00ba\u00bb\3\2\2\2\u00bb\u00bd"+
-		"\3\2\2\2\u00bc\u00ba\3\2\2\2\u00bd\u00be\b\24\1\2\u00be\'\3\2\2\2\u00bf"+
-		"\u00c0\7\26\2\2\u00c0\u00c1\b\25\1\2\u00c1)\3\2\2\2\u00c2\u00c3\7\32\2"+
-		"\2\u00c3+\3\2\2\2\u00c4\u00c5\7\30\2\2\u00c5\u00c6\b\27\1\2\u00c6-\3\2"+
-		"\2\2\b\63v\u0086\u00a0\u00ad\u00ba";
+		"\17\3\17\7\17\u0086\n\17\f\17\16\17\u0089\13\17\3\17\3\17\3\20\3\20\3"+
+		"\20\3\20\3\20\3\20\3\20\3\21\3\21\3\21\3\21\3\21\3\21\3\21\3\22\3\22\3"+
+		"\22\3\22\3\22\3\22\7\22\u00a1\n\22\f\22\16\22\u00a4\13\22\3\22\3\22\3"+
+		"\23\3\23\3\23\3\23\3\23\3\23\7\23\u00ae\n\23\f\23\16\23\u00b1\13\23\3"+
+		"\23\3\23\3\24\3\24\3\24\3\24\3\24\3\24\7\24\u00bb\n\24\f\24\16\24\u00be"+
+		"\13\24\3\24\3\24\3\25\3\25\3\25\3\26\3\26\3\27\3\27\3\27\3\27\2\2\30\2"+
+		"\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,\2\2\u00b9\2.\3\2\2\2\48"+
+		"\3\2\2\2\6?\3\2\2\2\bI\3\2\2\2\nN\3\2\2\2\fS\3\2\2\2\16X\3\2\2\2\20]\3"+
+		"\2\2\2\22b\3\2\2\2\24g\3\2\2\2\26l\3\2\2\2\30q\3\2\2\2\32{\3\2\2\2\34"+
+		"\u0082\3\2\2\2\36\u008c\3\2\2\2 \u0093\3\2\2\2\"\u009a\3\2\2\2$\u00a7"+
+		"\3\2\2\2&\u00b4\3\2\2\2(\u00c1\3\2\2\2*\u00c4\3\2\2\2,\u00c6\3\2\2\2."+
+		"/\b\2\1\2/\63\5\4\3\2\60\62\5\4\3\2\61\60\3\2\2\2\62\65\3\2\2\2\63\61"+
+		"\3\2\2\2\63\64\3\2\2\2\64\66\3\2\2\2\65\63\3\2\2\2\66\67\b\2\1\2\67\3"+
+		"\3\2\2\289\7\3\2\29:\b\3\1\2:;\5\6\4\2;<\5\30\r\2<=\7\4\2\2=>\b\3\1\2"+
+		">\5\3\2\2\2?@\5\b\5\2@A\5\n\6\2AB\5\f\7\2BC\5\16\b\2CD\5\20\t\2DE\5\22"+
+		"\n\2EF\5\24\13\2FG\5\26\f\2GH\b\4\1\2H\7\3\2\2\2IJ\7\5\2\2JK\7\6\2\2K"+
+		"L\7\24\2\2LM\b\5\1\2M\t\3\2\2\2NO\7\7\2\2OP\7\6\2\2PQ\7\24\2\2QR\b\6\1"+
+		"\2R\13\3\2\2\2ST\7\b\2\2TU\7\6\2\2UV\7\24\2\2VW\b\7\1\2W\r\3\2\2\2XY\7"+
+		"\t\2\2YZ\7\6\2\2Z[\5(\25\2[\\\b\b\1\2\\\17\3\2\2\2]^\7\n\2\2^_\7\6\2\2"+
+		"_`\7\31\2\2`a\b\t\1\2a\21\3\2\2\2bc\7\13\2\2cd\7\6\2\2de\7\24\2\2ef\b"+
+		"\n\1\2f\23\3\2\2\2gh\7\f\2\2hi\7\6\2\2ij\7\24\2\2jk\b\13\1\2k\25\3\2\2"+
+		"\2lm\7\r\2\2mn\7\6\2\2no\5*\26\2op\b\f\1\2p\27\3\2\2\2qr\b\r\1\2rv\5\32"+
+		"\16\2su\5\32\16\2ts\3\2\2\2ux\3\2\2\2vt\3\2\2\2vw\3\2\2\2wy\3\2\2\2xv"+
+		"\3\2\2\2yz\b\r\1\2z\31\3\2\2\2{|\7\16\2\2|}\7\24\2\2}~\7\6\2\2~\177\b"+
+		"\16\1\2\177\u0080\5\34\17\2\u0080\u0081\b\16\1\2\u0081\33\3\2\2\2\u0082"+
+		"\u0083\b\17\1\2\u0083\u0087\5\36\20\2\u0084\u0086\5\36\20\2\u0085\u0084"+
+		"\3\2\2\2\u0086\u0089\3\2\2\2\u0087\u0085\3\2\2\2\u0087\u0088\3\2\2\2\u0088"+
+		"\u008a\3\2\2\2\u0089\u0087\3\2\2\2\u008a\u008b\b\17\1\2\u008b\35\3\2\2"+
+		"\2\u008c\u008d\7\17\2\2\u008d\u008e\7\30\2\2\u008e\u008f\7\6\2\2\u008f"+
+		"\u0090\b\20\1\2\u0090\u0091\5 \21\2\u0091\u0092\b\20\1\2\u0092\37\3\2"+
+		"\2\2\u0093\u0094\5\"\22\2\u0094\u0095\b\21\1\2\u0095\u0096\5$\23\2\u0096"+
+		"\u0097\b\21\1\2\u0097\u0098\5&\24\2\u0098\u0099\b\21\1\2\u0099!\3\2\2"+
+		"\2\u009a\u009b\7\20\2\2\u009b\u009c\7\6\2\2\u009c\u009d\5,\27\2\u009d"+
+		"\u00a2\b\22\1\2\u009e\u009f\7\21\2\2\u009f\u00a1\5,\27\2\u00a0\u009e\3"+
+		"\2\2\2\u00a1\u00a4\3\2\2\2\u00a2\u00a0\3\2\2\2\u00a2\u00a3\3\2\2\2\u00a3"+
+		"\u00a5\3\2\2\2\u00a4\u00a2\3\2\2\2\u00a5\u00a6\b\22\1\2\u00a6#\3\2\2\2"+
+		"\u00a7\u00a8\7\22\2\2\u00a8\u00a9\7\6\2\2\u00a9\u00aa\5,\27\2\u00aa\u00af"+
+		"\b\23\1\2\u00ab\u00ac\7\21\2\2\u00ac\u00ae\5,\27\2\u00ad\u00ab\3\2\2\2"+
+		"\u00ae\u00b1\3\2\2\2\u00af\u00ad\3\2\2\2\u00af\u00b0\3\2\2\2\u00b0\u00b2"+
+		"\3\2\2\2\u00b1\u00af\3\2\2\2\u00b2\u00b3\b\23\1\2\u00b3%\3\2\2\2\u00b4"+
+		"\u00b5\7\23\2\2\u00b5\u00b6\7\6\2\2\u00b6\u00b7\5,\27\2\u00b7\u00bc\b"+
+		"\24\1\2\u00b8\u00b9\7\21\2\2\u00b9\u00bb\5,\27\2\u00ba\u00b8\3\2\2\2\u00bb"+
+		"\u00be\3\2\2\2\u00bc\u00ba\3\2\2\2\u00bc\u00bd\3\2\2\2\u00bd\u00bf\3\2"+
+		"\2\2\u00be\u00bc\3\2\2\2\u00bf\u00c0\b\24\1\2\u00c0\'\3\2\2\2\u00c1\u00c2"+
+		"\7\26\2\2\u00c2\u00c3\b\25\1\2\u00c3)\3\2\2\2\u00c4\u00c5\7\32\2\2\u00c5"+
+		"+\3\2\2\2\u00c6\u00c7\7\30\2\2\u00c7\u00c8\b\27\1\2\u00c8-\3\2\2\2\b\63"+
+		"v\u0087\u00a2\u00af\u00bc";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

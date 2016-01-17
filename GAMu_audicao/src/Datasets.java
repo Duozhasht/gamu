@@ -8,7 +8,7 @@
  * @author JRCO
  */
 public class Datasets {
-    
+
     Professores pr;
     Alunos al;
     Instrumentos in;
@@ -16,6 +16,8 @@ public class Datasets {
     Cursos cs;
     Periodos ps;
     Compositores cp;
+    int idAudicao;
+    int idAtuacao;
 
     public Datasets() {
         this.pr = new Professores();
@@ -25,12 +27,14 @@ public class Datasets {
         this.cs = new Cursos();
         this.ps = new Periodos();
         this.cp = new Compositores();
+        this.idAudicao = -1;
+        this.idAtuacao = -1;
     }
 
     public Professores getPr() {
         return pr;
     }
-  
+
     public Alunos getAl() {
         return this.al;
     }
@@ -44,29 +48,45 @@ public class Datasets {
     }
 
     public Cursos getCs() {
-        return cs;
+        return this.cs;
     }
 
     public Periodos getPs() {
-        return ps;
+        return this.ps;
     }
 
     public Compositores getCp() {
-        return cp;
+        return this.cp;
+    }
+
+    public int getIdAtuacao() {
+        return this.idAtuacao;
+    }
+
+    public int getIdAudicao() {
+        return this.idAudicao;
+    }
+
+    public void setIdAtuacao(int idAtuacao) {
+        this.idAtuacao = idAtuacao;
+    }
+
+    public void setIdAudicao(int idAudicao) {
+        this.idAudicao = idAudicao;
     }
 
     public void setCp(Compositores cp) {
         this.cp = cp;
     }
-    
+
     public void setPs(Periodos ps) {
         this.ps = ps;
     }
-   
+
     public void setCs(Cursos cs) {
         this.cs = cs;
     }
-    
+
     public void setAl(Alunos al) {
         this.al = al;
     }
@@ -82,7 +102,7 @@ public class Datasets {
     public void setPr(Professores pr) {
         this.pr = pr;
     }
-    
-    
-    
+
+
+
 }

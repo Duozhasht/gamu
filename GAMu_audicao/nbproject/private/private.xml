@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/MAMP/htdocs/GAMu_audicao/GAMu.g4</file>
+            <file>file:/C:/MAMP/htdocs/GAMu_audicao/src/GAMu.java</file>
+            <file>file:/C:/MAMP/htdocs/GAMu_audicao/src/GrammarJDBC.java</file>
+            <file>file:/C:/MAMP/htdocs/GAMu_audicao/src/Datasets.java</file>
+            <file>file:/C:/MAMP/htdocs/GAMu_audicao/src/GAMuParser.java</file>
         </group>
     </open-files>
 </project-private>

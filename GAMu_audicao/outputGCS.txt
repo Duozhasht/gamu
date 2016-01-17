@@ -1,0 +1,63 @@
+Connecting to database...
+Creating statement...
+--------------------------
+--------------------------
+----------------------------------------
+|           AUDIÇÕES MUSICAIS           |
+----------------------------------------
+----------------------------------------
+|           AUDIÇÃO 11                  |
+----------------------------------------
+----------------------------------------
+|       INFORMAÇÕES DA AUDIÇÃO         |
+----------------------------------------
+TITULO: Universidade do Minho
+SUBTITULO: Processamento de Linguagens e Programacao
+TEMA: Musicas Gramaticais
+DATA: 2016-01-18
+HORA: 21:00
+LOCAL: Braga
+ORGANIZADOR: Professores de PLC
+DURAÇÃO: 01:00:00
+----------------------------------------
+|           LISTA DE ATUAÇÕES          |
+----------------------------------------
+----------------------------------------
+           ATUAÇÃO: Malta de MIEI
+----------------------------------------
+-------------------------
+|    LISTA DE OBRAS     |
+-------------------------
+---------------
+|    OBRA     |
+---------------
+Id: O121
+Titulo: Adagio in B minor
+Compositor: Durante, Francesco
+-----------------------
+|LISTA DE INSTRUMENTOS|
+-----------------------
+>Contrabaixo (I2)
+>Eufónio (I4)
+>Fliscorne (I7)
+-------------------
+|LISTA DE MAESTROS|
+-------------------
+>ALVARO JOSE DE CASTRO MOREIRA DA SILVA (P1)
+>ANDRE FILIPE AZEVEDO SOUSA (P2)
+>FILIPE ALEXANDRE DA SILVA MARTINS (P4)
+>HELDER RICARDO DIAS RIBEIRO (P5)
+------------------
+|LISTA DE MUSICOS|
+------------------
+>ALI DOS REIS MOTA (A36487)
+>ANA MARGARIDA FIDALGO PINHEIRO (A27589)
+>ANA MARGARIDA LIMA ALEM (A25073)
+Aviso: O instrumento com o ID = I2 não tem nenhum músico que o toque
+Aviso: O instrumento com o ID = I4 não tem nenhum músico que o toque
+Aviso: O instrumento com o ID = I7 não tem nenhum músico que o toque
+Aviso: O aluno com o ID = A36487 não toca nenhum dos instrumentos da lista
+Aviso: O aluno com o ID = A27589 não toca nenhum dos instrumentos da lista
+Aviso: O aluno com o ID = A25073 não toca nenhum dos instrumentos da lista
+------------------------------
+Audição carregada com sucesso!

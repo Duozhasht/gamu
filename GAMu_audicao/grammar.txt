@@ -1,0 +1,166 @@
+
+audicoes :
+          audicao (audicao)*
+         ;
+
+audicao:
+    'AUDICAO:' dadosAud atuacoes '.'
+    ;
+
+dadosAud:
+    titulo subtitulo tema dataS hora local organizador duracaoS
+    ;
+
+titulo:
+    'TITULO' ':' NOME
+    ;
+
+subtitulo:
+    'SUBTITULO' ':' NOME
+    ;
+
+tema:
+    'TEMA' ':' NOME
+    ;
+
+dataS:
+    'DATA' ':' data
+    ;
+
+hora:
+    'HORA' ':' HORA
+    ;
+
+local:
+    'LOCAL' ':' NOME
+    ;
+
+organizador:
+    'ORGANIZADOR' ':'mNOME
+    ;
+
+duracaoS:
+    'DURACAO' ':' duracao
+    ;
+
+atuacoes:
+    atuacao (atuacao)*
+    ;
+
+atuacao:
+    'ATUACAO' NOME ':' obras
+    ;
+
+obras:
+  obra (obra)*
+    ;
+
+obra:
+  'OBRA' ID ':' dadosObra
+        ;
+
+dadosObra:
+    instrumentos
+    maestros
+    musicos
+    ;
+
+instrumentos :
+    'INSTRUMENTOS' ':' id (',' id)*
+    ;
+
+maestros:
+    'MAESTROS' ':' id (',' id)*
+    ;
+
+musicos :
+    'MUSICOS' ':' id (',' id)*
+    ;
+
+data:
+     DATA
+    ;
+
+duracao
+    :
+    DURACAO
+    ;
+
+id :
+    ID
+    ;
+
+/*--------------- Lexer ---------------------------------------*/
+NOME:	STRING
+	;
+
+PAL : [a-zA-Z]+
+    ;
+
+DATA:   ANO '-' MES '-' DIA
+    ;
+
+fragment
+MES: '0'..'9'+
+   ;
+
+fragment
+DIA: '0'..'9'+
+   ;
+
+ANO: [0-9]+
+   ;
+
+ID : [a-zA-Z'-''_'0-9]+
+   ;
+
+HORA: HORAS ':' MINUTOS
+    ;
+
+DURACAO: HORAS ':' MINUTOS ':' SEGUNDOS
+    ;
+
+SEGUNDOS: '0' .. '9'+
+        ;
+
+fragment
+HORAS: '0'..'9'+
+    ;
+
+fragment
+MINUTOS: '0'..'9'+
+       ;
+
+
+INT :	'0'..'9'+
+    ;
+
+WS  :   [ \t\r\n]  -> skip
+    ;
+
+fragment
+STRING
+    :  '"' ( ESC_SEQ | ~('"') )* '"'
+    ;
+
+fragment
+ESC_SEQ
+    :   '\\' ('b'|'t'|'n'|'f'|'r'|'\"'|'\''|'\\')
+    |   UNICODE_ESC
+    |   OCTAL_ESC
+    ;
+
+fragment
+OCTAL_ESC
+    :   '\\' ('0'..'3') ('0'..'7') ('0'..'7')
+    |   '\\' ('0'..'7') ('0'..'7')
+    |   '\\' ('0'..'7')
+    ;
+
+fragment
+UNICODE_ESC
+    :   '\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+    ;
+fragment
+HEX_DIGIT : ('0'..'9'|'a'..'f'|'A'..'F')
+    ;

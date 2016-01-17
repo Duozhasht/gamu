@@ -1,0 +1,15 @@
+AUDICAO:
+	TITULO : "Universidade do Minho"
+	SUBTITULO : "Processamento de Linguagens e Programacao"
+	TEMA : "Musicas Gramaticais"
+	DATA : 2016-01-18
+	HORA : 21:00
+	LOCAL : "Braga"
+	ORGANIZADOR : "Professores de PLC"
+	DURACAO : 01:00:00
+	ATUACAO "Malta de MIEI" :
+			OBRA O121 :
+				INSTRUMENTOS : I2, I4, I7
+				MAESTROS : P1, P2, P4, P5
+				MUSICOS : A36487, A27589, A25073
+.

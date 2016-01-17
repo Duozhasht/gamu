@@ -82,7 +82,7 @@ public class GAMuLexer extends Lexer {
 	}
 
 
-	    
+
 
 
 	public GAMuLexer(CharStream input) {
