@@ -13,96 +13,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `gamu` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 USE `gamu` ;
--- -----------------------------------------------------
--- Table `gamu`.`Audicao`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `gamu`.`Audicao` ;
 
-CREATE TABLE IF NOT EXISTS `gamu`.`Audicao` (
-  `id_audicao` INT NOT NULL AUTO_INCREMENT COMMENT '',
-  `titulo` VARCHAR(45) NOT NULL COMMENT '',
-  `subtitulo` VARCHAR(45) NOT NULL COMMENT '',
-  `tema` VARCHAR(45) NOT NULL COMMENT '',
-  `data` DATETIME NOT NULL COMMENT '',
-  `local` VARCHAR(45) NOT NULL COMMENT '',
-  `organizador` VARCHAR(45) NOT NULL COMMENT '',
-  `duracao` TIME NOT NULL COMMENT '',
-  PRIMARY KEY (`id_audicao`)  COMMENT '')
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gamu`.`Actuacao`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `gamu`.`Actuacao` ;
-
-CREATE TABLE IF NOT EXISTS `gamu`.`Actuacao` (
-  `id_actuacao` INT NOT NULL COMMENT '',
-  `id_audicao` INT NOT NULL COMMENT '',
-  `designacao` VARCHAR(100) NOT NULL COMMENT '',
-  PRIMARY KEY (`id_actuacao`)  COMMENT '',
-  INDEX `fk_actuacao_audicao_idx` (`id_audicao` ASC)  COMMENT '',
-  CONSTRAINT `fk_actuacao_audicao`
-    FOREIGN KEY (`id_audicao`)
-    REFERENCES `gamu`.`Audicao` (`id_audicao`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gamu`.`Actuacao_Obra`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `gamu`.`Actuacao_Obra` ;
-
-CREATE TABLE IF NOT EXISTS `gamu`.`Actuacao_Obra` (
-  `id_actuacao` INT NOT NULL COMMENT '',
-  `id_obra` INT NOT NULL COMMENT '',
-  INDEX `fk_actuacao_obra_obra_idx` (`id_obra` ASC)  COMMENT '',
-  INDEX `fk_actuacao_obra_actuacao_idx` (`id_actuacao` ASC)  COMMENT '',
-  PRIMARY KEY (`id_actuacao`, `id_obra`)  COMMENT '',
-  CONSTRAINT `fk_actuacao_obra_obra`
-    FOREIGN KEY (`id_obra`)
-    REFERENCES `gamu`.`Obra` (`id_obra`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_actuacao_obra_actuacao`
-    FOREIGN KEY (`id_actuacao`)
-    REFERENCES `gamu`.`Actuacao` (`id_actuacao`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gamu`.`Participante`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `gamu`.`Participante` ;
-
-CREATE TABLE IF NOT EXISTS `gamu`.`Participante` (
-  `id_actuacao` INT NOT NULL COMMENT '',
-  `id_obra` INT NOT NULL COMMENT '',
-  `id_professor` INT NULL COMMENT '',
-  `id_aluno` INT NULL COMMENT '',
-  INDEX `fk_participante_professor_idx` (`id_professor` ASC)  COMMENT '',
-  INDEX `fk_participante_aluno_idx` (`id_aluno` ASC)  COMMENT '',
-  INDEX `fk_participante_actuacao_idx` (`id_actuacao` ASC, `id_obra` ASC)  COMMENT '',
-  CONSTRAINT `fk_participante_actuacao`
-    FOREIGN KEY (`id_actuacao` , `id_obra`)
-    REFERENCES `gamu`.`Actuacao_Obra` (`id_actuacao` , `id_obra`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_participante_aluno`
-    FOREIGN KEY (`id_aluno`)
-    REFERENCES `gamu`.`Aluno` (`id_aluno`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_participante_professor`
-    FOREIGN KEY (`id_professor`)
-    REFERENCES `gamu`.`Professor` (`id_professor`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `gamu`.`Instrumento`
 -- -----------------------------------------------------
@@ -198,8 +109,8 @@ CREATE TABLE IF NOT EXISTS `gamu`.`Compositor` (
   `id_compositor` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `nome` VARCHAR(45) NOT NULL COMMENT '',
   `bio` VARCHAR(5000) NOT NULL COMMENT '',
-  `data_de_nascimento` VARCHAR(45) NOT NULL COMMENT '',
-  `data_de_obito` VARCHAR(45) NOT NULL COMMENT '',
+  `data_de_nascimento` DATE NOT NULL COMMENT '',
+  `data_de_obito` DATE NOT NULL COMMENT '',
   `id_periodo` INT NOT NULL COMMENT '',
   PRIMARY KEY (`id_compositor`)  COMMENT '',
   INDEX `fk_compositor_periodo_idx` (`id_periodo` ASC)  COMMENT '',
@@ -264,7 +175,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `gamu`.`Actuacao` ;
 
 CREATE TABLE IF NOT EXISTS `gamu`.`Actuacao` (
-  `id_actuacao` INT NOT NULL COMMENT '',
+  `id_actuacao` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `id_audicao` INT NOT NULL COMMENT '',
   `designacao` VARCHAR(100) NOT NULL COMMENT '',
   PRIMARY KEY (`id_actuacao`)  COMMENT '',
@@ -330,6 +241,12 @@ CREATE TABLE IF NOT EXISTS `gamu`.`Participante` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
 
 -- -----------------------------------------------------
 -- View `gamu`.`aluno_model`
@@ -412,3 +329,11 @@ FROM ((`professor` join `curso` on((`professor`.`id_curso` = `curso`.`id_curso`)
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+INSERT INTO gamu.Periodo VALUES (1, 'Medieval');
+INSERT INTO gamu.Periodo VALUES (2, 'Renascimento');
+INSERT INTO gamu.Periodo VALUES (3, 'Barroco');
+INSERT INTO gamu.Periodo VALUES (4, 'Clássico');
+INSERT INTO gamu.Periodo VALUES (5, 'Romântico');
+INSERT INTO gamu.Periodo VALUES (6, 'Século XX');
+INSERT INTO gamu.Periodo VALUES (7, 'Contemporâneo');

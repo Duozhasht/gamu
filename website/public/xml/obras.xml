@@ -1392,20 +1392,4 @@
     <compositor>C284</compositor>
     <duracao>01:15:00</duracao>
   </obra>
-  <obra id="O175">
-    <nome>Preludes Opus 51</nome>
-    <desc>Alexander Scriabins Prelude Opus 51 No. 2 is </desc>
-    <anoCriacao>2007</anoCriacao>
-    <periodo>PE7</periodo>
-    <compositor>C238</compositor>
-    <duracao>01:24:00</duracao>
-  </obra>
-  <obra id="O176">
-    <nome>Uma obra</nome>
-    <desc>Uma descrição</desc>
-    <anoCriacao>2014</anoCriacao>
-    <periodo>PE6</periodo>
-    <compositor>C152</compositor>
-    <duracao>01:12:00</duracao>
-  </obra>
 </obras>
