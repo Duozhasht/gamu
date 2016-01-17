@@ -8,7 +8,7 @@
 
 	<div class="container">
 		<div class="col-xs-3"></div>
-		<div id="sidebar" class="col-xs-12 col-md-7" style="padding-top:10px;">
+		<div id="sidebar" class="col-xs-12 col-lg-7" style="padding-top:10px;">
 			<ul class="sidebar nav nav-pills" style="padding-bottom: 10px;">
 				<li role="presentation" class="normal">
 					
@@ -29,7 +29,6 @@
 						Exportar PDF
 					</a>
 				</li>
-				<li class="mydivider">
 				</li>
 				<li role="presentation" class="warn">
 					<a href="#" onclick="inputXML()">

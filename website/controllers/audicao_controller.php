@@ -6,7 +6,7 @@
       //small script to change url
       echo "<script>window.history.pushState('string', 'Index', 'http://localhost:8888/gamu/website/?controller=audicao&action=index');</script>";
       //number of records per page and number of pages 
-      $nr_audicoes = Aluno::count();
+      $nr_audicoes = Audicao::count();
       $number_of_records = 50;
       $result_number=ceil($nr_audicoes/$number_of_records);
 
@@ -24,11 +24,6 @@
       $audicoes_next = Audicao::retrieve('data',$page,$number_of_records,2);
       
       require_once('views/audicao/index.php');    
-/*
-      foreach($audicoes as $audicao) {
-        echo "<p>".$audicao->titulo."</p>";
-      }
-*/
 
     }
 
@@ -49,6 +44,96 @@
 
       $controller = new AudicaoController();
       $controller->index();
+    }
+
+    public function add_atuacao() {
+
+        if(isset($_GET['id_audicao'])&&!empty($_POST['designacao'])){
+              Atuacao::create($_GET['id_audicao'],$_POST['designacao']);
+              $id_actuacao = Atuacao::retrieve_last();
+
+
+              //echo "<p>".$_POST['designacao']."</p>";
+              $counter = 0;
+              foreach ($_POST['id_obra'] as $id_obra) {
+                Atuacao::add_obra($id_actuacao, $id_obra);
+                //echo "<p>id obra: ".$id_obra."</p>";
+                
+                foreach ($_POST['ids_maestro'][$counter] as $id_maestro) {
+                  Atuacao::add_maestro_obra($id_actuacao,$id_obra,$id_maestro);
+                  //echo "<p>id maestro: ".$id_maestro."</p>";
+                }
+                foreach ($_POST['ids_musico'][$counter] as $id_musico) {
+                  Atuacao::add_musico_obra($id_actuacao,$id_obra,$id_musico);
+                  //echo "<p>id musico".$id_musico."</p>";
+                }
+                $counter++;
+
+
+              }
+
+              echo "
+                    <div class='alert alert-success text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Inserção Concluída com Sucesso
+                    </div>
+                  ";
+            }
+        else
+            echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Problemas no preenchimento de pelo menos um dos campos!
+                  </div>";
+
+      $controller = new AudicaoController();
+      $controller->view2($_GET['id_audicao']);
+
+    }
+
+    public function add_musico_obra(){
+
+      if(isset($_POST['id_actuacao'])&&isset($_POST['id_audicao'])&&isset($_POST['id_obra']))
+      {
+        try{
+          $aux = Atuacao::add_musico_obra($_POST['id_actuacao'],$_POST['id_obra'],$_POST['id_musico']);
+          echo "<div class='alert alert-success text-center'>
+              <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+              Musico Adicionado Com Sucesso!
+              </div>";
+        }
+        catch (Exception $e) {
+          echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Não é possivel adicionar este registo.
+                  </div>";
+        }
+      }
+      $controller = new AudicaoController();
+      $controller->view2($_POST['id_audicao']);
+
+    }
+
+        public function add_maestro_obra(){
+
+      if(isset($_POST['id_actuacao'])&&isset($_POST['id_audicao'])&&isset($_POST['id_obra'])&&isset($_POST['id_maestro']))
+      {
+        try{
+          $aux = Atuacao::add_maestro_obra($_POST['id_actuacao'],$_POST['id_obra'],$_POST['id_maestro']);
+          echo "<div class='alert alert-success text-center'>
+              <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+              Maestro Adicionado Com Sucesso!
+              </div>";
+        }
+        catch (Exception $e) {
+          echo "<div class='alert alert-danger text-center'>
+                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    Não é possivel adicionar este registo.
+                  </div>";
+        }
+      }
+      $controller = new AudicaoController();
+      $controller->view2($_POST['id_audicao']);
+
     }
 
 
@@ -171,48 +256,18 @@
     }
 
 
-    public function add_atuacao() {
+    
 
-        if(isset($_GET['id_audicao'])&&!empty($_POST['designacao'])){
-              Atuacao::create($_GET['id_audicao'],$_POST['designacao']);
-              $id_actuacao = Atuacao::retrieve_last();
+    public function remove_atuacao(){
 
+       if(isset($_GET['id_audicao'])&&!empty($_GET['id_actuacao'])){
 
-              //echo "<p>".$_POST['designacao']."</p>";
-              $counter = 0;
-              foreach ($_POST['id_obra'] as $id_obra) {
-                Atuacao::add_obra($id_actuacao, $id_obra);
-                //echo "<p>id obra: ".$id_obra."</p>";
-                
-                foreach ($_POST['ids_maestro'][$counter] as $id_maestro) {
-                  Atuacao::add_maestro_obra($id_actuacao,$id_obra,$id_maestro);
-                  //echo "<p>id maestro: ".$id_maestro."</p>";
-                }
-                foreach ($_POST['ids_musico'][$counter] as $id_musico) {
-                  Atuacao::add_musico_obra($id_actuacao,$id_obra,$id_musico);
-                  //echo "<p>id musico".$id_musico."</p>";
-                }
-                $counter++;
+        Atuacao::delete($_GET['id_actuacao']);
 
-
-              }
-
-              echo "
-                    <div class='alert alert-success text-center'>
-                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-                    Inserção Concluída com Sucesso
-                    </div>
-                  ";
-            }
-        else
-            echo "<div class='alert alert-danger text-center'>
-                    <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-                    Problemas no preenchimento de pelo menos um dos campos!
-                  </div>";
+       }
 
       $controller = new AudicaoController();
       $controller->view2($_GET['id_audicao']);
-
     }
 
 

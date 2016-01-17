@@ -1,12 +1,41 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div id="header" class="col-xs-12" style="padding-top:30px;padding-bottom:70px;">
-				<h2 id="title" class='text-center'>Audição <?php echo $audicao->id; ?></h2>
+				<h2 id="title" class='text-center'><?php echo $audicao->titulo; ?></h2>
+				<h4 id="title" class='text-center'><?php echo $audicao->subtitulo; ?></h4>
 			</div>
 		</div> 
 	</div>
 
-	<div class="container">
+	<div class="container" >
+	<div class="col-xs-12" style="font-size: 16px; padding-top:20px;">	
+		<div class="col-xs-12 text-center" style="padding-bottom: 50px;">
+			<div class="col-xs-3">
+				<p id='title'><strong>Data:</strong></p>
+			</div>
+			<div class="col-xs-3" style="color: black;">
+				<p><strong><?php echo $audicao->data; ?></strong></p>
+			</div>
+			<div class="col-xs-3">
+				<p id='title'><strong>Local:</strong></p>
+			</div>
+			<div class="col-xs-3" style="color: black;">
+				<p><strong><?php echo $audicao->local; ?></strong></p>
+			</div>
+			<div class="col-xs-3">
+				<p id='title'><strong>Organizador:</strong></p>
+			</div>
+			<div class="col-xs-3" style="color: black;">
+				<p><strong><?php echo $audicao->organizador; ?></strong></p>
+			</div>
+			<div class="col-xs-3">
+				<p id='title'><strong>Duração:</strong></p>
+			</div>
+			<div class="col-xs-3" style="color: black;">
+				<p><strong><?php echo $audicao->duracao; ?></strong></p>
+			</div>
+		</div>
+	</div>
 	<div class="col-xs-5"></div>
 	<div id="sidebar" class="col-xs-12 col-md-3" style="padding-top:10px;">
 			<ul class="sidebar nav nav-pills" style="padding-bottom: 10px;">
@@ -83,11 +112,63 @@
  					              	    </div>
  					              	    </div>";
 
+
  					            }
  					            echo "</div>";
  					            echo "</div>";
+ 					             					         echo "
+ 					         <div class='row'>
+								<div class='col-md-4 col-lg-4'></div>
+										<div id='sidebar' class='col-xs-12 col-md-7 col-lg-8' style='padding-top:10px;'>
+											<ul class='sidebar nav nav-pills' style='padding-bottom: 10px;'>
+												<li id='uM' role='presentation' class='safe'>
+													<a onclick='showupdateMaestro(".$actuacao->id_actuacao.",".$audicao->id.",".$acto['obra']->id.")'>
+														<i class='fa fa-plus' style='padding-right: 20px'></i>
+														Adicionar Maestro
+													</a>
+												</li>
+												<li role='presentation' class='safe'>
+													<a onclick='showupdateMusico(".$actuacao->id_actuacao.",".$audicao->id.",".$acto['obra']->id.")'>
+														<i class='fa fa-plus' style='padding-right: 20px'></i>
+														Adicionar Músico
+													</a>
+												</li>
+
+											</ul>
+										</div>
+								<div class='col-md-1 col-lg-2'></div>
+							</div>
+
+ 					         ";
  					      	}
+
+ 					         echo "
+ 					         <div class='row'>
+								<div class='col-md-4 col-lg-4'></div>
+										<div id='sidebar' class='col-xs-12 col-md-7 col-lg-8' style='padding-top:10px;'>
+											<ul class='sidebar nav nav-pills' style='padding-bottom: 10px;'>
+												<li role='presentation' class='normal' style='width:179px;'>
+													
+													<a href='#' >
+													<i class='fa fa-plus' style='padding-right: 20px'></i>
+														Adicionar Obra
+													</a>
+												</li>
+												<li role='presentation' class='warn'>
+													<a href='?controller=audicao&action=remove_atuacao&id_audicao=".$audicao->id."&id_actuacao=".$actuacao->id_actuacao."'>
+														<i class='fa fa-times' style='padding-right: 20px'></i>
+														Remover Atuação
+													</a>
+												</li>
+											</ul>
+										</div>
+								<div class='col-md-1'></div>
+							</div>
+
+ 					         ";
+
  					         echo "<hr>";
+
  					         $counter++;
  					     }
 							
@@ -110,6 +191,9 @@
 							<div class="form-group">
 								<input type="text" class="form-control" id="nome" name="designacao" placeholder="Nome da Actuação">
 							</div>
+						</div>
+						<div id="addObra" class="col-xs-4 col-xs-offset-4" style="padding-top: 10px;padding-bottom: 10px;">
+								<button onclick="addObra()" type="button" class="btn btn-default">Adicionar Obra</button>
 						</div>
 						<div id="obrass">
 						<div class="col-md-12">
@@ -199,6 +283,92 @@
 	</div>
 </div>
 
+<div class="modal fade" id="updateMaestro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Adicionar Maestro</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<form action='?controller=audicao&action=add_maestro_obra' method="post" accept-charset="utf-8">
+						<div class="hiddenfile" style="width: 0px; height: 0px; overflow: hidden;">
+							<div class="form-group">
+								<input type="text" class="form-control" id="id_actuacaoM" name="id_actuacao">
+								<input type="text" class="form-control" id="id_audicaoM" name="id_audicao">
+								<input type="text" class="form-control" id="id_obraM" name="id_obra">
+							</div>
+						</div>
+						
+						<div class="col-md-12">
+							
+							<select id="maestros" class="form-control" name="id_maestro">				
+									<?php
+										
+										$nr_profs = Professor::count();
+										$profs = Professor::retrieve('nome',1,$nr_profs);
+										
+										foreach ($profs as $prof) {
+											echo "<option value='".$prof->id."'>".$prof->nome."</option>";
+										}
+									?>
+							</select>
+						</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-primary">Actualizar</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="updateMusico" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Adicionar Maestro</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<form action='?controller=audicao&action=add_musico_obra' method="post" accept-charset="utf-8">
+						<div class="hiddenfile" style="width: 0px; height: 0px; overflow: hidden;">
+							<div class="form-group">
+								<input type="text" class="form-control" id="id_actuacaoMu" name="id_actuacao">
+								<input type="text" class="form-control" id="id_audicaoMu" name="id_audicao">
+								<input type="text" class="form-control" id="id_obraMu" name="id_obra">
+							</div>
+						</div>
+						
+						<div class="col-md-12">
+							
+								<select id="musicos" class="form-control" name="id_musico">
+									<?php
+										
+										$nr_alunos = Aluno::count();
+										$alunos = Aluno::retrieve('nome',1,$nr_alunos);
+										
+										foreach ($alunos as $aluno) {
+											echo "<option value='".$aluno->id."'>".$aluno->nome."</option>";
+										}
+									?>
+							</select>
+						</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-primary">Actualizar</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					</form>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 
 <div class="hiddenfile" style="width: 0px; height: 0px; overflow: hidden;">
@@ -214,7 +384,28 @@ var nr_musicos = 1;
 var nr_obras = 1;
 
 function showModal(){
-	$('#insertModal').modal('show');};
+	$('#insertModal').modal('show');
+};
+
+function showupdateMaestro(id_actuacao,id_audicao,id_obra){
+	$('#id_actuacaoM').val(id_actuacao);
+	$('#id_audicaoM').val(id_audicao);
+	$('#id_obraM').val(id_obra);
+	$('#updateMaestro').modal('show');
+	
+}
+
+
+function showupdateMusico(id_actuacao,id_audicao,id_obra){
+	$('#id_actuacaoMu').val(id_actuacao);
+	$('#id_audicaoMu').val(id_audicao);
+	$('#id_obraMu').val(id_obra);
+	$('#updateMusico').modal('show');
+	
+}
+
+
+
 function inputXML(){
 	$('#fileinput').trigger('click'); 
 }
