@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alunos>
-  <aluno id="a1510">
-    <nome>ADEMAR FONTES DE MAGALHAES GONCALVES</nome>
-    <dataNasc>1997-02-28</dataNasc>
-    <curso>CS40</curso>
-    <curso>40</curso>
-    <anoCurso>7</anoCurso>
-    <instrumento>Tuba</instrumento>
-  </aluno>
   <aluno id="a12753">
-    <nome>MARIA LUISA VILLAVERDE MACHADO FERNANDES NOVA</nome>
+    <nome>MARIA LUISA VILLAVERDE MACHADO FERNANDES NOV</nome>
     <dataNasc>2000-02-20</dataNasc>
     <curso>CS23</curso>
-    <curso>23</curso>
-    <anoCurso>8</anoCurso>
+    <anoCurso>6</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
   <aluno id="a14539">
     <nome>ORLANDO JORGE GONCALVES PINTO</nome>
     <dataNasc>1997-08-17</dataNasc>
     <curso>CS26</curso>
-    <curso>26</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Eufónio</instrumento>
   </aluno>
@@ -28,7 +18,6 @@
     <nome>NUNO MIGUEL AFONSO CARVALHO DE MOURA</nome>
     <dataNasc>2003-08-05</dataNasc>
     <curso>CB16</curso>
-    <curso>16</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Trompa</instrumento>
   </aluno>
@@ -36,7 +25,6 @@
     <nome>JORGE MANUEL DE CASTRO MAIO GOMES DA COSTA</nome>
     <dataNasc>1998-03-26</dataNasc>
     <curso>CS40</curso>
-    <curso>40</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Tuba</instrumento>
   </aluno>
@@ -44,7 +32,6 @@
     <nome>JOAO PAULO DA SILVA CASTRO</nome>
     <dataNasc>2002-11-07</dataNasc>
     <curso>CB6</curso>
-    <curso>6</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Flauta</instrumento>
   </aluno>
@@ -52,7 +39,6 @@
     <nome>ALEXANDRE MIGUEL DA COSTA FERREIRA DOS SANTOS</nome>
     <dataNasc>2000-08-23</dataNasc>
     <curso>CS34</curso>
-    <curso>34</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Percussão</instrumento>
   </aluno>
@@ -60,7 +46,6 @@
     <nome>ROSA ALEXANDRA AZEVEDO GUIMARAES</nome>
     <dataNasc>2005-06-22</dataNasc>
     <curso>CB22</curso>
-    <curso>22</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -68,7 +53,6 @@
     <nome>JOAO PEDRO BRITO ANTUNES GUIMARAES</nome>
     <dataNasc>1997-01-18</dataNasc>
     <curso>CS36</curso>
-    <curso>36</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -76,7 +60,6 @@
     <nome>RICARDO MANUEL RODRIGUES DE OLIVEIRA DIMAS</nome>
     <dataNasc>1997-12-13</dataNasc>
     <curso>CS28</curso>
-    <curso>28</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Flauta</instrumento>
   </aluno>
@@ -84,7 +67,6 @@
     <nome>JOSE ANTONIO PEREIRA CIBRAO</nome>
     <dataNasc>1997-08-02</dataNasc>
     <curso>CS24</curso>
-    <curso>24</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -92,7 +74,6 @@
     <nome>CARLOS JOSE DA CUNHA RIBEIRO</nome>
     <dataNasc>2002-10-11</dataNasc>
     <curso>CB2</curso>
-    <curso>2</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -100,7 +81,6 @@
     <nome>BRUNO DE ALMEIDA RAMOS PEREIRA</nome>
     <dataNasc>1997-06-24</dataNasc>
     <curso>CS25</curso>
-    <curso>25</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -108,7 +88,6 @@
     <nome>JOEL TITO DA CRUZ PINTO</nome>
     <dataNasc>2001-07-06</dataNasc>
     <curso>CS34</curso>
-    <curso>34</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Percussão</instrumento>
   </aluno>
@@ -116,7 +95,6 @@
     <nome>JORGE MIGUEL SILVA MELO PEREIRA</nome>
     <dataNasc>2004-07-11</dataNasc>
     <curso>CB3</curso>
-    <curso>3</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -124,7 +102,6 @@
     <nome>MIGUEL MANUEL GOMES RODRIGUES</nome>
     <dataNasc>2004-04-12</dataNasc>
     <curso>CB10</curso>
-    <curso>10</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -132,7 +109,6 @@
     <nome>PEDRO DAVID ALVES MARTINHO</nome>
     <dataNasc>2000-04-20</dataNasc>
     <curso>CS44</curso>
-    <curso>44</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -140,7 +116,6 @@
     <nome>JOAO PAULO CARRAPATO ALMEIDA</nome>
     <dataNasc>1999-05-20</dataNasc>
     <curso>CS33</curso>
-    <curso>33</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Orgão</instrumento>
   </aluno>
@@ -148,39 +123,20 @@
     <nome>JOSE MANUEL TEIXEIRA FERNANDES</nome>
     <dataNasc>2005-12-19</dataNasc>
     <curso>CB16</curso>
-    <curso>16</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Trompa</instrumento>
-  </aluno>
-  <aluno id="a22685">
-    <nome>MARCO FRANCISCO DA SILVA LIZARDO</nome>
-    <dataNasc>2002-07-03</dataNasc>
-    <curso>CB18</curso>
-    <curso>18</curso>
-    <anoCurso>1</anoCurso>
-    <instrumento>Tuba</instrumento>
   </aluno>
   <aluno id="a22688">
     <nome>MARCO RICARDO BARBOSA COELHO</nome>
     <dataNasc>2003-10-04</dataNasc>
     <curso>CB19</curso>
-    <curso>19</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Violoncelo</instrumento>
-  </aluno>
-  <aluno id="a22695">
-    <nome>NANCY DO SAMEIRO SILVERIO LAVANDEIRA</nome>
-    <dataNasc>2003-09-18</dataNasc>
-    <curso>CB8</curso>
-    <curso>8</curso>
-    <anoCurso>1</anoCurso>
-    <instrumento>Guitarra</instrumento>
   </aluno>
   <aluno id="a22701">
     <nome>NUNO MIGUEL MARTINS CASANOVA</nome>
     <dataNasc>2002-02-07</dataNasc>
     <curso>CB19</curso>
-    <curso>19</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Violoncelo</instrumento>
   </aluno>
@@ -188,7 +144,6 @@
     <nome>RICARDO NUNO MOREIRA CASTILHO FERREIRA LOPES</nome>
     <dataNasc>2002-11-02</dataNasc>
     <curso>CB9</curso>
-    <curso>9</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -196,7 +151,6 @@
     <nome>DAVI CARNEIRO PEREIRA</nome>
     <dataNasc>2000-01-24</dataNasc>
     <curso>CS27</curso>
-    <curso>27</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -204,7 +158,6 @@
     <nome>JOSE ROMEU FERNANDES PINTO</nome>
     <dataNasc>2000-11-05</dataNasc>
     <curso>CS44</curso>
-    <curso>44</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -212,7 +165,6 @@
     <nome>MARIO RUI ANUNCIACAO MONTEIRO</nome>
     <dataNasc>1997-07-04</dataNasc>
     <curso>CS29</curso>
-    <curso>29</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -220,7 +172,6 @@
     <nome>JOSE GRACA DA NOBREGA</nome>
     <dataNasc>2003-03-19</dataNasc>
     <curso>CB18</curso>
-    <curso>18</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Tuba</instrumento>
   </aluno>
@@ -228,7 +179,6 @@
     <nome>CARLOS DE SOUSA CABRAL BRANDAO</nome>
     <dataNasc>2001-05-18</dataNasc>
     <curso>CS43</curso>
-    <curso>43</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Viola de Arco</instrumento>
   </aluno>
@@ -236,7 +186,6 @@
     <nome>NUNO FILIPE MARQUES MOREIRA RIBEIRO</nome>
     <dataNasc>1998-07-05</dataNasc>
     <curso>CS42</curso>
-    <curso>42</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Violino</instrumento>
   </aluno>
@@ -244,7 +193,6 @@
     <nome>LEONOR ISABEL FERREIRA DE MELO OSORIO ARAUJO</nome>
     <dataNasc>2003-01-20</dataNasc>
     <curso>CB14</curso>
-    <curso>14</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -252,7 +200,6 @@
     <nome>RUI MANUEL COUTO DA SILVA</nome>
     <dataNasc>1998-10-22</dataNasc>
     <curso>CS34</curso>
-    <curso>34</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Percussão</instrumento>
   </aluno>
@@ -260,7 +207,6 @@
     <nome>RUI MIGUEL ESCUDEIRO DA COSTA AGUIAR</nome>
     <dataNasc>1996-10-02</dataNasc>
     <curso>CS37</curso>
-    <curso>37</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Trombone</instrumento>
   </aluno>
@@ -268,7 +214,6 @@
     <nome>SERGIO MANUEL RUIVO CARDOSO</nome>
     <dataNasc>2003-12-05</dataNasc>
     <curso>CB4</curso>
-    <curso>4</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Eufónio</instrumento>
   </aluno>
@@ -276,7 +221,6 @@
     <nome>ANA MARGARIDA LIMA ALEM</nome>
     <dataNasc>2003-12-03</dataNasc>
     <curso>CB5</curso>
-    <curso>5</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -284,7 +228,6 @@
     <nome>PEDRO MIGUEL MARTINS FERNANDES</nome>
     <dataNasc>2001-07-27</dataNasc>
     <curso>CS44</curso>
-    <curso>44</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -292,7 +235,6 @@
     <nome>RUI MIGUEL MORAIS LOPES</nome>
     <dataNasc>2002-08-28</dataNasc>
     <curso>CB9</curso>
-    <curso>9</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -300,7 +242,6 @@
     <nome>IGOR MURILO DE ALMEIDA</nome>
     <dataNasc>2002-07-10</dataNasc>
     <curso>CB3</curso>
-    <curso>3</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -308,7 +249,6 @@
     <nome>FERNANDO MIGUEL SOUSA LISBOA</nome>
     <dataNasc>2003-08-14</dataNasc>
     <curso>CB6</curso>
-    <curso>6</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Flauta</instrumento>
   </aluno>
@@ -316,7 +256,6 @@
     <nome>PAULO CESAR DE CARVALHO LOPES</nome>
     <dataNasc>2004-03-01</dataNasc>
     <curso>CB14</curso>
-    <curso>14</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -324,7 +263,6 @@
     <nome>ANA MARGARIDA FIDALGO PINHEIRO</nome>
     <dataNasc>2005-07-05</dataNasc>
     <curso>CB5</curso>
-    <curso>5</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -332,7 +270,6 @@
     <nome>EURICO MANUEL TELES MORAIS</nome>
     <dataNasc>2002-04-25</dataNasc>
     <curso>CB17</curso>
-    <curso>17</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Trompete</instrumento>
   </aluno>
@@ -340,7 +277,6 @@
     <nome>FRANCISCO JOSE PRATA DA PAZ</nome>
     <dataNasc>2001-11-26</dataNasc>
     <curso>CS26</curso>
-    <curso>26</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Eufónio</instrumento>
   </aluno>
@@ -348,7 +284,6 @@
     <nome>JOSE LUIS PINTO MONTEIRO ALVES</nome>
     <dataNasc>1999-11-12</dataNasc>
     <curso>CS24</curso>
-    <curso>24</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -356,7 +291,6 @@
     <nome>MANUEL JOSE TORRES SOUSA DA CUNHA</nome>
     <dataNasc>2002-05-03</dataNasc>
     <curso>CB16</curso>
-    <curso>16</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Trompa</instrumento>
   </aluno>
@@ -364,7 +298,6 @@
     <nome>NUNO MIGUEL OLIVEIRA SILVA</nome>
     <dataNasc>1997-01-23</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -372,7 +305,6 @@
     <nome>PEDRO MIGUEL ARAUJO MOTA LOPES</nome>
     <dataNasc>2002-02-13</dataNasc>
     <curso>CB8</curso>
-    <curso>8</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -380,7 +312,6 @@
     <nome>RUI MIGUEL PEREIRA OLIVEIRA</nome>
     <dataNasc>2001-01-07</dataNasc>
     <curso>CS27</curso>
-    <curso>27</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -388,7 +319,6 @@
     <nome>JOSE MIGUEL FERREIRA PONTES</nome>
     <dataNasc>2001-02-07</dataNasc>
     <curso>CS43</curso>
-    <curso>43</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Viola de Arco</instrumento>
   </aluno>
@@ -396,7 +326,6 @@
     <nome>RUI MIGUEL NOVAIS CASTRO</nome>
     <dataNasc>2005-09-16</dataNasc>
     <curso>CB22</curso>
-    <curso>22</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -404,7 +333,6 @@
     <nome>MARANGAZE JOAQUIM MUNHEPE MULHANGA</nome>
     <dataNasc>2002-08-28</dataNasc>
     <curso>CB16</curso>
-    <curso>16</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Trompa</instrumento>
   </aluno>
@@ -412,7 +340,6 @@
     <nome>MARCO ALEXANDRE BARREIRA MEDEIROS TEIXEIRA</nome>
     <dataNasc>2003-07-19</dataNasc>
     <curso>CB14</curso>
-    <curso>14</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -420,7 +347,6 @@
     <nome>MARIO RUI RIBEIRO FIALHO DA CONCEICAO</nome>
     <dataNasc>1998-12-20</dataNasc>
     <curso>CS38</curso>
-    <curso>38</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Trompa</instrumento>
   </aluno>
@@ -428,7 +354,6 @@
     <nome>RUI MIGUEL FERNANDES VARELA</nome>
     <dataNasc>1996-09-13</dataNasc>
     <curso>CS32</curso>
-    <curso>32</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -436,7 +361,6 @@
     <nome>TITO JOSE FERREIRA DE SOUSA LOPES</nome>
     <dataNasc>2005-12-02</dataNasc>
     <curso>CB3</curso>
-    <curso>3</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -444,7 +368,6 @@
     <nome>NUNO VIRIATO MACEDO FERREIRA DE CARVALHO</nome>
     <dataNasc>2005-03-01</dataNasc>
     <curso>CB20</curso>
-    <curso>20</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Violino</instrumento>
   </aluno>
@@ -452,7 +375,6 @@
     <nome>LUIS FILIPE RIBEIRO NOVAIS</nome>
     <dataNasc>2003-01-01</dataNasc>
     <curso>CB7</curso>
-    <curso>7</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -460,7 +382,6 @@
     <nome>ANDRE LEITE FERREIRA</nome>
     <dataNasc>2004-01-09</dataNasc>
     <curso>CB22</curso>
-    <curso>22</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -468,7 +389,6 @@
     <nome>RENATO CESAR ALMEIDA FIGUEIREDO</nome>
     <dataNasc>1998-11-20</dataNasc>
     <curso>CS23</curso>
-    <curso>23</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
@@ -476,7 +396,6 @@
     <nome>ANTONIO TIAGO MORGADO PEREIRA</nome>
     <dataNasc>2003-01-25</dataNasc>
     <curso>CB1</curso>
-    <curso>1</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
@@ -484,7 +403,6 @@
     <nome>BRUNO RICARDO DUARTE MAGALHAES</nome>
     <dataNasc>2004-04-12</dataNasc>
     <curso>CB3</curso>
-    <curso>3</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -492,7 +410,6 @@
     <nome>FERNANDO SERGIO MADALENO PEREIRA</nome>
     <dataNasc>1997-11-11</dataNasc>
     <curso>CS23</curso>
-    <curso>23</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
@@ -500,7 +417,6 @@
     <nome>JOAO GUILHERME RABACA CAMPOS</nome>
     <dataNasc>2001-06-12</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -508,7 +424,6 @@
     <nome>JORGE MIGUEL GONCALVES DA SILVA</nome>
     <dataNasc>2003-07-14</dataNasc>
     <curso>CB1</curso>
-    <curso>1</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
@@ -516,7 +431,6 @@
     <nome>JOSE CARLOS CARVALHO DOS SANTOS</nome>
     <dataNasc>2005-02-24</dataNasc>
     <curso>CB6</curso>
-    <curso>6</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Flauta</instrumento>
   </aluno>
@@ -524,7 +438,6 @@
     <nome>JOSE CARLOS DA ROCHA MACHADO</nome>
     <dataNasc>2003-12-24</dataNasc>
     <curso>CB6</curso>
-    <curso>6</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Flauta</instrumento>
   </aluno>
@@ -532,7 +445,6 @@
     <nome>JOSE MANUEL LOUREIRO DE AZEVEDO TEIXEIRA</nome>
     <dataNasc>2005-10-21</dataNasc>
     <curso>CB17</curso>
-    <curso>17</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Trompete</instrumento>
   </aluno>
@@ -540,7 +452,6 @@
     <nome>JOSE PEDRO SILVA DE OLIVEIRA CARVALHO</nome>
     <dataNasc>2002-01-25</dataNasc>
     <curso>CB13</curso>
-    <curso>13</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Piano</instrumento>
   </aluno>
@@ -548,7 +459,6 @@
     <nome>MANUEL FERNANDO SOTO MAIOR FRANQUEIRA</nome>
     <dataNasc>2000-05-25</dataNasc>
     <curso>CS33</curso>
-    <curso>33</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Orgão</instrumento>
   </aluno>
@@ -556,7 +466,6 @@
     <nome>MIGUEL ANGELO RIBEIRO DE SOUSA E SILVA</nome>
     <dataNasc>1998-02-18</dataNasc>
     <curso>CS30</curso>
-    <curso>30</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -564,7 +473,6 @@
     <nome>PAULO JORGE SOARES MENDES</nome>
     <dataNasc>1998-06-15</dataNasc>
     <curso>CS23</curso>
-    <curso>23</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
@@ -572,7 +480,6 @@
     <nome>PEDRO HENRIQUE GONCALVES GERAZ RODRIGUES</nome>
     <dataNasc>2003-11-08</dataNasc>
     <curso>CB2</curso>
-    <curso>2</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -580,7 +487,6 @@
     <nome>PEDRO MIGUEL VEIGA DA SILVA</nome>
     <dataNasc>2000-02-23</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -588,7 +494,6 @@
     <nome>ROQUE MANUEL DE CARVALHO TEIXEIRA</nome>
     <dataNasc>1996-07-22</dataNasc>
     <curso>CS44</curso>
-    <curso>44</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -596,7 +501,6 @@
     <nome>VITOR CARLOS TEIXEIRA PIMENTEL</nome>
     <dataNasc>2004-02-03</dataNasc>
     <curso>CB8</curso>
-    <curso>8</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -604,7 +508,6 @@
     <nome>EMANUEL JOSE ANTUNES FERNANDES</nome>
     <dataNasc>2000-01-21</dataNasc>
     <curso>CS43</curso>
-    <curso>43</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Viola de Arco</instrumento>
   </aluno>
@@ -612,7 +515,6 @@
     <nome>CATARINA SOFIA MARTINHO LUIS</nome>
     <dataNasc>1996-01-05</dataNasc>
     <curso>CS35</curso>
-    <curso>35</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Piano</instrumento>
   </aluno>
@@ -620,7 +522,6 @@
     <nome>JOSE MANUEL LIMA GANDARELA</nome>
     <dataNasc>2005-02-07</dataNasc>
     <curso>CB14</curso>
-    <curso>14</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -628,7 +529,6 @@
     <nome>ADERITO NELSON MIRANDA DE OLIVEIRA</nome>
     <dataNasc>2005-10-03</dataNasc>
     <curso>CB7</curso>
-    <curso>7</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -636,7 +536,6 @@
     <nome>MIGUEL PEDRO DE ALMEIDA FERREIRA CORREIA DOUR</nome>
     <dataNasc>2000-04-26</dataNasc>
     <curso>CS26</curso>
-    <curso>26</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Eufónio</instrumento>
   </aluno>
@@ -644,7 +543,6 @@
     <nome>DANIEL FILIPE PERES FERREIRA</nome>
     <dataNasc>2003-05-06</dataNasc>
     <curso>CB18</curso>
-    <curso>18</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Tuba</instrumento>
   </aluno>
@@ -652,7 +550,6 @@
     <nome>PEDRO DUARTE CARDOSO LOPES</nome>
     <dataNasc>1996-03-08</dataNasc>
     <curso>CS36</curso>
-    <curso>36</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -660,7 +557,6 @@
     <nome>JOAO ARNALDO FREITAS DE ABREU</nome>
     <dataNasc>1997-05-24</dataNasc>
     <curso>CS23</curso>
-    <curso>23</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
@@ -668,7 +564,6 @@
     <nome>ANTONIO RUI MIRANDA DE LEMOS</nome>
     <dataNasc>1996-06-19</dataNasc>
     <curso>CS27</curso>
-    <curso>27</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -676,7 +571,6 @@
     <nome>PEDRO TIAGO DIAS GONCALVES</nome>
     <dataNasc>1996-12-06</dataNasc>
     <curso>CS23</curso>
-    <curso>23</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
@@ -684,7 +578,6 @@
     <nome>NUNO FILIPE MAGALHAES SANTOS</nome>
     <dataNasc>2004-12-08</dataNasc>
     <curso>CB11</curso>
-    <curso>11</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Orgão</instrumento>
   </aluno>
@@ -692,7 +585,6 @@
     <nome>AVELINO RODRIGO ARAUJO SEMELHE DE SOUSA PINTO</nome>
     <dataNasc>1996-10-14</dataNasc>
     <curso>CS42</curso>
-    <curso>42</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Violino</instrumento>
   </aluno>
@@ -700,7 +592,6 @@
     <nome>BARBARA ALEXANDRA EUSEBIO FREITAS</nome>
     <dataNasc>1999-12-27</dataNasc>
     <curso>CS23</curso>
-    <curso>23</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
@@ -708,7 +599,6 @@
     <nome>BRUNO CESAR PEREIRA DA SILVA</nome>
     <dataNasc>2002-10-26</dataNasc>
     <curso>CB12</curso>
-    <curso>12</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Percussão</instrumento>
   </aluno>
@@ -716,7 +606,6 @@
     <nome>BRUNO MIGUEL CAMPOS RODRIGUES</nome>
     <dataNasc>1996-09-09</dataNasc>
     <curso>CS41</curso>
-    <curso>41</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Violoncelo</instrumento>
   </aluno>
@@ -724,7 +613,6 @@
     <nome>BRUNO MIGUEL FLORES DIAMANTINO</nome>
     <dataNasc>2000-02-16</dataNasc>
     <curso>CS25</curso>
-    <curso>25</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -732,7 +620,6 @@
     <nome>BRUNO MIGUEL MAGALHAES AZEVEDO</nome>
     <dataNasc>2001-04-04</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -740,7 +627,6 @@
     <nome>BRUNO MIGUEL TEIXEIRA PAIVA DE FARIA</nome>
     <dataNasc>2001-09-27</dataNasc>
     <curso>CS42</curso>
-    <curso>42</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Violino</instrumento>
   </aluno>
@@ -748,7 +634,6 @@
     <nome>DANIEL RICARDO DE CASTRO MENDES</nome>
     <dataNasc>1997-10-28</dataNasc>
     <curso>CS25</curso>
-    <curso>25</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -756,7 +641,6 @@
     <nome>DUARTE FILIPE AFONSO CHAVES</nome>
     <dataNasc>2000-11-23</dataNasc>
     <curso>CS29</curso>
-    <curso>29</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -764,7 +648,6 @@
     <nome>EURICO MANUEL FOLGADO AFONSO</nome>
     <dataNasc>2002-05-16</dataNasc>
     <curso>CB10</curso>
-    <curso>10</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -772,7 +655,6 @@
     <nome>FAUSTO MIGUEL PACHECO FARIA VIANA</nome>
     <dataNasc>2005-04-22</dataNasc>
     <curso>CB7</curso>
-    <curso>7</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -780,7 +662,6 @@
     <nome>GONCALO LEAL MACHADO RIBEIRO PINTO</nome>
     <dataNasc>1999-10-06</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -788,7 +669,6 @@
     <nome>GONCALO PAULO CUNHA CARDOSO FERREIRA</nome>
     <dataNasc>2004-03-20</dataNasc>
     <curso>CB17</curso>
-    <curso>17</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Trompete</instrumento>
   </aluno>
@@ -796,7 +676,6 @@
     <nome>HELDER ARTUR PEIXOTO MAGALHAES</nome>
     <dataNasc>1996-12-04</dataNasc>
     <curso>CS44</curso>
-    <curso>44</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -804,7 +683,6 @@
     <nome>JOANA SOUTO DE MIRANDA GONZALEZ</nome>
     <dataNasc>2000-12-08</dataNasc>
     <curso>CS27</curso>
-    <curso>27</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -812,7 +690,6 @@
     <nome>JOAO MIGUEL RAPOSO DA SILVA MARQUES</nome>
     <dataNasc>1999-09-16</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -820,7 +697,6 @@
     <nome>JOAO PAULO MINHAVA PEIXOTO ASSIS CARDOSO</nome>
     <dataNasc>2003-11-14</dataNasc>
     <curso>CB13</curso>
-    <curso>13</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Piano</instrumento>
   </aluno>
@@ -828,7 +704,6 @@
     <nome>JOAO PEDRO BACAO COELHO DE BARROS</nome>
     <dataNasc>2005-10-26</dataNasc>
     <curso>CB15</curso>
-    <curso>15</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Trombone</instrumento>
   </aluno>
@@ -836,7 +711,6 @@
     <nome>JOAO PEDRO GOMES FERNANDES</nome>
     <dataNasc>1997-04-12</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -844,7 +718,6 @@
     <nome>JOSE MIGUEL DOS SANTOS FERRAZ</nome>
     <dataNasc>1999-01-08</dataNasc>
     <curso>CS38</curso>
-    <curso>38</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Trompa</instrumento>
   </aluno>
@@ -852,7 +725,6 @@
     <nome>LUIS FILIPE GAMA PAIS CABRAL</nome>
     <dataNasc>2004-02-19</dataNasc>
     <curso>CB13</curso>
-    <curso>13</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Piano</instrumento>
   </aluno>
@@ -860,7 +732,6 @@
     <nome>LUIS PEDRO LOPES PEREIRA</nome>
     <dataNasc>1999-04-02</dataNasc>
     <curso>CS32</curso>
-    <curso>32</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -868,7 +739,6 @@
     <nome>MIGUEL PINTO DE SOUSA MARQUES</nome>
     <dataNasc>2004-07-19</dataNasc>
     <curso>CB11</curso>
-    <curso>11</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Orgão</instrumento>
   </aluno>
@@ -876,7 +746,6 @@
     <nome>NELSON FILIPE COELHO DE MOURA SOUSA</nome>
     <dataNasc>2005-03-12</dataNasc>
     <curso>CB8</curso>
-    <curso>8</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -884,7 +753,6 @@
     <nome>PAULO EDUARDO MIRANDA CAMPOS</nome>
     <dataNasc>1999-04-02</dataNasc>
     <curso>CS34</curso>
-    <curso>34</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Percussão</instrumento>
   </aluno>
@@ -892,7 +760,6 @@
     <nome>PAULO MIGUEL SA MORAIS PIRES</nome>
     <dataNasc>1998-03-28</dataNasc>
     <curso>CS25</curso>
-    <curso>25</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -900,7 +767,6 @@
     <nome>PEDRO GUIMARAES DE FREITAS</nome>
     <dataNasc>2000-09-20</dataNasc>
     <curso>CS32</curso>
-    <curso>32</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -908,7 +774,6 @@
     <nome>PEDRO JORGE OSORIO MARINHO OLIVEIRA</nome>
     <dataNasc>1998-04-02</dataNasc>
     <curso>CS42</curso>
-    <curso>42</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Violino</instrumento>
   </aluno>
@@ -916,7 +781,6 @@
     <nome>RICARDO JORGE ALMEIDA DE MAGALHAES</nome>
     <dataNasc>1996-10-27</dataNasc>
     <curso>CS23</curso>
-    <curso>23</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
@@ -924,7 +788,6 @@
     <nome>RUI FILIPE BARROS TAVARES</nome>
     <dataNasc>2003-08-09</dataNasc>
     <curso>CB8</curso>
-    <curso>8</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -932,7 +795,6 @@
     <nome>RUI MANUEL SILVA OLIVEIRA</nome>
     <dataNasc>1996-02-18</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -940,7 +802,6 @@
     <nome>SANDRA MARIA OLIVEIRA CARVALHO</nome>
     <dataNasc>1999-05-20</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -948,7 +809,6 @@
     <nome>SERGIO DE ALMEIDA PAIVA</nome>
     <dataNasc>2004-09-23</dataNasc>
     <curso>CB3</curso>
-    <curso>3</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -956,7 +816,6 @@
     <nome>SONIA ANDREA GARRIDO DE SA EIRAS</nome>
     <dataNasc>2004-05-05</dataNasc>
     <curso>CB5</curso>
-    <curso>5</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -964,7 +823,6 @@
     <nome>TIAGO JORGE GOMES DA SILVA ARAUJO</nome>
     <dataNasc>2000-10-05</dataNasc>
     <curso>CS24</curso>
-    <curso>24</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -972,7 +830,6 @@
     <nome>HUGO ANDRE PEIXOTO FREITAS PEREIRA</nome>
     <dataNasc>2002-05-13</dataNasc>
     <curso>CB17</curso>
-    <curso>17</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Trompete</instrumento>
   </aluno>
@@ -980,7 +837,6 @@
     <nome>PAULO BRUNO DA SILVA VIDES FERNANDES</nome>
     <dataNasc>1996-10-04</dataNasc>
     <curso>CS32</curso>
-    <curso>32</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -988,7 +844,6 @@
     <nome>PEDRO MIGUEL SOARES PINTO</nome>
     <dataNasc>1996-07-23</dataNasc>
     <curso>CS34</curso>
-    <curso>34</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Percussão</instrumento>
   </aluno>
@@ -996,7 +851,6 @@
     <nome>VIRGILIO ABRANTES VINHA</nome>
     <dataNasc>2004-08-05</dataNasc>
     <curso>CB22</curso>
-    <curso>22</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -1004,7 +858,6 @@
     <nome>BARBARA SOFIA ARAUJO DA SILVA</nome>
     <dataNasc>1996-08-07</dataNasc>
     <curso>CS24</curso>
-    <curso>24</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -1012,7 +865,6 @@
     <nome>NELSON LEANDRO BARBOSA CARNEIRO</nome>
     <dataNasc>2001-11-13</dataNasc>
     <curso>CS27</curso>
-    <curso>27</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -1020,7 +872,6 @@
     <nome>NUNO MIGUEL MARQUES GOMES</nome>
     <dataNasc>2002-03-11</dataNasc>
     <curso>CB20</curso>
-    <curso>20</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Violino</instrumento>
   </aluno>
@@ -1028,7 +879,6 @@
     <nome>PEDRO MIGUEL PAES MACHADO</nome>
     <dataNasc>2002-03-02</dataNasc>
     <curso>CB18</curso>
-    <curso>18</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Tuba</instrumento>
   </aluno>
@@ -1036,7 +886,6 @@
     <nome>LUIS ANDRE DA CUNHA MARQUES</nome>
     <dataNasc>2000-12-03</dataNasc>
     <curso>CS28</curso>
-    <curso>28</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Flauta</instrumento>
   </aluno>
@@ -1044,7 +893,6 @@
     <nome>CARLOS ANDRE BRITO RIBEIRO</nome>
     <dataNasc>2003-06-14</dataNasc>
     <curso>CB20</curso>
-    <curso>20</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Violino</instrumento>
   </aluno>
@@ -1052,7 +900,6 @@
     <nome>ISABEL MARIA ROSENDO CARDOSO</nome>
     <dataNasc>2003-09-25</dataNasc>
     <curso>CB10</curso>
-    <curso>10</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -1060,7 +907,6 @@
     <nome>JORGE MANUEL VIANA RIBEIRO MARTINS FORTE</nome>
     <dataNasc>1996-05-08</dataNasc>
     <curso>CS25</curso>
-    <curso>25</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -1068,7 +914,6 @@
     <nome>NUNO FILIPE ANTUNES DA SILVA</nome>
     <dataNasc>2001-02-11</dataNasc>
     <curso>CS27</curso>
-    <curso>27</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -1076,7 +921,6 @@
     <nome>ANDRE FERNANDES MARTINS</nome>
     <dataNasc>1997-07-14</dataNasc>
     <curso>CS34</curso>
-    <curso>34</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Percussão</instrumento>
   </aluno>
@@ -1084,7 +928,6 @@
     <nome>FERNANDO JORGE PINTO LIMA</nome>
     <dataNasc>1996-01-01</dataNasc>
     <curso>CS44</curso>
-    <curso>44</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -1092,7 +935,6 @@
     <nome>LEONOR ISABEL CONSTANTINO CAEIRO BOGA</nome>
     <dataNasc>2004-04-18</dataNasc>
     <curso>CB11</curso>
-    <curso>11</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Orgão</instrumento>
   </aluno>
@@ -1100,7 +942,6 @@
     <nome>JOSE CARLOS MARQUES DIAS</nome>
     <dataNasc>2002-02-01</dataNasc>
     <curso>CB12</curso>
-    <curso>12</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Percussão</instrumento>
   </aluno>
@@ -1108,7 +949,6 @@
     <nome>RICARDO JOSE FERREIRA DIAS DE OLIVEIRA</nome>
     <dataNasc>1998-12-03</dataNasc>
     <curso>CS24</curso>
-    <curso>24</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -1116,7 +956,6 @@
     <nome>PAULO CESAR ALMEIDA DE SA</nome>
     <dataNasc>2004-02-23</dataNasc>
     <curso>CB2</curso>
-    <curso>2</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -1124,7 +963,6 @@
     <nome>CARLOS PRUDENCIO DO ESPIRITO CRISOSTOMO</nome>
     <dataNasc>2005-12-28</dataNasc>
     <curso>CB3</curso>
-    <curso>3</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -1132,7 +970,6 @@
     <nome>JOAO MANUEL DE CAMPOS GONCALVES</nome>
     <dataNasc>1997-07-04</dataNasc>
     <curso>CS42</curso>
-    <curso>42</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Violino</instrumento>
   </aluno>
@@ -1140,7 +977,6 @@
     <nome>CESAR FILIPE DA CRUZ GOMES</nome>
     <dataNasc>2000-02-22</dataNasc>
     <curso>CS24</curso>
-    <curso>24</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -1148,7 +984,6 @@
     <nome>PEDRO MANUEL DE AMORIM MAGALHAES</nome>
     <dataNasc>1998-07-12</dataNasc>
     <curso>CS34</curso>
-    <curso>34</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Percussão</instrumento>
   </aluno>
@@ -1156,7 +991,6 @@
     <nome>ALEXANDRE JORGE CAMELO FARIA</nome>
     <dataNasc>2003-10-08</dataNasc>
     <curso>CB18</curso>
-    <curso>18</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Tuba</instrumento>
   </aluno>
@@ -1164,7 +998,6 @@
     <nome>ANA LUISA PARREIRA NUNES</nome>
     <dataNasc>2005-09-21</dataNasc>
     <curso>CB17</curso>
-    <curso>17</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Trompete</instrumento>
   </aluno>
@@ -1172,7 +1005,6 @@
     <nome>ANDRE FILIPE OLIVEIRA MARTINS</nome>
     <dataNasc>1999-01-14</dataNasc>
     <curso>CS25</curso>
-    <curso>25</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -1180,7 +1012,6 @@
     <nome>ANTONIO MANUEL MARTINS PINTO</nome>
     <dataNasc>2003-06-08</dataNasc>
     <curso>CB6</curso>
-    <curso>6</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Flauta</instrumento>
   </aluno>
@@ -1188,7 +1019,6 @@
     <nome>ANTONIO MANUEL RODRIGUES FERNANDES</nome>
     <dataNasc>1996-08-25</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -1196,7 +1026,6 @@
     <nome>ANTONIO RICARDO PEREIRA GONCALVES</nome>
     <dataNasc>2000-12-25</dataNasc>
     <curso>CS40</curso>
-    <curso>40</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Tuba</instrumento>
   </aluno>
@@ -1204,7 +1033,6 @@
     <nome>BRUNO EDGAR BERNARDO TEIXEIRA</nome>
     <dataNasc>1998-09-18</dataNasc>
     <curso>CS33</curso>
-    <curso>33</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Orgão</instrumento>
   </aluno>
@@ -1212,7 +1040,6 @@
     <nome>BRUNO EMANUEL TEIXEIRA DE CASTRO ARAUJO</nome>
     <dataNasc>1997-07-23</dataNasc>
     <curso>CS37</curso>
-    <curso>37</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Trombone</instrumento>
   </aluno>
@@ -1220,7 +1047,6 @@
     <nome>BRUNO GABRIEL LEAL MACHADO DOS SANTOS</nome>
     <dataNasc>2000-05-20</dataNasc>
     <curso>CS38</curso>
-    <curso>38</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Trompa</instrumento>
   </aluno>
@@ -1228,7 +1054,6 @@
     <nome>CARLOS MIGUEL TAVARES LOPES</nome>
     <dataNasc>1997-05-01</dataNasc>
     <curso>CS37</curso>
-    <curso>37</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Trombone</instrumento>
   </aluno>
@@ -1236,7 +1061,6 @@
     <nome>DAVID DANIEL CARDOSO DE OLIVEIRA</nome>
     <dataNasc>2005-01-25</dataNasc>
     <curso>CB18</curso>
-    <curso>18</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Tuba</instrumento>
   </aluno>
@@ -1244,7 +1068,6 @@
     <nome>DIAMANTINO JOSE MADEIRA ABOBELEIRA</nome>
     <dataNasc>2002-07-18</dataNasc>
     <curso>CB20</curso>
-    <curso>20</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Violino</instrumento>
   </aluno>
@@ -1252,7 +1075,6 @@
     <nome>DUARTE NUNO MALHEIRO DE BARREIRO</nome>
     <dataNasc>2005-03-04</dataNasc>
     <curso>CB17</curso>
-    <curso>17</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Trompete</instrumento>
   </aluno>
@@ -1260,7 +1082,6 @@
     <nome>EMANUEL CERDEIRA MESQUITA</nome>
     <dataNasc>2005-08-11</dataNasc>
     <curso>CB1</curso>
-    <curso>1</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
@@ -1268,7 +1089,6 @@
     <nome>FABIO ROBERTO LEITE MATOS</nome>
     <dataNasc>2004-02-16</dataNasc>
     <curso>CB10</curso>
-    <curso>10</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -1276,7 +1096,6 @@
     <nome>FILIPE ANTONIO GONCALVES DA SILVA</nome>
     <dataNasc>2000-11-21</dataNasc>
     <curso>CS23</curso>
-    <curso>23</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
@@ -1284,7 +1103,6 @@
     <nome>FRANCISCO JOSE MAIO LEITE</nome>
     <dataNasc>1996-04-18</dataNasc>
     <curso>CS32</curso>
-    <curso>32</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -1292,7 +1110,6 @@
     <nome>GONCALO LUIS MALHEIRO DE OLIVEIRA NOVAIS MACH</nome>
     <dataNasc>2005-06-05</dataNasc>
     <curso>CB14</curso>
-    <curso>14</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -1300,7 +1117,6 @@
     <nome>HELDER FILIPE DE CASTRO MARQUES</nome>
     <dataNasc>2004-05-28</dataNasc>
     <curso>CB2</curso>
-    <curso>2</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -1308,7 +1124,6 @@
     <nome>HUGO EMANUEL QUEIROS TEIXEIRA DA SILVA</nome>
     <dataNasc>2002-08-21</dataNasc>
     <curso>CB14</curso>
-    <curso>14</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -1316,7 +1131,6 @@
     <nome>HUGO GUILHERME DOS SANTOS RIGOR</nome>
     <dataNasc>1998-11-04</dataNasc>
     <curso>CS39</curso>
-    <curso>39</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Trompete</instrumento>
   </aluno>
@@ -1324,7 +1138,6 @@
     <nome>JASON PETER COSTA</nome>
     <dataNasc>2000-06-16</dataNasc>
     <curso>CS36</curso>
-    <curso>36</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -1332,7 +1145,6 @@
     <nome>JOAO ALEXANDRE VAZ OLIVEIRA</nome>
     <dataNasc>1998-07-10</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -1340,7 +1152,6 @@
     <nome>JOAO ANTONIO LAVRADOR VILANOVA</nome>
     <dataNasc>1998-01-25</dataNasc>
     <curso>CS36</curso>
-    <curso>36</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -1348,7 +1159,6 @@
     <nome>JOAO FILIPE FONTES MACHADO</nome>
     <dataNasc>1999-07-08</dataNasc>
     <curso>CS43</curso>
-    <curso>43</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Viola de Arco</instrumento>
   </aluno>
@@ -1356,7 +1166,6 @@
     <nome>JOAO GILBERTO LAMARAO DA SILVA</nome>
     <dataNasc>2000-05-03</dataNasc>
     <curso>CS39</curso>
-    <curso>39</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Trompete</instrumento>
   </aluno>
@@ -1364,7 +1173,6 @@
     <nome>JOAO MARIO MENDES DE OLIVEIRA</nome>
     <dataNasc>2005-04-05</dataNasc>
     <curso>CB4</curso>
-    <curso>4</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Eufónio</instrumento>
   </aluno>
@@ -1372,7 +1180,6 @@
     <nome>JOAO PAULO COELHO GOMES TEIXEIRA E OLIVEIRA</nome>
     <dataNasc>1999-05-14</dataNasc>
     <curso>CS34</curso>
-    <curso>34</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Percussão</instrumento>
   </aluno>
@@ -1380,7 +1187,6 @@
     <nome>JOEL ARAUJO ROCHA</nome>
     <dataNasc>2002-05-01</dataNasc>
     <curso>CB12</curso>
-    <curso>12</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Percussão</instrumento>
   </aluno>
@@ -1388,7 +1194,6 @@
     <nome>JORGE ANDRE ALVES DE MELO</nome>
     <dataNasc>1997-04-23</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -1396,7 +1201,6 @@
     <nome>JOSE ALEXANDRE DE CARVALHO AMORIM</nome>
     <dataNasc>1997-10-25</dataNasc>
     <curso>CS29</curso>
-    <curso>29</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -1404,7 +1208,6 @@
     <nome>JOSE DIOGO RIBEIRO LIZ DE ALMEIDA</nome>
     <dataNasc>1996-02-26</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -1412,7 +1215,6 @@
     <nome>JOSE FILIPE QUEIJO FERNANDES</nome>
     <dataNasc>1996-06-15</dataNasc>
     <curso>CS35</curso>
-    <curso>35</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Piano</instrumento>
   </aluno>
@@ -1420,7 +1222,6 @@
     <nome>JOSE MIGUEL SILVA PEIXOTO DE CARVALHO</nome>
     <dataNasc>1996-07-07</dataNasc>
     <curso>CS29</curso>
-    <curso>29</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -1428,7 +1229,6 @@
     <nome>JOSE PAULO CARNEIRO DE MELO MAMEDE</nome>
     <dataNasc>2003-10-27</dataNasc>
     <curso>CB9</curso>
-    <curso>9</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -1436,7 +1236,6 @@
     <nome>JOSE PEDRO DOMINGUES</nome>
     <dataNasc>1998-09-17</dataNasc>
     <curso>CS35</curso>
-    <curso>35</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Piano</instrumento>
   </aluno>
@@ -1444,7 +1243,6 @@
     <nome>LIDIA NOGUEIRA LARANJEIRA</nome>
     <dataNasc>1997-01-14</dataNasc>
     <curso>CS29</curso>
-    <curso>29</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -1452,7 +1250,6 @@
     <nome>LILIANA SOLANGE SEQUEIRA HENRIQUES DE MACEDO</nome>
     <dataNasc>2005-11-21</dataNasc>
     <curso>CB9</curso>
-    <curso>9</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -1460,7 +1257,6 @@
     <nome>LUIS CARLOS GONCALO LEONARDO</nome>
     <dataNasc>1999-10-15</dataNasc>
     <curso>CS39</curso>
-    <curso>39</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Trompete</instrumento>
   </aluno>
@@ -1468,7 +1264,6 @@
     <nome>MANUEL JOSE GOMES MEIRELES</nome>
     <dataNasc>2002-03-25</dataNasc>
     <curso>CB22</curso>
-    <curso>22</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -1476,7 +1271,6 @@
     <nome>MARCIA MARLENE DE ALMEIDA MARTINS</nome>
     <dataNasc>2000-07-03</dataNasc>
     <curso>CS44</curso>
-    <curso>44</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -1484,7 +1278,6 @@
     <nome>MARCIAL COELHO GOMES</nome>
     <dataNasc>1999-02-05</dataNasc>
     <curso>CS35</curso>
-    <curso>35</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Piano</instrumento>
   </aluno>
@@ -1492,7 +1285,6 @@
     <nome>MIGUEL AFONSO PIRES DA ROSA</nome>
     <dataNasc>1999-07-07</dataNasc>
     <curso>CS26</curso>
-    <curso>26</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Eufónio</instrumento>
   </aluno>
@@ -1500,7 +1292,6 @@
     <nome>NUNO MIGUEL MACHADO ALVES COSTA</nome>
     <dataNasc>2005-04-02</dataNasc>
     <curso>CB8</curso>
-    <curso>8</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -1508,7 +1299,6 @@
     <nome>PAULO JORGE FERNANDES DE SOUSA</nome>
     <dataNasc>2000-12-16</dataNasc>
     <curso>CS36</curso>
-    <curso>36</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -1516,7 +1306,6 @@
     <nome>PEDRO DANIEL FERREIRA DE CARVALHO</nome>
     <dataNasc>1998-10-18</dataNasc>
     <curso>CS40</curso>
-    <curso>40</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Tuba</instrumento>
   </aluno>
@@ -1524,7 +1313,6 @@
     <nome>PEDRO MIGUEL DA SILVA ARAUJO</nome>
     <dataNasc>2002-10-14</dataNasc>
     <curso>CB17</curso>
-    <curso>17</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Trompete</instrumento>
   </aluno>
@@ -1532,7 +1320,6 @@
     <nome>PEDRO MIGUEL MEIRA DAS NEVES</nome>
     <dataNasc>1997-03-15</dataNasc>
     <curso>CS35</curso>
-    <curso>35</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Piano</instrumento>
   </aluno>
@@ -1540,7 +1327,6 @@
     <nome>RICARDO MANUEL VIANA MAGALHAES</nome>
     <dataNasc>2005-01-12</dataNasc>
     <curso>CB7</curso>
-    <curso>7</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -1548,7 +1334,6 @@
     <nome>RUI JORGE GUIMARAES MACHADO RODRIGUES VALENTE</nome>
     <dataNasc>1996-07-11</dataNasc>
     <curso>CS32</curso>
-    <curso>32</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -1556,7 +1341,6 @@
     <nome>RUI PEDRO ANDIAS DUARTE</nome>
     <dataNasc>2002-07-14</dataNasc>
     <curso>CB7</curso>
-    <curso>7</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -1564,7 +1348,6 @@
     <nome>SERGIO MANUEL PEREIRA BARREIRO</nome>
     <dataNasc>1999-07-25</dataNasc>
     <curso>CS25</curso>
-    <curso>25</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -1572,7 +1355,6 @@
     <nome>SERGIO RICARDO TEIXEIRA ANDIAS MIRANDA</nome>
     <dataNasc>1999-10-21</dataNasc>
     <curso>CS25</curso>
-    <curso>25</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -1580,7 +1362,6 @@
     <nome>TELMA DE FATIMA PIRES DE SA</nome>
     <dataNasc>2002-08-26</dataNasc>
     <curso>CB12</curso>
-    <curso>12</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Percussão</instrumento>
   </aluno>
@@ -1588,7 +1369,6 @@
     <nome>VITOR DA COSTA PINHEIRO</nome>
     <dataNasc>2001-10-16</dataNasc>
     <curso>CS32</curso>
-    <curso>32</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -1596,7 +1376,6 @@
     <nome>VITOR HUGO PEREIRA DA SILVA MOREIRA</nome>
     <dataNasc>1997-08-06</dataNasc>
     <curso>CS44</curso>
-    <curso>44</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -1604,7 +1383,6 @@
     <nome>HUGO JOSE FERNANDES CARVALHO</nome>
     <dataNasc>1999-01-21</dataNasc>
     <curso>CS40</curso>
-    <curso>40</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Tuba</instrumento>
   </aluno>
@@ -1612,7 +1390,6 @@
     <nome>JOSE MANUEL ESTEVES</nome>
     <dataNasc>2004-06-13</dataNasc>
     <curso>CB8</curso>
-    <curso>8</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -1620,7 +1397,6 @@
     <nome>VALTER MIGUEL OLIVEIRA VILAR</nome>
     <dataNasc>2000-09-23</dataNasc>
     <curso>CS30</curso>
-    <curso>30</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -1628,7 +1404,6 @@
     <nome>DANIEL BARBOSA ALVES</nome>
     <dataNasc>2004-10-25</dataNasc>
     <curso>CB5</curso>
-    <curso>5</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -1636,7 +1411,6 @@
     <nome>FRANCISCO JOSE MARTINS GOMES</nome>
     <dataNasc>1998-12-06</dataNasc>
     <curso>CS44</curso>
-    <curso>44</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -1644,7 +1418,6 @@
     <nome>FERNANDO ANTONIO ALVES LOPES</nome>
     <dataNasc>1996-10-11</dataNasc>
     <curso>CS40</curso>
-    <curso>40</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Tuba</instrumento>
   </aluno>
@@ -1652,7 +1425,6 @@
     <nome>CANDIDO MIGUEL REBELO BARROS</nome>
     <dataNasc>1998-02-14</dataNasc>
     <curso>CS35</curso>
-    <curso>35</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Piano</instrumento>
   </aluno>
@@ -1660,7 +1432,6 @@
     <nome>JOAO PEDRO GONCALVES DE CARVALHO</nome>
     <dataNasc>2002-01-27</dataNasc>
     <curso>CB2</curso>
-    <curso>2</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -1668,7 +1439,6 @@
     <nome>LARA SOFIA ALPOIM MIRANDA</nome>
     <dataNasc>2001-02-24</dataNasc>
     <curso>CS30</curso>
-    <curso>30</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -1676,7 +1446,6 @@
     <nome>PEDRO MIGUEL PINTO RIBEIRO</nome>
     <dataNasc>2003-06-26</dataNasc>
     <curso>CB5</curso>
-    <curso>5</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -1684,7 +1453,6 @@
     <nome>BRUNO JOSE DE MACEDO SOARES AMOR</nome>
     <dataNasc>2001-05-07</dataNasc>
     <curso>CS34</curso>
-    <curso>34</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Percussão</instrumento>
   </aluno>
@@ -1692,7 +1460,6 @@
     <nome>FRANCISCO EURICO PINTO CORTEZ MARTINS LEITE</nome>
     <dataNasc>2002-06-01</dataNasc>
     <curso>CB3</curso>
-    <curso>3</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -1700,7 +1467,6 @@
     <nome>JOAO PEDRO ROBALO ESPINHO PEREIRA DA SILVA</nome>
     <dataNasc>1996-10-22</dataNasc>
     <curso>CS41</curso>
-    <curso>41</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Violoncelo</instrumento>
   </aluno>
@@ -1708,7 +1474,6 @@
     <nome>FILIPE BARROSO DE OLIVEIRA</nome>
     <dataNasc>2004-12-18</dataNasc>
     <curso>CB14</curso>
-    <curso>14</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -1716,7 +1481,6 @@
     <nome>MICHEL FERREIRA PINTO</nome>
     <dataNasc>1997-02-17</dataNasc>
     <curso>CS40</curso>
-    <curso>40</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Tuba</instrumento>
   </aluno>
@@ -1724,7 +1488,6 @@
     <nome>PEDRO ALEXANDRE FERREIRA VILACA</nome>
     <dataNasc>1999-06-10</dataNasc>
     <curso>CS32</curso>
-    <curso>32</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -1732,7 +1495,6 @@
     <nome>ALI DOS REIS MOTA</nome>
     <dataNasc>1999-07-18</dataNasc>
     <curso>CS42</curso>
-    <curso>42</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Violino</instrumento>
   </aluno>
@@ -1740,7 +1502,6 @@
     <nome>ADMILSON CESAR ANDRADE RODRIGUES</nome>
     <dataNasc>2003-10-02</dataNasc>
     <curso>CB5</curso>
-    <curso>5</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -1748,7 +1509,6 @@
     <nome>ERNESTO MANUEL DA SILVA LOPES</nome>
     <dataNasc>1998-04-25</dataNasc>
     <curso>CS44</curso>
-    <curso>44</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -1756,7 +1516,6 @@
     <nome>HUGO ALEXANDRE PEREIRA TRIUNFANTE MARTINS</nome>
     <dataNasc>1998-11-13</dataNasc>
     <curso>CS44</curso>
-    <curso>44</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -1764,7 +1523,6 @@
     <nome>JOSE EDUARDO TEIXEIRA RITO</nome>
     <dataNasc>2001-10-21</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -1772,7 +1530,6 @@
     <nome>RUI ANDRE FERREIRA SILVA</nome>
     <dataNasc>1999-03-15</dataNasc>
     <curso>CS39</curso>
-    <curso>39</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Trompete</instrumento>
   </aluno>
@@ -1780,7 +1537,6 @@
     <nome>SANDRA MARIA TELES FEIO ALMEIDA FAZENDEIRO</nome>
     <dataNasc>2001-06-20</dataNasc>
     <curso>CS44</curso>
-    <curso>44</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -1788,7 +1544,6 @@
     <nome>VITOR MANUEL CARVALHO RODRIGUES</nome>
     <dataNasc>1997-09-09</dataNasc>
     <curso>CS30</curso>
-    <curso>30</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -1796,7 +1551,6 @@
     <nome>MARIA BEATRIZ ALVES DE SA CAMPOS</nome>
     <dataNasc>2002-07-05</dataNasc>
     <curso>CB7</curso>
-    <curso>7</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -1804,7 +1558,6 @@
     <nome>JOSE CARLOS DE FREITAS FONTAO</nome>
     <dataNasc>2002-02-16</dataNasc>
     <curso>CB1</curso>
-    <curso>1</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
@@ -1812,7 +1565,6 @@
     <nome>PEDRO EMANUEL FERNANDES LOPES</nome>
     <dataNasc>2003-01-01</dataNasc>
     <curso>CB10</curso>
-    <curso>10</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -1820,7 +1572,6 @@
     <nome>AUGUSTO JORGE PEREIRA DA COSTA</nome>
     <dataNasc>2005-01-27</dataNasc>
     <curso>CB18</curso>
-    <curso>18</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Tuba</instrumento>
   </aluno>
@@ -1828,7 +1579,6 @@
     <nome>RUI MANUEL DA SILVA PEREIRA NEIVA</nome>
     <dataNasc>1999-05-01</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -1836,7 +1586,6 @@
     <nome>PEDRO JOSE MARTINS FARIA</nome>
     <dataNasc>2003-04-11</dataNasc>
     <curso>CB10</curso>
-    <curso>10</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -1844,7 +1593,6 @@
     <nome>ANTONIO ANDRE MARQUES RIBEIRO</nome>
     <dataNasc>2005-10-18</dataNasc>
     <curso>CB7</curso>
-    <curso>7</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -1852,7 +1600,6 @@
     <nome>PEDRO MANUEL LOPES PATRICIO</nome>
     <dataNasc>2002-04-05</dataNasc>
     <curso>CB14</curso>
-    <curso>14</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -1860,7 +1607,6 @@
     <nome>RUI MIGUEL DA SILVA ABREU</nome>
     <dataNasc>1999-01-18</dataNasc>
     <curso>CS30</curso>
-    <curso>30</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -1868,7 +1614,6 @@
     <nome>OCTAVIO DAVID DA CONCEICAO JACINTO</nome>
     <dataNasc>2000-08-06</dataNasc>
     <curso>CS37</curso>
-    <curso>37</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Trombone</instrumento>
   </aluno>
@@ -1876,7 +1621,6 @@
     <nome>JOSE MIGUEL RODRIGUES OLIVEIRA DA SILVA</nome>
     <dataNasc>1997-10-01</dataNasc>
     <curso>CS36</curso>
-    <curso>36</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -1884,7 +1628,6 @@
     <nome>PAULO JORGE ASSIS DE SOUSA</nome>
     <dataNasc>1999-08-16</dataNasc>
     <curso>CS43</curso>
-    <curso>43</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Viola de Arco</instrumento>
   </aluno>
@@ -1892,7 +1635,6 @@
     <nome>JOAO MANUEL DA SILVA SANCHES</nome>
     <dataNasc>2001-07-11</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -1900,7 +1642,6 @@
     <nome>BRUNO RICARDO CUNHA MAGALHAES</nome>
     <dataNasc>2005-05-12</dataNasc>
     <curso>CB16</curso>
-    <curso>16</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Trompa</instrumento>
   </aluno>
@@ -1908,7 +1649,6 @@
     <nome>CARLOS CESAR MADUREIRA ROMANO</nome>
     <dataNasc>2000-06-15</dataNasc>
     <curso>CS30</curso>
-    <curso>30</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -1916,7 +1656,6 @@
     <nome>CARLOS ALFREDO MACIEIRA DE FARIA</nome>
     <dataNasc>1999-01-04</dataNasc>
     <curso>CS41</curso>
-    <curso>41</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Violoncelo</instrumento>
   </aluno>
@@ -1924,7 +1663,6 @@
     <nome>VANESSA ALZIRA ABRUNHOSA CARNEIRO DE CASTRO F</nome>
     <dataNasc>2001-10-13</dataNasc>
     <curso>CS26</curso>
-    <curso>26</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Eufónio</instrumento>
   </aluno>
@@ -1932,7 +1670,6 @@
     <nome>JOSE PEDRO RODRIGUES MAGALHAES</nome>
     <dataNasc>2000-03-19</dataNasc>
     <curso>CS30</curso>
-    <curso>30</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -1940,7 +1677,6 @@
     <nome>RICARDO GOMES DE FARIA</nome>
     <dataNasc>2001-01-21</dataNasc>
     <curso>CS26</curso>
-    <curso>26</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Eufónio</instrumento>
   </aluno>
@@ -1948,7 +1684,6 @@
     <nome>RICARDO JORGE RODRIGUES SEPULVEDA MARQUES</nome>
     <dataNasc>2001-03-01</dataNasc>
     <curso>CS27</curso>
-    <curso>27</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -1956,7 +1691,6 @@
     <nome>TIAGO DANIEL CERQUEIRA BOTELHO DA SILVA</nome>
     <dataNasc>2000-03-19</dataNasc>
     <curso>CS36</curso>
-    <curso>36</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -1964,7 +1698,6 @@
     <nome>AVELINO JOSE DA COSTA REGO</nome>
     <dataNasc>2002-06-06</dataNasc>
     <curso>CB7</curso>
-    <curso>7</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -1972,7 +1705,6 @@
     <nome>JOAO GONCALO BOTICA RIBEIRO DA SILVA</nome>
     <dataNasc>2004-12-04</dataNasc>
     <curso>CB4</curso>
-    <curso>4</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Eufónio</instrumento>
   </aluno>
@@ -1980,7 +1712,6 @@
     <nome>IVO MANUEL DANTAS MONTEIRO</nome>
     <dataNasc>2001-12-25</dataNasc>
     <curso>CS27</curso>
-    <curso>27</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -1988,7 +1719,6 @@
     <nome>RUI ANDRE LEITE RIBEIRO</nome>
     <dataNasc>2001-06-10</dataNasc>
     <curso>CS36</curso>
-    <curso>36</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -1996,7 +1726,6 @@
     <nome>JOSE NUNO MARTINS PINTO FRAGA</nome>
     <dataNasc>1997-03-26</dataNasc>
     <curso>CS41</curso>
-    <curso>41</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Violoncelo</instrumento>
   </aluno>
@@ -2004,7 +1733,6 @@
     <nome>JOSE PEDRO RIBEIRO DA ARAUJO</nome>
     <dataNasc>2005-02-09</dataNasc>
     <curso>CB3</curso>
-    <curso>3</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -2012,7 +1740,6 @@
     <nome>ANTONIO NUNO BACELAR MARTINS BARREIRO COVAS</nome>
     <dataNasc>2002-09-20</dataNasc>
     <curso>CB3</curso>
-    <curso>3</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -2020,7 +1747,6 @@
     <nome>JORGE ALBERTO FARIA MIRANDA</nome>
     <dataNasc>2003-10-05</dataNasc>
     <curso>CB6</curso>
-    <curso>6</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Flauta</instrumento>
   </aluno>
@@ -2028,7 +1754,6 @@
     <nome>JOSE PEDRO MACHADO GOMES</nome>
     <dataNasc>1996-02-23</dataNasc>
     <curso>CS25</curso>
-    <curso>25</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -2036,7 +1761,6 @@
     <nome>RUBEN FILIPE CARDOSO DA FONSECA</nome>
     <dataNasc>1996-03-19</dataNasc>
     <curso>CS25</curso>
-    <curso>25</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -2044,7 +1768,6 @@
     <nome>JOSE PEDRO FARIA E VASCONCELOS CORREIA</nome>
     <dataNasc>2003-02-15</dataNasc>
     <curso>CB22</curso>
-    <curso>22</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -2052,7 +1775,6 @@
     <nome>ANTONIO SERGIO MATOS SILVA</nome>
     <dataNasc>2002-02-28</dataNasc>
     <curso>CB6</curso>
-    <curso>6</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Flauta</instrumento>
   </aluno>
@@ -2060,7 +1782,6 @@
     <nome>TIAGO LEANDRO DE CASTRO RIBEIRO</nome>
     <dataNasc>1997-05-15</dataNasc>
     <curso>CS42</curso>
-    <curso>42</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Violino</instrumento>
   </aluno>
@@ -2068,7 +1789,6 @@
     <nome>TIAGO MIGUEL SOARES FERNANDES</nome>
     <dataNasc>2000-07-24</dataNasc>
     <curso>CS26</curso>
-    <curso>26</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Eufónio</instrumento>
   </aluno>
@@ -2076,7 +1796,6 @@
     <nome>RUI FILIPE TORRES ALEXANDRE</nome>
     <dataNasc>2002-02-28</dataNasc>
     <curso>CB19</curso>
-    <curso>19</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Violoncelo</instrumento>
   </aluno>
@@ -2084,7 +1803,6 @@
     <nome>PEDRO MIGUEL RAMOS MADEIRA</nome>
     <dataNasc>2000-06-26</dataNasc>
     <curso>CS42</curso>
-    <curso>42</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Violino</instrumento>
   </aluno>
@@ -2092,7 +1810,6 @@
     <nome>RUI DOMINGOS GUIMARAES SALGADO</nome>
     <dataNasc>2004-02-02</dataNasc>
     <curso>CB14</curso>
-    <curso>14</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -2100,7 +1817,6 @@
     <nome>PEDRO SILVESTRE MENESES MAGALHAES COELHO</nome>
     <dataNasc>2003-07-11</dataNasc>
     <curso>CB7</curso>
-    <curso>7</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -2108,7 +1824,6 @@
     <nome>LEANDRO EMANUEL DA SILVA SALGADO BARBOSA</nome>
     <dataNasc>2001-04-11</dataNasc>
     <curso>CS41</curso>
-    <curso>41</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Violoncelo</instrumento>
   </aluno>
@@ -2116,7 +1831,6 @@
     <nome>RICARDO FERNANDO LIRA DE MESQUITA LACHADO</nome>
     <dataNasc>2003-04-12</dataNasc>
     <curso>CB22</curso>
-    <curso>22</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -2124,7 +1838,6 @@
     <nome>MARCO ANTONIO SAMPAIO FREITAS DE CASTRO</nome>
     <dataNasc>2002-04-18</dataNasc>
     <curso>CB14</curso>
-    <curso>14</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -2132,7 +1845,6 @@
     <nome>RICARDO ARAUJO CARVALHO VILACA MOREIRA</nome>
     <dataNasc>2004-04-02</dataNasc>
     <curso>CB4</curso>
-    <curso>4</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Eufónio</instrumento>
   </aluno>
@@ -2140,7 +1852,6 @@
     <nome>RAFAEL DE CASTRO CARREIRA</nome>
     <dataNasc>1996-06-18</dataNasc>
     <curso>CS43</curso>
-    <curso>43</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Viola de Arco</instrumento>
   </aluno>
@@ -2148,7 +1859,6 @@
     <nome>JULIO ANDRE RODRIGUES ARAUJO</nome>
     <dataNasc>2001-09-14</dataNasc>
     <curso>CS24</curso>
-    <curso>24</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -2156,7 +1866,6 @@
     <nome>BRUNO FILIPE DA COSTA HERMENEGILDO</nome>
     <dataNasc>1999-01-10</dataNasc>
     <curso>CS29</curso>
-    <curso>29</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -2164,7 +1873,6 @@
     <nome>JOEL HUMBERTO DA SILVA BEIRAO DO VALE CARVALH</nome>
     <dataNasc>2000-07-08</dataNasc>
     <curso>CS28</curso>
-    <curso>28</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Flauta</instrumento>
   </aluno>
@@ -2172,7 +1880,6 @@
     <nome>RAUL GRACIANO OLIVEIRA RODRIGUES</nome>
     <dataNasc>2002-01-26</dataNasc>
     <curso>CB9</curso>
-    <curso>9</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -2180,7 +1887,6 @@
     <nome>PEDRO MIGUEL AZEVEDO DE OLIVEIRA</nome>
     <dataNasc>1998-02-12</dataNasc>
     <curso>CS34</curso>
-    <curso>34</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Percussão</instrumento>
   </aluno>
@@ -2188,7 +1894,6 @@
     <nome>PEDRO TIAGO AMORIM DE BRITO</nome>
     <dataNasc>1997-12-08</dataNasc>
     <curso>CS26</curso>
-    <curso>26</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Eufónio</instrumento>
   </aluno>
@@ -2196,7 +1901,6 @@
     <nome>MARIANA PEREIRA NEVES</nome>
     <dataNasc>2003-02-23</dataNasc>
     <curso>CB7</curso>
-    <curso>7</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -2204,7 +1908,6 @@
     <nome>GASPAR AUGUSTO SIMOES CORREIA VIEIRA LEITE</nome>
     <dataNasc>1997-02-05</dataNasc>
     <curso>CS27</curso>
-    <curso>27</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -2212,7 +1915,6 @@
     <nome>DIOGO PAULO DA FONTE LAPA</nome>
     <dataNasc>2005-06-12</dataNasc>
     <curso>CB16</curso>
-    <curso>16</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Trompa</instrumento>
   </aluno>
@@ -2220,7 +1922,6 @@
     <nome>AFONSO DELERUE ARRIAGA</nome>
     <dataNasc>2003-07-18</dataNasc>
     <curso>CB14</curso>
-    <curso>14</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -2228,7 +1929,6 @@
     <nome>DIOGO FILIPE DA SILVA CARDOSO</nome>
     <dataNasc>2002-01-04</dataNasc>
     <curso>CB15</curso>
-    <curso>15</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Trombone</instrumento>
   </aluno>
@@ -2236,7 +1936,6 @@
     <nome>DUARTE ALEXANDRE DA CUNHA ALVES</nome>
     <dataNasc>1999-02-20</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -2244,7 +1943,6 @@
     <nome>LUIZ ALBERTO DE CASTRO SANTOS</nome>
     <dataNasc>2004-08-16</dataNasc>
     <curso>CB12</curso>
-    <curso>12</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Percussão</instrumento>
   </aluno>
@@ -2252,7 +1950,6 @@
     <nome>ANDRE ABILIO NUNES ROCHA RODRIGUES</nome>
     <dataNasc>1997-08-11</dataNasc>
     <curso>CS43</curso>
-    <curso>43</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Viola de Arco</instrumento>
   </aluno>
@@ -2260,7 +1957,6 @@
     <nome>JOAO PEDRO OLIVEIRA PEREIRA</nome>
     <dataNasc>2002-11-27</dataNasc>
     <curso>CB3</curso>
-    <curso>3</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -2268,7 +1964,6 @@
     <nome>MARIO ANDRE PATRICIO TEIXEIRA JULIO</nome>
     <dataNasc>2004-11-22</dataNasc>
     <curso>CB21</curso>
-    <curso>21</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Viola de Arco</instrumento>
   </aluno>
@@ -2276,7 +1971,6 @@
     <nome>LUIS TIAGO AFONSO MASCARENHAS</nome>
     <dataNasc>2005-03-02</dataNasc>
     <curso>CB18</curso>
-    <curso>18</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Tuba</instrumento>
   </aluno>
@@ -2284,7 +1978,6 @@
     <nome>SEBASTIAO MONTEIRO SIMOES</nome>
     <dataNasc>2004-08-13</dataNasc>
     <curso>CB19</curso>
-    <curso>19</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Violoncelo</instrumento>
   </aluno>
@@ -2292,7 +1985,6 @@
     <nome>GUILHERME REIS BARBOSA</nome>
     <dataNasc>1997-12-16</dataNasc>
     <curso>CS30</curso>
-    <curso>30</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -2300,7 +1992,6 @@
     <nome>JOAO PAULO DA SILVA GOMES</nome>
     <dataNasc>2002-05-13</dataNasc>
     <curso>CB2</curso>
-    <curso>2</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -2308,7 +1999,6 @@
     <nome>AGOSTINHO MANUEL ALVES DA SILVA</nome>
     <dataNasc>1998-09-16</dataNasc>
     <curso>CS35</curso>
-    <curso>35</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Piano</instrumento>
   </aluno>
@@ -2316,7 +2006,6 @@
     <nome>SERGIO NUNO CLARO GOMES</nome>
     <dataNasc>1997-10-17</dataNasc>
     <curso>CS43</curso>
-    <curso>43</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Viola de Arco</instrumento>
   </aluno>
@@ -2324,7 +2013,6 @@
     <nome>MARCO ALEXANDRE TEIXEIRA PALOS</nome>
     <dataNasc>2001-04-24</dataNasc>
     <curso>CS36</curso>
-    <curso>36</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -2332,7 +2020,6 @@
     <nome>MARCO ANTONIO TEIXEIRA MARTINS</nome>
     <dataNasc>1996-01-16</dataNasc>
     <curso>CS26</curso>
-    <curso>26</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Eufónio</instrumento>
   </aluno>
@@ -2340,7 +2027,6 @@
     <nome>JOAO CARLOS AZEVEDO SALGADO GUIMARAES</nome>
     <dataNasc>1997-07-21</dataNasc>
     <curso>CS24</curso>
-    <curso>24</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -2348,7 +2034,6 @@
     <nome>SOFIA DA CONCEICAO ALVES MENDES</nome>
     <dataNasc>2002-05-21</dataNasc>
     <curso>CB3</curso>
-    <curso>3</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -2356,7 +2041,6 @@
     <nome>VITOR MANUEL ALVES DA ROCHA</nome>
     <dataNasc>2000-06-23</dataNasc>
     <curso>CS42</curso>
-    <curso>42</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Violino</instrumento>
   </aluno>
@@ -2364,7 +2048,6 @@
     <nome>SERGIO BRANCO AMORIM</nome>
     <dataNasc>2002-10-22</dataNasc>
     <curso>CB5</curso>
-    <curso>5</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -2372,7 +2055,6 @@
     <nome>MARIA CRISTINA CARNEIRO BARREIRA</nome>
     <dataNasc>2002-10-12</dataNasc>
     <curso>CB11</curso>
-    <curso>11</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Orgão</instrumento>
   </aluno>
@@ -2380,7 +2062,6 @@
     <nome>HELDER JOSE FERREIRA BARBOSA RIBEIRO</nome>
     <dataNasc>2005-01-07</dataNasc>
     <curso>CB2</curso>
-    <curso>2</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -2388,7 +2069,6 @@
     <nome>JOAO NUNO MARQUES DOS SANTOS</nome>
     <dataNasc>2004-10-22</dataNasc>
     <curso>CB5</curso>
-    <curso>5</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -2396,7 +2076,6 @@
     <nome>FLAVIO MIGUEL XAVIER FERREIRA</nome>
     <dataNasc>2003-06-16</dataNasc>
     <curso>CB17</curso>
-    <curso>17</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Trompete</instrumento>
   </aluno>
@@ -2404,7 +2083,6 @@
     <nome>JOSE ANTONIO DA CUNHA E SILVA</nome>
     <dataNasc>2001-06-10</dataNasc>
     <curso>CS31</curso>
-    <curso>31</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Harpa</instrumento>
   </aluno>
@@ -2412,7 +2090,6 @@
     <nome>ELISEU CARNEIRO DOS SANTOS ROCHA</nome>
     <dataNasc>1999-06-16</dataNasc>
     <curso>CS23</curso>
-    <curso>23</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
@@ -2420,7 +2097,6 @@
     <nome>JOAO MIGUEL RODRIGUES BATISTA</nome>
     <dataNasc>1997-03-12</dataNasc>
     <curso>CS29</curso>
-    <curso>29</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -2428,7 +2104,6 @@
     <nome>VITOR HUGO DA SILVA NOGUEIRA</nome>
     <dataNasc>1997-05-27</dataNasc>
     <curso>CS27</curso>
-    <curso>27</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -2436,7 +2111,6 @@
     <nome>ALEXANDRE MANUEL PEREIRA DE MIRANDA PINTO</nome>
     <dataNasc>2003-09-12</dataNasc>
     <curso>CB19</curso>
-    <curso>19</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Violoncelo</instrumento>
   </aluno>
@@ -2444,7 +2118,6 @@
     <nome>MARIO DA FONTE LAMEIRAS</nome>
     <dataNasc>2004-09-15</dataNasc>
     <curso>CB22</curso>
-    <curso>22</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -2452,7 +2125,6 @@
     <nome>NELSON TAVARES CUNHA</nome>
     <dataNasc>1999-09-01</dataNasc>
     <curso>CS29</curso>
-    <curso>29</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -2460,7 +2132,6 @@
     <nome>ALEXANDRE COELHO CARVALHO</nome>
     <dataNasc>2003-08-22</dataNasc>
     <curso>CB14</curso>
-    <curso>14</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -2468,7 +2139,6 @@
     <nome>HUGO ALEXANDRE SOBREIRO DE SEIXAS</nome>
     <dataNasc>2004-02-15</dataNasc>
     <curso>CB8</curso>
-    <curso>8</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -2476,7 +2146,6 @@
     <nome>JOAQUIM MACHADO GONCALVES SAMPAIO</nome>
     <dataNasc>2003-02-15</dataNasc>
     <curso>CB17</curso>
-    <curso>17</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Trompete</instrumento>
   </aluno>
@@ -2484,7 +2153,6 @@
     <nome>JOAO RICARDO DA SILVA CAMPOS</nome>
     <dataNasc>1996-01-08</dataNasc>
     <curso>CS33</curso>
-    <curso>33</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Orgão</instrumento>
   </aluno>
@@ -2492,7 +2160,6 @@
     <nome>RUI ALEXANDRE SERRANO DE MOURA</nome>
     <dataNasc>2004-04-07</dataNasc>
     <curso>CB6</curso>
-    <curso>6</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Flauta</instrumento>
   </aluno>
@@ -2500,7 +2167,6 @@
     <nome>HUGO FILIPE NASCIMENTO PEREIRA</nome>
     <dataNasc>2000-07-19</dataNasc>
     <curso>CS38</curso>
-    <curso>38</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Trompa</instrumento>
   </aluno>
@@ -2508,7 +2174,6 @@
     <nome>NUNO JORGE FERREIRA GUIMARAES</nome>
     <dataNasc>2004-04-01</dataNasc>
     <curso>CB7</curso>
-    <curso>7</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -2516,7 +2181,6 @@
     <nome>HUGO JOSE PEREIRA PACHECO</nome>
     <dataNasc>1999-08-05</dataNasc>
     <curso>CS41</curso>
-    <curso>41</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Violoncelo</instrumento>
   </aluno>
@@ -2524,7 +2188,6 @@
     <nome>JOSE LUIS LOPES DE ARAUJO</nome>
     <dataNasc>1998-11-22</dataNasc>
     <curso>CS30</curso>
-    <curso>30</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -2532,7 +2195,6 @@
     <nome>JOSE MANUEL ARAUJO SOARES</nome>
     <dataNasc>2000-02-12</dataNasc>
     <curso>CS32</curso>
-    <curso>32</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -2540,7 +2202,6 @@
     <nome>CATARINA ISABEL DE OLIVEIRA MATEUS</nome>
     <dataNasc>1997-11-08</dataNasc>
     <curso>CS37</curso>
-    <curso>37</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Trombone</instrumento>
   </aluno>
@@ -2548,7 +2209,6 @@
     <nome>NUNO GONCALO BETTENCOURT DA CRUZ CORREIA</nome>
     <dataNasc>1998-10-06</dataNasc>
     <curso>CS38</curso>
-    <curso>38</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Trompa</instrumento>
   </aluno>
@@ -2556,7 +2216,6 @@
     <nome>MIGUEL ANGELO PINTO MARQUES</nome>
     <dataNasc>2000-02-18</dataNasc>
     <curso>CS43</curso>
-    <curso>43</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Viola de Arco</instrumento>
   </aluno>
@@ -2564,7 +2223,6 @@
     <nome>DANIELA CRISTINA GARCIA TEIXEIRA</nome>
     <dataNasc>2000-02-01</dataNasc>
     <curso>CS36</curso>
-    <curso>36</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -2572,7 +2230,6 @@
     <nome>DANIEL TORRES GONCALVES</nome>
     <dataNasc>2004-04-20</dataNasc>
     <curso>CB2</curso>
-    <curso>2</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -2580,7 +2237,6 @@
     <nome>JOAO PEDRO SILVA ARAUJO</nome>
     <dataNasc>1999-10-01</dataNasc>
     <curso>CS28</curso>
-    <curso>28</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Flauta</instrumento>
   </aluno>
@@ -2588,7 +2244,6 @@
     <nome>ANDRE FILIPE DE SOUSA VIVEIROS</nome>
     <dataNasc>1999-11-09</dataNasc>
     <curso>CS23</curso>
-    <curso>23</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
@@ -2596,7 +2251,6 @@
     <nome>ANDRE RIBEIRO RODRIGUES</nome>
     <dataNasc>2002-10-04</dataNasc>
     <curso>CB16</curso>
-    <curso>16</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Trompa</instrumento>
   </aluno>
@@ -2604,7 +2258,6 @@
     <nome>NELSON DE SOUSA E SILVA</nome>
     <dataNasc>1996-11-17</dataNasc>
     <curso>CS32</curso>
-    <curso>32</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -2612,7 +2265,6 @@
     <nome>MIGUEL ANGELO MARQUES DE MATOS</nome>
     <dataNasc>2000-12-20</dataNasc>
     <curso>CS28</curso>
-    <curso>28</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Flauta</instrumento>
   </aluno>
@@ -2620,7 +2272,6 @@
     <nome>ALEXANDRINA MARIA FERREIRA LEMOS</nome>
     <dataNasc>2002-04-10</dataNasc>
     <curso>CB6</curso>
-    <curso>6</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Flauta</instrumento>
   </aluno>
@@ -2628,7 +2279,6 @@
     <nome>LUIS FILIPE PEREIRA GONCALVES</nome>
     <dataNasc>2002-12-14</dataNasc>
     <curso>CB16</curso>
-    <curso>16</curso>
     <anoCurso>2</anoCurso>
     <instrumento>Trompa</instrumento>
   </aluno>
@@ -2636,7 +2286,6 @@
     <nome>JOAO RAFAEL FERREIRA VELOSO</nome>
     <dataNasc>1998-05-15</dataNasc>
     <curso>CS42</curso>
-    <curso>42</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Violino</instrumento>
   </aluno>
@@ -2644,7 +2293,6 @@
     <nome>MIGUEL ANGELO VIVAS GOMES ALVES</nome>
     <dataNasc>2001-08-11</dataNasc>
     <curso>CS27</curso>
-    <curso>27</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -2652,7 +2300,6 @@
     <nome>JOSE LUIS CARDOSO SILVA</nome>
     <dataNasc>1997-11-23</dataNasc>
     <curso>CS24</curso>
-    <curso>24</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Contrabaixo</instrumento>
   </aluno>
@@ -2660,7 +2307,6 @@
     <nome>LUIS DIOGO MONTEIRO DUARTE COUTO</nome>
     <dataNasc>2005-07-28</dataNasc>
     <curso>CB13</curso>
-    <curso>13</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Piano</instrumento>
   </aluno>
@@ -2668,7 +2314,6 @@
     <nome>JOSE FILIPE HENRIQUES VILAS BOAS</nome>
     <dataNasc>1996-02-01</dataNasc>
     <curso>CS41</curso>
-    <curso>41</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Violoncelo</instrumento>
   </aluno>
@@ -2676,7 +2321,6 @@
     <nome>MANUEL DOMINGOS DE CARVALHO FELGUEIRAS DA SIL</nome>
     <dataNasc>1997-02-07</dataNasc>
     <curso>CS36</curso>
-    <curso>36</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Saxofone</instrumento>
   </aluno>
@@ -2684,7 +2328,6 @@
     <nome>FILIPE GONCALO GONCALVES DA COSTA</nome>
     <dataNasc>2005-09-02</dataNasc>
     <curso>CB8</curso>
-    <curso>8</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Guitarra</instrumento>
   </aluno>
@@ -2692,7 +2335,6 @@
     <nome>RUI JORGE DE OLIVEIRA PEREIRA</nome>
     <dataNasc>2001-03-17</dataNasc>
     <curso>CS23</curso>
-    <curso>23</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
@@ -2700,7 +2342,6 @@
     <nome>GENILDO SOARES NEVES</nome>
     <dataNasc>2002-12-27</dataNasc>
     <curso>CB5</curso>
-    <curso>5</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -2708,7 +2349,6 @@
     <nome>LUIS FERNANDO ROMANEL RODRIGUES</nome>
     <dataNasc>2002-04-03</dataNasc>
     <curso>CB7</curso>
-    <curso>7</curso>
     <anoCurso>5</anoCurso>
     <instrumento>Fliscorne</instrumento>
   </aluno>
@@ -2716,7 +2356,6 @@
     <nome>MIGUEL PEDRO AMARAL FIGUEIREDO</nome>
     <dataNasc>2001-10-19</dataNasc>
     <curso>CS40</curso>
-    <curso>40</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Tuba</instrumento>
   </aluno>
@@ -2724,7 +2363,6 @@
     <nome>SERGIO FELICIANO FERREIRA JACOME</nome>
     <dataNasc>1998-10-13</dataNasc>
     <curso>CS39</curso>
-    <curso>39</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Trompete</instrumento>
   </aluno>
@@ -2732,7 +2370,6 @@
     <nome>MARCO ALEXANDRE AGUIAR VAZ</nome>
     <dataNasc>2005-01-02</dataNasc>
     <curso>CB19</curso>
-    <curso>19</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Violoncelo</instrumento>
   </aluno>
@@ -2740,7 +2377,6 @@
     <nome>PAULO MANUEL RIBEIRO NOVAIS</nome>
     <dataNasc>2000-11-20</dataNasc>
     <curso>CS32</curso>
-    <curso>32</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -2748,7 +2384,6 @@
     <nome>LUIS FILIPE FARIA MONTEIRO CAPELO</nome>
     <dataNasc>2003-06-25</dataNasc>
     <curso>CB6</curso>
-    <curso>6</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Flauta</instrumento>
   </aluno>
@@ -2756,7 +2391,6 @@
     <nome>SERGIO FILIPE PEREIRA DA FELICIDADE</nome>
     <dataNasc>1999-01-12</dataNasc>
     <curso>CS44</curso>
-    <curso>44</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Bandolim</instrumento>
   </aluno>
@@ -2764,7 +2398,6 @@
     <nome>HELDER NUNO MARTINS DO VALE TOME</nome>
     <dataNasc>1997-07-13</dataNasc>
     <curso>CS23</curso>
-    <curso>23</curso>
     <anoCurso>6</anoCurso>
     <instrumento>Clarinete</instrumento>
   </aluno>
@@ -2772,7 +2405,6 @@
     <nome>JOSE EDUARDO CORREIA CALHEIROS</nome>
     <dataNasc>2003-07-04</dataNasc>
     <curso>CB18</curso>
-    <curso>18</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Tuba</instrumento>
   </aluno>
@@ -2780,7 +2412,6 @@
     <nome>GONCALO MANUEL CORREIA CALHEIROS</nome>
     <dataNasc>2000-11-24</dataNasc>
     <curso>CS37</curso>
-    <curso>37</curso>
     <anoCurso>8</anoCurso>
     <instrumento>Trombone</instrumento>
   </aluno>
@@ -2788,7 +2419,6 @@
     <nome>RICARDO ANDRE RODRIGUES AFONSO</nome>
     <dataNasc>2004-10-22</dataNasc>
     <curso>CB4</curso>
-    <curso>4</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Eufónio</instrumento>
   </aluno>
@@ -2796,7 +2426,6 @@
     <nome>JOAO PAULO SILVA DE VASCONCELOS GUSMAO</nome>
     <dataNasc>2002-05-24</dataNasc>
     <curso>CB10</curso>
-    <curso>10</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Oboé</instrumento>
   </aluno>
@@ -2804,7 +2433,6 @@
     <nome>VITOR MANUEL PINTO LOPES</nome>
     <dataNasc>1996-03-24</dataNasc>
     <curso>CS25</curso>
-    <curso>25</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Corne Inglês</instrumento>
   </aluno>
@@ -2812,7 +2440,6 @@
     <nome>LUIS PEDRO FERREIRA LEITE DOS SANTOS ALEIXO</nome>
     <dataNasc>2002-03-10</dataNasc>
     <curso>CB15</curso>
-    <curso>15</curso>
     <anoCurso>4</anoCurso>
     <instrumento>Trombone</instrumento>
   </aluno>
@@ -2820,7 +2447,6 @@
     <nome>JOAO PAULO BARBOSA OLIVEIRA</nome>
     <dataNasc>2004-10-22</dataNasc>
     <curso>CB5</curso>
-    <curso>5</curso>
     <anoCurso>1</anoCurso>
     <instrumento>Fagote</instrumento>
   </aluno>
@@ -2828,7 +2454,6 @@
     <nome>PAULO CESAR ROMANEL RODRIGUES</nome>
     <dataNasc>2003-07-24</dataNasc>
     <curso>CB18</curso>
-    <curso>18</curso>
     <anoCurso>3</anoCurso>
     <instrumento>Tuba</instrumento>
   </aluno>
@@ -2836,7 +2461,6 @@
     <nome>RUI ANTONIO PEIXOTO DE ABREU</nome>
     <dataNasc>1999-08-10</dataNasc>
     <curso>CS26</curso>
-    <curso>26</curso>
     <anoCurso>7</anoCurso>
     <instrumento>Eufónio</instrumento>
   </aluno>

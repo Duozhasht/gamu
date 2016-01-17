@@ -2,25 +2,55 @@
 	
 
 	<div class="row">
+		<div class="col-xs-12" style="padding-bottom: 150px;">
+		<h1 class="title text-center">GAMμ - Gestor de Audições Músicais</h1>
+		</div>
 		<div class="col-xs-12 col-md-6">
 			<h3 class="text-center" style="padding-top: 20px;padding-bottom: 40px;">
 				Próximas Audições
 			</h3>
-			<ul>
-				<li>asd</li>
-				<li>asd</li>
-				<li>asd</li>
-				<li>asd</li>
-				<li>asd</li>
-				<li>asd</li>
-				<li>asd</li>
-				<li>asd</li>
-				<li>asd</li>								
-			</ul>
+			<table class='table'>
+				<thead>
+					<tr>
+						<th width='35%'>Titulo</th>
+						<th width='30%'>Data</th>
+						<th width='15%'>Local</th>
+						<th width='15%'>Duração</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+					<?php
+							foreach ($audicoes_next as $aud)
+							{
+								echo "<tr class='linkeable' onclick='redirect(".$aud->id.")'>";
+								echo "<td>".$aud->titulo."</td>";
+								echo "<td>".$aud->data."</td>";
+								echo "<td>".$aud->local."</td>";
+								echo "<td>".$aud->duracao."</td>";
+								echo "</tr>";
+							}
+					?>
+				</tbody>
+			</table>
 		</div>
 
-		<div class="col-xs-12 col-md-6">
-			
+		<div class="col-xs-12 col-md-6 text-center"style="padding-top: 10px;">
+		<div class="row">
+			<div class="col-xs-6" style="padding-top: 20px;padding-bottom: 40px;">
+				<h4 id="title">Total de Cursos</h4>
+				<p style="font-size: 16px;">12 cursos</p>
+			</div>
+			<div class="col-xs-6" style="padding-top: 20px;padding-bottom: 40px;">
+				<h4 id="title">Total de Alunos</h4>
+				<p style="font-size: 16px;">12 alunos</p>
+			</div>
+			<div class="col-xs-12" style="padding-top: 20px;padding-bottom: 40px;">
+			<h4 id="title">Total de Professores</h4>
+			<p style="font-size: 16px;">12 professores</p>
+			</div>
+		</div>
+
 		</div>
 
 	</div>
@@ -70,3 +100,8 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+function redirect(id){
+	document.location = '?controller=audicao&action=view&id='+id;
+}
+</script>

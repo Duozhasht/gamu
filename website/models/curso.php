@@ -78,11 +78,11 @@ class Curso {
 	public static function find($id) {
 
 		$db = DB::getInstance();
-		$query_find = "SELECT * FROM Curso WHERE id_curso = $id";
+		$query_find = "SELECT * FROM curso_model WHERE id_curso = $id";
 
 		$result = $db->query($query_find);
 		$curs = $result->fetch();
-		return new Curso($curs['id_curso'],$curs['designacao'],$curs['data_de_nascimento'],$curs['habilitacoes']);
+		return new Curso($curs['id_curso'],$curs['designacao'],$curs['duracao'],$curs['id_instrumento'],NULL);
 
 	}
 

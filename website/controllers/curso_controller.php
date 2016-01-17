@@ -55,6 +55,22 @@
 
     }
 
+    public function view() {
+
+      //Check page rules (if is set, if not atributes 1 if it's higher or lower the same)
+      if(isset($_GET['id'])){
+              // Get profs
+        $curso = Curso::find($_GET['id']);
+        $alunos = Aluno::find_alunos_curso($_GET['id']);
+        $profs = Professor::find_professores_curso($_GET['id']);
+
+      }
+      require_once('views/curso/view.php');
+
+    }
+
+
+
     public function update() {
 
         if(!empty($_POST['id'])&&!empty($_POST['curso'])&&!empty($_POST['id_instrumento'])){

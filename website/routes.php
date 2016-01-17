@@ -4,6 +4,11 @@
 
     switch($controller) {
       case 'index':
+        require_once('models/audicao.php');
+        require_once('models/atuacao.php');
+        require_once('models/aluno.php');
+        require_once('models/professor.php');
+        require_once('models/obra.php');
         $controller = new IndexController();
       break;
       case 'professor':
@@ -14,6 +19,8 @@
       case 'curso':
         require_once('models/instrumento.php');
         require_once('models/curso.php');
+        require_once('models/aluno.php');
+        require_once('models/professor.php');
         $controller = new CursoController();
       break;
       case 'instrumento':
@@ -56,13 +63,13 @@
   // we're adding an entry for the new controller and its actions
   $controllers = array('index' => ['update','home', 'error'],
                        'professor' => ['update','index','add','remove','exportxml','importxml'],
-                       'curso' => ['update','index','add','remove','exportxml','importxml'],
+                       'curso' => ['update','index','add','remove','exportxml','importxml','view'],
                        'instrumento' => ['update','index','add','remove','exportxml','importxml'],
                        'aluno' => ['update','index','add','remove','exportxml','importxml'],
                        'periodo' => ['update','index','add','remove','exportxml','importxml'],
                        'compositor' => ['update','index','add','remove','exportxml','importxml'],
                        'obra' => ['update','index','add','remove','exportxml','importxml'],
-                       'audicao' => ['update','index','add','remove','exportxml','importxml','test','view','remove_maestro_obra','remove_musico_obra', 'remove_obra','add_atuacao']
+                       'audicao' => ['update','index','add','remove','exportxml','importxml','test','view','remove_maestro_obra','remove_musico_obra', 'remove_obra','add_atuacao','remove_atuacao','add_maestro_obra','add_musico_obra']
                        );
 
   if (array_key_exists($controller, $controllers)) {

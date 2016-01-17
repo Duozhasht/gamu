@@ -92,5 +92,22 @@ class Aluno {
 		return new Aluno($alu['id_aluno'],$alu['nome'],$alu['data_de_nascimento'],$alu['curso'],$alu['ano_curso'],$alu['instrumento'],$alu['id_curso'],$alu['id_instrumento']);
 	}
 
+	public static function find_alunos_curso($id_curso){
+		$db = Db::getInstance();	
+		$list = [];
+
+		//Query
+		$query_select = "SELECT * from aluno_model WHERE id_curso=$id_curso ORDER BY 'nome'";
+		$result = $db->query($query_select);
+
+
+
+		foreach($result as $alu)
+			$list[] = new Aluno($alu['id_aluno'],$alu['nome'],$alu['data_de_nascimento'],$alu['curso'],$alu['ano_curso'],$alu['instrumento'],$alu['id_curso'],$alu['id_instrumento']);
+
+		return $list;
+
+	}
+
   }
   ?>

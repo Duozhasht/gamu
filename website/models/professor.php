@@ -91,5 +91,24 @@ class Professor {
 
 	}
 
+	public static function find_professores_curso($id_curso) {
+
+		$db = Db::getInstance();
+
+		$list = [];
+
+		//Query
+		$query_select = "SELECT * from professor_model WHERE id_curso = $id_curso ORDER BY 'nome'";
+		$result = $db->query($query_select);
+
+
+		// we create a list of Professor objects from the database results
+		foreach($result as $prof)
+			$list[] = new Professor($prof['id_professor'],$prof['nome'],$prof['data_de_nascimento'],$prof['habilitacoes'],$prof['curso'],$prof['instrumento'],$prof['id_curso'],$prof['id_instrumento']);
+
+		return $list;
+	
+	}
+
   }
   ?>

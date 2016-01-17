@@ -61,7 +61,7 @@
 									echo "<td>CS".$curso->id."</td>";
 								else
 									echo "<td>CB".$curso->id."</td>";
-								echo "<td>".$curso->designacao."</td>";
+								echo "<td><a href='?controller=curso&action=view&id=".$curso->id."'>".$curso->designacao."</a></td>";
 								echo "<td class='text-center'>".$curso->duracao." anos</td>";
 								if(isset($curso->professor))
 									echo "<td>".$curso->professor."</td>";
