@@ -1,43 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <audicoes>
-    <audicao>
-        <id>AUD11</id>
-        <metadados>
-            <titulo>Universidade do Minho</titulo>
-            <subtitulo>Processamento de Linguagens e Programacao</subtitulo>
-            <tema>Musicas Gramaticais</tema>
-            <data>2016-01-18</data>
-            <hora>21:00</hora>
-            <local>Braga</local>
-            <organizador>Professores de PLC</organizador>
-            <duracao>01:00:00</duracao>
-        </metadados>
-        <atuacoes>
-            <atuacao>
-                <idAt>AT18</idAt>
-                <tituloAt>Malta de MIEI</tituloAt>
-                <obras>
-                    <obra>
-                        <idOb>O121</idOb>
-                        <instrumentos>
-                            <instrumento>I2</instrumento>
-                            <instrumento>I4</instrumento>
-                            <instrumento>I7</instrumento>
-                        </instrumentos>
-                        <maestros>
-                            <maestro>P1</maestro>
-                            <maestro>P2</maestro>
-                            <maestro>P4</maestro>
-                            <maestro>P5</maestro>
-                        </maestros>
-                        <musicos>
-                            <musico>A36487</musico>
-                            <musico>A27589</musico>
-                            <musico>A25073</musico>
-                        </musicos>
-                    </obra>
-                </obras>
-            </atuacao>
-        </atuacoes>
-    </audicao>
+<audicao>
+<id>AUD15</id>
+<metadados>
+<titulo>Audicao dos alunos da Escola Primaria</titulo>
+<subtitulo>Preparacao Ano Lectivo</subtitulo>
+<tema>Musicas infantis</tema>
+<data>2016-01-21</data>
+<hora>21:00</hora>
+<local>Braga</local>
+<organizador>Professores da Escola Primaria</organizador>
+<duracao>01:00:00</duracao>
+</metadados>
+<atuacoes>
+<atuacao>
+<idAt>AT24</idAt>
+<tituloAt>Atuacao dos meninos</tituloAt>
+<obras>
+<obra>
+<idOb>O121</idOb>
+<instrumentos>
+<instrumento>I2</instrumento>
+</instrumentos>
+<maestros>
+<maestro>P1</maestro>
+</maestros>
+<musicos>
+<musico>A36487</musico>
+</musicos>
+</obra>
+<obra>
+<idOb>O50</idOb>
+<instrumentos>
+<instrumento>I12</instrumento>
+<instrumento>I4</instrumento>
+<instrumento>I3</instrumento>
+<instrumento>I11</instrumento>
+</instrumentos>
+<maestros>
+<maestro>P1</maestro>
+</maestros>
+<musicos>
+<musico>A1510</musico>
+<musico>A32597</musico>
+<musico>A36539</musico>
+</musicos>
+</obra>
+</obras>
+</atuacao>
+<atuacao>
+<idAt>AT25</idAt>
+<tituloAt>Atuacao das meninas</tituloAt>
+<obras>
+<obra>
+<idOb>O121</idOb>
+<instrumentos>
+<instrumento>I2</instrumento>
+<instrumento>I3</instrumento>
+<instrumento>I4</instrumento>
+</instrumentos>
+<maestros>
+<maestro>P1</maestro>
+<maestro>P2</maestro>
+<maestro>P4</maestro>
+<maestro>P5</maestro>
+</maestros>
+<musicos>
+<musico>A36487</musico>
+<musico>A27589</musico>
+<musico>A25073</musico>
+</musicos>
+</obra>
+<obra>
+<idOb>O50</idOb>
+<instrumentos>
+<instrumento>I12</instrumento>
+<instrumento>I4</instrumento>
+<instrumento>I3</instrumento>
+<instrumento>I11</instrumento>
+</instrumentos>
+<maestros>
+<maestro>P4</maestro>
+<maestro>P5</maestro>
+</maestros>
+<musicos>
+<musico>A1510</musico>
+<musico>A32597</musico>
+<musico>A36539</musico>
+</musicos>
+</obra>
+</obras>
+</atuacao>
+</atuacoes>
+</audicao>
 </audicoes>

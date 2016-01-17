@@ -2,7 +2,7 @@ AUDICAO:
 	TITULO : "Universidade do Minho"
 	SUBTITULO : "Processamento de Linguagens e Programacao"
 	TEMA : "Musicas Gramaticais"
-	DATA : 2016-01-18
+	DATA : 2016-01-19
 	HORA : 21:00
 	LOCAL : "Braga"
 	ORGANIZADOR : "Professores de PLC"

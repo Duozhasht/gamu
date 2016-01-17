@@ -25,7 +25,7 @@ public class GAMu {
     public static void main(String[] args) throws ParseException {
         try{
             // Get our lexer
-            GAMuLexer lexer = new GAMuLexer(new ANTLRFileStream("audicao.txt"));
+            GAMuLexer lexer = new GAMuLexer(new ANTLRFileStream("audicaov2.txt"));
 
             // Get a list of matched tokens
             TokenStream tokens = new CommonTokenStream(lexer);

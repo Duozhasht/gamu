@@ -1562,7 +1562,9 @@ public class GAMuParser extends Parser {
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			 ((InstrumentosContext)_localctx).listaOUT =  ((InstrumentosContext)_localctx).instrumento2.out; 
+			   if((((InstrumentosContext)_localctx).instrumento2!=null?_input.getText(((InstrumentosContext)_localctx).instrumento2.start,((InstrumentosContext)_localctx).instrumento2.stop):null) != null)
+			            ((InstrumentosContext)_localctx).listaOUT =  ((InstrumentosContext)_localctx).instrumento2.out; 
+			    
 			}
 		}
 		catch (RecognitionException re) {
@@ -1633,7 +1635,9 @@ public class GAMuParser extends Parser {
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			 ((MaestrosContext)_localctx).listaOUT =  ((MaestrosContext)_localctx).idP2.out; 
+			   if((((MaestrosContext)_localctx).idP2!=null?_input.getText(((MaestrosContext)_localctx).idP2.start,((MaestrosContext)_localctx).idP2.stop):null) != null)
+			                ((MaestrosContext)_localctx).listaOUT =  ((MaestrosContext)_localctx).idP2.out; 
+			        
 			}
 		}
 		catch (RecognitionException re) {
@@ -1704,7 +1708,9 @@ public class GAMuParser extends Parser {
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			 ((MusicosContext)_localctx).listaOUT =  ((MusicosContext)_localctx).idM2.out; 
+			   if((((MusicosContext)_localctx).idM2!=null?_input.getText(((MusicosContext)_localctx).idM2.start,((MusicosContext)_localctx).idM2.stop):null) != null)
+			                ((MusicosContext)_localctx).listaOUT =  ((MusicosContext)_localctx).idM2.out; 
+			        
 			}
 		}
 		catch (RecognitionException re) {

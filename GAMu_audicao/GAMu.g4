@@ -618,7 +618,9 @@ instrumentos [ArrayList<String> listaIN]
         { $listaOUT = $instrumento1.out; }
 
     (',' instrumento2=id[$listaIN])*
-    { $listaOUT = $instrumento2.out; }
+    {   if($instrumento2.text != null)
+            $listaOUT = $instrumento2.out; 
+    }
     ;
 
 maestros [ArrayList<String> listaIN]
@@ -626,7 +628,9 @@ maestros [ArrayList<String> listaIN]
     : 'MAESTROS' ':' idP1=id[$listaIN]
         { $listaOUT = $idP1.out; }
     (',' idP2=id[$listaIN])*
-        { $listaOUT = $idP2.out; }
+        {   if($idP2.text != null)
+                $listaOUT = $idP2.out; 
+        }
     ;
 
 musicos [ArrayList<String> listaIN]
@@ -634,7 +638,9 @@ musicos [ArrayList<String> listaIN]
     : 'MUSICOS' ':' idM1=id[$listaIN]
         { $listaOUT = $idM1.out; }
     (',' idM2=id[$listaIN] )*
-        { $listaOUT = $idM2.out; }
+        {   if($idM2.text != null)
+                $listaOUT = $idM2.out; 
+        }
     ;
 
 data
