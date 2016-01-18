@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<cursos>
-  <curso id="CB1">
-      <designacao>Curso Básico de Clarinete</designacao>
-      <duracao>5</duracao>
-      <instrumento>I1</instrumento>
-   </curso>
-</cursos>

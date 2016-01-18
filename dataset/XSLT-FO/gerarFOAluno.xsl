@@ -12,22 +12,20 @@
                     <fo:region-body region-name="dados" margin="2cm"/>
                 </fo:simple-page-master>
             </fo:layout-master-set>
-            
-            
+
             <fo:page-sequence master-reference="Aluno">
                 <fo:flow flow-name="dados" font-size="12pt">
-                    <fo:block font-size="24pt" space-after="1em" border-bottom-style="solid" text-align="center">
-                        Confirmação de criação de um aluno
-                    </fo:block>
-                    
-                    <xsl:apply-templates/>
-                    
+
+                    <xsl:apply-templates/>                
                 </fo:flow>
             </fo:page-sequence>
         </fo:root>
     </xsl:template>
 
     <xsl:template match="aluno">
+        <fo:block font-size="24pt" space-after="1em" border-bottom-style="solid" text-align="center">
+            Certificado de matrícula de um aluno
+        </fo:block>
         <fo:block>
             Código de identificação do aluno: <xsl:value-of select="@id"/>
         </fo:block>
@@ -36,6 +34,10 @@
         <xsl:apply-templates select="anoCurso"/>
         <xsl:apply-templates select="instrumento"/>
         <xsl:apply-templates select="curso"/>
+        
+        <xsl:if test="following-sibling::aluno">
+            <fo:block page-break-before="always"/>
+        </xsl:if>
     </xsl:template>
 
     <xsl:template match="nome">
@@ -57,9 +59,8 @@
     </xsl:template>
     
     <xsl:template match="instrumento">
-        <xsl:variable name="inst" select="."/>
         <fo:block space-after="1em">
-            Instrumento: <xsl:value-of select="document('instrumentos.xml')//instrumento[@id=$inst]"/>
+            Instrumento: <xsl:value-of select="."/>
         </fo:block>
     </xsl:template>
     

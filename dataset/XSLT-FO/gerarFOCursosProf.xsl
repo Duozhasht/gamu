@@ -21,8 +21,6 @@
                     </fo:block>
                     
                     <xsl:apply-templates/>
-                    
-                    
                 </fo:flow>
             </fo:page-sequence>
         </fo:root>
@@ -40,8 +38,7 @@
             Duração do curso: <xsl:value-of select="duracao"/> anos
         </fo:block>
         <fo:block>
-            <xsl:variable name="inst" select="instrumento"/>
-            Intrumento ensinado no curso: <xsl:value-of select="document('instrumentos.xml')//instrumento[@id=$inst]"/>
+            Intrumento ensinado no curso: <xsl:value-of select="instrumento"/>
         </fo:block>
         
         <fo:block font-size="14pt" space-before="1em">Professores Responsáveis:</fo:block>
@@ -58,28 +55,16 @@
         <fo:block space-before="1em" >
             Código de identificação do professor: <xsl:value-of select="@id"/>
         </fo:block>
-        <xsl:apply-templates select="nome"/>
-        <xsl:apply-templates select="dataNasc"/>
-        <xsl:apply-templates select="habilitacoes"/>
-    </xsl:template>
-    
-    <xsl:template match="nome">
         <fo:block>
-            Nome: <xsl:value-of select="."/>
+            Nome: <xsl:value-of select="nome"/>
+        </fo:block>
+        <fo:block>
+            Data de Nascimento: <xsl:value-of select="dataNasc"/>
+        </fo:block>
+        <fo:block>
+            Habilitacões: <xsl:value-of select="habilitacoes"/>
         </fo:block>
     </xsl:template>
     
-    <xsl:template match="dataNasc">
-        <fo:block>
-            Data de Nascimento: <xsl:value-of select="."/>
-        </fo:block>
-    </xsl:template>
-    
-    <xsl:template match="habilitacoes">
-        <fo:block>
-            <xsl:variable name="hab" select="."/>
-            Habilitacões: <xsl:value-of select="document('habilitacoes.xml')//habilitacao[@id=$hab]"/>
-        </fo:block>
-    </xsl:template>
     
 </xsl:stylesheet>
