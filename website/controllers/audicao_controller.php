@@ -193,6 +193,20 @@
         require_once('views/audicao/view.php');
     }
 
+    public function publish()
+    {
+      if(!empty($_GET['id']))
+      {
+        $audicao = Audicao::find($_GET['id']);
+        $actuacoes = Atuacao::retrieve('id_actuacao',$_GET['id']);
+        require_once('views/audicao/publish.php');
+      }
+      else
+        echo "Erro";
+    }
+
+
+
     public function test() 
     {
       $actuacoes = Atuacao::retrieve('id_actuacao',1);

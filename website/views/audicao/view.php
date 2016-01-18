@@ -36,14 +36,21 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-5"></div>
-	<div id="sidebar" class="col-xs-12 col-md-3" style="padding-top:10px;">
+	<div class="col-xs-4"></div>
+	<div id="sidebar" class="col-xs-12 col-md-6" style="padding-top:10px;">
 			<ul class="sidebar nav nav-pills" style="padding-bottom: 10px;">
 				<li role="presentation" class="normal">
 					
 					<a href="#" onclick="showModal()">
 					<i class="fa fa-plus" style="padding-right: 20px"></i>
 						Adicionar Actuação
+					</a>
+				</li>
+				<li role="presentation" class="normal">
+					
+					<a href="?controller=audicao&action=publish&id=<?php echo $audicao->id;?>">
+					<i class="fa fa-plus" style="padding-right: 20px"></i>
+						Gerar Página 
 					</a>
 				</li>
 				<li class="mydivider">
