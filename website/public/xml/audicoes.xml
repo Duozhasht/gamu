@@ -3,107 +3,137 @@
   <audicao>
     <id>AUD1</id>
     <metadados>
-      <titulo>Titulo</titulo>
-      <subtitulo>Sub</subtitulo>
-      <tema>Tema</tema>
-      <data>2016-01-17 17:44:33</data>
-      <local>Local</local>
-      <organizador>Organizador</organizador>
-      <duracao>17:44:33</duracao>
+      <titulo>Audição Especial de Apresentação</titulo>
+      <subtitulo>Apresentação do Trabalho</subtitulo>
+      <tema>Académico</tema>
+      <data>2016-02-28</data>
+      <hora>09:00:00</hora>
+      <local>Uma sala algures no DI</local>
+      <organizador/>
+      <duracao>00:00:15</duracao>
     </metadados>
-    <actuacoes>
-      <actuacao>
+    <atuacoes>
+      <atuacao>
         <idAt>AT1</idAt>
         <tituloAt>Primeira</tituloAt>
         <obras>
           <obra>
-            <idOb>12</idOb>
-            <instrumentos/>
+            <idOb>O12</idOb>
+            <instrumentos>
+              <instrumento>I18</instrumento>
+              <instrumento>I1</instrumento>
+              <instrumento>I4</instrumento>
+            </instrumentos>
             <maestros>
-              <maestro>1</maestro>
-              <maestro>2</maestro>
-              <maestro>3</maestro>
+              <maestro>P1</maestro>
+              <maestro>P2</maestro>
+              <maestro>P3</maestro>
             </maestros>
             <musicos>
-              <musico>14539</musico>
+              <musico>A1510</musico>
+              <musico>A12753</musico>
+              <musico>A14539</musico>
             </musicos>
           </obra>
           <obra>
-            <idOb>13</idOb>
-            <instrumentos/>
+            <idOb>O13</idOb>
+            <instrumentos>
+              <instrumento>I18</instrumento>
+              <instrumento>I1</instrumento>
+              <instrumento>I4</instrumento>
+            </instrumentos>
             <maestros>
-              <maestro>1</maestro>
+              <maestro>P1</maestro>
             </maestros>
             <musicos>
-              <musico>14539</musico>
+              <musico>A1510</musico>
+              <musico>A12753</musico>
+              <musico>A14539</musico>
             </musicos>
           </obra>
         </obras>
-      </actuacao>
-      <actuacao>
+      </atuacao>
+      <atuacao>
         <idAt>AT2</idAt>
         <tituloAt>Segunda</tituloAt>
         <obras>
           <obra>
-            <idOb>14</idOb>
-            <instrumentos/>
+            <idOb>O14</idOb>
+            <instrumentos>
+              <instrumento>I18</instrumento>
+              <instrumento>I3</instrumento>
+              <instrumento>I4</instrumento>
+            </instrumentos>
             <maestros>
-              <maestro>1</maestro>
+              <maestro>P1</maestro>
             </maestros>
             <musicos>
-              <musico>20044</musico>
-              <musico>14539</musico>
+              <musico>A1510</musico>
+              <musico>A20044</musico>
+              <musico>A14539</musico>
             </musicos>
           </obra>
           <obra>
-            <idOb>15</idOb>
-            <instrumentos/>
+            <idOb>O15</idOb>
+            <instrumentos>
+              <instrumento>I2</instrumento>
+              <instrumento>I3</instrumento>
+            </instrumentos>
             <maestros>
-              <maestro>7</maestro>
+              <maestro>P7</maestro>
             </maestros>
             <musicos>
-              <musico>19705</musico>
-              <musico>20021</musico>
-              <musico>20044</musico>
+              <musico>A19705</musico>
+              <musico>A20021</musico>
+              <musico>A20044</musico>
             </musicos>
           </obra>
         </obras>
-      </actuacao>
-      <actuacao>
+      </atuacao>
+      <atuacao>
         <idAt>AT3</idAt>
         <tituloAt>Terceira</tituloAt>
         <obras>
           <obra>
-            <idOb>20</idOb>
-            <instrumentos/>
+            <idOb>O20</idOb>
+            <instrumentos>
+              <instrumento>I2</instrumento>
+              <instrumento>I18</instrumento>
+              <instrumento>I3</instrumento>
+            </instrumentos>
             <maestros>
-              <maestro>5</maestro>
+              <maestro>P5</maestro>
             </maestros>
             <musicos>
-              <musico>19705</musico>
-              <musico>20044</musico>
+              <musico>A19705</musico>
+              <musico>A1510</musico>
+              <musico>A20044</musico>
             </musicos>
           </obra>
         </obras>
-      </actuacao>
-      <actuacao>
+      </atuacao>
+      <atuacao>
         <idAt>AT4</idAt>
         <tituloAt>Quarta</tituloAt>
         <obras>
           <obra>
-            <idOb>21</idOb>
-            <instrumentos/>
+            <idOb>O21</idOb>
+            <instrumentos>
+              <instrumento>I2</instrumento>
+              <instrumento>I18</instrumento>
+              <instrumento>I3</instrumento>
+            </instrumentos>
             <maestros>
-              <maestro>9</maestro>
-              <maestro>29</maestro>
+              <maestro>P9</maestro>
             </maestros>
             <musicos>
-              <musico>19705</musico>
-              <musico>20044</musico>
+              <musico>A19705</musico>
+              <musico>A1510</musico>
+              <musico>A20044</musico>
             </musicos>
           </obra>
         </obras>
-      </actuacao>
-    </actuacoes>
+      </atuacao>
+    </atuacoes>
   </audicao>
 </audicoes>

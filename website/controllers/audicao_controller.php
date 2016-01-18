@@ -291,6 +291,22 @@
       $controller->view2($_GET['id_audicao']);
     }
 
+    public function remove_audicao(){
+
+       if(isset($_GET['id_audicao'])) {
+        //echo "aqui";
+        $actuacoes = Atuacao::retrieve('id_actuacao',$_GET['id_audicao']);
+        foreach ($actuacoes as $actuacao) {
+          Atuacao::delete($actuacao->id_actuacao);
+        }
+        Audicao::delete($_GET['id_audicao']);
+
+       }
+
+      $controller = new AudicaoController();
+      $controller->index();
+    }
+
 
     public function remove_atuacao(){
 
@@ -304,7 +320,7 @@
       $controller->view2($_GET['id_audicao']);
     }
 
-/*
+
     public function importxml() {
         
         if($_FILES['ficheiro']['error'] > 0)
@@ -331,15 +347,46 @@
   
           foreach($audicoes as $audicao) 
           {
-            if(Audicao::find(substr((string)$audicao['id'],1))->id==null)
+            if(Audicao::find(substr((string)$audicao->id,3))->id==null)
             {
-              Audicao::create(  substr((string)$audicao['id'],3),
+              Audicao::create(substr((string)$audicao->id,3),
                                      (string)$audicao->metadados->titulo,
                                      (string)$audicao->metadados->subtitulo,
-                              substr((string)$audicao->curso,2),
-                                     (string)$audicao->anoCurso);
+                                     (string)$audicao->metadados->tema,
+                                     (string)$audicao->metadados->data." ".(string)$audicao->metadados->hora,
+                                     (string)$audicao->metadados->local,
+                                     (string)$audicao->metadados->organizador,
+                                     (string)$audicao->metadados->duracao);
+              //echo "ID: ".$audicao->id;
+              //echo $audicao->metadados->titulo;
+              //var_dump($audicao);
+              foreach ($audicao->atuacoes->atuacao as $atuacao) {
+                //var_dump($atuacao);
+                //echo "IDAT: ".$atuacao->idAt;
+                //echo "Titulo: ".$atuacao->tituloAt;
+                //echo $atuacao->tituloAt;
+                Atuacao::create2(substr((string)$audicao->id,3),substr((string)$atuacao->idAt,2) , (string)$atuacao->tituloAt);
 
-              create($id, $titulo, $subtitulo, $tema, $data, $local, $organizador, $duracao)
+                foreach ($atuacao->obras->obra as $obra) {
+                  
+                  Atuacao::add_obra(substr((string)$atuacao->idAt,2), substr((string)$obra->idOb,1));
+
+                  //echo "IDOB: ".$obra->idOb;
+                  foreach ($obra->maestros->maestro as $ma) {
+                    Atuacao::add_maestro_obra(substr((string)$atuacao->idAt,2),substr((string)$obra->idOb,1),substr((string)$ma,1));
+                    //echo "Maestro: ".$ma;
+                  }
+                 foreach ($obra->musicos->musico as $mu) {
+                    Atuacao::add_musico_obra(substr((string)$atuacao->idAt,2),substr((string)$obra->idOb,1),substr((string)$mu,1));
+                  }
+
+
+                }
+
+
+              }
+
+
             }
             else
             {
@@ -366,13 +413,13 @@
 
 
           }
-          $controller = new AlunoController();
-          $controller->index(); 
+          $controller = new AudicaoController();
+          $controller->index();
          }
 
         }
 
-*/
+
 
     public function exportxml(){
       
@@ -395,16 +442,17 @@
         $aud_meta->addChild('titulo',$audicao->titulo);
         $aud_meta->addChild('subtitulo',$audicao->subtitulo);
         $aud_meta->addChild('tema',$audicao->tema);
-        $aud_meta->addChild('data',$audicao->data);
+        $aud_meta->addChild('data',substr((string)$audicao->data,0,10));
+        $aud_meta->addChild('hora',substr((string)$audicao->data,11));
         $aud_meta->addChild('local',$audicao->local);
         $aud_meta->addChild('organizador',$audicao->organizador);
         $aud_meta->addChild('duracao',$audicao->duracao);
         
         $actuacoes = Atuacao::retrieve('id_actuacao',$audicao->id);
-        $aud_acts = $aud->addChild('actuacoes');
+        $aud_acts = $aud->addChild('atuacoes');
         
         foreach ($actuacoes as $actuacao) {
-          $aud_act = $aud_acts->addChild('actuacao');
+          $aud_act = $aud_acts->addChild('atuacao');
           $aud_act->addChild('idAt','AT'.$actuacao->id_actuacao);  
           $aud_act->addChild('tituloAt',$actuacao->designacao);
 
@@ -412,17 +460,24 @@
 
           foreach($actuacao->actos as $acto){
             $obra = $obras->addChild('obra'); 
-            $obra->addChild('idOb',$acto['obra']->id);
+            $obra->addChild('idOb','O'.$acto['obra']->id);
             $instrumentos = $obra->addChild('instrumentos');
+            $instrumentos_aux = []; 
             $maestros = $obra->addChild('maestros');
             $musicos = $obra->addChild('musicos');
 
              foreach($acto['participantes']['maestros'] as $ma){
-                $maestros->addChild('maestro',$ma->id);
+               $maestros->addChild('maestro','P'.$ma->id);
              }
              foreach($acto['participantes']['musicos'] as $mu){
-                $musicos->addChild('musico',$mu->id);
+              if(!in_array($mu->id_instrumento, $instrumentos_aux))
+              {
+                $instrumentos_aux[] = $mu->id_instrumento;
+                $instrumentos->addChild('instrumento','I'.$mu->id_instrumento);
+              }
+                $musicos->addChild('musico','A'.$mu->id);
              }
+
           }
   
         }

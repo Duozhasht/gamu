@@ -76,16 +76,16 @@ class Audicao {
 		$result = $db->query($query_update);
 
 	}
-
+*/
 
 	public static function delete($id) {
 
 		$db = DB::getInstance();
-		$query_delete = "DELETE FROM Aluno WHERE id_aluno=$id";
+		$query_delete = "DELETE FROM Audicao WHERE id_audicao=$id";
 		$result = $db->query($query_delete);
 
 	}
-*/
+
 	public static function find($id) {
 
 		$db = DB::getInstance();

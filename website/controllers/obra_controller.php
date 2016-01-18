@@ -56,7 +56,7 @@
           $aux = Obra::delete($_GET['id']);
           echo "<div class='alert alert-success text-center'>
               <a href='#'' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-              Aluno Removido Com Sucesso!
+              Obra Removido Com Sucesso!
               </div>";
         }catch(PDOException $Exception){
           echo "<div class='alert alert-danger text-center'>

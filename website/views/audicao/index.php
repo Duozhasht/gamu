@@ -74,7 +74,7 @@
 									  <a href='#'><i class='fa fa-pencil-square-o'></i></a>
 									  </td>
 									  <td>
-									  <a href='?controller=audicao&action=remove&id=".$aud->id."'><i class='fa fa-times'></i></a>
+									  <a href='?controller=audicao&action=remove_audicao&id_audicao=".$aud->id."'><i class='fa fa-times'></i></a>
 									  </td>";
 								echo "</tr>";
 							}
@@ -178,9 +178,10 @@
 
 
 
-<div class="hiddenfile" style="width: 0px; height: 0px; overflow: hidden;">
-<form action='?controller=audicao&action=importxml' method="post" accept-charset="utf-8">
-  <input name="upload" type="file" id="fileinput"/>
+<div  class="hiddenfile" style="width: 0px; height: 0px; overflow: hidden;">
+<form id="upload" action='?controller=audicao&action=importxml' method="post" accept-charset="utf-8" enctype="multipart/form-data">
+  <input type="file" name="ficheiro" id="file" />
+  <input type="submit" name="Enviar"/>
 </form>
 </div>
 
@@ -189,8 +190,11 @@
 function showModal(){
 	$('#insertModal').modal('show');};
 function inputXML(){
-	$('#fileinput').trigger('click'); 
+	$('#file').trigger('click');
 }
+$('#file').change(function() {
+  $('#upload').submit();
+});
 function redirect(id){
 	document.location = '?controller=audicao&action=view&id='+id;
 }

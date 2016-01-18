@@ -481,16 +481,6 @@ INSERT INTO gamu.Aluno VALUES (39947, 'Jorge Gonzalez y Hurtado de Mendoza', '20
 INSERT INTO gamu.Aluno VALUES (39948, 'Brais Hernandez Facal', '2000-07-18', 38, 8);
 INSERT INTO gamu.Aluno VALUES (39949, 'Oscar Lopez Garcia', '2003-01-14', 7, 2);
 
-/* PERIODOS */
-
-INSERT INTO gamu.Periodo VALUES (1, 'Medieval');
-INSERT INTO gamu.Periodo VALUES (2, 'Renascimento');
-INSERT INTO gamu.Periodo VALUES (3, 'Barroco');
-INSERT INTO gamu.Periodo VALUES (4, 'Clássico');
-INSERT INTO gamu.Periodo VALUES (5, 'Romântico');
-INSERT INTO gamu.Periodo VALUES (6, 'Século XX');
-INSERT INTO gamu.Periodo VALUES (7, 'Contemporâneo');
-
 
 /* Compositor */
 INSERT INTO gamu.Compositor VALUES (2, 'Dieterich Buxtehude', 'text', '1637', '1707', 2);
@@ -839,7 +829,7 @@ INSERT INTO gamu.Obra VALUES (172, 'Preludes Op. 11 No. 4', '(string)$obra->desc
 INSERT INTO gamu.Obra VALUES (173, 'Mazurkas, Op. 56', '(string)$obra->desc', '1534', '00:21:50', 2, 176);
 INSERT INTO gamu.Obra VALUES (174, 'Händelgesellschaft volume 50', '(string)$obra->desc', '1818', '01:15:40', 4, 284);
 
-INSERT INTO gamu.Audicao VALUES (1,'Titulo','Sub','Tema',NOW(),'Local','Organizador',NOW());
+INSERT INTO gamu.Audicao VALUES (1,'Audição Especial de Apresentação','Apresentação do Trabalho','Académico','	2016-02-01 09:00:00','Uma sala algures no DI','JCR && PRH','00:00:15');
 
 INSERT INTO gamu.Actuacao VALUES (1,1,'Primeira');
 INSERT INTO gamu.Actuacao VALUES (2,1,'Segunda');

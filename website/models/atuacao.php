@@ -37,6 +37,15 @@ class Atuacao	 {
 	
 	}
 
+	public static function create2($id_audicao,$id_atuacao, $designacao) {
+	
+		$db = DB::getInstance();
+		$query_insert = "INSERT INTO Actuacao VALUES ($id_atuacao, $id_audicao, '$designacao')";
+		
+		$result = $db->query($query_insert);
+	
+	}
+
 
 	public static function retrieve($order,$id_audicao) {
 
