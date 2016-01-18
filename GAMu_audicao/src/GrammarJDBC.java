@@ -132,8 +132,8 @@ public class GrammarJDBC {
                 //Retrieve by column name
                 this.ds.getCp().addCompositor("C"+rs.getInt("id_compositor"),
                         rs.getNString("nome"), "",
-                        rs.getNString("data_de_nascimento"),
-                        rs.getNString("data_de_obito"), "PE"+rs.getInt("id_periodo") );
+                        "",
+                        "", "PE"+rs.getInt("id_periodo") );
             }
             rs.close();
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <audicoes>
 <audicao>
-<id>AUD15</id>
+<id>AUD4</id>
 <metadados>
 <titulo>Audicao dos alunos da Escola Primaria</titulo>
 <subtitulo>Preparacao Ano Lectivo</subtitulo>
@@ -14,7 +14,7 @@
 </metadados>
 <atuacoes>
 <atuacao>
-<idAt>AT24</idAt>
+<idAt>AT8</idAt>
 <tituloAt>Atuacao dos meninos</tituloAt>
 <obras>
 <obra>
@@ -49,7 +49,7 @@
 </obras>
 </atuacao>
 <atuacao>
-<idAt>AT25</idAt>
+<idAt>AT9</idAt>
 <tituloAt>Atuacao das meninas</tituloAt>
 <obras>
 <obra>
